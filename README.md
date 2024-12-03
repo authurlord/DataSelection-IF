@@ -1,3 +1,9 @@
+## Guidance
+
+Please Check example_ER.ipynb for a demo. 
+
+1. For pre-trained models, we apply DeBERTa-v3-base and RoBERTa-Large.
+
 # HyperINF
 This repo contains two main parts for paper HyperINF:
 1. Mislabeled Data Detection

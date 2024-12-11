@@ -294,22 +294,26 @@ class LORAEngineDebertaMultiClass(object):
                 target_modules=None,
                 train_dataloader=None,
                 eval_dataloader=None,
+                test_dataloader=None,
                 device="cuda",
                 num_epochs=10,
                 lr=3e-4,
                 low_rank=2,
                 task="mrpc",
-                save_path=None):
+                save_path=None,
+                valid_each_epoch=False):
         self.model_name_or_path = model_name_or_path
         # self.target_modules = target_modules or ["query_proj", "key_proj", "value_proj"]  # Typical 
         self.target_modules = target_modules
         # DeBERTa attention layer names
         self.train_dataloader = train_dataloader
         self.eval_dataloader = eval_dataloader
+        self.test_dataloader = test_dataloader
         self.device = device
         self.num_epochs = num_epochs
         self.lr = lr
         self.task = task
+        self.valid_each_epoch = valid_each_epoch
         self.low_rank = low_rank
         self.tokenizer = DebertaV2Tokenizer.from_pretrained(self.model_name_or_path)
         self.save_path = save_path
@@ -328,7 +332,8 @@ class LORAEngineDebertaMultiClass(object):
                                  target_modules=self.target_modules,
                                  r=self.low_rank,
                                  lora_alpha=self.low_rank, 
-                                 lora_dropout=0.05)
+                                 lora_dropout=0.05,
+                                 use_rslora=False)
         self.model = get_peft_model(self.model, peft_config)
         self.model.print_trainable_parameters()
 
@@ -346,33 +351,52 @@ class LORAEngineDebertaMultiClass(object):
             num_warmup_steps=0.06*(len(self.train_dataloader)*self.num_epochs),
             num_training_steps=(len(self.train_dataloader)*self.num_epochs),
         )
-
+        print('Total Steps:{}'.format(len(self.train_dataloader)*self.num_epochs))
         self.model.to(self.device)
+        # self.model = torch.compile(self.model)
         for epoch in range(self.num_epochs):
             self.model.train()
+            total_loss  = 0
+
             for step, batch in enumerate(tqdm(self.train_dataloader)):
                 batch.to(self.device)
                 outputs = self.model(**batch)
                 loss = outputs.loss
+                total_loss += loss.item()
                 loss.backward()
                 optimizer.step()
                 lr_scheduler.step()
                 optimizer.zero_grad()
+            print(f"Epoch {epoch + 1}: Training Loss = {total_loss / len(self.train_dataloader)}")
+            
+            if self.valid_each_epoch:
+                self.model.eval()
+                for step, batch in enumerate(tqdm(self.eval_dataloader)):
+                    batch.to(self.device)
+                    with torch.no_grad():
+                        outputs = self.model(**batch)
+                    predictions = outputs.logits.argmax(dim=-1)
+                    predictions, references = predictions, batch["labels"]
+                    metric.add_batch(
+                        predictions=predictions,
+                        references=references,
+                    )
 
-            self.model.eval()
-            for step, batch in enumerate(tqdm(self.eval_dataloader)):
-                batch.to(self.device)
-                with torch.no_grad():
-                    outputs = self.model(**batch)
-                predictions = outputs.logits.argmax(dim=-1)
-                predictions, references = predictions, batch["labels"]
-                metric.add_batch(
-                    predictions=predictions,
-                    references=references,
-                )
+                eval_metric = metric.compute()
+                print(f"Epoch {(epoch+1)}:", eval_metric)
+        for step, batch in enumerate(tqdm(self.test_dataloader)):
+            batch.to(self.device)
+            with torch.no_grad():
+                outputs = self.model(**batch)
+            predictions = outputs.logits.argmax(dim=-1)
+            predictions, references = predictions, batch["labels"]
+            metric.add_batch(
+                predictions=predictions,
+                references=references,
+            )
 
-            eval_metric = metric.compute()
-            print(f"Epoch {(epoch+1)}:", eval_metric)
+        eval_metric = metric.compute()
+        print("Prediction Result on Test Data:", eval_metric)
         # return self.model
     def save_model(self):
         '''
@@ -466,6 +490,7 @@ class LORAEngineDebertaMultiClass(object):
                                                batch_size=batch_size)
         # Compute the gradient
         self.model.to(self.device)
+        # self.model = torch.compile(self.model)
         self.model.eval()
         tr_grad_dict = {}
         for step, batch in enumerate(tqdm(train_dataloader_stochastic)):
@@ -479,10 +504,13 @@ class LORAEngineDebertaMultiClass(object):
             for k, v in self.model.named_parameters():
                 if 'lora_A' in k:
                     grad_dict[k] = v.grad.cpu()
+                    # grad_dict[k] = v.grad
                 elif 'lora_B' in k:
                     grad_dict[k] = v.grad.cpu().T
+                    # grad_dict[k] = v.grad.T
                 elif 'modules_to_save.default.weight' in k:
                     grad_dict[k] = v.grad.cpu()
+                    # grad_dict[k] = v.grad
             tr_grad_dict[step] = grad_dict
             del grad_dict
             

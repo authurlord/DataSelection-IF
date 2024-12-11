@@ -104,6 +104,7 @@ class IFEngine(object):
            # G_l = G_l.cpu().detach().numpy()
            # 使用 Schulz 方法近似计算逆矩阵
             G_l_inv = schulz_inverse_stable(G_l, damping_factor=0.001, max_iterations=n_iteration, tol=1e-6)
+            print(G_l.shape,G_l_inv.shape)
             # 计算 HVP: G_l_inv @ val_grad_avg
             hvp_iterative_dict[weight_name] = torch.tensor(self.val_grad_avg_dict[weight_name] @ G_l_inv)
             #print(hvp_iterative_dict[weight_name])

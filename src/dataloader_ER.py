@@ -19,16 +19,18 @@ def create_dataloaders(model_name_or_path="roberta-large",
                        batch_size=32,
                        train_file="train.json",
                        valid_file="valid.json",
-                       test_file="test.json"):
+                       test_file="test.json",
+                       max_length = 128,
+                       select_index = None):
     # Load tokenizer
     tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, padding_side="right")
     tokenizer.pad_token = tokenizer.eos_token
     tokenizer.pad_token_id = tokenizer.eos_token_id
-
+    
     # Define task-specific keys for sentence1 and sentence2
     sentence1_key, sentence2_key = task_to_keys[task]
     
-    def tokenize_function(examples, max_length=128):
+    def tokenize_function(examples, max_length=max_length):
         # Tokenize based on the task, considering whether there is a second sentence
         if sentence2_key is None:
             outputs = tokenizer(examples[sentence1_key], truncation=True, max_length=max_length)
@@ -44,11 +46,15 @@ def create_dataloaders(model_name_or_path="roberta-large",
     valid_df.columns = ['sentence_1', 'sentence_2', 'label']
     test_df.columns = ['sentence_1', 'sentence_2', 'label']
     
+    if isinstance(select_index,np.ndarray):
+        train_df = train_df.iloc[select_index].reset_index(drop=True)
     # Convert the DataFrames into the HuggingFace Dataset format
+    
     train_dataset = Dataset.from_pandas(train_df)
     valid_dataset = Dataset.from_pandas(valid_df)
     test_dataset = Dataset.from_pandas(test_df)
     
+
     # If noise is required, apply the noise to the training set
     if noise_ratio > 0.0:
         n_train = len(train_dataset)

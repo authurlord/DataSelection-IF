@@ -4,7 +4,7 @@ import torch
 from torch.optim import AdamW
 from torch.utils.data import DataLoader, DistributedSampler
 from torch.nn.parallel import DistributedDataParallel as DDP
-from tqdm import tqdm
+from tqdm.notebook import tqdm
 import numpy as np
 from transformers import (
     AutoModelForSequenceClassification,
@@ -73,7 +73,7 @@ class LORAEngine(object):
         This function fine-tunes a model for GLUE classification tasks. 
         For text generation tasks, please see `notebooks/Influential_Data_Identification-Llama2-Math.ipynb`.
         '''
-        metric = evaluate.load("/home/yanmy/evaluate-main/metrics/glue", self.task)
+        metric = evaluate.load("../metrics/glue", self.task)
         optimizer = AdamW(params=self.model.parameters(), lr=self.lr)
 
         # Instantiate scheduler
@@ -342,7 +342,7 @@ class LORAEngineDebertaMultiClass(object):
         This function fine-tunes a DeBERTa model for GLUE classification tasks. 
         '''
         # metric = evaluate.load("/home/yanmy/evaluate-main/metrics/glue", self.task)
-        metric = evaluate.load("/home/yanmy/evaluate-main/metrics/f1", "f1")
+        metric = evaluate.load("../metrics/f1", "f1")
         optimizer = AdamW(params=self.model.parameters(), lr=self.lr)
 
         # Instantiate scheduler
@@ -353,7 +353,7 @@ class LORAEngineDebertaMultiClass(object):
         )
         print('Total Steps:{}'.format(len(self.train_dataloader)*self.num_epochs))
         self.model.to(self.device)
-        # self.model = torch.compile(self.model)
+        # self.model = torch.compile(self.model,mode="max-autotune")
         for epoch in range(self.num_epochs):
             self.model.train()
             total_loss  = 0
@@ -410,7 +410,7 @@ class LORAEngineDebertaMultiClass(object):
         This function fine-tunes a DeBERTa model for classification tasks using Hugging Face Trainer. 
         '''
         # Define metric
-        metric = evaluate.load("/home/yanmy/evaluate-main/metrics/f1", "f1")
+        metric = evaluate.load("../metrics/f1", "f1")
 
         # Metric computation function for Trainer
         def compute_metrics(eval_pred):
@@ -489,8 +489,8 @@ class LORAEngineDebertaMultiClass(object):
                                                collate_fn=collate_fn,
                                                batch_size=batch_size)
         # Compute the gradient
-        self.model.to(self.device)
-        # self.model = torch.compile(self.model)
+        # self.model.to(self.device)
+        # self.model = torch.compile(self.model,mode="max-autotune")
         self.model.eval()
         tr_grad_dict = {}
         for step, batch in enumerate(tqdm(train_dataloader_stochastic)):
@@ -796,7 +796,7 @@ class LORAEngineDeberta(object):
         '''
         This function fine-tunes a DeBERTa model for multi-class classification tasks using micro F1 metric.
         '''
-        metric = evaluate.load("f1")  # Load F1 metric
+        metric = evaluate.load("../metrics/f1")  # Load F1 metric
         optimizer = AdamW(params=self.model.parameters(), lr=self.lr)
 
         # Instantiate scheduler

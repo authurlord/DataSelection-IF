@@ -10,10 +10,11 @@ import numpy as np
 class IFEngine(object):
         # 初始化存储时间、Hessian-Vector Product (HVP) 结果和影响函数（Influence Function）值的字典
 
-    def __init__(self):
+    def __init__(self,weight_list=None):
         self.time_dict=defaultdict(list)
         self.hvp_dict=defaultdict(list)
         self.IF_dict=defaultdict(list)
+        self.weight_list = weight_list
 
     def preprocess_gradients(self, tr_grad_dict, val_grad_dict, noise_index=None): # 存储训练集和验证集的梯度字典，并计算验证集平均梯度
         self.tr_grad_dict = tr_grad_dict # 训练集梯度字典
@@ -23,11 +24,15 @@ class IFEngine(object):
         self.n_train = len(self.tr_grad_dict.keys())
         self.n_val = len(self.val_grad_dict.keys())
         self.compute_val_grad_avg() # 计算验证集平均梯度
+        if self.weight_list == None: ## 没有传入grad信息
+            self.weight_list = [weight_name for weight_name in self.val_grad_dict[0] if weight_name.__contains__('model')]
+            
+            
 
-    def compute_val_grad_avg(self):
+    def compute_val_grad_avg(self): ## 修改
         # Compute the avg gradient on the validation dataset
         self.val_grad_avg_dict={}
-        for weight_name in self.val_grad_dict[0]:
+        for weight_name in self.weight_list:
             # 初始化为与梯度同设备的零向量
             self.val_grad_avg_dict[weight_name]=torch.zeros(self.val_grad_dict[0][weight_name].shape).to(self.val_grad_dict[0][weight_name].device)
             # 逐个样本累加梯度并取平均值
@@ -83,7 +88,7 @@ class IFEngine(object):
         start_time = time()
         hvp_iterative_dict={}
 
-        for _, weight_name in enumerate(tqdm(self.val_grad_avg_dict)):
+        for weight_name in tqdm(self.weight_list):
             # lambda_const computation = 0.1 x (n * d_l)^(-1) \sum_{i=1}^{n} ||grad_i^l||_2^2, 计算 λ（正则化系数）：基于梯度的方差
             S=torch.zeros(len(self.tr_grad_dict.keys())).to(self.val_grad_avg_dict[weight_name].device)
             for tr_id in self.tr_grad_dict:
@@ -121,7 +126,8 @@ class IFEngine(object):
         start_time = time()
         hvp_proposed_dict={}
 
-        for _ , weight_name in enumerate(tqdm(self.val_grad_avg_dict)):
+        # for _ , weight_name in enumerate(tqdm(self.val_grad_avg_dict)):
+        for weight_name in tqdm(self.weight_list):
             # lambda_const computation = 0.1 x (n * d_l)^(-1) \sum_{i=1}^{n} ||grad_i^l||_2^2
             S=torch.zeros(len(self.tr_grad_dict.keys())).to(self.val_grad_avg_dict[weight_name].device)
             for tr_id in self.tr_grad_dict:
@@ -145,7 +151,8 @@ class IFEngine(object):
     def compute_hvp_accurate(self, lambda_const_param=10):
         start_time = time()
         hvp_accurate_dict={}
-        for _ , weight_name in enumerate(tqdm(self.val_grad_avg_dict)):
+        # for _ , weight_name in enumerate(tqdm(self.val_grad_avg_dict)):
+        for weight_name in tqdm(self.weight_list):
 
             # lambda_const computation
             S=torch.zeros(len(self.tr_grad_dict.keys()))
@@ -182,7 +189,8 @@ class IFEngine(object):
         start_time = time()
         hvp_LiSSA_dict={}
 
-        for _, weight_name in enumerate(tqdm(self.val_grad_avg_dict)):
+        # for _, weight_name in enumerate(tqdm(self.val_grad_avg_dict)):
+        for weight_name in tqdm(self.weight_list):
             # lambda_const computation
             S=torch.zeros(len(self.tr_grad_dict.keys())).to(self.val_grad_avg_dict[weight_name].device)
             for tr_id in self.tr_grad_dict:
@@ -209,13 +217,22 @@ class IFEngine(object):
         for method_name in self.hvp_dict:
             if_tmp_dict = {}
             for tr_id in self.tr_grad_dict:
-                if_tmp_value = 0
-                for weight_name in self.val_grad_avg_dict:
-                    if_tmp_value += torch.sum(self.hvp_dict[method_name][weight_name]*self.tr_grad_dict[tr_id][weight_name])
-                if_tmp_dict[tr_id]= -if_tmp_value.cpu()
+                if_tmp_value = {}
+                # for weight_name in self.val_grad_avg_dict:
+                for weight_name in self.weight_list:
+                    if_tmp_value[weight_name] = -torch.sum(self.hvp_dict[method_name][weight_name]*self.tr_grad_dict[tr_id][weight_name]).cpu().numpy()
+                if_tmp_value['ids'] = self.tr_grad_dict[tr_id]['ids'].cpu().numpy()
+                if_tmp_dict[tr_id]= if_tmp_value
+                # if_tmp_dict[tr_id].append(self.tr_grad_dict[tr_id]['ids'].cpu()) ## add sample index
                # print(-if_tmp_value)
-
-            self.IF_dict[method_name] = pd.Series(if_tmp_dict, dtype=float).to_numpy()
+            # if_tmp_dict[]
+            # self.IF_dict[method_name] = pd.Series(if_tmp_dict, dtype=float).to_numpy()
+            # df = pd.DataFrame(if_tmp_dict, dtype=float).to_numpy()
+            # columns = self.weight_list
+            # columns.append('ids')
+            # df.columns = columns
+            # df['']
+            self.IF_dict[method_name] = if_tmp_dict
 
     def save_result(self, noise_index, run_id=0):
         results={}

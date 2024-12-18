@@ -10,4 +10,5 @@ lora_weight/*
 *.npy
 *.safetensors
 *.zip
+*.pkl
 

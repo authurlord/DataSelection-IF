@@ -7,7 +7,66 @@ from torch.optim import AdamW
 from transformers import get_linear_schedule_with_warmup
 import evaluate
 from torch.cuda.amp import autocast, GradScaler
-
+def compute_gradient_iterative_inner(model, train_dataloader_stochastic,val_dataloader_stochastic,device):
+    # Compute the gradient
+    # self.model.to(self.device)
+    # self.model = torch.compile(self.model,mode="max-autotune")
+    # self.model.eval()
+    model = model.eval()
+    tr_grad_dict = {}
+    for step, batch in enumerate(tqdm(train_dataloader_stochastic)):
+        grad_dict = {}
+        grad_dict['ids'] = batch['id']
+        batch.pop('id', None)
+        
+        
+        model.zero_grad()  # zeroing out gradient
+        batch.to(device)
+        outputs = model(**batch)
+        loss = outputs.loss
+        loss.backward()
+        
+        
+        # print(self.model.named_parameters)
+        for k, v in model.named_parameters():
+            if 'lora_A' in k:
+                grad_dict[k] = v.grad.cpu()
+                # grad_dict[k] = v.grad
+            elif 'lora_B' in k:
+                grad_dict[k] = v.grad.cpu().T
+                # grad_dict[k] = v.grad.T
+            elif 'modules_to_save.default.weight' in k:
+                grad_dict[k] = v.grad.cpu()
+                # grad_dict[k] = v.grad
+        tr_grad_dict[step] = grad_dict
+        del grad_dict
+        
+    val_grad_dict = {}
+    for step, batch in enumerate(tqdm(val_dataloader_stochastic)):
+        grad_dict = {}
+        grad_dict['ids'] = batch['id']
+        batch.pop('id', None)
+        
+        
+        model.zero_grad()  # zeroing out gradient
+        batch.to(device)
+        outputs = model(**batch)
+        loss = outputs.loss
+        loss.backward()
+        
+        
+        for k, v in model.named_parameters():
+            # print(k)
+            if 'lora_A' in k:
+                grad_dict[k] = v.grad.cpu()
+            elif 'lora_B' in k:
+                grad_dict[k] = v.grad.cpu().T
+            elif 'modules_to_save.default.weight' in k:
+                grad_dict[k] = v.grad.cpu()
+        val_grad_dict[step] = grad_dict    
+        del grad_dict
+        
+    return tr_grad_dict, val_grad_dict
 
 class LORAEngineDebertaMultiClass(object):
     def __init__(self,
@@ -22,13 +81,16 @@ class LORAEngineDebertaMultiClass(object):
                  low_rank=2,
                  task="mrpc",
                  save_path=None,
-                 valid_each_epoch=False):
+                 valid_each_epoch=False,
+                 cal_grad_per_sample = False,
+                 tokenized_dataset = None):
         self.model_name_or_path = model_name_or_path
         self.target_modules = target_modules
         self.train_dataloader = train_dataloader
         self.eval_dataloader = eval_dataloader
         self.test_dataloader = test_dataloader
         self.device = device
+        self.cal_grad_per_sample = cal_grad_per_sample
         self.num_epochs = num_epochs
         self.lr = lr
         self.task = task
@@ -37,6 +99,7 @@ class LORAEngineDebertaMultiClass(object):
         # self.tokenizer = DebertaV2Tokenizer.from_pretrained(self.model_name_or_path)
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name_or_path)
         self.save_path = save_path
+        # self.tokenized_dataset = tokenized_dataset
 
     def build_LORA_model(self):
         # self.model = DebertaV2ForSequenceClassification.from_pretrained(self.model_name_or_path,
@@ -92,13 +155,74 @@ class LORAEngineDebertaMultiClass(object):
         self.model = self.model.merge_and_unload() ## 存储全量模型
         self.model.save_pretrained(path)
         self.tokenizer.save_pretrained(path)
-    def save_lora(self, path):
+    def save_lora(self, path, full_model = False):
         """
         保存训练好的LoRA模型、分词器以及相关配置到指定路径。
         """
-        # self.model = self.model.merge_and_unload() ## 存储全量模型
+        if full_model:
+            self.model = self.model.merge_and_unload() ## 存储全量模型
         self.model.save_pretrained(path)
         self.tokenizer.save_pretrained(path)
+        # torch.save(self.model.state_dict(), path) ## torch原生方法测试
+    def compute_gradient_iterative_inner(self, train_dataloader_stochastic,val_dataloader_stochastic):
+        # Compute the gradient
+        # self.model.to(self.device)
+        # self.model = torch.compile(self.model,mode="max-autotune")
+        self.model.eval()
+        tr_grad_dict = {}
+        for step, batch in enumerate(tqdm(train_dataloader_stochastic)):
+            grad_dict = {}
+            grad_dict['ids'] = batch['id']
+            batch.pop('id', None)
+            
+            
+            self.model.zero_grad()  # zeroing out gradient
+            batch.to(self.device)
+            outputs = self.model(**batch)
+            loss = outputs.loss
+            loss.backward()
+            
+            
+            # print(self.model.named_parameters)
+            for k, v in self.model.named_parameters():
+                if 'lora_A' in k:
+                    grad_dict[k] = v.grad.cpu()
+                    # grad_dict[k] = v.grad
+                elif 'lora_B' in k:
+                    grad_dict[k] = v.grad.cpu().T
+                    # grad_dict[k] = v.grad.T
+                elif 'modules_to_save.default.weight' in k:
+                    grad_dict[k] = v.grad.cpu()
+                    # grad_dict[k] = v.grad
+            tr_grad_dict[step] = grad_dict
+            del grad_dict
+            
+        val_grad_dict = {}
+        for step, batch in enumerate(tqdm(val_dataloader_stochastic)):
+            grad_dict = {}
+            grad_dict['ids'] = batch['id']
+            batch.pop('id', None)
+            
+            
+            self.model.zero_grad()  # zeroing out gradient
+            batch.to(self.device)
+            outputs = self.model(**batch)
+            loss = outputs.loss
+            loss.backward()
+            
+            
+            for k, v in self.model.named_parameters():
+                # print(k)
+                if 'lora_A' in k:
+                    grad_dict[k] = v.grad.cpu()
+                elif 'lora_B' in k:
+                    grad_dict[k] = v.grad.cpu().T
+                elif 'modules_to_save.default.weight' in k:
+                    grad_dict[k] = v.grad.cpu()
+            val_grad_dict[step] = grad_dict    
+            del grad_dict
+            
+        return tr_grad_dict, val_grad_dict
     def train_LORA_model(self):
         """
         执行模型训练的方法，加入混合精度训练相关逻辑，包括加载评估指标、初始化优化器和学习率调度器，
@@ -119,7 +243,8 @@ class LORAEngineDebertaMultiClass(object):
         self.model.to(self.device)
 
         scaler = GradScaler()  # 创建梯度缩放器，用于混合精度训练
-
+        tr_grad_dict_all = {}
+        val_grad_dict_all = {}
         for epoch in range(self.num_epochs):
             self.model.train()
             total_loss = 0
@@ -156,6 +281,14 @@ class LORAEngineDebertaMultiClass(object):
 
                 eval_metric = metric.compute()
                 print(f"Epoch {(epoch + 1)}:", eval_metric)
+            if self.cal_grad_per_sample:
+                tr_grad_dict,val_grad_dict = compute_gradient_iterative_inner(self.model, 
+                                                                        self.train_dataloader, 
+                                                                        self.eval_dataloader,
+                                                                        device=self.device)
+                tr_grad_dict_all[epoch] = tr_grad_dict
+                val_grad_dict_all[epoch] = val_grad_dict
+                
         self.model.eval()
         metric = evaluate.load("../../evaluate-main/metrics/f1", "f1")
         for step, batch in enumerate(tqdm(self.test_dataloader)):
@@ -172,6 +305,7 @@ class LORAEngineDebertaMultiClass(object):
 
         eval_metric = metric.compute()
         print("Prediction Result on Test Data:", eval_metric)
+        return tr_grad_dict_all,val_grad_dict_all
     def eval_LORA_model(self):
         """
         执行模型训练的方法，加入混合精度训练相关逻辑，包括加载评估指标、初始化优化器和学习率调度器，
@@ -423,9 +557,9 @@ class LORAEngineDebertaMultiClass(object):
 
 
 
-    def compute_gradient_iterative(self, tokenized_datasets, collate_fn, batch_size=1):
+    def compute_gradient_iterative(self, tokenized_datasets, collate_fn, batch_size=1, shuffle=False):
         train_dataloader_stochastic = DataLoader(tokenized_datasets["train"], 
-                                                  shuffle=False,
+                                                  shuffle=shuffle,
                                                   collate_fn=collate_fn,
                                                   batch_size=batch_size)
         val_dataloader_stochastic = DataLoader(tokenized_datasets["validation"], 
@@ -490,3 +624,4 @@ class LORAEngineDebertaMultiClass(object):
             del grad_dict
             
         return tr_grad_dict, val_grad_dict
+    

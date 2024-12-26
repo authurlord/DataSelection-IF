@@ -11,4 +11,5 @@ lora_weight/*
 *.safetensors
 *.zip
 *.pkl
+*.arrow
 

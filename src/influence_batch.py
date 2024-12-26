@@ -16,28 +16,29 @@ class IFEngine(object):
         self.IF_dict=defaultdict(list)
         self.weight_list = weight_list
 
-    def preprocess_gradients(self, tr_grad_dict, val_grad_dict, noise_index=None): # 存储训练集和验证集的梯度字典，并计算验证集平均梯度
+    def preprocess_gradients(self, tr_grad_dict, val_grad_avg_dict, noise_index=None): # 存储训练集和验证集的梯度字典，并计算验证集平均梯度
         self.tr_grad_dict = tr_grad_dict # 训练集梯度字典
-        self.val_grad_dict = val_grad_dict # 验证集梯度字典
+        # self.val_grad_dict = val_grad_dict # 验证集梯度字典
         self.noise_index = noise_index # 可选的噪声索引（用于异常值处理）
         # 存储训练集和验证集的样本数
         self.n_train = len(self.tr_grad_dict.keys())
-        self.n_val = len(self.val_grad_dict.keys())
-        self.compute_val_grad_avg() # 计算验证集平均梯度
+        # self.n_val = len(self.val_grad_dict.keys())
+        # self.compute_val_grad_avg() # 计算验证集平均梯度
+        self.val_grad_avg_dict = val_grad_avg_dict
         if self.weight_list == None: ## 没有传入grad信息
-            self.weight_list = [weight_name for weight_name in self.val_grad_dict[0] if weight_name.__contains__('model')]
+            self.weight_list = [weight_name for weight_name in self.val_grad_avg_dict if weight_name.__contains__('model')]
             
             
 
-    def compute_val_grad_avg(self): ## 修改
-        # Compute the avg gradient on the validation dataset
-        self.val_grad_avg_dict={}
-        for weight_name in self.weight_list:
-            # 初始化为与梯度同设备的零向量
-            self.val_grad_avg_dict[weight_name]=torch.zeros(self.val_grad_dict[0][weight_name].shape).to(self.val_grad_dict[0][weight_name].device)
-            # 逐个样本累加梯度并取平均值
-            for val_id in self.val_grad_dict:
-                self.val_grad_avg_dict[weight_name] += self.val_grad_dict[val_id][weight_name] / self.n_val
+    # def compute_val_grad_avg(self): ## 修改
+    #     # Compute the avg gradient on the validation dataset
+    #     self.val_grad_avg_dict={}
+    #     for weight_name in self.weight_list:
+    #         # 初始化为与梯度同设备的零向量
+    #         self.val_grad_avg_dict[weight_name]=torch.zeros(self.val_grad_avg_dict[weight_name].shape).to(self.val_grad_dict[0][weight_name].device)
+    #         # 逐个样本累加梯度并取平均值
+    #         for val_id in self.val_grad_dict:
+    #             self.val_grad_avg_dict[weight_name] += self.val_grad_dict[val_id][weight_name] / self.n_val
 
     def compute_hvps(self, lambda_const_param=10, compute_accurate=True, compute_LiSSA=True):
         '''

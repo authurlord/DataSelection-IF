@@ -11,7 +11,7 @@ from transformers import (
     get_linear_schedule_with_warmup,
     BitsAndBytesConfig,
     LlamaForCausalLM,
-    LlamaTokenizer,
+    LlamaTokenizer,AutoModelForCausalLM,AutoTokenizer,
     DebertaV2ForSequenceClassification, DebertaV2Tokenizer, AdamW, get_linear_schedule_with_warmup
 )
 from peft import (
@@ -173,26 +173,30 @@ class LORAEngineGeneration(object):
     def __init__(self, 
                 base_path,
                 project_path,
+                adapter_path,
                 dataset_name='math_with_reason',
-                device="cuda"):
+                device="cuda",
+                batch_size = 1):
         self.base_path = base_path
+        self.adapter_path = adapter_path
         self.project_path = project_path
-        self.adapter_path = f"{self.project_path}/models/math_with_reason_13bf"
+        self.adapter_path = f"{self.adapter_path}"
         self.dataset_name = dataset_name
         self.device=device
+        self.batch_size = batch_size
         self.load_pretrained_network()
         self.load_datasets()
 
     def load_pretrained_network(self):
         # setup tokenizer
-        self.tokenizer = LlamaTokenizer.from_pretrained(self.base_path)
+        self.tokenizer = AutoTokenizer.from_pretrained(self.base_path)
         self.tokenizer.padding_side = "right"
         self.tokenizer.pad_token = self.tokenizer.eos_token
         self.tokenizer.pad_token_id = self.tokenizer.eos_token_id
 
         # load a base model
         quantization_config = BitsAndBytesConfig(load_in_8bit=True, load_in_4bit=False)
-        base_model = LlamaForCausalLM.from_pretrained(
+        base_model = AutoModelForCausalLM.from_pretrained(
             self.base_path,
             quantization_config=quantization_config,
             torch_dtype=torch.bfloat16,
@@ -237,11 +241,11 @@ class LORAEngineGeneration(object):
         train_dataloader_stochastic = DataLoader(tokenized_datasets["train"], 
                                                   shuffle=False,
                                                   collate_fn=collate_fn,
-                                                  batch_size=1)
+                                                  batch_size=self.batch_size)
         val_dataloader_stochastic = DataLoader(tokenized_datasets["validation"], 
                                                   shuffle=False,
                                                   collate_fn=collate_fn,
-                                                  batch_size=1)
+                                                  batch_size=self.batch_size)
         # Compute the gradient
         self.model.eval()
         tr_grad_dict = {}

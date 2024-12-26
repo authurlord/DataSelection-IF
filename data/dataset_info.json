@@ -1,0 +1,948 @@
+{
+    "AE_110k_train_small": {
+        "file_name": "/data/home/wangys/LLaMA-Factory-main/data/AE_110k/AE_110k_train_small.json",
+        "file_sha1": "d22b6c75577710c5fc7bafeaa4a79a12853755bf",
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "response": "output"
+        }
+    },
+    "AE_110k_train_large": {
+        "file_name": "/data/home/wangys/LLaMA-Factory-main/data/AE_110k/AE_110k_train_large.json",
+        "file_sha1": "9a0794834e06b5720d9db19e5600309ce1e76486",
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "response": "output"
+        }
+    },
+    "oa_mine_train_large": {
+        "file_name": "/data/home/wangys/LLaMA-Factory-main/data/oa_mine/oa_mine_train_large.json",
+        "file_sha1": "9f15725f558b139e6a938e5c31a4271e3a9dd3a2",
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "response": "output"
+        }
+    },
+    "oa_mine_train_small": {
+        "file_name": "/data/home/wangys/LLaMA-Factory-main/data/oa_mine/oa_mine_train_small.json",
+        "file_sha1": "7699580ad22fc83ef363b1aa85d376bb947634a0",
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "response": "output"
+        }
+    },
+    "identity": {
+        "file_name": "identity.json"
+    },
+    "Amazon-Google-Match-FewShot-50": {
+        "file_name": "/data/home/wangys/LLAMA-backup/LLaMA-Factory-main/data/few-shot-CL/Amazon-Google-Train-Match-Fewshot-50.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Amazon-Google-Match-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Amazon-Google/LLM_file/Amazon-Google-Train-Match-P1.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Amazon-Google-Match-P2": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Amazon-Google/LLM_file/Amazon-Google-Pseudo-Label-Train.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Amazon-Google-Select-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Amazon-Google/LLM_file/Amazon-Google-Train-Select-P1.json",
+        "ranking": true,
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "Walmart-Amazon-Match-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Train-Match-P1.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Walmart-Amazon-Select-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Train-Select-P1.json",
+        "ranking": true,
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "Amazon-Google-Match-Test": {
+        "file_name": "Amazon-Google-Test-Match.json"
+    },
+    "alpaca_en_demo": {
+        "file_name": "alpaca_en_demo.json"
+    },
+    "Walmart-Amazon-Match-P2": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Pseudo-Label-Train.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-P1.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P1-short": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-P1-short.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Select-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Select-P1.json",
+        "ranking": true,
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "Abt-Buy-Match-P2": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Pseudo-Label-Train.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "DBLP-Scholar-Match-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-Scholar/LLM_file/DBLP-Scholar-Train-Match-P1.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "DBLP-Scholar-Select-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-Scholar/LLM_file/DBLP-Scholar-Train-Select-P1.json",
+        "ranking": true,
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "DBLP-Scholar-Match-P2": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-Scholar/LLM_file/DBLP-Scholar-Pseudo-Label-Train.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-All-Match-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-All/LLM_file/WDC-All-Train-Match-P1.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-All-Select-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-All/LLM_file/WDC-All-Train-Select-P1.json",
+        "ranking": true,
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "DBLP-ACM-Match-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-ACM/LLM_file/DBLP-ACM-Train-Match-P1.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "DBLP-ACM-Select-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-ACM/LLM_file/DBLP-ACM-Train-Select-P1.json",
+        "ranking": true,
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "DBLP-ACM-Match-P2": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-ACM/LLM_file/DBLP-ACM-Pseudo-Label-Train.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-All-Match-P2": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-All/LLM_file/WDC-All-Pseudo-Label-Train.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Watch-Match-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Watch/LLM_file/WDC-Watch-Train-Match-P1.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Watch-Select-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Watch/LLM_file/WDC-Watch-Train-Select-P1.json",
+        "ranking": true,
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "WDC-Shoes-Match-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Shoes/LLM_file/WDC-Shoes-Train-Match-P1.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Shoes-Select-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Shoes/LLM_file/WDC-Shoes-Train-Select-P1.json",
+        "ranking": true,
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "WDC-Camera-Match-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Camera/LLM_file/WDC-Camera-Train-Match-P1.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Camera-Select-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Camera/LLM_file/WDC-Camera-Train-Select-P1.json",
+        "ranking": true,
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "WDC-Computer-Match-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Computer/LLM_file/WDC-Computer-Train-Match-P1.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Computer-Select-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Computer/LLM_file/WDC-Computer-Train-Select-P1.json",
+        "ranking": true,
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "WDC-Shoes-Match-P2": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Shoes/LLM_file/WDC-Shoes-Pseudo-Label-Train.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Company-Match-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Company/LLM_file/Company-Train-Match-P1.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Company-Select-P1": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Company/LLM_file/Company-Train-Select-P1.json",
+        "ranking": true,
+        "columns": {
+            "prompt": "instruction",
+            "query": "input",
+            "chosen": "chosen",
+            "rejected": "rejected"
+        }
+    },
+    "WDC-Watch-Match-P2": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Watch/LLM_file/WDC-Watch-Pseudo-Label-Train.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Computer-Match-P2": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Computer/LLM_file/WDC-Computer-Pseudo-Label-Train.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Camera-Match-P2": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Camera/LLM_file/WDC-Camera-Pseudo-Label-Train.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Company-Match-P2": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Company/LLM_file/Company-Pseudo-Label-Train.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Amazon-Google-Match-P1-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Amazon-Google/LLM_file/Amazon-Google-Train-Match-P1-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Amazon-Google-Match-P2-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Amazon-Google/LLM_file/Amazon-Google-Train-Match-P2-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Amazon-Google-Match-P1-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Amazon-Google/LLM_file/Amazon-Google-Train-Match-P1-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Amazon-Google-Match-P2-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Amazon-Google/LLM_file/Amazon-Google-Pseudo-Label-Train-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Amazon-Google-Match-P2-wo-Pseudo-Label": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Amazon-Google/LLM_file/Amazon-Google-Train-Match-wo-pseudo-label.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Walmart-Amazon-Match-P1-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Train-Match-P1-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Walmart-Amazon-Match-P2-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Train-Match-P2-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Walmart-Amazon-Match-P1-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Train-Match-P1-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Walmart-Amazon-Match-P2-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Pseudo-Label-Train-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Walmart-Amazon-Match-P2-wo-Pseudo-Label": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Train-Match-wo-pseudo-label.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Walmart-Amazon-Match-P2-baseline": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Train-baseline.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Amazon-Google-Match-P2-baseline": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Amazon-Google/LLM_file/Amazon-Google-Train-baseline.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P1-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-P1-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P2-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-P2-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P1-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-P1-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P2-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Pseudo-Label-Train-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P2-wo-Pseudo-Label": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-wo-pseudo-label.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P2-baseline": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-baseline.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "DBLP-ACM-Match-P1-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-ACM/LLM_file/DBLP-ACM-Train-Match-P1-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "DBLP-ACM-Match-P2-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-ACM/LLM_file/DBLP-ACM-Train-Match-P2-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "DBLP-ACM-Match-P1-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-ACM/LLM_file/DBLP-ACM-Train-Match-P1-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "DBLP-ACM-Match-P2-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-ACM/LLM_file/DBLP-ACM-Pseudo-Label-Train-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "DBLP-ACM-Match-P2-wo-Pseudo-Label": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-ACM/LLM_file/DBLP-ACM-Train-Match-wo-Pseudo-Label.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "DBLP-ACM-Match-P2-baseline": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-ACM/LLM_file/DBLP-ACM-Train-baseline.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "DBLP-Scholar-Match-P1-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-Scholar/LLM_file/DBLP-Scholar-Train-Match-P1-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "DBLP-Scholar-Match-P2-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-Scholar/LLM_file/DBLP-Scholar-Train-Match-P2-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "DBLP-Scholar-Match-P1-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-Scholar/LLM_file/DBLP-Scholar-Train-Match-P1-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "DBLP-Scholar-Match-P2-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-Scholar/LLM_file/DBLP-Scholar-Pseudo-Label-Train-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "DBLP-Scholar-Match-P2-wo-Pseudo-Label": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-Scholar/LLM_file/DBLP-Scholar-Train-Match-wo-Pseudo-Label.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "DBLP-Scholar-Match-P2-baseline": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/DBLP-Scholar/LLM_file/DBLP-Scholar-Train-baseline.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-All-Match-P1-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-All/LLM_file/WDC-All-Train-Match-P1-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-All-Match-P2-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-All/LLM_file/WDC-All-Train-Match-P2-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-All-Match-P1-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-All/LLM_file/WDC-All-Train-Match-P1-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-All-Match-P2-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-All/LLM_file/WDC-All-Pseudo-Label-Train-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-All-Match-P2-wo-Pseudo-Label": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-All/LLM_file/WDC-All-Train-Match-wo-Pseudo-Label.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-All-Match-P2-baseline": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-All/LLM_file/WDC-All-Train-baseline.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Camera-Match-P1-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Camera/LLM_file/WDC-Camera-Train-Match-P1-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Camera-Match-P2-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Camera/LLM_file/WDC-Camera-Train-Match-P2-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Camera-Match-P1-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Camera/LLM_file/WDC-Camera-Train-Match-P1-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Camera-Match-P2-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Camera/LLM_file/WDC-Camera-Pseudo-Label-Train-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Camera-Match-P2-wo-Pseudo-Label": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Camera/LLM_file/WDC-Camera-Train-Match-wo-Pseudo-Label.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Camera-Match-P2-baseline": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Camera/LLM_file/WDC-Camera-Train-baseline.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Watch-Match-P1-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Watch/LLM_file/WDC-Watch-Train-Match-P1-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Watch-Match-P2-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Watch/LLM_file/WDC-Watch-Train-Match-P2-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Watch-Match-P1-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Watch/LLM_file/WDC-Watch-Train-Match-P1-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Watch-Match-P2-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Watch/LLM_file/WDC-Watch-Pseudo-Label-Train-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Watch-Match-P2-wo-Pseudo-Label": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Watch/LLM_file/WDC-Watch-Train-Match-wo-Pseudo-Label.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Watch-Match-P2-baseline": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Watch/LLM_file/WDC-Watch-Train-baseline.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Computer-Match-P1-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Computer/LLM_file/WDC-Computer-Train-Match-P1-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Computer-Match-P2-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Computer/LLM_file/WDC-Computer-Train-Match-P2-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Computer-Match-P1-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Computer/LLM_file/WDC-Computer-Train-Match-P1-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Computer-Match-P2-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Computer/LLM_file/WDC-Computer-Pseudo-Label-Train-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Computer-Match-P2-wo-Pseudo-Label": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Computer/LLM_file/WDC-Computer-Train-Match-wo-Pseudo-Label.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Computer-Match-P2-baseline": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Computer/LLM_file/WDC-Computer-Train-baseline.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Shoes-Match-P1-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Shoes/LLM_file/WDC-Shoes-Train-Match-P1-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Shoes-Match-P2-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Shoes/LLM_file/WDC-Shoes-Train-Match-P2-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Shoes-Match-P1-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Shoes/LLM_file/WDC-Shoes-Train-Match-P1-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Shoes-Match-P2-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Shoes/LLM_file/WDC-Shoes-Pseudo-Label-Train-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Shoes-Match-P2-wo-Pseudo-Label": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Shoes/LLM_file/WDC-Shoes-Train-Match-wo-Pseudo-Label.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-Shoes-Match-P2-baseline": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-Shoes/LLM_file/WDC-Shoes-Train-baseline.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Company-Match-P1-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Company/LLM_file/Company-Train-Match-P1-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Company-Match-P2-wo-RAG": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Company/LLM_file/Company-Train-Match-P2-wo-RAG.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Company-Match-P1-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Company/LLM_file/Company-Train-Match-P1-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Company-Match-P2-wo-Enrich": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Company/LLM_file/Company-Pseudo-Label-Train-wo-Enrich.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Company-Match-P2-wo-Pseudo-Label": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Company/LLM_file/Company-Train-Match-wo-Pseudo-Label.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Company-Match-P2-baseline": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Company/LLM_file/Company-Train-baseline.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P1-budget-10": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-P1-budget-10.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P1-budget-20": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-P1-budget-20.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P1-budget-30": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-P1-budget-30.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P1-budget-40": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-P1-budget-40.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-All-Match-P1-budget-10": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-All/LLM_file/WDC-All-Train-Match-P1-budget-10.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-All-Match-P1-budget-20": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-All/LLM_file/WDC-All-Train-Match-P1-budget-20.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-All-Match-P1-budget-30": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-All/LLM_file/WDC-All-Train-Match-P1-budget-30.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-All-Match-P1-budget-40": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-All/LLM_file/WDC-All-Train-Match-P1-budget-40.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "WDC-All-Match-P1-budget-100": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/WDC-All/LLM_file/WDC-All-Train-Match-P1-budget-100.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P1-budget-100": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-P1-budget-100.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Amazon-Google-Match-P2-wo-blocker": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Amazon-Google/LLM_file/Amazon-Google-Train-Match-wo-blocker.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Walmart-Amazon-Match-P2-wo-blocker": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Train-Match-wo-blocker.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P2-wo-blocker": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-wo-blocker.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Walmart-Amazon-Match-P1-varyK-5": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Train-Match-P1-varyK-5.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Walmart-Amazon-Match-P1-varyK-10": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Train-Match-P1-varyK-10.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Walmart-Amazon-Match-P1-varyK-30": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Train-Match-P1-varyK-30.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Walmart-Amazon-Match-P1-varyK-50": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Train-Match-P1-varyK-50.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P1-varyK-5": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-P1-varyK-5.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P1-varyK-10": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-P1-varyK-10.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P1-varyK-30": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-P1-varyK-30.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Abt-Buy-Match-P1-varyK-50": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Abt-Buy/LLM_file/Abt-Buy-Train-Match-P1-varyK-50.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Company-Match-P2-wo-blocker": {
+        "file_name": "/data/home/wangys/transfer-er/Pipeline/Company/LLM_file/Company-Train-Match-wo-blocker.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    },
+    "Walmart-Amazon-Match-dirty": {
+        "file_name": "/data/home/wangys/Uncertainty-ER/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Train-Match-P1.json",
+        "columns": {
+            "prompt": "instruction",
+            "response": "output"
+        }
+    }
+}

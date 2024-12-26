@@ -83,7 +83,8 @@ class LORAEngineDebertaMultiClass(object):
                  save_path=None,
                  valid_each_epoch=False,
                  cal_grad_per_sample = False,
-                 tokenized_dataset = None):
+                 tokenized_dataset = None,
+                 grad_epoch = None):
         self.model_name_or_path = model_name_or_path
         self.target_modules = target_modules
         self.train_dataloader = train_dataloader
@@ -99,6 +100,10 @@ class LORAEngineDebertaMultiClass(object):
         # self.tokenizer = DebertaV2Tokenizer.from_pretrained(self.model_name_or_path)
         self.tokenizer = AutoTokenizer.from_pretrained(self.model_name_or_path)
         self.save_path = save_path
+        self.grad_epoch = grad_epoch
+        ## 如果不指定，只求最后一个epoch的grad返回
+        if self.grad_epoch==None:
+            self.grad_epoch = [self.num_epochs-1]
         # self.tokenized_dataset = tokenized_dataset
 
     def build_LORA_model(self):
@@ -160,6 +165,7 @@ class LORAEngineDebertaMultiClass(object):
         保存训练好的LoRA模型、分词器以及相关配置到指定路径。
         """
         if full_model:
+
             self.model = self.model.merge_and_unload() ## 存储全量模型
         self.model.save_pretrained(path)
         self.tokenizer.save_pretrained(path)
@@ -281,7 +287,7 @@ class LORAEngineDebertaMultiClass(object):
 
                 eval_metric = metric.compute()
                 print(f"Epoch {(epoch + 1)}:", eval_metric)
-            if self.cal_grad_per_sample:
+            if self.cal_grad_per_sample and epoch in self.grad_epoch:
                 tr_grad_dict,val_grad_dict = compute_gradient_iterative_inner(self.model, 
                                                                         self.train_dataloader, 
                                                                         self.eval_dataloader,

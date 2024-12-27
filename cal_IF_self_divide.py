@@ -27,7 +27,16 @@ from llamafactory.extras.constants import IGNORE_INDEX
 from llamafactory.hparams import get_train_args
 from llamafactory.model import load_model, load_tokenizer
 
+class CustomBatchSampler:
+    def __init__(self, batch_list):
+        self.batch_list = batch_list
 
+    def __len__(self):
+        return len(self.batch_list)
+
+    def __iter__(self):
+        for batch in self.batch_list:
+            yield batch
 @dataclass
 class PairwiseDataCollatorWithPadding(MultiModalDataCollatorForSeq2Seq):
     r"""
@@ -57,6 +66,7 @@ class PairwiseDataCollatorWithPadding(MultiModalDataCollatorForSeq2Seq):
 
 def calculate_ppl(
     model_name_or_path: str,
+    adapter_name_or_path: str = None,
     save_name: str = "ppl.json",
     batch_size: int = 4,
     stage: Literal["pt", "sft", "rm"] = "sft",
@@ -80,6 +90,7 @@ def calculate_ppl(
         dict(
             stage=stage,
             model_name_or_path=model_name_or_path,
+            adapter_name_or_path = adapter_name_or_path,
             dataset=dataset,
             dataset_dir=dataset_dir,
             template=template,
@@ -100,6 +111,7 @@ def calculate_ppl(
     # trainset = get_dataset(template, model_args, data_args, training_args, stage, **tokenizer_module)["train_dataset"]
     trainset = get_dataset_id(template, model_args, data_args, training_args, stage, **tokenizer_module)["train_dataset"]
 
+
     model = load_model(tokenizer, model_args, finetuning_args, is_trainable=False)
     if stage == "pt":
         data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
@@ -113,8 +125,10 @@ def calculate_ppl(
         )
     else:
         raise NotImplementedError(f"Stage does not supported: {stage}.")
-
-    dataloader = DataLoader(trainset, batch_size, shuffle=False, collate_fn=data_collator, pin_memory=True)
+    batch_list = torch.load('ppl/AG-batch.pkl')
+    batch_list = [batch for batch in batch_list if len(batch)>1] ## 过滤空batch和长度只为1的batch
+    batch_sampler = CustomBatchSampler(batch_list)
+    dataloader = DataLoader(trainset, collate_fn=data_collator, pin_memory=True,batch_sampler=batch_sampler)
     criterion = torch.nn.CrossEntropyLoss(reduction="none")
     total_ppl = 0
     perplexities = []
@@ -130,6 +144,7 @@ def calculate_ppl(
         # print(batch.keys())
         id_list.append(batch['ids'])
         id_list_flatten.extend(batch['ids'])
+        # print(batch['ids'],batch_list[step])
         model.zero_grad()
         batch = batch.to(model.device)
         outputs = model(**batch)

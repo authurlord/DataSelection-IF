@@ -96,20 +96,21 @@ def main():
                     text_list = result.iloc[:,0].to_list()
             selection_list = list(result.iloc[:,2].unique())
             selection_list = [s for s in selection_list if s!='']
-            
-            # prompts = ["[INST] %s [/INST]" % str(a) for a in text_list] 
-            text_all = []
-            for prompt in tqdm(text_list):
-                messages = [
-                    {"role": "system", "content": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant."},
-                    {"role": "user", "content": prompt}
-                ]
-                text = tokenizer.apply_chat_template(
-                    messages,
-                    tokenize=False,
-                    add_generation_prompt=True
-                )
-                text_all.append(text)
+            if(output_path.lower().__contains__('mistral')):
+                text_all = ["[INST] %s [/INST]" % str(a) for a in text_list]
+            else: 
+                text_all = []
+                for prompt in tqdm(text_list):
+                    messages = [
+                        {"role": "system", "content": "You are Qwen, created by Alibaba Cloud. You are a helpful assistant."},
+                        {"role": "user", "content": prompt}
+                    ]
+                    text = tokenizer.apply_chat_template(
+                        messages,
+                        tokenize=False,
+                        add_generation_prompt=True
+                    )
+                    text_all.append(text)
             sampling_params = SamplingParams(temperature=args.temperature, 
                                              top_p=args.top_p,
                                              max_tokens=args.max_token)

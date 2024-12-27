@@ -268,7 +268,7 @@ Entity 1:{""title"": ""apple final cut studio 2 ( mac )"", ""manufacturer"": ""a
 
 Entity 2:{""title"": ""apple software m9372z/a final cut express 2.0 upgrade"", ""manufacturer"": ""apple software"", ""price"": 79.99, ""category"": ""Video Editing Software"", ""subcategory"": ""Upgrades"", ""platform"": ""Mac"", ""edition"": ""Express"", ""type"": ""Upgrade"", ""modelno"": ""M9372Z/A""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 18,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -328,7 +328,7 @@ Entity 1:{""title"": ""adobe cs3 design standard macosx dvd"", ""manufacturer"":
 
 Entity 2:{""title"": ""adobe cs3 design standard upgrade"", ""manufacturer"": """", ""price"": 413.99, ""category"": ""Software"", ""subcategory"": ""Design & Publishing"", ""platform"": """", ""edition"": ""Upgrade"", ""type"": ""Standard"", ""modelno"": ""CS3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 22,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -628,7 +628,7 @@ Entity 1:{""title"": ""punch 5 in 1 home design"", ""manufacturer"": ""punch ! s
 
 Entity 2:{""title"": ""punch software 20100 punch ! 5 in 1 home design"", ""manufacturer"": ""punch software"", ""price"": 35.99, ""category"": ""Home Design"", ""subcategory"": ""Software"", ""platform"": ""Windows"", ""edition"": ""Standard"", ""type"": ""Bundle"", ""modelno"": ""2010""}
 
-",,"{""Output"": ""match""}","{""Output"": ""match""}"
+",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
 42,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -718,7 +718,7 @@ Entity 1:{""title"": ""mac os x server v10 .4.7 unlimited client"", ""manufactur
 
 Entity 2:{""title"": ""apple apple mac os x server 10 4 7 10 client"", ""manufacturer"": """", ""price"": 499.0, ""category"": ""Operating Systems"", ""subcategory"": ""Mac OS"", ""platform"": ""Mac"", ""edition"": ""Server"", ""type"": ""Volume"", ""modelno"": ""10.4.7""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 48,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -1108,7 +1108,7 @@ Entity 1:{""title"": ""sonicwall global vpn client license 01-ssc-5310 )"", ""ma
 
 Entity 2:{""title"": ""01-ssc-3363 sonicwall global management system standard edition license 10 nodes win"", ""manufacturer"": """", ""price"": 1835.31, ""category"": ""Network Management"", ""subcategory"": ""Network Management Software"", ""platform"": ""SonicWall"", ""edition"": ""Standard Edition"", ""type"": ""License"", ""modelno"": ""01-SSC-3363""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 74,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -1303,7 +1303,7 @@ Entity 1:{""title"": ""microsoft office 2004 professional ( mac )"", ""manufactu
 
 Entity 2:{""title"": ""office mac 2004 microsoft 731-01002"", ""manufacturer"": """", ""price"": 331.77, ""category"": ""Software"", ""subcategory"": ""Office Suites"", ""platform"": ""Mac"", ""edition"": ""2004"", ""type"": ""Boxed"", ""modelno"": ""731-01002""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 87,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -1483,7 +1483,7 @@ Entity 1:{""title"": ""microsoft office small business 2007 full version"", ""ma
 
 Entity 2:{""title"": ""microsoft ( r ) office ultimate 2007"", ""manufacturer"": """", ""price"": 539.95, ""category"": """", ""subcategory"": """", ""platform"": """", ""edition"": """", ""type"": """", ""modelno"": """"}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 99,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -2203,7 +2203,7 @@ Entity 1:{""title"": ""peachtree by sage complete accounting 2007"", ""manufactu
 
 Entity 2:{""title"": ""sage ( ptree ) premium accounting accountants edition 2007"", ""manufacturer"": """", ""price"": 492.01, ""category"": ""Accounting Software"", ""subcategory"": ""Accountants"", ""platform"": ""Windows"", ""edition"": ""Premium"", ""type"": ""Accountants Edition"", ""modelno"": ""2007""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 147,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -2293,7 +2293,7 @@ Entity 1:{""title"": ""microsoft windows vista ultimate full version [ dvd ]"", 
 
 Entity 2:{""title"": ""windows vista ultimate upgrade"", ""manufacturer"": """", ""price"": 259.0, ""category"": ""Operating Systems"", ""subcategory"": ""Windows"", ""platform"": ""Windows"", ""edition"": ""Ultimate"", ""type"": ""Upgrade"", ""modelno"": ""Vista Ultimate""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 153,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -2398,7 +2398,7 @@ Entity 1:{""title"": ""upgrade emc retrospect 7.5 multi server windows only"", "
 
 Entity 2:{""title"": ""emc cz24h6175 emc retrospect 7.5 client 5pk windows emc insignia retrospect clients v. 7.5 upgrade package 5 clients cd win 0093156011419"", ""manufacturer"": """", ""price"": 47.26, ""category"": ""Backup and Recovery Software"", ""subcategory"": ""Retrospect"", ""platform"": ""Windows"", ""edition"": ""Client"", ""type"": ""Software"", ""modelno"": ""7.5""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 160,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -2998,7 +2998,7 @@ Entity 1:{""title"": ""3d home architect home design deluxe version 9"", ""manuf
 
 Entity 2:{""title"": ""encore software 13911 3d home architect home & landscape deluxe suite version 9"", ""manufacturer"": """", ""price"": 33.97, ""category"": ""3D Modeling"", ""subcategory"": ""Architecture"", ""platform"": ""Windows"", ""edition"": ""Deluxe"", ""type"": ""Software"", ""modelno"": ""9""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 200,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -3013,7 +3013,7 @@ Entity 1:{""title"": ""hp dss software v. 4.0 complete package t1936aa ua0 )"", 
 
 Entity 2:{""title"": ""98741h mobile phonetools v. 4.0 complete package 1 user cd win"", ""manufacturer"": """", ""price"": 18.59, ""category"": ""Communications"", ""subcategory"": ""Mobile Phones"", ""platform"": ""Windows"", ""edition"": ""Complete Package"", ""type"": ""Software"", ""modelno"": ""1 User, CD""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 201,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -3928,7 +3928,7 @@ Entity 1:{""title"": ""microsoft windows server 2003 client additional license f
 
 Entity 2:{""title"": ""t74-01215 microsoft windows small business server 2003 version upgrade license 5 addit"", ""manufacturer"": """", ""price"": 186.73, ""category"": ""Operating Systems"", ""subcategory"": ""Windows"", ""platform"": ""Windows Server"", ""edition"": ""2003"", ""type"": ""Upgrade"", ""modelno"": ""T74-01215""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 262,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -3988,7 +3988,7 @@ Entity 1:{""title"": ""cakewalk sonar 6 studio"", ""manufacturer"": ""cakewalk""
 
 Entity 2:{""title"": ""cakewalk sonar 5 producer edition music production software"", ""manufacturer"": """", ""price"": 379.95, ""category"": ""Music Production Software"", ""subcategory"": ""Digital Audio Workstations"", ""platform"": ""Windows"", ""edition"": ""Producer Edition"", ""type"": ""Software"", ""modelno"": ""Sonar 5""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 266,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -4168,7 +4168,7 @@ Entity 1:{""title"": ""the print shop 22 deluxe"", ""manufacturer"": ""encore"",
 
 Entity 2:{""title"": ""encore inc print shop 22 pro publisher deluxe"", ""manufacturer"": """", ""price"": 85.07, ""category"": ""Design & Graphics"", ""subcategory"": ""Desktop Publishing"", ""platform"": ""Windows"", ""edition"": ""Pro"", ""type"": ""Software"", ""modelno"": ""22ProPublisherDeluxe""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 278,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -4483,7 +4483,7 @@ Entity 1:{""title"": ""apple final cut studio 2 ( mac )"", ""manufacturer"": ""a
 
 Entity 2:{""title"": ""apple software m9372z/a final cut express 2.0 upgrade"", ""manufacturer"": ""apple software"", ""price"": 79.99, ""category"": ""Video Editing Software"", ""subcategory"": ""Upgrades"", ""platform"": ""Mac"", ""edition"": ""Express"", ""type"": ""Upgrade"", ""modelno"": ""M9372Z/A""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 299,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -4573,7 +4573,7 @@ Entity 1:{""title"": ""power production storyboard artist 4"", ""manufacturer"":
 
 Entity 2:{""title"": ""power production power production storyboard artist v4 .2 software animation software"", ""manufacturer"": """", ""price"": 749.0, ""category"": ""Software"", ""subcategory"": ""Animation Software"", ""platform"": ""Windows"", ""edition"": ""Full"", ""type"": ""Storyboard Software"", ""modelno"": ""v4.2""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 305,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -5038,7 +5038,7 @@ Entity 1:{""title"": ""sony vegas 6 + dvd [ old version ]"", ""manufacturer"": "
 
 Entity 2:{""title"": ""sony vegas 7 + dvd production suite software full version video editing and dvd creation"", ""manufacturer"": """", ""price"": 426.0, ""category"": ""Software"", ""subcategory"": ""Video Editing"", ""platform"": ""Windows"", ""edition"": ""Full Version"", ""type"": ""Video Editing Software"", ""modelno"": """"}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 336,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -5083,7 +5083,7 @@ Entity 1:{""title"": ""3d home architect landscape designer v8"", ""manufacturer
 
 Entity 2:{""title"": ""encore software 10634 3d home architect home v. 8 by"", ""manufacturer"": """", ""price"": 33.97, ""category"": ""3D Modeling"", ""subcategory"": ""Architecture"", ""platform"": ""Windows"", ""edition"": ""Standard"", ""type"": ""Software"", ""modelno"": ""8""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 339,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -5188,7 +5188,7 @@ Entity 1:{""title"": ""adobe acrobat distiller svr v6-cd linux u/u 42050142 )"",
 
 Entity 2:{""title"": ""adobe 42050142 acrobat distiller 6 lnx ret cd u/l lnx"", ""manufacturer"": """", ""price"": 14967.47, ""category"": ""Software"", ""subcategory"": ""Business"", ""platform"": ""Linux"", ""edition"": ""Retail"", ""type"": ""Client"", ""modelno"": ""42050142""}
 
-",,"{""Output"": ""match""}","{""Output"": ""match""}"
+",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
 346,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -5218,7 +5218,7 @@ Entity 1:{""title"": ""adobe creative suite cs3 design standard upgrade"", ""man
 
 Entity 2:{""title"": ""adobe creative suite 3 ( cs3 ) design premium upgrade mac"", ""manufacturer"": """", ""price"": 569.97, ""category"": ""Graphic Design Software"", ""subcategory"": ""Upgrades"", ""platform"": ""Mac"", ""edition"": ""Design Premium"", ""type"": ""Upgrade"", ""modelno"": ""CS3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 348,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -5773,7 +5773,7 @@ Entity 1:{""title"": ""apple logic pro 7.2 upgrade"", ""manufacturer"": ""apple"
 
 Entity 2:{""title"": ""apple software t9161ll/a logic platinum / gold 5 & 6 to logic pro 6 update"", ""manufacturer"": ""apple software"", ""price"": 149.0, ""category"": ""Software"", ""subcategory"": ""Audio Editing"", ""platform"": ""Mac"", ""edition"": ""Upgrade"", ""type"": ""Upgrade"", ""modelno"": ""T9161LL/A""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 385,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -5833,7 +5833,7 @@ Entity 1:{""title"": ""ulead videostudio 11"", ""manufacturer"": ""corel"", ""pr
 
 Entity 2:{""title"": ""corel ulead videostudio 11 plus video editing and dvd authoring software win authoring software"", ""manufacturer"": """", ""price"": 129.95, ""category"": ""Video Editing Software"", ""subcategory"": ""Professional"", ""platform"": ""Windows"", ""edition"": ""Plus"", ""type"": ""Video Editing and DVD Authoring"", ""modelno"": ""VS11P""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 389,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -6193,7 +6193,7 @@ Entity 1:{""title"": ""acid music studio 7"", ""manufacturer"": ""sony media"", 
 
 Entity 2:{""title"": ""sony acid music studio ( pc )"", ""manufacturer"": """", ""price"": 69.99, ""category"": ""Music Production"", ""subcategory"": ""Digital Audio Workstations"", ""platform"": ""Windows"", ""edition"": ""Entry Level"", ""type"": ""Software"", ""modelno"": ""ACIDMS""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 413,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -6268,7 +6268,7 @@ Entity 1:{""title"": ""adobe premiere elements 3.0"", ""manufacturer"": ""adobe"
 
 Entity 2:{""title"": ""adobe premiere elements 3 video editing software for windows consumer video editing software"", ""manufacturer"": """", ""price"": 99.95, ""category"": ""Software"", ""subcategory"": ""Photo & Video Editing"", ""platform"": ""Windows"", ""edition"": ""Elements"", ""type"": ""Video Editing"", ""modelno"": ""3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 418,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -6403,7 +6403,7 @@ Entity 1:{""title"": ""adobe creative suite cs3 design premium upgrade [ mac ]""
 
 Entity 2:{""title"": ""adobe illustrator cs3 upgrade from freehand for mac"", ""manufacturer"": """", ""price"": 206.99, ""category"": ""Software"", ""subcategory"": ""Design & Illustration"", ""platform"": ""Mac"", ""edition"": ""Upgrade"", ""type"": ""Illustrator"", ""modelno"": ""CS3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 427,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -7063,7 +7063,7 @@ Entity 1:{""title"": ""reader rabbit learning system 1st grade"", ""manufacturer
 
 Entity 2:{""title"": ""encore software 13871 tlc reader rabbit 1st grade learning system 2008"", ""manufacturer"": """", ""price"": 17.97, ""category"": ""Education"", ""subcategory"": ""First Grade"", ""platform"": ""Windows"", ""edition"": ""Base Edition"", ""type"": ""Software"", ""modelno"": ""13871""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 471,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -7183,7 +7183,7 @@ Entity 1:{""title"": ""adobe photoshop cs3 extended"", ""manufacturer"": ""adobe
 
 Entity 2:{""title"": ""adobe photoshop cs3 extended complete package 1 user academic cd mac"", ""manufacturer"": """", ""price"": 279.0, ""category"": ""Software"", ""subcategory"": ""Graphic Design"", ""platform"": ""Mac"", ""edition"": ""Academic"", ""type"": ""Software"", ""modelno"": ""1 User, Academic CD""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 479,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -7363,7 +7363,7 @@ Entity 1:{""title"": ""microsoft windows server 2003 client additional license f
 
 Entity 2:{""title"": ""t74-01215 microsoft windows small business server 2003 version upgrade license 5 addit"", ""manufacturer"": """", ""price"": 186.73, ""category"": ""Operating Systems"", ""subcategory"": ""Windows"", ""platform"": ""Windows Server"", ""edition"": ""2003"", ""type"": ""Upgrade"", ""modelno"": ""T74-01215""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 491,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -7408,7 +7408,7 @@ Entity 1:{""title"": ""adobe after effects cs3"", ""manufacturer"": ""adobe"", "
 
 Entity 2:{""title"": ""adobe after effects cs3 professional software for mac effects software"", ""manufacturer"": """", ""price"": 998.95, ""category"": ""Software"", ""subcategory"": ""Video & Photo"", ""platform"": ""Mac"", ""edition"": ""CS3"", ""type"": ""Professional"", ""modelno"": ""After Effects""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 494,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -7513,7 +7513,7 @@ Entity 1:{""title"": ""scansoft paperport 11 5 user license"", ""manufacturer"":
 
 Entity 2:{""title"": ""6809a-g03-11 .0 scansoft paperport v. 11 complete package 5 users win english"", ""manufacturer"": """", ""price"": 421.17, ""category"": ""Software"", ""subcategory"": ""Document Management"", ""platform"": ""Windows"", ""edition"": ""Complete Package"", ""type"": ""Software Package"", ""modelno"": ""11.0""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 501,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -7648,7 +7648,7 @@ Entity 1:{""title"": ""adobe acrobat 7.0 professional"", ""manufacturer"": ""ado
 
 Entity 2:{""title"": ""adobe acrobat 7.0 professional ( education version ) for windows"", ""manufacturer"": """", ""price"": 154.99, ""category"": ""Software"", ""subcategory"": ""Productivity"", ""platform"": ""Windows"", ""edition"": ""Education Version"", ""type"": ""Professional"", ""modelno"": ""7.0""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 510,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -7783,7 +7783,7 @@ Entity 1:{""title"": ""adobe creative suite cs3 production premium upgrade"", ""
 
 Entity 2:{""title"": ""adobe creative suite 3 ( cs3 ) design premium upgrade mac"", ""manufacturer"": """", ""price"": 569.97, ""category"": ""Design"", ""subcategory"": ""Graphic Design Software"", ""platform"": ""Mac"", ""edition"": ""Design Premium"", ""type"": ""Upgrade"", ""modelno"": ""CS3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 519,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -8158,7 +8158,7 @@ Entity 1:{""title"": ""microsoft windows server 2003 client additional license f
 
 Entity 2:{""title"": ""microsoft windows server 2003 client additional license for devices 5 pack ( 823930 )"", ""manufacturer"": """", ""price"": 158.39, ""category"": ""Operating Systems"", ""subcategory"": ""Windows Server"", ""platform"": ""Windows"", ""edition"": ""2003"", ""type"": ""Server"", ""modelno"": ""823930""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 544,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -8248,7 +8248,7 @@ Entity 1:{""title"": ""adobe creative suite cs3 web premium upsell [ mac ]"", ""
 
 Entity 2:{""title"": ""adobe cs3 web premium upsell"", ""manufacturer"": """", ""price"": 1434.99, ""category"": ""Web Design"", ""subcategory"": ""Professional Software"", ""platform"": ""Mac"", ""edition"": ""Upsell"", ""type"": ""Software"", ""modelno"": ""CS3WEBP""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 550,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -8323,7 +8323,7 @@ Entity 1:{""title"": ""peachtree by sage premium accounting 2007"", ""manufactur
 
 Entity 2:{""title"": ""peachtree software vernfpm2008rt sage peachtree premium accounting 2008 for nonprofits multiple user financial management pc - free shipping"", ""manufacturer"": """", ""price"": 1075.97, ""category"": ""Accounting Software"", ""subcategory"": ""Nonprofits"", ""platform"": ""Windows"", ""edition"": ""Premium"", ""type"": ""Accounting"", ""modelno"": ""2008""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 555,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -8398,7 +8398,7 @@ Entity 1:{""title"": ""apple final cut studio 2 upgrade from final cut pro ( mac
 
 Entity 2:{""title"": ""apple software m9372z/a final cut express 2.0 upgrade"", ""manufacturer"": ""apple software"", ""price"": 79.99, ""category"": ""Video Editing Software"", ""subcategory"": ""Entry-Level"", ""platform"": ""Mac"", ""edition"": ""Upgrade"", ""type"": ""Express"", ""modelno"": ""M9372Z/A""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 560,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -8503,7 +8503,7 @@ Entity 1:{""title"": ""adobe photoshop cs3 extended"", ""manufacturer"": ""adobe
 
 Entity 2:{""title"": ""adobe photoshop cs3 extended for mac academic"", ""manufacturer"": """", ""price"": 295.99, ""category"": ""Software"", ""subcategory"": ""Graphic Design"", ""platform"": ""Mac"", ""edition"": ""CS3"", ""type"": ""Academic Software"", ""modelno"": ""14.0""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 567,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -9163,7 +9163,7 @@ Entity 1:{""title"": ""adobe creative suite cs3 web standard upsell"", ""manufac
 
 Entity 2:{""title"": ""19300109 adobe creative suite 3 design standard product upgrade package 1 user upgr"", ""manufacturer"": """", ""price"": 424.74, ""category"": ""Software"", ""subcategory"": ""Design & Photo"", ""platform"": ""MacOSX"", ""edition"": ""Standard"", ""type"": ""Upgrade"", ""modelno"": ""CS3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 611,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -9343,7 +9343,7 @@ Entity 1:{""title"": ""family tree maker version 16 collectors edition"", ""manu
 
 Entity 2:{""title"": ""family tree maker premium 11.2"", ""manufacturer"": """", ""price"": 99.97, ""category"": ""Genealogy Software"", ""subcategory"": ""Family Tree Maker"", ""platform"": ""Windows"", ""edition"": ""Premium"", ""type"": ""Software"", ""modelno"": ""11.2""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 623,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -9898,7 +9898,7 @@ Entity 1:{""title"": ""pcdefense"", ""manufacturer"": ""avanquest software"", ""
 
 Entity 2:{""title"": ""avanquest usa llc pcdefense"", ""manufacturer"": """", ""price"": 26.11, ""category"": ""Security"", ""subcategory"": ""Antivirus & Antimalware"", ""platform"": ""Windows"", ""edition"": ""Standard"", ""type"": ""Software"", ""modelno"": ""AVQ-678901""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 660,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -10903,7 +10903,7 @@ Entity 1:{""title"": ""microsoft windows server 2003 client additional license f
 
 Entity 2:{""title"": ""u84-00101 microsoft windows server 2003 for small business license 5 device cals ope"", ""manufacturer"": """", ""price"": 303.9, ""category"": ""Operating Systems"", ""subcategory"": ""Windows"", ""platform"": ""Windows"", ""edition"": ""Server 2003"", ""type"": ""Small Business License"", ""modelno"": ""5 Device CALs""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 727,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -11218,7 +11218,7 @@ Entity 1:{""title"": ""apple remote desktop 3 unlim managed systems"", ""manufac
 
 Entity 2:{""title"": ""apple software m9953z/a remote desktop 2.2 10 client"", ""manufacturer"": ""apple software"", ""price"": 294.99, ""category"": ""Software"", ""subcategory"": ""Remote Desktop"", ""platform"": ""Mac"", ""edition"": ""2.2"", ""type"": ""Client"", ""modelno"": ""M9953Z/A""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 748,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -11398,7 +11398,7 @@ Entity 1:{""title"": ""webroot spy sweeper antispyware 5.x"", ""manufacturer"": 
 
 Entity 2:{""title"": ""webroot software 65210 spy sweeper 3 pc"", ""manufacturer"": ""webroot software"", ""price"": 31.99, ""category"": ""Security Software"", ""subcategory"": ""Antivirus & Anti-Malware"", ""platform"": ""Windows"", ""edition"": ""Standard Edition"", ""type"": ""Spyware Removal"", ""modelno"": ""WSA200-3PC""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 760,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -11548,7 +11548,7 @@ Entity 1:{""title"": ""quickstart photo montage studio"", ""manufacturer"": ""se
 
 Entity 2:{""title"": ""quickstart photo montage studio"", ""manufacturer"": """", ""price"": 9.95, ""category"": ""Photography"", ""subcategory"": ""Editing"", ""platform"": ""Windows"", ""edition"": ""Standard"", ""type"": ""Software"", ""modelno"": ""QS-MONTAGE-STUDIO""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 770,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -11593,7 +11593,7 @@ Entity 1:{""title"": ""diskeeper 2007 pro premier 5-lic pack"", ""manufacturer""
 
 Entity 2:{""title"": ""121744 diskeeper 2007 pro premier edition complete package 5 workstations dvd w"", ""manufacturer"": """", ""price"": 426.58, ""category"": ""System Utilities"", ""subcategory"": ""Disk Management"", ""platform"": ""Windows"", ""edition"": ""Pro"", ""type"": ""Software"", ""modelno"": ""2007""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 773,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -11848,7 +11848,7 @@ Entity 1:{""title"": ""family tree maker version 16 deluxe"", ""manufacturer"": 
 
 Entity 2:{""title"": ""encore inc family tree maker 2008 platinum"", ""manufacturer"": """", ""price"": 85.07, ""category"": ""Genealogy Software"", ""subcategory"": ""Family Tree Maker"", ""platform"": ""Windows"", ""edition"": ""Platinum"", ""type"": ""Software"", ""modelno"": ""FTM2008""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 790,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -12118,7 +12118,7 @@ Entity 1:{""title"": ""adobe photoshop cs3 extended"", ""manufacturer"": ""adobe
 
 Entity 2:{""title"": ""adobe photoshop cs3 for mac"", ""manufacturer"": """", ""price"": 609.99, ""category"": ""Software"", ""subcategory"": ""Graphic Design"", ""platform"": ""MacOS"", ""edition"": """", ""type"": ""Desktop Software"", ""modelno"": ""CS3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 808,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -12133,7 +12133,7 @@ Entity 1:{""title"": ""microsoft licenses win svr 2003 device cal l/sa ( r180014
 
 Entity 2:{""title"": ""windows sbs cal 2003 20-clt addpak device cal microsoft t74-00003"", ""manufacturer"": """", ""price"": 1413.42, ""category"": ""Operating Systems"", ""subcategory"": ""Windows"", ""platform"": ""Windows"", ""edition"": ""SBS 2003"", ""type"": ""Device CAL"", ""modelno"": ""T74-00003""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 809,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -12283,7 +12283,7 @@ Entity 1:{""title"": ""microsoft windows server 2003 client additional license f
 
 Entity 2:{""title"": ""windows sbs cal 2003 20-clt addpak device cal microsoft t74-00003"", ""manufacturer"": """", ""price"": 1413.42, ""category"": ""Operating Systems"", ""subcategory"": ""Windows"", ""platform"": ""Windows"", ""edition"": ""SBS 2003"", ""type"": ""Device CAL"", ""modelno"": ""T74-00003""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 819,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -12328,7 +12328,7 @@ Entity 1:{""title"": ""professional home design suite platinum"", ""manufacturer
 
 Entity 2:{""title"": ""punch software 14100 punch ! professional home design suite for windows"", ""manufacturer"": ""punch software"", ""price"": 62.99, ""category"": ""CAD & Design Software"", ""subcategory"": ""Home Design"", ""platform"": ""Windows"", ""edition"": ""Professional"", ""type"": ""Suite"", ""modelno"": ""14100""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 822,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -12508,7 +12508,7 @@ Entity 1:{""title"": ""mavis beacon teaches typing deluxe v17"", ""manufacturer"
 
 Entity 2:{""title"": ""encore software 10072 mavis beacon typing 17 deluxe by broderbund"", ""manufacturer"": """", ""price"": 33.97, ""category"": ""Productivity"", ""subcategory"": ""Typing & Keyboarding"", ""platform"": ""Windows"", ""edition"": ""Deluxe Edition"", ""type"": ""Software"", ""modelno"": ""17 Deluxe""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 834,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -12523,7 +12523,7 @@ Entity 1:{""title"": ""microsoft visual studio team suite 2005 with msdn premium
 
 Entity 2:{""title"": ""microsoft uea-00033 visual studio 2005 team edition for database professionals with msdn premium subscription renewal complete product software development standard 1 user complete product pc - free shipping"", ""manufacturer"": """", ""price"": 2072.97, ""category"": ""Software"", ""subcategory"": ""Development Tools"", ""platform"": ""Windows"", ""edition"": ""Team Edition"", ""type"": ""Download"", ""modelno"": ""UEA00033""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 835,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -12868,7 +12868,7 @@ Entity 1:{""title"": ""punch ! 5 in 1 home design"", ""manufacturer"": ""punch !
 
 Entity 2:{""title"": ""punch software 42100 punch ! home design architectural series 18 ( small box )"", ""manufacturer"": ""punch software"", ""price"": 119.99, ""category"": ""Home Design"", ""subcategory"": ""Architectural Series"", ""platform"": ""42100"", ""edition"": ""small box"", ""type"": ""Software"", ""modelno"": ""42100-small box""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 858,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -13063,7 +13063,7 @@ Entity 1:{""title"": ""photo go"", ""manufacturer"": ""sony-media-software"", ""
 
 Entity 2:{""title"": ""sony photo go"", ""manufacturer"": """", ""price"": 24.99, ""category"": ""Photo Management Software"", ""subcategory"": ""Photo Organization"", ""platform"": ""Windows"", ""edition"": ""Standard"", ""type"": ""Software"", ""modelno"": ""SPG-W""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 871,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -13123,7 +13123,7 @@ Entity 1:{""title"": ""webroot spy sweeper antispyware 5.x"", ""manufacturer"": 
 
 Entity 2:{""title"": ""webroot software 65210 spy sweeper 3 pc"", ""manufacturer"": ""webroot software"", ""price"": 31.99, ""category"": ""Security Software"", ""subcategory"": ""Antivirus & Anti-Malware"", ""platform"": ""Windows"", ""edition"": ""Standard Edition"", ""type"": ""Spyware Removal"", ""modelno"": ""WSA200-3PC""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 875,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -13408,7 +13408,7 @@ Entity 1:{""title"": ""state standards grade 8"", ""manufacturer"": ""topics ent
 
 Entity 2:{""title"": ""state standards grade 8"", ""manufacturer"": """", ""price"": 9.49, ""category"": ""Education"", ""subcategory"": ""Test Preparation"", ""platform"": ""Streaming"", ""edition"": """", ""type"": ""Online Test Prep"", ""modelno"": """"}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 894,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -13423,7 +13423,7 @@ Entity 1:{""title"": ""superstart ! science arcade"", ""manufacturer"": ""select
 
 Entity 2:{""title"": ""superstart ! science arcade"", ""manufacturer"": """", ""price"": 8.95, ""category"": ""Educational Games"", ""subcategory"": ""Science"", ""platform"": ""Windows"", ""edition"": ""Deluxe"", ""type"": ""Software"", ""modelno"": ""SSA-002""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 895,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -13618,7 +13618,7 @@ Entity 1:{""title"": ""family tree maker 2008 platinum"", ""manufacturer"": ""en
 
 Entity 2:{""title"": ""encore inc family tree maker v 16 essentials"", ""manufacturer"": """", ""price"": 25.75, ""category"": ""Family Tree & Genealogy Software"", ""subcategory"": ""Genealogy Software"", ""platform"": ""Windows"", ""edition"": ""Essentials"", ""type"": ""Software"", ""modelno"": ""FTM16E""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 908,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -13888,7 +13888,7 @@ Entity 1:{""title"": ""upg sgms 1000 incremental node"", ""manufacturer"": ""son
 
 Entity 2:{""title"": ""sonicwall gms 1000n-incremental lic upg"", ""manufacturer"": ""sonic-systems-inc ."", ""price"": 62920.89, ""category"": ""Security"", ""subcategory"": ""Firewalls"", ""platform"": ""SonicOS"", ""edition"": ""Incremental"", ""type"": ""License"", ""modelno"": ""GMS 1000N""}
 
-",,"{""Output"": ""match""}","{""Output"": ""match""}"
+",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
 926,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -14068,7 +14068,7 @@ Entity 1:{""title"": ""symc backup exec sbs std 11d win small business server st
 
 Entity 2:{""title"": ""symantec backup exec system recovery server edition business pack v. 7.0 complete package + 1 year basic maintenance 1 user cd win multi"", ""manufacturer"": """", ""price"": 548.77, ""category"": ""Backup and Recovery"", ""subcategory"": ""Symantec Backup Exec"", ""platform"": ""Windows"", ""edition"": ""Server Edition"", ""type"": ""Server"", ""modelno"": ""v. 7.0""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 938,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -14308,7 +14308,7 @@ Entity 1:{""title"": ""ulead videostudio 10"", ""manufacturer"": ""corel"", ""pr
 
 Entity 2:{""title"": ""corel ulead videostudio 11 plus video editing and dvd authoring software win authoring software"", ""manufacturer"": """", ""price"": 129.95, ""category"": ""Video Editing Software"", ""subcategory"": ""Professional"", ""platform"": ""Windows"", ""edition"": ""Plus"", ""type"": ""Video Editing and DVD Authoring"", ""modelno"": ""VS11P""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 954,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -14368,7 +14368,7 @@ Entity 1:{""title"": ""adobe dreamweaver cs3 upgrade"", ""manufacturer"": ""adob
 
 Entity 2:{""title"": ""adobe dreamweaver cs3 upgrade"", ""manufacturer"": """", ""price"": 205.99, ""category"": ""Software"", ""subcategory"": ""Web Design"", ""platform"": ""Mac"", ""edition"": ""Upgrade"", ""type"": ""Digital"", ""modelno"": ""DWCS3UPG-MAC""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 958,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -14443,7 +14443,7 @@ Entity 1:{""title"": ""adobe photoshop elements 4.0 plus adobe premiere elements
 
 Entity 2:{""title"": ""122103 quarkxpress v. 7 complete package 1 user cd win mac"", ""manufacturer"": """", ""price"": 742.21, ""category"": ""Desktop Publishing"", ""subcategory"": ""Software"", ""platform"": ""Windows & Mac"", ""edition"": ""Complete Package"", ""type"": ""Software"", ""modelno"": ""Version 7, 1 User, CD""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 963,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -14833,7 +14833,7 @@ Entity 1:{""title"": ""symc backup exec sbs aws 11d win sbs agent for windows sy
 
 Entity 2:{""title"": ""symantec 11976505 symc backup exec sro 11d win system recovery option ml portfolio mpk"", ""manufacturer"": """", ""price"": 30.24, ""category"": ""Backup and Recovery"", ""subcategory"": ""Symantec Backup Exec"", ""platform"": ""Win"", ""edition"": ""SRO"", ""type"": ""System Recovery Option"", ""modelno"": ""11d Win System Recovery Option ML Portfolio MPK""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 989,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -15238,7 +15238,7 @@ Entity 1:{""title"": ""microsoft windows small business server cal 2003 license 
 
 Entity 2:{""title"": ""t74-00004 microsoft windows small business server 2003 license 20 additional user cals"", ""manufacturer"": """", ""price"": 1834.4, ""category"": ""Server Operating Systems"", ""subcategory"": ""Additional User Licenses"", ""platform"": ""Windows"", ""edition"": ""Small Business Server 2003"", ""type"": ""License"", ""modelno"": ""T74-00004""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1016,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -15523,7 +15523,7 @@ Entity 1:{""title"": ""atari arcade classics ( mac )"", ""manufacturer"": ""macs
 
 Entity 2:{""title"": ""destineer inc 10316 destineer atari arcade classics action/adventure mac"", ""manufacturer"": """", ""price"": 17.97, ""category"": ""Games"", ""subcategory"": ""Action & Adventure"", ""platform"": ""Mac"", ""edition"": ""Standard"", ""type"": ""Software"", ""modelno"": ""10316""}
 
-",,"{""Output"": ""match""}","{""Output"": ""match""}"
+",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
 1035,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -15658,7 +15658,7 @@ Entity 1:{""title"": ""sony acid music studio"", ""manufacturer"": ""sony-pictur
 
 Entity 2:{""title"": ""sony media software acid music studio 7 software music production software"", ""manufacturer"": """", ""price"": 69.95, ""category"": ""Software"", ""subcategory"": ""Music Production"", ""platform"": ""Windows"", ""edition"": ""Standard"", ""type"": ""DAW"", ""modelno"": ""AMS-2021""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 1044,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -15778,7 +15778,7 @@ Entity 1:{""title"": ""acad upgrade dragon naturallyspeaking pro solution 9.0 ( 
 
 Entity 2:{""title"": ""nuance communications inc. upgrade to dragon naturallyspeaking v8 legal solutions from professional v6 and up ( govt ) olp a590a-sf2-8 .0"", ""manufacturer"": """", ""price"": 314.0, ""category"": ""Legal"", ""subcategory"": ""Software"", ""platform"": ""Windows"", ""edition"": ""Upgrade"", ""type"": ""Government"", ""modelno"": ""a590a-sf2-8.0""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1052,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -15973,7 +15973,7 @@ Entity 1:{""title"": ""adobe premiere elements 3.0 [ lb ]"", ""manufacturer"": "
 
 Entity 2:{""title"": ""adobe premiere elements 3 and photoshop elements 5 software for windows consumer video editing software"", ""manufacturer"": """", ""price"": 149.95, ""category"": ""Multimedia"", ""subcategory"": ""Video Editing Software"", ""platform"": ""Windows"", ""edition"": ""Standard"", ""type"": ""Software Suite"", ""modelno"": ""APE3PE5""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1065,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -16243,7 +16243,7 @@ Entity 1:{""title"": ""brainfood games cranium collection 2006"", ""manufacturer
 
 Entity 2:{""title"": ""encore software 11252 brain food games : cranium collection 2006 win 98 me 2000 xp"", ""manufacturer"": """", ""price"": 18.97, ""category"": ""Educational"", ""subcategory"": ""Brain Training"", ""platform"": ""Windows"", ""edition"": ""Standard"", ""type"": ""Software"", ""modelno"": ""11252""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 1083,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -16528,7 +16528,7 @@ Entity 1:{""title"": ""adobe creative suite cs3 master collection [ mac ]"", ""m
 
 Entity 2:{""title"": ""adobe cs3 master collection upsell from cs2"", ""manufacturer"": """", ""price"": 1437.99, ""category"": ""Software"", ""subcategory"": ""Design & Graphics"", ""platform"": """", ""edition"": ""Master Collection"", ""type"": ""Upsell"", ""modelno"": ""CS3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 1102,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -16663,7 +16663,7 @@ Entity 1:{""title"": ""national geographic presents : redshift planetarium"", ""
 
 Entity 2:{""title"": ""national geographic redshift planetarium"", ""manufacturer"": """", ""price"": 17.9, ""category"": ""Education"", ""subcategory"": ""Software"", ""platform"": ""Windows"", ""edition"": ""Full Version"", ""type"": ""Software"", ""modelno"": ""NGRS-W""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1111,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -16753,7 +16753,7 @@ Entity 1:{""title"": ""riverdeep adventure workshop 4th-6th grade 8th edition"",
 
 Entity 2:{""title"": ""encore inc adventure workshop 4th-6th grade 8th edition"", ""manufacturer"": """", ""price"": 17.1, ""category"": ""Education"", ""subcategory"": ""Learning Aids"", ""platform"": ""Windows"", ""edition"": ""8th Edition"", ""type"": ""Software"", ""modelno"": """"}
 
-",,"{""Output"": ""match""}","{""Output"": ""match""}"
+",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
 1117,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -17323,7 +17323,7 @@ Entity 1:{""title"": ""instant immersion french 2.0"", ""manufacturer"": ""topic
 
 Entity 2:{""title"": ""topics entertainment 80542 instant immersion french 2.0 781735805428"", ""manufacturer"": """", ""price"": 18.2, ""category"": ""Language Learning"", ""subcategory"": ""Courses"", ""platform"": ""DVD"", ""edition"": ""French"", ""type"": ""Software"", ""modelno"": ""2.0""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1155,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -17428,7 +17428,7 @@ Entity 1:{""title"": ""symc backup exec sbs prm 11d win small business server"",
 
 Entity 2:{""title"": ""symantec backup exec 11d for windows servers agent for lotus domino server complete package"", ""manufacturer"": """", ""price"": 772.14, ""category"": ""Backup and Recovery"", ""subcategory"": ""Symantec Backup Exec"", ""platform"": ""Windows"", ""edition"": ""Agent for Lotus Domino Server"", ""type"": ""Server Software"", ""modelno"": ""11d""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1162,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -17668,7 +17668,7 @@ Entity 1:{""title"": ""hoyle mahjongg ( jewel case )"", ""manufacturer"": ""enco
 
 Entity 2:{""title"": ""encore software 10023 hoyle mahjongg ( win 98 me 2000 xp )"", ""manufacturer"": """", ""price"": 7.47, ""category"": ""Games"", ""subcategory"": ""Puzzle"", ""platform"": ""Windows"", ""edition"": ""Legacy"", ""type"": ""Software"", ""modelno"": ""10023""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1178,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -17758,7 +17758,7 @@ Entity 1:{""title"": ""40 years of the x-men"", ""manufacturer"": ""git corp"", 
 
 Entity 2:{""title"": ""git 40 years of marvel x-men dvd-rom"", ""manufacturer"": """", ""price"": 42.99, ""category"": ""Comics"", ""subcategory"": ""X-Men"", ""platform"": ""DVD-ROM"", ""edition"": ""Standard Edition"", ""type"": ""Software"", ""modelno"": ""XM-40-SE""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1184,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -17923,7 +17923,7 @@ Entity 1:{""title"": ""peachtree by sage premium accounting 2007"", ""manufactur
 
 Entity 2:{""title"": ""peachtree ( r ) pro accounting 2007"", ""manufacturer"": """", ""price"": 169.99, ""category"": ""Accounting Software"", ""subcategory"": ""Peachtree"", ""platform"": ""Windows"", ""edition"": ""Pro"", ""type"": ""Accounting"", ""modelno"": ""2007""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1195,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -17938,7 +17938,7 @@ Entity 1:{""title"": ""snap enterprise data replicator advanced license for 1000
 
 Entity 2:{""title"": ""5325301935 snap enterprise data replicator license 1 additional server linux unix w"", ""manufacturer"": """", ""price"": 4401.41, ""category"": ""Data Replication"", ""subcategory"": ""Additional Licenses"", ""platform"": ""Linux/Unix"", ""edition"": ""Additional Server"", ""type"": ""License"", ""modelno"": ""5325301935""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1196,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -18523,7 +18523,7 @@ Entity 1:{""title"": ""microsoft office 2004 standard upgrade ( mac )"", ""manuf
 
 Entity 2:{""title"": ""microsoft microsoft office 2004 software suite mac apple & mac software"", ""manufacturer"": """", ""price"": 399.95, ""category"": ""Software"", ""subcategory"": ""Office Suites"", ""platform"": ""Mac"", ""edition"": ""2004"", ""type"": ""Software Suite"", ""modelno"": ""NA""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 1235,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -18568,7 +18568,7 @@ Entity 1:{""title"": ""mediapilot kit"", ""manufacturer"": ""susteen"", ""price"
 
 Entity 2:{""title"": ""mediapilot kit"", ""manufacturer"": """", ""price"": 29.99, ""category"": ""Automotive"", ""subcategory"": ""Dash Cameras"", ""platform"": ""iOS"", ""edition"": ""Basic"", ""type"": ""Dash Cam"", ""modelno"": ""MPK-02""}
 
-",,"{""Output"": ""match""}","{""Output"": ""match""}"
+",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
 1238,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -18958,7 +18958,7 @@ Entity 1:{""title"": ""adobe photoshop cs2 advanced techniques by julieanne kost
 
 Entity 2:{""title"": ""software cinema dvd-rom : dvdrom : photoshop cs2 advanced techniques ( training ) photoshop software"", ""manufacturer"": """", ""price"": 159.95, ""category"": ""Software"", ""subcategory"": ""Graphic Design"", ""platform"": ""Windows"", ""edition"": ""Training"", ""type"": ""Software"", ""modelno"": """"}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1264,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -19633,7 +19633,7 @@ Entity 1:{""title"": ""small business server 2003 20u cal addpak user"", ""manuf
 
 Entity 2:{""title"": ""t74-00004 microsoft windows small business server 2003 license 20 additional user cals"", ""manufacturer"": """", ""price"": 1834.4, ""category"": ""Server Operating Systems"", ""subcategory"": ""Additional User Licenses"", ""platform"": ""Windows"", ""edition"": ""Small Business Server 2003"", ""type"": ""License"", ""modelno"": ""T74-00004""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1309,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -19648,7 +19648,7 @@ Entity 1:{""title"": ""hp dss software v. 4.0 complete package t1936aa ua0 )"", 
 
 Entity 2:{""title"": ""microsoft windows services for netware v. 5.0 complete package"", ""manufacturer"": """", ""price"": 138.17, ""category"": ""Operating Systems"", ""subcategory"": ""Windows"", ""platform"": ""Windows"", ""edition"": ""Services for NetWare v. 5.0"", ""type"": ""Server Software"", ""modelno"": ""Complete Package""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1310,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -19678,7 +19678,7 @@ Entity 1:{""title"": ""textbridge pro 11 5u license xp"", ""manufacturer"": ""nu
 
 Entity 2:{""title"": ""scansoft textbridge pro v. 11"", ""manufacturer"": ""nuance-communications-inc ."", ""price"": 68.99, ""category"": ""Software"", ""subcategory"": ""OCR Software"", ""platform"": ""MacOS"", ""edition"": ""Pro"", ""type"": ""Desktop OCR"", ""modelno"": ""TBP11-MAC""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 1312,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -19723,7 +19723,7 @@ Entity 1:{""title"": ""acad vegas movie studio + dvd 8 platinum"", ""manufacture
 
 Entity 2:{""title"": ""sony media software vegas movie studio + dvd 8 platinum edition"", ""manufacturer"": """", ""price"": 100.97, ""category"": ""Video Editing Software"", ""subcategory"": ""DVD Editing"", ""platform"": ""Windows"", ""edition"": ""Platinum Edition"", ""type"": ""Video Editing Suite"", ""modelno"": ""VEGAS Movie Studio DVD Platinum 8""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1315,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -19798,7 +19798,7 @@ Entity 1:{""title"": ""south park chef 's luv shack"", ""manufacturer"": ""accla
 
 Entity 2:{""title"": ""south park chef 's luv shack"", ""manufacturer"": """", ""price"": 6.95, ""category"": ""Games"", ""subcategory"": ""Cooking Games"", ""platform"": ""Nintendo 64"", ""edition"": ""Standard"", ""type"": ""Video Game"", ""modelno"": ""N64-SPC""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1320,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -19903,7 +19903,7 @@ Entity 1:{""title"": ""instant immersion italian v2 .0 ( large box )"", ""manufa
 
 Entity 2:{""title"": ""topics entertainment instant immersion italian deluxe 2.0 ( mass merchant box )"", ""manufacturer"": """", ""price"": 31.06, ""category"": ""Language Learning"", ""subcategory"": ""Italian"", ""platform"": ""PC"", ""edition"": ""Deluxe"", ""type"": ""Software"", ""modelno"": ""2.0""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 1327,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -20023,7 +20023,7 @@ Entity 1:{""title"": ""microsoft licenses win svr 2003 device cal l/sa ( r180014
 
 Entity 2:{""title"": ""microsoft windows server 2003 terminal server cals 20-pack ( per device )"", ""manufacturer"": """", ""price"": 2429.99, ""category"": ""Operating Systems"", ""subcategory"": ""Windows Server"", ""platform"": ""Windows"", ""edition"": ""Terminal Server"", ""type"": ""CALs"", ""modelno"": ""20-Pack (Per Device)""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1335,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -20038,7 +20038,7 @@ Entity 1:{""title"": ""punch ! home design architectural series 18"", ""manufact
 
 Entity 2:{""title"": ""punch software 14100 punch ! professional home design suite for windows"", ""manufacturer"": ""punch software"", ""price"": 62.99, ""category"": ""Home Design"", ""subcategory"": ""Professional Suite"", ""platform"": ""Windows"", ""edition"": ""Professional"", ""type"": ""Software"", ""modelno"": ""14100""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1336,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -20098,7 +20098,7 @@ Entity 1:{""title"": ""jumpstart learning games phonics ( pc & mac )"", ""manufa
 
 Entity 2:{""title"": ""jumpstart phonics ( jc )"", ""manufacturer"": """", ""price"": 9.9, ""category"": ""Education"", ""subcategory"": ""Language Learning"", ""platform"": ""JC"", ""edition"": ""Phonics"", ""type"": ""Software"", ""modelno"": ""Jumpstart Phonics""}
 
-",,"{""Output"": ""match""}","{""Output"": ""match""}"
+",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
 1340,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -20248,7 +20248,7 @@ Entity 1:{""title"": ""wanted : a wild western adventure"", ""manufacturer"": ""
 
 Entity 2:{""title"": ""dreamcatcher interactive wanted wild willy west"", ""manufacturer"": """", ""price"": 17.55, ""category"": ""Adventure"", ""subcategory"": ""Western"", ""platform"": ""PS4"", ""edition"": ""Deluxe"", ""type"": ""Game"", ""modelno"": ""DC-WWW-PS4""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1350,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -20608,7 +20608,7 @@ Entity 1:{""title"": ""punch ! master landscape & home design"", ""manufacturer"
 
 Entity 2:{""title"": ""punch software 85100 punch!master landscape pro v10 and home design"", ""manufacturer"": """", ""price"": 59.97, ""category"": ""Landscape Design"", ""subcategory"": ""Pro"", ""platform"": ""Windows"", ""edition"": ""Bundle"", ""type"": ""Software"", ""modelno"": ""v10""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1374,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -20908,7 +20908,7 @@ Entity 1:{""title"": ""simply put software got ta sing windows/macintosh )"", ""
 
 Entity 2:{""title"": ""simply put software llc de905-s data elminator ( win 95 98 me nt 2000 xp )"", ""manufacturer"": ""simply-put-software"", ""price"": 34.97, ""category"": ""Software"", ""subcategory"": ""Data Management"", ""platform"": ""Windows 95, 98, ME, NT, 2000, XP"", ""edition"": ""Standard Edition"", ""type"": ""Data Elimination Software"", ""modelno"": ""DE905-S""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1394,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -20968,7 +20968,7 @@ Entity 1:{""title"": ""math missions : the race to spectacle city arcade ( grade
 
 Entity 2:{""title"": ""math missions : the race to spectacle city arcade ( grades k-2 )"", ""manufacturer"": """", ""price"": 8.49, ""category"": ""Educational Games"", ""subcategory"": ""Math Games"", ""platform"": ""PC"", ""edition"": ""Deluxe Edition"", ""type"": ""Single-player"", ""modelno"": ""MM-SPEC-K2-DLX""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1398,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -21043,7 +21043,7 @@ Entity 1:{""title"": ""microsoft licenses exch . srvr extrn conn sa eng ( 394004
 
 Entity 2:{""title"": ""microsoft 394-00416 opens exch svr exconn l/sa qual"", ""manufacturer"": """", ""price"": 22575.14, ""category"": ""Software"", ""subcategory"": ""Business Software"", ""platform"": ""Windows"", ""edition"": ""Open"", ""type"": ""Server"", ""modelno"": ""394-00416""}
 
-",,"{""Output"": ""match""}","{""Output"": ""match""}"
+",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
 1403,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -21058,7 +21058,7 @@ Entity 1:{""title"": ""tomb raider : legend"", ""manufacturer"": ""eidos interac
 
 Entity 2:{""title"": ""eidos interactive 40022 tomb raider : legend ds 788687400220"", ""manufacturer"": """", ""price"": 19.8, ""category"": ""Action-Adventure"", ""subcategory"": ""Shooter"", ""platform"": ""Nintendo DS"", ""edition"": ""Standard"", ""type"": ""Video Game"", ""modelno"": ""788687400220""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1404,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -21508,7 +21508,7 @@ Entity 1:{""title"": ""tournament poker 2005"", ""manufacturer"": ""eagle games"
 
 Entity 2:{""title"": ""eagle games egl 150 tournament poker no limit texas hold 'em"", ""manufacturer"": ""eagle games"", ""price"": 7.95, ""category"": ""Games"", ""subcategory"": ""Card Games"", ""platform"": ""Board Game"", ""edition"": ""2015 Edition"", ""type"": ""Tabletop Game"", ""modelno"": ""EGL 150""}
 
-",,"{""Output"": ""match""}","{""Output"": ""match""}"
+",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
 1434,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -21643,7 +21643,7 @@ Entity 1:{""title"": ""logic pro 6 upgrade from logic platinum/gold 5 & 6"", ""m
 
 Entity 2:{""title"": ""apple logic express 7.2 upgrade from v. 6"", ""manufacturer"": ""apple-computer - ( direct )"", ""price"": 99.99, ""category"": ""Audio Editing Software"", ""subcategory"": ""Upgrades"", ""platform"": ""Mac"", ""edition"": ""Express"", ""type"": ""Upgrade"", ""modelno"": ""7.2""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1443,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -21733,7 +21733,7 @@ Entity 1:{""title"": ""peachtree by sage premium accounting for manufacturing 20
 
 Entity 2:{""title"": ""peachtree software vernfpm2008rt sage peachtree premium accounting 2008 for nonprofits multiple user financial management pc - free shipping"", ""manufacturer"": """", ""price"": 1075.97, ""category"": ""Accounting Software"", ""subcategory"": ""Nonprofit Accounting"", ""platform"": ""Windows"", ""edition"": ""Premium"", ""type"": ""Desktop"", ""modelno"": ""2008""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1449,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -21853,7 +21853,7 @@ Entity 1:{""title"": ""hoyle south beach solitaire"", ""manufacturer"": ""encore
 
 Entity 2:{""title"": ""hoyle solitaire"", ""manufacturer"": """", ""price"": 9.99, ""category"": ""Games"", ""subcategory"": ""Card Games"", ""platform"": ""PC"", ""edition"": ""Standard"", ""type"": ""Digital Download"", ""modelno"": ""HD00124""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 1457,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -22183,7 +22183,7 @@ Entity 1:{""title"": ""microsoft office mac 2004 english 3pk dsp 731-01163 )"", 
 
 Entity 2:{""title"": ""microsoft microsoft office 2004 software suite mac education apple & mac software"", ""manufacturer"": """", ""price"": 148.95, ""category"": ""Productivity Software"", ""subcategory"": ""Office Suites"", ""platform"": ""Mac"", ""edition"": ""Education"", ""type"": ""Software"", ""modelno"": ""OFFICE2004MACEDU""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1479,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -22423,7 +22423,7 @@ Entity 1:{""title"": ""trudy 's time and place house ages 3-6"", ""manufacturer"
 
 Entity 2:{""title"": ""trudys time & place house"", ""manufacturer"": """", ""price"": 9.9, ""category"": ""Educational Games"", ""subcategory"": ""Learning Toys"", ""platform"": ""Windows"", ""edition"": ""Deluxe"", ""type"": ""Software"", ""modelno"": ""TTHP-WIN-DLX""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1495,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -22573,7 +22573,7 @@ Entity 1:{""title"": ""adobe creative suite cs3 design standard [ mac ]"", ""man
 
 Entity 2:{""title"": ""adobe creative suite 3 ( cs3 ) design suite standard upgrade ( upsell ) mac"", ""manufacturer"": """", ""price"": 859.96, ""category"": ""Software"", ""subcategory"": ""Design & Publishing"", ""platform"": ""Mac"", ""edition"": ""Upgrade"", ""type"": ""Upgrade"", ""modelno"": ""CS3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1505,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -22618,7 +22618,7 @@ Entity 1:{""title"": ""adobe photoshop elements 5.0 premiere elements 3.0 bundle
 
 Entity 2:{""title"": ""29180162 adobe photoshop elements 4.0 plus adobe premiere elements 2.0 complete package"", ""manufacturer"": """", ""price"": 138.28, ""category"": ""Software"", ""subcategory"": ""Graphic Design & Video Editing"", ""platform"": ""Windows"", ""edition"": ""Complete Package"", ""type"": ""Boxed"", ""modelno"": ""29180162""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1508,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -22798,7 +22798,7 @@ Entity 1:{""title"": ""adobe indesign cs3 upgrade from pagemaker [ mac ]"", ""ma
 
 Entity 2:{""title"": ""adobe indesign cs3 for mac academic"", ""manufacturer"": """", ""price"": 192.99, ""category"": ""Design"", ""subcategory"": ""Graphic Design"", ""platform"": ""MacOSX"", ""edition"": ""Academic"", ""type"": ""Software"", ""modelno"": ""CS3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 1520,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -22813,7 +22813,7 @@ Entity 1:{""title"": ""adobe premiere pro cs3"", ""manufacturer"": ""adobe"", ""
 
 Entity 2:{""title"": ""adobe premiere pro cs3 video editing software for windows professional editing software"", ""manufacturer"": """", ""price"": 798.95, ""category"": ""Video Production"", ""subcategory"": ""Video Editing Software"", ""platform"": ""Windows"", ""edition"": ""Professional"", ""type"": ""Video Editing Software"", ""modelno"": ""APC-CS3-001""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 1521,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -22843,7 +22843,7 @@ Entity 1:{""title"": ""john deere : welcome to merriweather farm"", ""manufactur
 
 Entity 2:{""title"": ""john deere : welcome to merriweather farm by bold games"", ""manufacturer"": ""global-software-publishing"", ""price"": 21.99, ""category"": ""Farming Simulation"", ""subcategory"": ""Simulation"", ""platform"": ""PC"", ""edition"": ""Deluxe"", ""type"": ""Game"", ""modelno"": ""JD002""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1523,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -23293,7 +23293,7 @@ Entity 1:{""title"": ""snap ! kakuro"", ""manufacturer"": ""topics entertainment
 
 Entity 2:{""title"": ""topics entertainment snap ! kakuro"", ""manufacturer"": """", ""price"": 3.44, ""category"": ""Puzzle Games"", ""subcategory"": ""Logic Puzzles"", ""platform"": ""iOS"", ""edition"": ""Deluxe"", ""type"": ""Mobile Game"", ""modelno"": ""TE002""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1553,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -23398,7 +23398,7 @@ Entity 1:{""title"": ""adobe creative suite cs3 web standard upgrade [ mac ]"", 
 
 Entity 2:{""title"": ""adobe creative suite 3 ( cs3 ) design premium upgrade mac"", ""manufacturer"": """", ""price"": 569.97, ""category"": ""Graphic Design Software"", ""subcategory"": ""Upgrades"", ""platform"": ""Mac"", ""edition"": ""Design Premium"", ""type"": ""Upgrade"", ""modelno"": ""CS3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1560,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -23638,7 +23638,7 @@ Entity 1:{""title"": ""cakewalk sonar home studio 6"", ""manufacturer"": ""cakew
 
 Entity 2:{""title"": ""cakewalk sonar home studio 6 software music production software"", ""manufacturer"": """", ""price"": 99.0, ""category"": ""Music Production"", ""subcategory"": ""DAWs"", ""platform"": ""Windows"", ""edition"": ""Home"", ""type"": ""Software"", ""modelno"": ""6.0""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1576,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -23668,7 +23668,7 @@ Entity 1:{""title"": ""quickbooks point-of-sale pro with hardware bundle 6.0"", 
 
 Entity 2:{""title"": ""quickbooks ( r ) point of sale 2007 : basic retail management 6.0 bundle"", ""manufacturer"": """", ""price"": 1499.99, ""category"": ""Retail"", ""subcategory"": ""Point of Sale"", ""platform"": ""Windows"", ""edition"": ""Basic Retail Management"", ""type"": ""Software"", ""modelno"": ""6.0 Bundle""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1578,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -23878,7 +23878,7 @@ Entity 1:{""title"": ""h & r block taxcut 2006 premium federal + state with usb 
 
 Entity 2:{""title"": ""h & r block taxcut home and business with state and e-file efile software for windows tax & finance software"", ""manufacturer"": """", ""price"": 73.95, ""category"": ""Tax Software"", ""subcategory"": ""Home & Business"", ""platform"": ""Windows"", ""edition"": ""With State and e-File"", ""type"": ""Software"", ""modelno"": """"}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1592,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -24013,7 +24013,7 @@ Entity 1:{""title"": ""photo explosion deluxe 3.0"", ""manufacturer"": ""nova de
 
 Entity 2:{""title"": ""nova development corp photo explosion 3.0"", ""manufacturer"": """", ""price"": 28.3, ""category"": ""Photo Editing Software"", ""subcategory"": """", ""platform"": ""Mac"", ""edition"": """", ""type"": ""Software"", ""modelno"": ""3.0""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 1601,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -24253,7 +24253,7 @@ Entity 1:{""title"": ""apple shake 4.1 visual effects ( mac )"", ""manufacturer"
 
 Entity 2:{""title"": ""apple shake 4.1 digital compositing software for mac os x effects software"", ""manufacturer"": """", ""price"": 498.95, ""category"": ""Video & Animation Software"", ""subcategory"": ""Visual Effects & Compositing"", ""platform"": ""Mac OS X"", ""edition"": ""Standard"", ""type"": ""Software"", ""modelno"": ""4.1""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1617,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -24403,7 +24403,7 @@ Entity 1:{""title"": ""adobe creative suite cs3 master collection upgrade [ mac 
 
 Entity 2:{""title"": ""production prem cs3 mac upgrad"", ""manufacturer"": """", ""price"": 808.15, ""category"": ""Software"", ""subcategory"": ""Video & Audio"", ""platform"": ""Mac"", ""edition"": ""Premium"", ""type"": ""Upgrade"", ""modelno"": ""CS3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1627,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -24643,7 +24643,7 @@ Entity 1:{""title"": ""photo explosion deluxe 3.0"", ""manufacturer"": ""nova de
 
 Entity 2:{""title"": ""prw photo explosion deluxe v. 3.0 complete package 1 user cd win"", ""manufacturer"": """", ""price"": 47.6, ""category"": ""Photo & Image Editing"", ""subcategory"": ""Photo Editing Software"", ""platform"": ""Windows"", ""edition"": ""Deluxe"", ""type"": ""Software"", ""modelno"": ""PE30-WIN-DLX""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 1643,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -25243,7 +25243,7 @@ Entity 1:{""title"": ""now up-to-date & contact v5 .0 ( mac )"", ""manufacturer"
 
 Entity 2:{""title"": ""now software now up-to-date and contact"", ""manufacturer"": """", ""price"": 109.99, ""category"": ""Productivity Software"", ""subcategory"": ""Contact & Address Book Software"", ""platform"": ""Windows"", ""edition"": ""Pro"", ""type"": ""Desktop App"", ""modelno"": """"}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1683,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -25318,7 +25318,7 @@ Entity 1:{""title"": ""genuine fractals genuine fractals print pro 1u"", ""manuf
 
 Entity 2:{""title"": ""onone software genuine fractals print pro software"", ""manufacturer"": """", ""price"": 269.99, ""category"": ""Image Editing"", ""subcategory"": ""Genuine Fractals"", ""platform"": ""Mac OS"", ""edition"": ""Print Pro"", ""type"": ""Software"", ""modelno"": """"}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1688,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -25408,7 +25408,7 @@ Entity 1:{""title"": ""family tree maker 11.2 collector 's edition"", ""manufact
 
 Entity 2:{""title"": ""family tree maker 16 collectors edition"", ""manufacturer"": """", ""price"": 99.99, ""category"": ""Software"", ""subcategory"": ""Genealogy"", ""platform"": ""Windows"", ""edition"": ""Collector's Edition"", ""type"": ""Genealogy software"", ""modelno"": ""FTM-16-CE""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1694,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -25558,7 +25558,7 @@ Entity 1:{""title"": ""ulead videostudio 11 plus"", ""manufacturer"": ""corel"",
 
 Entity 2:{""title"": ""corel ulead videostudio 11 plus software for win educational license authoring software"", ""manufacturer"": """", ""price"": 89.95, ""category"": ""Video Editing Software"", ""subcategory"": ""Educational"", ""platform"": ""Windows"", ""edition"": ""Plus"", ""type"": ""Authoring Software"", ""modelno"": ""VS11Plus""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1704,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -25618,7 +25618,7 @@ Entity 1:{""title"": ""adobe creative suite cs3 design premium [ mac ]"", ""manu
 
 Entity 2:{""title"": ""adobe creative suite ( v3 .0 ) design premium mac adobe 19500009"", ""manufacturer"": """", ""price"": 1482.0, ""category"": ""Software"", ""subcategory"": ""Design & Multimedia"", ""platform"": ""Mac"", ""edition"": ""Premium"", ""type"": ""Boxed Software"", ""modelno"": ""Creative Suite (v3.0)""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 1708,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -25723,7 +25723,7 @@ Entity 1:{""title"": ""john deere : busy days in deerfield valley"", ""manufactu
 
 Entity 2:{""title"": ""john deere : busy days in deerfield valley by bold games"", ""manufacturer"": """", ""price"": 21.99, ""category"": ""Simulation"", ""subcategory"": ""Farming"", ""platform"": ""PC"", ""edition"": ""Standard"", ""type"": ""Game"", ""modelno"": ""JD002""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1715,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -25783,7 +25783,7 @@ Entity 1:{""title"": ""apple final cut studio 2 upgrade from final cut studio ( 
 
 Entity 2:{""title"": ""apple software m9372z/a final cut express 2.0 upgrade"", ""manufacturer"": ""apple software"", ""price"": 79.99, ""category"": ""Video Editing Software"", ""subcategory"": ""Entry-Level"", ""platform"": ""Mac"", ""edition"": ""Upgrade"", ""type"": ""Express"", ""modelno"": ""M9372Z/A""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1719,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -25903,7 +25903,7 @@ Entity 1:{""title"": ""adobe photoshop cs3 upgrade [ mac ]"", ""manufacturer"": 
 
 Entity 2:{""title"": ""adobe systems inc 13102124 adobe photoshop cs 2 mac os x v. 10.2.8 to 10.3"", ""manufacturer"": ""adobe systems inc"", ""price"": 788.63, ""category"": ""Software"", ""subcategory"": ""Graphic Design"", ""platform"": ""Mac"", ""edition"": ""CS2"", ""type"": ""Photoshop"", ""modelno"": ""13102124""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1727,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -25948,7 +25948,7 @@ Entity 1:{""title"": ""jumpstart kindergarten"", ""manufacturer"": ""knowledge a
 
 Entity 2:{""title"": ""jumpstart kindergarten ( jc )"", ""manufacturer"": """", ""price"": 9.9, ""category"": ""Educational Software"", ""subcategory"": ""Kindergarten Learning"", ""platform"": ""Windows"", ""edition"": ""Standard"", ""type"": ""Learning Software"", ""modelno"": ""KG002""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1730,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -26008,7 +26008,7 @@ Entity 1:{""title"": ""timbuktu remote control softwre 2 licenses for windows & 
 
 Entity 2:{""title"": ""netopia timbuktu pro for mac single license"", ""manufacturer"": """", ""price"": 97.99, ""category"": ""Remote Access Software"", ""subcategory"": ""Remote Desktop"", ""platform"": ""Mac"", ""edition"": ""Single License"", ""type"": ""Software"", ""modelno"": ""TBTKPROSL-MAC""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1734,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -26203,7 +26203,7 @@ Entity 1:{""title"": ""datawatch monarch v7 ntwk-starter cd most 8u fpm32c070-a0
 
 Entity 2:{""title"": ""monarch std ( v9 .0 ) retail box datawatch fpm32c090-a01"", ""manufacturer"": """", ""price"": 290.59, ""category"": ""Software"", ""subcategory"": ""Data Integration"", ""platform"": ""Windows"", ""edition"": ""Standard"", ""type"": ""Boxed Version"", ""modelno"": ""FPM32C090-A01""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1747,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -26278,7 +26278,7 @@ Entity 1:{""title"": ""sonicwall gms standard edition 10 node license"", ""manuf
 
 Entity 2:{""title"": ""01-ssc-3377 sonicwall comprehensive gms 24x7 support sonicwall gms standard edition licens"", ""manufacturer"": """", ""price"": 60374.4, ""category"": ""Support"", ""subcategory"": ""24x7 Support"", ""platform"": ""SonicWall"", ""edition"": ""Comprehensive GMS"", ""type"": ""License"", ""modelno"": ""01-ssc-3377""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1752,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -26368,7 +26368,7 @@ Entity 1:{""title"": ""microsoft windows terminal server 2003 client additional 
 
 Entity 2:{""title"": ""dja-00892 microsoft system center essentials 2007 license 1 server win english"", ""manufacturer"": """", ""price"": 93.25, ""category"": ""System & Network Management"", ""subcategory"": ""System Center"", ""platform"": ""Windows"", ""edition"": ""Essentials 2007"", ""type"": ""License"", ""modelno"": ""1 Server Win English""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1758,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -26623,7 +26623,7 @@ Entity 1:{""title"": ""microsoft office 2004 standard upgrade ( mac )"", ""manuf
 
 Entity 2:{""title"": ""microsoft word 2004 upgrade for mac os x apple & mac software"", ""manufacturer"": """", ""price"": 108.95, ""category"": ""Office Software"", ""subcategory"": ""Word Processing"", ""platform"": ""Mac OS X"", ""edition"": ""2004"", ""type"": ""Upgrade"", ""modelno"": ""Word""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1775,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -26713,7 +26713,7 @@ Entity 1:{""title"": ""adobe flash pro cs3 upgrade [ mac ]"", ""manufacturer"": 
 
 Entity 2:{""title"": ""adobe creative suite 3 ( cs3 ) design suite standard upgrade ( upsell ) mac"", ""manufacturer"": """", ""price"": 859.96, ""category"": ""Software"", ""subcategory"": ""Design & Photo Editing"", ""platform"": ""Mac"", ""edition"": ""Standard Upgrade"", ""type"": ""Suite"", ""modelno"": ""CS3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1781,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -27568,7 +27568,7 @@ Entity 1:{""title"": ""world history ( win/mac ) ( jewel case )"", ""manufacture
 
 Entity 2:{""title"": ""high school world history ( pc/mac ) fogware"", ""manufacturer"": """", ""price"": 9.99, ""category"": ""Education"", ""subcategory"": ""History"", ""platform"": ""PC & macOS"", ""edition"": """", ""type"": ""Book"", ""modelno"": """"}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1838,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -27673,7 +27673,7 @@ Entity 1:{""title"": ""crystal reports xi developer"", ""manufacturer"": ""busin
 
 Entity 2:{""title"": ""business objects crystal reports xi"", ""manufacturer"": """", ""price"": 459.99, ""category"": ""Software"", ""subcategory"": ""Business Intelligence"", ""platform"": ""Windows"", ""edition"": ""Unknown"", ""type"": ""Upgrade"", ""modelno"": ""11.0""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 1845,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -27898,7 +27898,7 @@ Entity 1:{""title"": ""microsoft windows small business server premium 2003 r2 u
 
 Entity 2:{""title"": ""microsoft windows terminal server 2003 client additional license for users - 5 user ( 824048 )"", ""manufacturer"": """", ""price"": 719.04, ""category"": ""Operating Systems"", ""subcategory"": ""Windows"", ""platform"": ""Windows"", ""edition"": ""Terminal Server"", ""type"": ""Additional License"", ""modelno"": ""5 user (824048)""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1860,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -27958,7 +27958,7 @@ Entity 1:{""title"": ""microsoft windows terminal server 2003 client additional 
 
 Entity 2:{""title"": ""t74-01215 microsoft windows small business server 2003 version upgrade license 5 addit"", ""manufacturer"": """", ""price"": 186.73, ""category"": ""Operating Systems"", ""subcategory"": ""Windows"", ""platform"": ""Windows Server"", ""edition"": ""2003"", ""type"": ""Upgrade"", ""modelno"": ""T74-01215""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1864,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -28018,7 +28018,7 @@ Entity 1:{""title"": ""the print shop 21 standard by broderbund"", ""manufacture
 
 Entity 2:{""title"": ""encore software 10032 the print shop 21 essentials by broderbund"", ""manufacturer"": """", ""price"": 17.97, ""category"": ""Software"", ""subcategory"": ""Design & Graphics"", ""platform"": ""Windows"", ""edition"": ""Essentials"", ""type"": ""Software"", ""modelno"": ""10032""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1868,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -28123,7 +28123,7 @@ Entity 1:{""title"": ""apple final cut studio 2 upgrade from final cut studio ( 
 
 Entity 2:{""title"": ""apple software m9372z/a final cut express 2.0 upgrade"", ""manufacturer"": ""apple software"", ""price"": 79.99, ""category"": ""Video Editing Software"", ""subcategory"": ""Entry-Level"", ""platform"": ""Mac"", ""edition"": ""Upgrade"", ""type"": ""Express"", ""modelno"": ""M9372Z/A""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1875,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -28273,7 +28273,7 @@ Entity 1:{""title"": ""nero 8 ultra edition"", ""manufacturer"": ""nero inc."", 
 
 Entity 2:{""title"": ""70009 nero ultra edition enhanced v. 7 complete package 1 user cd win"", ""manufacturer"": """", ""price"": 87.76, ""category"": ""Software"", ""subcategory"": ""CD/DVD Burning"", ""platform"": ""Windows"", ""edition"": ""Enhanced v. 7 Complete Package"", ""type"": ""Software Suite"", ""modelno"": ""70009 Nero Ultra Edition Enhanced v. 7""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 1885,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -28708,7 +28708,7 @@ Entity 1:{""title"": ""multiplication and division grades 3-4"", ""manufacturer"
 
 Entity 2:{""title"": ""school zone interactive multiplication & division 3-4 on track software"", ""manufacturer"": """", ""price"": 9.45, ""category"": ""Education"", ""subcategory"": ""Math"", ""platform"": ""PC"", ""edition"": ""On Track"", ""type"": ""Software"", ""modelno"": ""MULT-DIV-004""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1914,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -28783,7 +28783,7 @@ Entity 1:{""title"": ""panda internet security 2007 3-user"", ""manufacturer"": 
 
 Entity 2:{""title"": ""oem internet security suite 2007 3-user single pack"", ""manufacturer"": """", ""price"": 32.85, ""category"": ""Internet Security"", ""subcategory"": ""Suite"", ""platform"": ""Windows"", ""edition"": ""2007"", ""type"": ""OEM"", ""modelno"": ""3-User Single Pack""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1919,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -28978,7 +28978,7 @@ Entity 1:{""title"": ""professor teaches windows xp"", ""manufacturer"": ""indiv
 
 Entity 2:{""title"": ""microsoft windows xp professional edition ( upgrade )"", ""manufacturer"": """", ""price"": 199.99, ""category"": ""Operating Systems"", ""subcategory"": ""Windows"", ""platform"": ""Windows"", ""edition"": ""Professional"", ""type"": ""Upgrade"", ""modelno"": ""XP Professional""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1932,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -29263,7 +29263,7 @@ Entity 1:{""title"": ""quicken 2007 home & business"", ""manufacturer"": ""intui
 
 Entity 2:{""title"": ""microsoft money 2007 home and business ( pc )"", ""manufacturer"": """", ""price"": 89.99, ""category"": ""Finance Software"", ""subcategory"": ""Personal Finance"", ""platform"": ""Windows"", ""edition"": ""Home and Business"", ""type"": ""Software"", ""modelno"": ""MONEY2007HB""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1951,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -29338,7 +29338,7 @@ Entity 1:{""title"": ""hoyle card games 2007"", ""manufacturer"": ""encore softw
 
 Entity 2:{""title"": ""hoyle ( r ) card games 2007"", ""manufacturer"": """", ""price"": 19.99, ""category"": ""Games/Puzzles"", ""subcategory"": ""Card Games"", ""platform"": ""PC"", ""edition"": ""Deluxe"", ""type"": ""Game"", ""modelno"": ""CG-002""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 1956,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -29518,7 +29518,7 @@ Entity 1:{""title"": ""quickbooks premier nonprofit edition 2007"", ""manufactur
 
 Entity 2:{""title"": ""intuit quickbooks simple start edition 2007 software for windows tax & finance software"", ""manufacturer"": """", ""price"": 83.95, ""category"": ""Accounting Software"", ""subcategory"": ""Tax & Finance Software"", ""platform"": ""Windows"", ""edition"": ""Simple Start"", ""type"": ""Software"", ""modelno"": ""2007""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1968,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -29593,7 +29593,7 @@ Entity 1:{""title"": ""scrabble complete ( jewel case )"", ""manufacturer"": ""e
 
 Entity 2:{""title"": ""encore software 11290 scrabble complete win 98 me xp"", ""manufacturer"": """", ""price"": 7.69, ""category"": ""Games"", ""subcategory"": ""Word Games"", ""platform"": ""Windows"", ""edition"": ""Standard"", ""type"": ""Software"", ""modelno"": ""11290""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 1973,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -29743,7 +29743,7 @@ Entity 1:{""title"": ""peachtree by sage premium accounting for manufacturing 20
 
 Entity 2:{""title"": ""peachtree software vernfp2008rt sage peachtree premium accounting 2008 for nonprofits financial management pc"", ""manufacturer"": """", ""price"": 540.97, ""category"": ""Accounting Software"", ""subcategory"": ""Nonprofit"", ""platform"": ""Windows"", ""edition"": ""Premium"", ""type"": ""Desktop"", ""modelno"": ""2008""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 1983,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -30403,7 +30403,7 @@ Entity 1:{""title"": ""panda software antivirus & firewall 2008 windows"", ""man
 
 Entity 2:{""title"": ""sos aggregation company panda antivirus + firewall 2008 3-user"", ""manufacturer"": """", ""price"": 31.53, ""category"": ""Antivirus/Firewall"", ""subcategory"": ""Antivirus Software"", ""platform"": ""Windows"", ""edition"": ""2008"", ""type"": ""Software"", ""modelno"": ""N/A""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 2027,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -30508,7 +30508,7 @@ Entity 1:{""title"": ""microsoft word 2004 upgrade ( mac )"", ""manufacturer"": 
 
 Entity 2:{""title"": ""microsoft powerpoint mac 2004 version upgrade"", ""manufacturer"": """", ""price"": 89.99, ""category"": ""Productivity Software"", ""subcategory"": ""Presentation Software"", ""platform"": ""Mac"", ""edition"": ""Upgrade"", ""type"": ""Software"", ""modelno"": ""PPT2004-MAC-UPG""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 2034,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -30793,7 +30793,7 @@ Entity 1:{""title"": ""peachtree by sage premium accounting for nonprofits 2007"
 
 Entity 2:{""title"": ""sage software peachtree pro accounting 2007 software for windows tax & finance software"", ""manufacturer"": """", ""price"": 159.95, ""category"": ""Accounting Software"", ""subcategory"": ""Pro Accounting"", ""platform"": ""Windows"", ""edition"": ""Tax & Finance Software"", ""type"": ""Software"", ""modelno"": ""2007""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 2053,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -30883,7 +30883,7 @@ Entity 1:{""title"": ""adobe premiere pro cs3"", ""manufacturer"": ""adobe"", ""
 
 Entity 2:{""title"": ""adobe premiere pro cs3 video editing software for mac av production software"", ""manufacturer"": """", ""price"": 798.95, ""category"": ""Software"", ""subcategory"": ""Video Editing"", ""platform"": ""Mac"", ""edition"": ""AV Production Software"", ""type"": ""Video Editing Software"", ""modelno"": ""CS3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 2059,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -31363,7 +31363,7 @@ Entity 1:{""title"": ""steinberg cubase studio 4"", ""manufacturer"": ""steinber
 
 Entity 2:{""title"": ""steinberg cubase 4 software competitive crossgrade music production software"", ""manufacturer"": """", ""price"": 399.99, ""category"": ""Audio Production"", ""subcategory"": ""Digital Audio Workstations"", ""platform"": ""Windows"", ""edition"": ""Crossgrade"", ""type"": ""Software"", ""modelno"": ""CUBASE4""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 2091,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -31438,7 +31438,7 @@ Entity 1:{""title"": ""creating keepsakes scrapbook platinum v. 3 sb cs by river
 
 Entity 2:{""title"": ""encore software 10612 creating keepsakes scrapbook designer deluxe v. 3 sb cs"", ""manufacturer"": """", ""price"": 17.97, ""category"": ""Scrapbooking"", ""subcategory"": ""Software"", ""platform"": ""Windows"", ""edition"": ""Deluxe"", ""type"": ""Scrapbook Designer"", ""modelno"": ""10612""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 2096,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -31468,7 +31468,7 @@ Entity 1:{""title"": ""adobe creative suite cs3 web standard upsell [ mac ]"", "
 
 Entity 2:{""title"": ""adobe creative suite 3 ( cs3 ) web standard 3 windows upsell from dreamweaver or flash"", ""manufacturer"": """", ""price"": 799.0, ""category"": ""Software"", ""subcategory"": ""Web Development"", ""platform"": ""Windows"", ""edition"": ""Web Standard"", ""type"": ""Upsell"", ""modelno"": ""CS3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 2098,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -31873,7 +31873,7 @@ Entity 1:{""title"": ""steinberg cubase 4 digital audio software"", ""manufactur
 
 Entity 2:{""title"": ""steinberg cubase 4 software educational discount music production software"", ""manufacturer"": """", ""price"": 349.95, ""category"": ""Educational Software"", ""subcategory"": ""Music Production"", ""platform"": ""Windows"", ""edition"": ""Educational Discount"", ""type"": ""Software"", ""modelno"": ""Cubase 4""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 2125,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -32263,7 +32263,7 @@ Entity 1:{""title"": ""gods : lands of infinity special edition"", ""manufacture
 
 Entity 2:{""title"": ""gods : lands of infinity spec"", ""manufacturer"": """", ""price"": 16.99, ""category"": ""Strategy"", ""subcategory"": ""Turn-Based Strategy"", ""platform"": ""PC"", ""edition"": ""Standard Edition"", ""type"": ""Video Game"", ""modelno"": ""Gods: LoI""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 2151,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -32578,7 +32578,7 @@ Entity 1:{""title"": ""i transfer dvds 2 ipod edition ( win/mac )"", ""manufactu
 
 Entity 2:{""title"": ""me too software i transfer dvds 2 ipod"", ""manufacturer"": ""me-too-software"", ""price"": 29.99, ""category"": ""Software"", ""subcategory"": ""Video"", ""platform"": ""N/A"", ""edition"": ""DVDs to iPod"", ""type"": ""Transfer"", ""modelno"": ""i Transfer""}
 
-",,"{""Output"": ""match""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""match""}","{""Output"": ""match""}"
 2172,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -32848,7 +32848,7 @@ Entity 1:{""title"": ""sonicwall global vpn client license 01-ssc-5310 )"", ""ma
 
 Entity 2:{""title"": ""sonicwall 01-ssc-6997 3yr snwl client/server anti-virus 1000u sonicwall client/server anti-virus suite subscription license 3 years 1000 users 0758479069973"", ""manufacturer"": """", ""price"": 58683.36, ""category"": ""Security"", ""subcategory"": ""Anti-Virus"", ""platform"": ""SonicWall"", ""edition"": ""Client/Server Anti-Virus"", ""type"": ""Subscription License"", ""modelno"": ""01-ssc-6997""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 2190,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -32983,7 +32983,7 @@ Entity 1:{""title"": ""elementary school advantage 2007"", ""manufacturer"": ""e
 
 Entity 2:{""title"": ""encore software 10444 elementary school advantage 2007 sb cs by encore"", ""manufacturer"": """", ""price"": 25.97, ""category"": ""Software"", ""subcategory"": ""Education & Reference"", ""platform"": ""Windows"", ""edition"": ""2007"", ""type"": ""Educational Software"", ""modelno"": ""10444""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
 2199,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -33058,7 +33058,7 @@ Entity 1:{""title"": ""netmanage rumba unix-hp edition v. 7.3 upgrade license 90
 
 Entity 2:{""title"": ""902453-006-g rumba unix-hp edition v. 7.3 upgrade license 1 user volume level g"", ""manufacturer"": """", ""price"": 93.66, ""category"": ""Software"", ""subcategory"": ""Operating Systems"", ""platform"": ""Unix"", ""edition"": ""HP Edition"", ""type"": ""Upgrade License"", ""modelno"": ""902453-006-g""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 2204,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -33853,7 +33853,7 @@ Entity 1:{""title"": ""adobe creative suite cs3 design premium upsell"", ""manuf
 
 Entity 2:{""title"": ""adobe creative suite 3 ( cs3 ) design suite standard upgrade ( upsell ) mac"", ""manufacturer"": """", ""price"": 859.96, ""category"": ""Software"", ""subcategory"": ""Graphic Design"", ""platform"": ""Mac"", ""edition"": ""Standard Upgrade"", ""type"": ""Upsell"", ""modelno"": ""CS3""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 2257,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.
@@ -34153,7 +34153,7 @@ Entity 1:{""title"": ""hoyle puzzle & board games"", ""manufacturer"": ""encore 
 
 Entity 2:{""title"": ""encore software 10568 encore hoyle puzzle & board games 2005 complete product puzzle game 1 user complete product standard pc"", ""manufacturer"": """", ""price"": 17.97, ""category"": ""Puzzle Games"", ""subcategory"": ""Board Games"", ""platform"": ""PC"", ""edition"": ""Complete Product"", ""type"": ""Puzzle Game"", ""modelno"": ""10568""}
 
-",,"{""Output"": ""mismatch""}","{""Output"": ""match""}"
+",,"{""Output"": ""mismatch""}","{""Output"": ""mismatch""}"
 2277,"You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. 
 
 Judge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.

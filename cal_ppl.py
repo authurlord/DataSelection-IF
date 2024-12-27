@@ -88,7 +88,7 @@ def calculate_ppl(
             train_on_prompt=train_on_prompt,
             output_dir="dummy_dir",
             overwrite_cache=True,
-            do_train=True,
+            do_train=False,
             train_file_path = train_file_path,
             eval_file_path = eval_file_path
         )

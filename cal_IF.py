@@ -11,7 +11,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+import pandas as pd
 import json
 from dataclasses import dataclass
 from typing import Any, Dict, Literal, Optional, Sequence
@@ -22,7 +22,7 @@ from torch.utils.data import DataLoader
 from tqdm import tqdm
 from transformers import DataCollatorForLanguageModeling
 
-from llamafactory.data import MultiModalDataCollatorForSeq2Seq, get_dataset, get_template_and_fix_tokenizer
+from llamafactory.data import MultiModalDataCollatorForSeq2Seq, get_dataset, get_template_and_fix_tokenizer, get_dataset_id
 from llamafactory.extras.constants import IGNORE_INDEX
 from llamafactory.hparams import get_train_args
 from llamafactory.model import load_model, load_tokenizer
@@ -97,7 +97,9 @@ def calculate_ppl(
     tokenizer_module = load_tokenizer(model_args)
     tokenizer = tokenizer_module["tokenizer"]
     template = get_template_and_fix_tokenizer(tokenizer, data_args)
-    trainset = get_dataset(template, model_args, data_args, training_args, stage, **tokenizer_module)["train_dataset"]
+    # trainset = get_dataset(template, model_args, data_args, training_args, stage, **tokenizer_module)["train_dataset"]
+    trainset = get_dataset_id(template, model_args, data_args, training_args, stage, **tokenizer_module)["train_dataset"]
+
     model = load_model(tokenizer, model_args, finetuning_args, is_trainable=False)
     if stage == "pt":
         data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
@@ -121,8 +123,13 @@ def calculate_ppl(
     tr_grad_dict = {}
     model.eval()
     # torch.set_grad_enabled(True)
+    id_list = [] ## id list in batch for mapping
+    id_list_flatten = []
 
     for step,batch in enumerate(tqdm(dataloader)):
+        # print(batch.keys())
+        id_list.append(batch['ids'])
+        id_list_flatten.extend(batch['ids'])
         model.zero_grad()
         batch = batch.to(model.device)
         outputs = model(**batch)
@@ -153,9 +160,14 @@ def calculate_ppl(
         tr_grad_dict[step]=grad_dict
 
 
-    with open(save_name, "w", encoding="utf-8") as f:
-        json.dump(perplexities, f, indent=2)
-    torch.save(tr_grad_dict,grad_name)
+    # with open(save_name, "w", encoding="utf-8") as f:
+    #     json.dump(perplexities, f, indent=2)
+    perplexities_df = pd.DataFrame(perplexities)
+    perplexities_df.index = [int(x) for x in id_list_flatten]
+    # print([int(x) for x in id_list_flatten])
+    perplexities_df.to_csv('ppl/{}.csv'.format(save_name))
+    torch.save(tr_grad_dict,'grad/{}.pkl'.format(grad_name))
+    torch.save(id_list,'grad/{}_index.pkl'.format(grad_name))
     print(f"Average perplexity is {total_ppl / len(perplexities):.2f}")
     print(f"Perplexities have been saved at {save_name}.")
 

@@ -133,6 +133,63 @@ def convert_alpaca(
     }
     return output
 
+def convert_alpaca_ids(
+    example: Dict[str, Any],
+    dataset_attr: "DatasetAttr",
+    data_args: "DataArguments",
+) -> Dict[str, Any]:
+    r"""
+    Converts alpaca format dataset to the standard format.
+    """
+    ids_value = example.get("ids", None)
+    prompt = []
+    if dataset_attr.history and isinstance(example[dataset_attr.history], list):
+        for old_prompt, old_response in example[dataset_attr.history]:
+            prompt.append({"role": Role.USER.value, "content": old_prompt})
+            prompt.append({"role": Role.ASSISTANT.value, "content": old_response})
+
+    query = []
+    if dataset_attr.prompt and example[dataset_attr.prompt]:
+        query.append(example[dataset_attr.prompt])
+
+    if dataset_attr.query and example[dataset_attr.query]:
+        query.append(example[dataset_attr.query])
+
+    prompt.append({"role": Role.USER.value, "content": "\n".join(query)})  # "prompt\nquery"
+
+    if dataset_attr.kto_tag and isinstance(example[dataset_attr.kto_tag], bool):  # kto example
+        response = [{"role": Role.ASSISTANT.value, "content": example[dataset_attr.response]}]
+        if example[dataset_attr.kto_tag]:
+            response = response + [{"role": Role.ASSISTANT.value, "content": ""}]
+        else:
+            response = [{"role": Role.ASSISTANT.value, "content": ""}] + response
+    elif (
+        dataset_attr.ranking
+        and isinstance(example[dataset_attr.chosen], str)
+        and isinstance(example[dataset_attr.rejected], str)
+    ):  # pairwise example
+        response = [
+            {"role": Role.ASSISTANT.value, "content": example[dataset_attr.chosen]},
+            {"role": Role.ASSISTANT.value, "content": example[dataset_attr.rejected]},
+        ]
+    elif dataset_attr.response and isinstance(example[dataset_attr.response], str):  # normal example
+        response = [{"role": Role.ASSISTANT.value, "content": example[dataset_attr.response]}]
+    else:  # unsupervised
+        response = []
+
+    convert_images = partial(_convert_images, dataset_attr=dataset_attr, data_args=data_args)
+    convert_videos = partial(_convert_videos, dataset_attr=dataset_attr, data_args=data_args)
+    output = {
+        "_prompt": prompt,
+        "_response": response,
+        "_system": example[dataset_attr.system] if dataset_attr.system else "",
+        "_tools": example[dataset_attr.tools] if dataset_attr.tools else "",
+        "_images": convert_images(example[dataset_attr.images]) if dataset_attr.images else None,
+        "_videos": convert_videos(example[dataset_attr.videos]) if dataset_attr.videos else None,
+        "ids": ids_value
+    }
+    return output
+
 
 def convert_sharegpt(
     example: Dict[str, Any],
@@ -226,6 +283,101 @@ def convert_sharegpt(
     }
     return output
 
+## convert sharegpt with ids
+def convert_sharegpt_ids( 
+    example: Dict[str, Any],
+    dataset_attr: "DatasetAttr",
+    data_args: "DataArguments",
+) -> Dict[str, Any]:
+    r"""
+    Converts sharegpt format dataset to the standard format.
+    """
+    ids_value = example.get("ids", None) ## get id value
+    tag_mapping = {
+        dataset_attr.user_tag: Role.USER.value,
+        dataset_attr.assistant_tag: Role.ASSISTANT.value,
+        dataset_attr.observation_tag: Role.OBSERVATION.value,
+        dataset_attr.function_tag: Role.FUNCTION.value,
+        dataset_attr.system_tag: Role.SYSTEM.value,
+    }
+    odd_tags = (dataset_attr.user_tag, dataset_attr.observation_tag)
+    even_tags = (dataset_attr.assistant_tag, dataset_attr.function_tag)
+    accept_tags = (odd_tags, even_tags)
+    messages = example[dataset_attr.messages]
+    if (
+        dataset_attr.system_tag
+        and len(messages) != 0
+        and messages[0][dataset_attr.role_tag] == dataset_attr.system_tag
+    ):
+        system = messages[0][dataset_attr.content_tag]
+        messages = messages[1:]
+    else:
+        system = example[dataset_attr.system] if dataset_attr.system else ""
+
+    aligned_messages = []
+    broken_data = False
+    for turn_idx, message in enumerate(messages):
+        if message[dataset_attr.role_tag] not in accept_tags[turn_idx % 2]:
+            logger.warning_rank0(f"Invalid role tag in {messages}.")
+            broken_data = True
+
+        aligned_messages.append(
+            {"role": tag_mapping[message[dataset_attr.role_tag]], "content": message[dataset_attr.content_tag]}
+        )
+
+    if (not dataset_attr.ranking and len(aligned_messages) % 2 != 0) or (
+        dataset_attr.ranking and len(aligned_messages) % 2 == 0
+    ):
+        logger.warning_rank0(f"Invalid message count in {messages}.")
+        broken_data = True
+
+    if dataset_attr.kto_tag and isinstance(example[dataset_attr.kto_tag], bool):  # kto example
+        prompt = aligned_messages[:-1]
+        response = aligned_messages[-1:]
+        if example[dataset_attr.kto_tag]:
+            response = response + [{"role": Role.ASSISTANT.value, "content": ""}]
+        else:
+            response = [{"role": Role.ASSISTANT.value, "content": ""}] + response
+    elif (
+        dataset_attr.ranking
+        and isinstance(example[dataset_attr.chosen], dict)
+        and isinstance(example[dataset_attr.rejected], dict)
+    ):  # pairwise example
+        chosen = example[dataset_attr.chosen]
+        rejected = example[dataset_attr.rejected]
+        if (
+            chosen[dataset_attr.role_tag] not in accept_tags[-1]
+            or rejected[dataset_attr.role_tag] not in accept_tags[-1]
+        ):
+            logger.warning_rank0(f"Invalid role tag in {[chosen, rejected]}.")
+            broken_data = True
+
+        prompt = aligned_messages
+        response = [
+            {"role": tag_mapping[chosen[dataset_attr.role_tag]], "content": chosen[dataset_attr.content_tag]},
+            {"role": tag_mapping[rejected[dataset_attr.role_tag]], "content": rejected[dataset_attr.content_tag]},
+        ]
+    else:  # normal example
+        prompt = aligned_messages[:-1]
+        response = aligned_messages[-1:]
+
+    if broken_data:
+        logger.warning_rank0("Skipping this abnormal example.")
+        prompt, response = [], []
+
+    convert_images = partial(_convert_images, dataset_attr=dataset_attr, data_args=data_args)
+    convert_videos = partial(_convert_videos, dataset_attr=dataset_attr, data_args=data_args)
+    output = {
+        "_prompt": prompt,
+        "_response": response,
+        "_system": system,
+        "_tools": example[dataset_attr.tools] if dataset_attr.tools else "",
+        "_images": convert_images(example[dataset_attr.images]) if dataset_attr.images else None,
+        "_videos": convert_videos(example[dataset_attr.videos]) if dataset_attr.videos else None,
+        "ids": ids_value
+    }
+    return output
+
 
 def align_dataset(
     dataset: Union["Dataset", "IterableDataset"],
@@ -242,12 +394,19 @@ def align_dataset(
         _images: [],
         _videos: [],
     """
-    if dataset_attr.formatting == "alpaca":
+    column_names = list(next(iter(dataset)).keys())
+    if dataset_attr.formatting == "alpaca" and 'ids' in column_names:
+        convert_func = partial(convert_alpaca_ids, dataset_attr=dataset_attr, data_args=data_args)
+        print('Hooked! transfer alpaca to alpaca_ids')
+    elif dataset_attr.formatting == "alpaca":
         convert_func = partial(convert_alpaca, dataset_attr=dataset_attr, data_args=data_args)
+    elif 'ids'.isin(column_names):
+        convert_func = partial(convert_sharegpt_ids, dataset_attr=dataset_attr, data_args=data_args)
+        print('Hooked! transfer sharegpt to sharegpt_ids')
     else:
         convert_func = partial(convert_sharegpt, dataset_attr=dataset_attr, data_args=data_args)
-
-    column_names = list(next(iter(dataset)).keys())
+    print(next(iter(dataset)))
+    
     kwargs = {}
     if not data_args.streaming:
         kwargs = dict(
@@ -255,7 +414,8 @@ def align_dataset(
             load_from_cache_file=(not data_args.overwrite_cache) or (training_args.local_process_index != 0),
             desc="Converting format of dataset",
         )
-
+    # print(column_names)
+    column_names = [name for name in column_names if name!= 'ids'] ## omit ids
     return dataset.map(
         convert_func,
         batched=False,

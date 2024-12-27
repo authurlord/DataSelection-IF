@@ -130,6 +130,7 @@ def _load_single_dataset(
             df = pd.DataFrame()
             for data_file in data_files:   
                 df_current = pd.read_json(data_file)
+                df_current['ids'] = df_current.index
                 df = pd.concat([df,df_current])
             dataset = Dataset.from_pandas(df)
             print('loading from json file')
@@ -171,7 +172,7 @@ def _load_single_dataset(
     if data_args.max_samples is not None:  # truncate dataset
         max_samples = min(data_args.max_samples, len(dataset))
         dataset = dataset.select(range(max_samples))
-
+    print('Hook! get not_aligned dataset:', dataset)
     return align_dataset(dataset, dataset_attr, data_args, training_args)
 
 
@@ -218,6 +219,8 @@ def _get_preprocessed_dataset(
         data_args, stage, template, tokenizer, processor, do_generate=(training_args.predict_with_generate and is_eval)
     )
     column_names = list(next(iter(dataset)).keys())
+    print('Hook! preprocess column_names',column_names)
+    column_names = [name for name in column_names if name!= 'ids']
     kwargs = {}
     if not data_args.streaming:
         kwargs = dict(
@@ -225,7 +228,7 @@ def _get_preprocessed_dataset(
             load_from_cache_file=(not data_args.overwrite_cache) or (training_args.local_process_index != 0),
             desc="Running tokenizer on dataset",
         )
-
+    # if 'ids' 
     dataset = dataset.map(
         preprocess_func,
         batched=True,
@@ -233,6 +236,9 @@ def _get_preprocessed_dataset(
         remove_columns=column_names,
         **kwargs,
     )
+    # print(dataset)
+    # print(column_names)
+
 
     if training_args.should_log:
         try:
@@ -377,6 +383,7 @@ def get_dataset_id(
     with training_args.main_process_first(desc="load dataset"):
         dataset = _get_merged_dataset(data_args.dataset, model_args, data_args, training_args, stage)
         eval_dataset = _get_merged_dataset(data_args.eval_dataset, model_args, data_args, training_args, stage)
+    print('Hook!_get_merged_dataset:',dataset)
 
     with training_args.main_process_first(desc="pre-process dataset"):
         dataset = _get_preprocessed_dataset(
@@ -387,14 +394,14 @@ def get_dataset_id(
         )
 
         # Add ids attribute to each sample in the dataset
-        def add_ids(examples):
-            # Create a new column 'ids' with sequential ids as a list
-            examples['ids'] = list(range(len(examples['input_ids'])))
-            return examples
+        # def add_ids(examples):
+        #     # Create a new column 'ids' with sequential ids as a list
+        #     examples['ids'] = list(range(len(examples['input_ids'])))
+        #     return examples
 
-        dataset = dataset.map(add_ids, batched=True)
-        if eval_dataset is not None:
-            eval_dataset = eval_dataset.map(add_ids, batched=True)
+        # dataset = dataset.map(add_ids, batched=True)
+        # if eval_dataset is not None:
+        #     eval_dataset = eval_dataset.map(add_ids, batched=True)
 
         if data_args.val_size > 1e-6:
             dataset_dict = split_dataset(dataset, data_args, seed=training_args.seed)

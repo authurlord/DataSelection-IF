@@ -1,5 +1,5 @@
 from time import time
-from tqdm.notebook import tqdm
+from tqdm import tqdm
 import sys
 from collections import defaultdict
 import pandas as pd
@@ -228,17 +228,17 @@ class IFEngine(object):
                # print(-if_tmp_value)
             # if_tmp_dict[]
             # self.IF_dict[method_name] = pd.Series(if_tmp_dict, dtype=float).to_numpy()
-            # df = pd.DataFrame(if_tmp_dict, dtype=float).to_numpy()
+            # df = pd.DataFrame(if_tmp_dict, dtype=float)
             # columns = self.weight_list
             # columns.append('ids')
             # df.columns = columns
             # df['']
             self.IF_dict[method_name] = if_tmp_dict
 
-    def save_result(self, noise_index, run_id=0):
+    def save_result(self, run_id=0):
         results={}
         results['runtime']=self.time_dict
-        results['noise_index']=noise_index
+        # results['noise_index']=noise_index
         results['influence']=self.IF_dict
 
         with open(f"./results_{run_id}.pkl",'wb') as file:

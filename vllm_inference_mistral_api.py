@@ -141,6 +141,7 @@ def main():
             create_folder_if_not_exists('inference_Transfer_ER/%s' % '|'.join(args.directory.split('/')[-2:]))
 
             result.to_csv('inference_Transfer_ER/%s--%s'% (args.directory.split('/')[-1],json_to_csv_filename_Transfer_ER(file_path)))
+            print('save result to inference_Transfer_ER/%s--%s'% (args.directory.split('/')[-1],json_to_csv_filename_Transfer_ER(file_path)))
 
     else:
         text_list = np.load(args.file)

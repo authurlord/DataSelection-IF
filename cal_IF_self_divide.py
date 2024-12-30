@@ -109,10 +109,7 @@ def calculate_ppl(
     tokenizer = tokenizer_module["tokenizer"]
     template = get_template_and_fix_tokenizer(tokenizer, data_args)
     # trainset = get_dataset(template, model_args, data_args, training_args, stage, **tokenizer_module)["train_dataset"]
-    trainset = get_dataset_id(template, model_args, data_args, training_args, stage, **tokenizer_module)["train_dataset"]
-
-
-    model = load_model(tokenizer, model_args, finetuning_args, is_trainable=False)
+    
     if stage == "pt":
         data_collator = DataCollatorForLanguageModeling(tokenizer=tokenizer, mlm=False)
     elif stage == "sft":
@@ -125,21 +122,37 @@ def calculate_ppl(
         )
     else:
         raise NotImplementedError(f"Stage does not supported: {stage}.")
-    batch_list = torch.load('ppl/AG-batch.pkl')
+
+
+    trainset = get_dataset_id(template, model_args, data_args, training_args, stage, **tokenizer_module)["train_dataset"]
+    ### Temporary modify data_args.train_file_path to data_args.eval_file_path
+    train_file_path = data_args.train_file_path
+    if data_args.eval_file_path is not None: ## eval_file_path exists
+        data_args.train_file_path = data_args.eval_file_path
+        eval_dataset = get_dataset_id(template, model_args, data_args, training_args, stage, **tokenizer_module)["train_dataset"]
+        data_args.train_file_path = train_file_path
+        eval_dataloader = DataLoader(eval_dataset, batch_size, shuffle=False, collate_fn=data_collator, pin_memory=True)
+    
+    
+    model = load_model(tokenizer, model_args, finetuning_args, is_trainable=True)
+
+    batch_list = torch.load('ppl/AG-batch.pkl') ## FL-based数据划分
     batch_list = [batch for batch in batch_list if len(batch)>1] ## 过滤空batch和长度只为1的batch
     batch_sampler = CustomBatchSampler(batch_list)
     dataloader = DataLoader(trainset, collate_fn=data_collator, pin_memory=True,batch_sampler=batch_sampler)
+    
     criterion = torch.nn.CrossEntropyLoss(reduction="none")
     total_ppl = 0
     perplexities = []
     batch: Dict[str, "torch.Tensor"]
     # with torch.no_grad():
     tr_grad_dict = {}
+    val_grad_dict = {}
     model.eval()
     # torch.set_grad_enabled(True)
     id_list = [] ## id list in batch for mapping
     id_list_flatten = []
-
+    ## 迭代Train_Data
     for step,batch in enumerate(tqdm(dataloader)):
         # print(batch.keys())
         id_list.append(batch['ids'])
@@ -165,6 +178,7 @@ def calculate_ppl(
         loss.backward(retain_graph=True)
         grad_dict={}
         for k, v in model.named_parameters():
+            # print(k)
             if 'lora_A' in k:
                 grad_dict[k]=v.grad.cpu()
             elif 'lora_B' in k:
@@ -186,6 +200,53 @@ def calculate_ppl(
     print(f"Average perplexity is {total_ppl / len(perplexities):.2f}")
     print(f"Perplexities have been saved at {save_name}.")
 
+## Clear the id_list, and calculate eval_dataloader if possible
+    if eval_file_path is not None:
+        id_list = [] ## id list in batch for mapping
+        id_list_flatten = []
+        total_ppl = 0
+        perplexities = []
+        
+        for step,batch in enumerate(tqdm(eval_dataloader)):
+            # print(batch.keys())
+            id_list.append(batch['ids'])
+            id_list_flatten.extend(batch['ids'])
+            # print(batch['ids'],batch_list[step])
+            model.zero_grad()
+            batch = batch.to(model.device)
+            outputs = model(**batch)
+            loss = outputs.loss
+
+            shift_logits: "torch.Tensor" = outputs["logits"][..., :-1, :]
+            shift_labels: "torch.Tensor" = batch["labels"][..., 1:]
+            loss_mask = shift_labels != IGNORE_INDEX
+            flatten_logits = shift_logits.contiguous().view(shift_labels.size(0) * shift_labels.size(1), -1)
+            flatten_labels = shift_labels.contiguous().view(-1)
+            token_logps: "torch.Tensor" = criterion(flatten_logits, flatten_labels)
+            token_logps = token_logps.contiguous().view(shift_logits.size(0), -1)
+            sentence_logps = (token_logps * loss_mask).sum(-1) / loss_mask.sum(-1)
+            total_ppl += sentence_logps.exp().sum().item()
+            perplexities.extend(sentence_logps.exp().tolist())
+            ### IF
+            loss.requires_grad_(True)
+            loss.backward(retain_graph=True)
+            grad_dict={}
+            for k, v in model.named_parameters():
+                if 'lora_A' in k:
+                    grad_dict[k]=v.grad.cpu()
+                elif 'lora_B' in k:
+                    # first index of shape indicates low-rank
+                    grad_dict[k]=v.grad.cpu().T
+                else:
+                    pass
+            val_grad_dict[step]=grad_dict
+        perplexities_df = pd.DataFrame(perplexities)
+        perplexities_df.index = [int(x) for x in id_list_flatten]
+        perplexities_df.to_csv('ppl/{}_eval.csv'.format(save_name))
+        torch.save(tr_grad_dict,'grad/{}_eval.pkl'.format(grad_name))
+        torch.save(id_list,'grad/{}_index_eval.pkl'.format(grad_name))
+        print(f"Average perplexity is {total_ppl / len(perplexities):.2f}")
+        print(f"Perplexities have been saved at {save_name}.")
 
 if __name__ == "__main__":
     fire.Fire(calculate_ppl)

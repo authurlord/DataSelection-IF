@@ -366,7 +366,7 @@ def calculate_ppl(
         perplexities_df = pd.DataFrame(perplexities)
         perplexities_df.index = [int(x) for x in id_list_flatten]
         perplexities_df.to_csv('ppl/{}/{}/ppl-p2-{}-eval.csv'.format(task,dataset_name,process_num))
-        torch.save(tr_grad_dict,'grad/{}/{}/val_grad_{}.pkl'.format(task,dataset_name,process_num))
+        torch.save(val_grad_dict,'grad/{}/{}/val_grad_{}.pkl'.format(task,dataset_name,process_num))
         torch.save(id_list,'grad/{}/{}/val_grad_index_{}.pkl'.format(task,dataset_name,process_num))
 
 

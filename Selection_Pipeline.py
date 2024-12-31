@@ -23,6 +23,62 @@ import argparse
 import torch.multiprocessing as mp
 import subprocess
 
+yaml_path = 'script/config_CTA_WebTable.yaml'
+
+def is_folder_empty(folder_path):
+    """
+    检查指定的文件夹是否为空文件夹。
+
+    参数:
+    folder_path (str): 要检查的文件夹的路径
+
+    返回:
+    bool: 如果文件夹为空，返回True；否则返回False。
+    """
+    if not os.path.exists(folder_path):
+        raise ValueError(f"指定的路径 {folder_path} 不存在，请检查输入的文件夹路径是否正确。")
+    if not os.path.isdir(folder_path):
+        raise ValueError(f"{folder_path} 不是一个文件夹，请确保输入的是文件夹路径。")
+
+    # 获取文件夹下的所有文件和子文件夹列表
+    contents = os.listdir(folder_path)
+    return len(contents) == 0
+
+def z_score_normalize(sample_IF):
+    """
+    对sample_IF字典中各个'method'对应的值（键为index、值为float的字典）进行Z-score归一化。
+
+    参数:
+    sample_IF (dict): 包含多个'method'键的字典，每个'method'键对应的值为需要进行归一化处理的字典数据。
+
+    返回:
+    dict: 归一化后的字典，结构与输入的sample_IF一致，其中每个'method'键对应的值都已经完成Z-score归一化。
+    """
+    for method in sample_IF.keys():
+        # 获取当前method对应需要归一化的值列表，保持原有顺序
+        values_list = list(sample_IF[method].values())
+        # 将列表转换为torch.Tensor
+        tensor_value = torch.tensor(values_list).unsqueeze(1)  # 添加维度，变为二维张量
+
+        # 计算均值和标准差
+        mean_value = tensor_value.mean()
+        std_value = tensor_value.std()
+
+        # 进行Z-score归一化
+        normalized_tensor = (tensor_value - mean_value) / std_value
+
+        # 将归一化后的结果再转换回列表
+        normalized_list = normalized_tensor.squeeze(1).tolist()
+
+        # 更新原字典中当前method对应的值
+        index_list = list(sample_IF[method].keys())
+        normalized_dict = {}
+        for index, normalized_value in zip(index_list, normalized_list):
+            normalized_dict[index] = normalized_value
+
+        sample_IF[method] = normalized_dict
+
+    return sample_IF
 
 def run_command(command):
     """
@@ -161,6 +217,7 @@ def do_fla(X, number_all, number_select):
 
     Y = X
     obj = FacilityLocationFunction(n=number_all, mode="dense", data=Y, metric="cosine")
+    
     greedyList = obj.maximize(budget=number_select, optimizer='LazyGreedy', stopIfZeroGain=False, stopIfNegativeGain=False, verbose=False)
     idx_list = [tuple_i[0] for tuple_i in greedyList]
 
@@ -293,9 +350,14 @@ def CTA_Embed_Text(df): ## 返回3列分别是text_1,text_2,label
         target_list.append(str({target:related_context}))
     return context_list,target_list,label_list
 
+# parser_yaml = argparse.ArgumentParser()
+# parser_yaml.add_argument('--yaml_path', type = str, default = 'config.yaml')
+# args_yaml = parser_yaml.parse_args()
 
-args = load_yaml_args('config.yaml')
-print(args.train_init_model)
+
+
+args = load_yaml_args(yaml_path)
+# print(args.train_init_model)
 
 
 cluster_num = args.cluster_num
@@ -303,13 +365,14 @@ sample_per_cluster = args.sample_per_cluster
 train_file_path = args.train_file_path
 device = args.devices
 embedding_model_path = args.embedding_model_path
-ppl_path = args.ppl_path
+# ppl_path = args.ppl_path
 batch_size = args.batch_size
 device_list = device.split(',')
+time_dict = {}
 
 train_file = pd.read_json(train_file_path)
 
-
+start_time = time.time()
 
 left_list,right_list,label_list = CTA_Embed_Text(train_file) ## 返回3个list
 
@@ -325,8 +388,39 @@ embedding_b = model.encode(right_list)
 embedding_c = model.encode(label_list)
 
 ## Calculate PPL, need modify for random calculation and .csv conditions
-ppl = pd.read_json(ppl_path)
-ppl_list = ppl.iloc[:,0].to_list()
+
+if args.require_ppl:
+    ## 如果 pplpath 非空
+    if os.path.exists('ppl/{}/{}/ppl-init-{}.csv'.format(args.task,args.dataset,1)):
+        command_IF = []
+        for process_num in range(len(device_list)): ## 从0开始
+            command_IF.append('CUDA_VISIBLE_DEVICES={} python cal_ppl_mp.py --yaml_path {} --process_num {} --total_process_num {}'.format(device_list[process_num], yaml_path, process_num+1,len(device_list)))
+
+        # if not hasattr(mp, '_start_method'):
+        #     mp.set_start_method('spawn')
+        processes = []
+        for command in command_IF:
+            p = mp.Process(target=run_command, args=(command,))
+            processes.append(p)
+            p.start()
+
+        for p in processes:
+            p.join()
+
+        print("所有命令执行完毕，进行下一步")
+    
+    ppl_array = np.zeros(len(train_file))
+    for process_num in range(1,9,1): ## maximum of k process
+        if os.path.exists('ppl/{}/{}/ppl-init-{}.csv'.format(args.task,args.dataset,process_num)): ## i-th gradient 
+            ppl_df = pd.read_csv('ppl/{}/{}/ppl-init-{}.csv'.format(args.task,args.dataset,process_num),index_col=0)
+            for index,row in ppl_df.iterrows():
+                ppl_array[index] = row[0]
+else:
+    ppl = pd.read_json(args.ppl_path)
+    ppl_list = ppl.iloc[:,0].to_list()
+    ppl_array = np.array(ppl_list)
+
+
 
 
 pt_data = np.concatenate([embedding_a,embedding_b,embedding_c],axis=1)
@@ -334,7 +428,7 @@ pt_data = np.concatenate([embedding_a,embedding_b,embedding_c],axis=1)
 ## Calculate Clustering for init
 
 high_dim_vectors = pt_data
-ppl_array = np.array(ppl_list)
+
 
 ## Clustering high_dim_vectors
 clustering = do_clustering(high_dim_vectors,kmeans_num_clusters=cluster_num)
@@ -352,7 +446,31 @@ if args.train_init_model:
     create_folder_for_file('train/{}/{}/train-init.json'.format(args.task,args.dataset))
     json.dump(init_df.to_dict(orient='records'), open('train/{}/{}/train-init.json'.format(args.task,args.dataset), 'w', encoding='utf-8'), ensure_ascii=False, indent=4)
     torch.save(middle_confidence_samples,'train/{}/{}/train-init.pkl'.format(args.task,args.dataset))
+    
+end_time = time.time()
+time_dict['init_select'] = end_time - start_time
+### train init model
 
+yaml_template_path = 'script/qwen_lora_CTA_SimTab-P1.yaml'
+
+with open(yaml_template_path, 'r') as file:
+    data = yaml.safe_load(file)
+
+# 修改特定属性，这里以修改某个键的值为例，你可以根据实际需求调整修改逻辑
+data['cutoff_len'] = 1024
+data['train_file_path'] = train_file_path
+data['output_dir'] = 'lora/qwen-0.5B/{}/{}/init'.format(args.task,args.dataset)
+lora_dir = 'lora/qwen-0.5B/{}/{}/init'.format(args.task,args.dataset)
+# 打开新的yaml文件，将修改后的数据写入
+with open('script/qwen_lora_{}_{}_init.yaml'.format(args.task,args.dataset), 'w') as file:
+    yaml.dump(data, file)
+
+## Run Command
+if not os.path.exists(lora_dir):
+    run_command('CUDA_VISIBLE_DEVICES={} llamafactory-cli train script/qwen_lora_{}_{}_init.yaml'.format(device,args.task,args.dataset))
+
+end_time = time.time()
+time_dict['init-train'] = end_time - start_time
 
 ## Calculate FL Score
 
@@ -372,9 +490,10 @@ for i in range(cluster_num):
     cluster_size = len(cluster_indice_index)
     # print(i,cluster_size)
     fla_num = int(np.ceil(cluster_size / batch_size))
-    idx_list,greedyList = do_fla(high_dim_vectors_cluster,high_dim_vectors_cluster.shape[0],number_select=fla_num) ## idx_list is the selected number
+
     
     try:
+        idx_list,greedyList = do_fla(high_dim_vectors_cluster,high_dim_vectors_cluster.shape[0],number_select=fla_num) ## idx_list is the selected number
         result,coverage = cluster_vectors(high_dim_vectors_cluster,idx_list,batch_size)
         for cluster_ind in result.keys():
             global_result = [cluster_indice_index[j] for j in result[cluster_ind]] ## 将相对index映射到global index
@@ -398,27 +517,99 @@ for key in batch_division.keys():
 create_folder_for_file('Influence/{}/{}/batch.pkl'.format(args.task,args.dataset))
 torch.save(batch_sampler,'Influence/{}/{}/batch.pkl'.format(args.task,args.dataset))
 
+end_time = time.time()
+time_dict['batch-division'] = end_time - start_time
+
 ## 根据显卡数量分配线程，可能可以修改
 ## TODO:config.yaml没有在--args内，需要修改
-command_IF = []
-for process_num in range(len(device_list)): ## 从0开始
-    command_IF.append('CUDA_VISIBLE_DEVICES={} python cal_IF_mp.py --yaml_path config.yaml --process_num {} --total_process_num {}'.format(device_list[process_num],process_num+1,len(device_list)))
+if args.require_grad:
+    command_IF = []
+    for process_num in range(len(device_list)): ## 从0开始
+        command_IF.append('CUDA_VISIBLE_DEVICES={} python cal_IF_mp.py --yaml_path {} --process_num {} --total_process_num {}'.format(device_list[process_num],yaml_path,process_num+1,len(device_list)))
 
-# if not hasattr(mp, '_start_method'):
-#     mp.set_start_method('spawn')
-processes = []
-for command in command_IF:
-    p = mp.Process(target=run_command, args=(command,))
-    processes.append(p)
-    p.start()
+    # if not hasattr(mp, '_start_method'):
+    #     mp.set_start_method('spawn')
+    processes = []
+    for command in command_IF:
+        p = mp.Process(target=run_command, args=(command,))
+        processes.append(p)
+        p.start()
 
-for p in processes:
-    p.join()
+    for p in processes:
+        p.join()
 
-print("所有命令执行完毕，进行下一步")
+    print("所有命令执行完毕，进行下一步")
+
+end_time = time.time()
+time_dict['gradient-calculation'] = end_time - start_time
 
 # command_ppl = 'CUDA_VISIBLE_DEVICES={} python cal_IF_self_divide.py  \
 #     --yaml_path {}\
 #     --process_num {}\
 #     --total_process_num {}'.format(device,'config.yaml',1,1)
 
+print('python IF_Cal_mp.py  --device cuda --task {} --dataset {} --save_all_layers'.format(args.task,args.dataset))
+
+run_command('python IF_Cal_mp.py  --device cuda --task {} --dataset {} --save_all_layers'.format(args.task,args.dataset))
+
+end_time = time.time()
+time_dict['IF-Score'] = end_time - start_time
+
+## IF Score
+sample_IF = torch.load('Influence/{}/{}/score.pkl'.format(args.task,args.dataset))
+sample_IF = z_score_normalize(sample_IF)
+
+
+
+## FL Score
+greedyList_All_norm = z_score_normalize(greedyList_All)
+## Flatten
+greedyList_All_norm_flatten = {}
+for key in greedyList_All_norm.keys():
+    for index in greedyList_All_norm[key]:
+        greedyList_All_norm_flatten[index] = greedyList_All_norm[key][index]
+
+total_score = np.zeros(len(train_file))
+## calculate ppl
+# for index,row in ppl.iterrows():
+#     total_score[index] += row[0]
+
+for index in range(len(total_score)):
+    total_score[index] = ppl_array[index]
+## add FL
+for key in greedyList_All_norm_flatten.keys():
+    total_score[key] += greedyList_All_norm_flatten[key]
+## add global_IF
+for key in sample_IF['iterative']:
+    total_score[key] -= sample_IF['iterative'][key] ## Influence Score与performance成反比，所以是-=
+    
+## 遍历cluster,排序
+cluster_rank = {}
+for i in range(cluster_num): ## 100 is the cluster number, hyper-parameter
+    cluster_rank[i] = {}
+    cluster_index = cluster_indices[i]
+    sorted_index = cluster_index[np.argsort(-total_score[cluster_index])] ## return to global index
+    cluster_rank[i] = sorted_index
+
+p2_choose_index = []
+cluster_per_budget = sample_per_cluster
+for i in range(cluster_num):
+    p2_choose_index.extend(cluster_rank[i][:cluster_per_budget])
+
+## save FL Score for ablation
+create_folder_for_file('selection/{}/{}/FL-Score.pkl'.format(args.task,args.dataset))
+torch.save(greedyList_All_norm_flatten,'selection/{}/{}/FL-Score.pkl'.format(args.task,args.dataset))
+## save total score for ablation
+torch.save(total_score,'selection/{}/{}/Total-Score.pkl'.format(args.task,args.dataset))
+## save cluster division for ablation and furthur experiment
+torch.save(cluster_rank,'selection/{}/{}/Cluster-Rank.pkl'.format(args.task,args.dataset))
+
+## output
+
+selected_df = train_file.iloc[p2_choose_index]
+json.dump(selected_df.to_dict(orient='records'), open('train/{}/{}/train-select.json'.format(args.task,args.dataset), 'w', encoding='utf-8'), ensure_ascii=False, indent=4)
+
+end_time = time.time()
+time_dict['Final Selection'] = end_time - start_time
+
+print(time_dict)

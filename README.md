@@ -4,6 +4,16 @@ Please Check example_ER.ipynb for a demo.
 
 1. For pre-trained models, we apply DeBERTa-v3-base and RoBERTa-Large.
 
+
+## Few-Shot Index
+- RE
+    - 16.229:/home/yanmy/LLaMA-Efficient-Tuning-main/evaluateion_RE.ipynb
+    - 16.229:/home/yanmy/LLaMA-Efficient-Tuning-main/relation_extraction_re.ipynb
+    - selection index: /home/yanmy/LLaMA-Efficient-Tuning-main/RE_sample_10_index.npy
+- CTA
+    - 51.11:/data/yanmengyi/simpleT5-main/examples/KGC/CTA_WebTable.ipynb
+
+
 # HyperINF
 This repo contains two main parts for paper HyperINF:
 1. Mislabeled Data Detection

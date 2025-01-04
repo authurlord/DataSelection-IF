@@ -23,7 +23,7 @@ import argparse
 import torch.multiprocessing as mp
 import subprocess
 
-yaml_path = 'script/config_CTA_WebTable.yaml'
+yaml_path = 'script/config_RE_RE.yaml'
 
 def is_folder_empty(folder_path):
     """
@@ -349,7 +349,20 @@ def CTA_Embed_Text(df): ## 返回3列分别是text_1,text_2,label
                 print(dict_output.keys(),target)
         target_list.append(str({target:related_context}))
     return context_list,target_list,label_list
-
+def RE_Embed_Text(df): ## 返回3列分别是text_1,text_2,label
+    SimTab = df
+    context_list = []
+    target_list = []
+    label_list = []
+    for i in range(len(SimTab)):
+        text = SimTab.iloc[i,0]
+        label = list(eval(SimTab.iloc[i,2]).values())[0]
+        label_list.append(label) ## add label
+        context = text.split('\n\nTable1:')[1].split('\n\nRelation Option: \n\n')[0].replace('<table_title>','<table_title> ').replace('<header>',' <header> ').replace('|',' | ')
+        context_list.append(str(context)) ## add context
+        target = text.split('<header>')[1].split('\n\nRelation Option: \n\n')[0]
+        target_list.append(str(target.replace('|',' | ')))
+    return context_list,target_list,label_list
 # parser_yaml = argparse.ArgumentParser()
 # parser_yaml.add_argument('--yaml_path', type = str, default = 'config.yaml')
 # args_yaml = parser_yaml.parse_args()
@@ -364,6 +377,7 @@ cluster_num = args.cluster_num
 sample_per_cluster = args.sample_per_cluster
 train_file_path = args.train_file_path
 device = args.devices
+task = args.task
 embedding_model_path = args.embedding_model_path
 # ppl_path = args.ppl_path
 batch_size = args.batch_size
@@ -374,7 +388,11 @@ train_file = pd.read_json(train_file_path)
 
 start_time = time.time()
 
-left_list,right_list,label_list = CTA_Embed_Text(train_file) ## 返回3个list
+
+if(task=='CTA'):
+    left_list,right_list,label_list = CTA_Embed_Text(train_file) ## 返回3个list
+elif(task=='RE'):
+    left_list,right_list,label_list = RE_Embed_Text(train_file) ## 返回3个list
 
 ## Set only One-GPU for embedding model
 

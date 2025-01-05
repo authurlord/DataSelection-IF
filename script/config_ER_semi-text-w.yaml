@@ -1,0 +1,19 @@
+sample_per_cluster: 15
+cluster_num: 100
+train_init_model: true
+task: ER
+dataset: semi-text-w
+embedding_model_path: /data/home/wangys/sentence_transformer_model/bge-large-en-1.5
+train_file_path: train/ER/semi-text-w/semi-text-w-train.json
+eval_file_path: train/ER/semi-text-w/train-init.json
+test_file_path: train/ER/semi-text-w/semi-text-w-test.json
+devices: 0,1,2,3,4,5,6,7
+batch_size: 8
+## LLM config
+model_name_or_path: /data/home/wangys/model/Qwen2.5-0.5B-Instruct
+stage: sft
+template: qwen
+adapter_name_or_path: lora/qwen-0.5B/ER/semi-text-w/init
+require_grad: true
+require_ppl: true
+require_inference: true

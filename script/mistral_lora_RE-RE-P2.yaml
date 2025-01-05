@@ -1,7 +1,7 @@
 bf16: true
-cutoff_len: 2048
+cutoff_len: 1024
 dataset: Abt-Buy-Match-P1
-train_file_path: train/RE/RE/RE-train.json
+train_file_path: train/RE/RE/train-select.json
 ddp_timeout: 180000000
 deepspeed: /data/home/wangys/LLAMA-backup/LLaMA-Factory/examples/deepspeed/ds_z0_config.json
 do_train: true
@@ -12,7 +12,7 @@ lora_rank: 16
 lora_target: all
 lr_scheduler_type: cosine
 model_name_or_path: /data/home/wangys/model/Mistral-7B-Instruct-v0.2
-num_train_epochs: 3.0
+num_train_epochs: 5.0
 output_dir: lora/mistral-7B/RE/RE/select
 overwrite_cache: false
 overwrite_output_dir: true

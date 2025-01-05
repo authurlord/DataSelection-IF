@@ -23,5 +23,5 @@ report_to: none
 save_steps: 500
 stage: sft
 template: qwen
-train_file_path: /data/home/wangys/MELD/dataset/CTA/webtable_train_few.json
+train_file_path: train/CTA/WebTable/WebTable-train.json
 warmup_ratio: 0.1

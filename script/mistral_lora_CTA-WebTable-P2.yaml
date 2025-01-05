@@ -1,5 +1,5 @@
 bf16: true
-cutoff_len: 2048
+cutoff_len: 1024
 dataset: Abt-Buy-Match-P1
 train_file_path: train/CTA/WebTable/train-select.json
 ddp_timeout: 180000000

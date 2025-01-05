@@ -23,7 +23,7 @@ import argparse
 import torch.multiprocessing as mp
 import subprocess
 
-yaml_path = 'script/config_RE_RE.yaml'
+yaml_path = 'script/config_ER_walmart-amazon.yaml'
 
 def is_folder_empty(folder_path):
     """
@@ -363,6 +363,21 @@ def RE_Embed_Text(df): ## 返回3列分别是text_1,text_2,label
         target = text.split('<header>')[1].split('\n\nRelation Option: \n\n')[0]
         target_list.append(str(target.replace('|',' | ')))
     return context_list,target_list,label_list
+def ER_Embed_Text(df): ## 返回3列分别是text_1,text_2,label
+    SimTab = df
+    context_list = []
+    target_list = []
+    label_list = []
+    for i in range(len(SimTab)):
+        text = SimTab.iloc[i,0]
+        label = list(eval(SimTab.iloc[i,2]).values())[0]
+        label_list.append(label) ## add label
+        context = text.split('Output format example:{"Output": ""}\n\nEntity 1:')[1].split('\n\nEntity 2:')[0].replace('\\n', '').replace('\n', '').replace('\\', '')
+        context_list.append(context) ## add context
+        
+        target = text.split('\n\nEntity 2:')[1].split('\n\nTake these examples as reference:')[0].replace('\\n', '').replace('\n', '').replace('\\', '')
+        target_list.append(target)
+    return context_list,target_list,label_list
 # parser_yaml = argparse.ArgumentParser()
 # parser_yaml.add_argument('--yaml_path', type = str, default = 'config.yaml')
 # args_yaml = parser_yaml.parse_args()
@@ -393,8 +408,11 @@ if(task=='CTA'):
     left_list,right_list,label_list = CTA_Embed_Text(train_file) ## 返回3个list
 elif(task=='RE'):
     left_list,right_list,label_list = RE_Embed_Text(train_file) ## 返回3个list
-
+elif(task=='ER'):
+    left_list,right_list,label_list = ER_Embed_Text(train_file) ## 返回3个list
 ## Set only One-GPU for embedding model
+
+print(len(np.unique(label_list)))
 
 os.environ['CUDA_VISIBLE_DEVICES']='{}'.format(device_list[-1]) ## only use last device for embedding model
 
@@ -408,8 +426,8 @@ embedding_c = model.encode(label_list)
 ## Calculate PPL, need modify for random calculation and .csv conditions
 
 if args.require_ppl:
-    ## 如果 pplpath 非空
-    if os.path.exists('ppl/{}/{}/ppl-init-{}.csv'.format(args.task,args.dataset,1)):
+    ## 如果 ppl-path 非空
+    if not os.path.exists('ppl/{}/{}/ppl-init-{}.csv'.format(args.task,args.dataset,1)): 
         command_IF = []
         for process_num in range(len(device_list)): ## 从0开始
             command_IF.append('CUDA_VISIBLE_DEVICES={} python cal_ppl_mp.py --yaml_path {} --process_num {} --total_process_num {}'.format(device_list[process_num], yaml_path, process_num+1,len(device_list)))
@@ -475,7 +493,7 @@ with open(yaml_template_path, 'r') as file:
     data = yaml.safe_load(file)
 
 # 修改特定属性，这里以修改某个键的值为例，你可以根据实际需求调整修改逻辑
-data['cutoff_len'] = 1024
+data['cutoff_len'] = args.cutoff_len
 data['train_file_path'] = train_file_path
 data['output_dir'] = 'lora/qwen-0.5B/{}/{}/init'.format(args.task,args.dataset)
 lora_dir = 'lora/qwen-0.5B/{}/{}/init'.format(args.task,args.dataset)
@@ -630,4 +648,50 @@ json.dump(selected_df.to_dict(orient='records'), open('train/{}/{}/train-select.
 end_time = time.time()
 time_dict['Final Selection'] = end_time - start_time
 
+### 使用selected data完成training
+
+train_yaml_template_path = 'script/mistral_lora_RE-RE-P2.yaml'
+
+with open(train_yaml_template_path, 'r') as file:
+    train_args = yaml.safe_load(file)
+
+train_args['train_file_path'] = 'train/{}/{}/train-select.json'.format(args.task,args.dataset) ## 指定训练数据位置
+train_args['output_dir'] = 'lora/mistral-7B/{}/{}/select'.format(args.task,args.dataset) ## 指定lora输出位置
+
+with open('script/mistral_lora_{}_{}_P2.yaml'.format(args.task,args.dataset), 'w') as file:
+    yaml.dump(train_args, file)
+
+if not os.path.exists(train_args['output_dir']):
+    run_command('CUDA_VISIBLE_DEVICES={} llamafactory-cli train script/mistral_lora_{}_{}_P2.yaml'.format(device,args.task,args.dataset))
+    
+end_time = time.time()
+time_dict['Selection fine-tune'] = end_time - start_time
+
+### 查询
+
+def round_down_to_power_of_two(num): ## vllm查询仅支持1/2/4/8的tensor_parallel
+    """
+    将给定的整数向下取整到最接近的1、2、4、8中的某个值。
+    """
+    result = 1
+    while result < num:
+        result *= 2
+        if result > num:
+            result //= 2
+    return result
+
+if args.require_inference:
+    command = 'CUDA_VISIBLE_DEVICES={} python vllm_inference_mistral_api.py --model_path {} --directory {} --gpu_num {} --file {} --json'.format(
+        device,
+        train_args['model_name_or_path'],
+        train_args['output_dir'],
+        round_down_to_power_of_two(len(device_list)),
+        args.test_file_path
+    )
+    result = subprocess.run(command, shell=True, capture_output=True, text=True)
+
+    print("标准输出：", result.stdout)
+end_time = time.time()
+time_dict['Selection Inference'] = end_time - start_time
+    
 print(time_dict)

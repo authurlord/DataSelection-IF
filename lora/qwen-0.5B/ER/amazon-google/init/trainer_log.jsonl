@@ -1,0 +1,11 @@
+{"current_steps": 10, "total_steps": 105, "loss": 1.2587, "lr": 9.090909090909092e-05, "epoch": 0.2857142857142857, "percentage": 9.52, "elapsed_time": "0:00:05", "remaining_time": "0:00:53"}
+{"current_steps": 20, "total_steps": 105, "loss": 0.5413, "lr": 9.775512486034563e-05, "epoch": 0.5714285714285714, "percentage": 19.05, "elapsed_time": "0:00:10", "remaining_time": "0:00:42"}
+{"current_steps": 30, "total_steps": 105, "loss": 0.1053, "lr": 9.025350265637815e-05, "epoch": 0.8571428571428571, "percentage": 28.57, "elapsed_time": "0:00:14", "remaining_time": "0:00:36"}
+{"current_steps": 40, "total_steps": 105, "loss": 0.0468, "lr": 7.829735471652978e-05, "epoch": 1.1428571428571428, "percentage": 38.1, "elapsed_time": "0:00:19", "remaining_time": "0:00:30"}
+{"current_steps": 50, "total_steps": 105, "loss": 0.036, "lr": 6.320977009356431e-05, "epoch": 1.4285714285714286, "percentage": 47.62, "elapsed_time": "0:00:23", "remaining_time": "0:00:25"}
+{"current_steps": 60, "total_steps": 105, "loss": 0.0292, "lr": 4.666036831274392e-05, "epoch": 1.7142857142857144, "percentage": 57.14, "elapsed_time": "0:00:28", "remaining_time": "0:00:21"}
+{"current_steps": 70, "total_steps": 105, "loss": 0.0207, "lr": 3.0480536241825263e-05, "epoch": 2.0, "percentage": 66.67, "elapsed_time": "0:00:32", "remaining_time": "0:00:16"}
+{"current_steps": 80, "total_steps": 105, "loss": 0.0177, "lr": 1.646076349303884e-05, "epoch": 2.2857142857142856, "percentage": 76.19, "elapsed_time": "0:00:36", "remaining_time": "0:00:11"}
+{"current_steps": 90, "total_steps": 105, "loss": 0.0158, "lr": 6.152503589666425e-06, "epoch": 2.571428571428571, "percentage": 85.71, "elapsed_time": "0:00:41", "remaining_time": "0:00:06"}
+{"current_steps": 100, "total_steps": 105, "loss": 0.0162, "lr": 6.964873004985717e-07, "epoch": 2.857142857142857, "percentage": 95.24, "elapsed_time": "0:00:45", "remaining_time": "0:00:02"}
+{"current_steps": 105, "total_steps": 105, "epoch": 3.0, "percentage": 100.0, "elapsed_time": "0:00:49", "remaining_time": "0:00:00"}

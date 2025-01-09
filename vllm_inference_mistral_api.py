@@ -49,6 +49,7 @@ def main():
     parser = argparse.ArgumentParser(description="A simple command-line argument parser example.")
     
     parser.add_argument("-test_file", "--file", help="Specify the input file")
+    parser.add_argument("--guided_choices", action="store_true", help="whether restrict guided_choices")
     parser.add_argument("-json", "--json", action="store_true", help="Enable verbose mode")
     parser.add_argument("--count", type=int, default=1, help="Specify the count")
     parser.add_argument("--gpu_memory_usage", type=float, default=0.85, help="gpu_memory_usage")
@@ -114,7 +115,10 @@ def main():
             sampling_params = SamplingParams(temperature=args.temperature, 
                                              top_p=args.top_p,
                                              max_tokens=args.max_token)
-            outputs = llm.generate(text_all, sampling_params,guided_options_request=dict(guided_choice=selection_list),lora_request = LoRARequest('merge', 1, args.directory))
+            if args.guided_choices:
+                outputs = llm.generate(text_all, sampling_params,guided_options_request=dict(guided_choice=selection_list),lora_request = LoRARequest('merge', 1, args.directory))
+            else:
+                outputs = llm.generate(text_all, sampling_params,lora_request = LoRARequest('merge', 1, args.directory))             
             generation_list = []
             # Print the outputs.
             for output in outputs:

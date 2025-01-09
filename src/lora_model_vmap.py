@@ -110,7 +110,7 @@ class LORAEngineDebertaMultiClass(object):
         # self.model = DebertaV2ForSequenceClassification.from_pretrained(self.model_name_or_path,
         #                                                                 return_dict=True)
         self.model = AutoModelForSequenceClassification.from_pretrained(self.model_name_or_path,
-                                                                        return_dict=True)
+                                                                        return_dict=True,compile_model=False)
         self.model.config.use_cache = False
         self.model.config.pad_token_id = self.tokenizer.pad_token_id
         self.model.config.eos_token_id = self.tokenizer.eos_token_id
@@ -630,4 +630,358 @@ class LORAEngineDebertaMultiClass(object):
             del grad_dict
             
         return tr_grad_dict, val_grad_dict
+    
+
+
+import torch
+import numpy as np
+from transformers import AutoModelForSequenceClassification, AutoTokenizer
+from transformers import AdamW, get_linear_schedule_with_warmup
+from peft import LoraConfig, get_peft_model, PeftConfig, PeftModel
+from torch.cuda.amp import autocast, GradScaler
+from tqdm import tqdm
+import evaluate
+from sklearn.metrics import precision_score, recall_score, f1_score
+
+
+class LORAEngineDebertaMultiLabel(object):
+    def __init__(self,
+                 model_name_or_path="microsoft/deberta-v3-base",
+                 use_lora = True,
+                 target_modules=None,
+                 train_dataloader=None,
+                 eval_dataloader=None,
+                 test_dataloader=None,
+                 device="cuda",
+                 num_epochs=10,
+                 lr=3e-4,
+                 low_rank=2,
+                 task="multi_label",
+                 save_path=None,
+                 valid_each_epoch=False,
+                 cal_grad_per_sample=False,
+                 tokenized_dataset=None,
+                 grad_epoch=None,
+                 num_labels = None,
+                 label2id = None,
+                 id2label = None):
+        self.model_name_or_path = model_name_or_path
+        self.use_lora = use_lora
+        self.target_modules = target_modules
+        self.train_dataloader = train_dataloader
+        self.eval_dataloader = eval_dataloader
+        self.test_dataloader = test_dataloader
+        self.device = device
+        self.cal_grad_per_sample = cal_grad_per_sample
+        self.num_epochs = num_epochs
+        self.lr = lr
+        self.task = task
+        self.valid_each_epoch = valid_each_epoch
+        self.low_rank = low_rank
+        self.tokenizer = AutoTokenizer.from_pretrained(self.model_name_or_path)
+        self.save_path = save_path
+        self.grad_epoch = grad_epoch
+        if self.grad_epoch == None:
+            self.grad_epoch = [self.num_epochs - 1]
+        self.num_labels = num_labels
+        self.label2id = label2id
+        self.id2label = id2label
+        # self.tokenized_dataset = tokenized_dataset
+
+    def build_LORA_model(self):
+        # 获取训练数据集中的标签映射，用于确定num_labels
+        all_labels = []
+        for batch in self.train_dataloader:
+            labels = batch["labels"].numpy()
+            all_labels.extend([l for sublist in labels for l in sublist])
+        all_labels = sorted(set(all_labels))
+        num_labels = len(all_labels)
+
+        self.model = AutoModelForSequenceClassification.from_pretrained(
+            self.model_name_or_path,
+            return_dict=True,
+            num_labels = self.num_labels,
+            id2label = self.id2label,
+            label2id = self.label2id,
+            problem_type = "multi_label_classification",
+            torch_dtype=torch.bfloat16
+        )
+        self.model.config.use_cache = False
+        self.model.config.pad_token_id = self.tokenizer.pad_token_id
+        self.model.config.eos_token_id = self.tokenizer.eos_token_id
+        if self.use_lora:
+            peft_config = LoraConfig(
+                task_type="SEQ_CLS",
+                inference_mode=False,
+                target_modules=self.target_modules,
+                r=self.low_rank,
+                lora_alpha=self.low_rank,
+                lora_dropout=0.05,
+                use_rslora=False
+            )
+            self.model = get_peft_model(self.model, peft_config)
+            self.model.print_trainable_parameters()
+
+        # 保存标签映射，方便后续使用
+
+
+    def load(self, path):
+        """
+        从指定路径加载已保存的LoRA模型及相关配置，并设置为当前模型。
+        """
+        # 加载模型时，尝试获取保存的标签映射信息（假设保存模型时同时保存了相关信息，实际可能需要额外处理）
+        self.model = AutoModelForSequenceClassification.from_pretrained(path,
+                                                                        return_dict=True,
+                                                                        num_labels = self.num_labels,
+                                                                        id2label = self.id2label,
+                                                                        label2id = self.label2id,
+                                                                        problem_type = "multi_label_classification")
+        self.model.to(self.device)
+        self.model.config.use_cache = False
+        self.model.config.pad_token_id = self.tokenizer.pad_token_id
+        self.model.config.eos_token_id = self.tokenizer.eos_token_id
+        self.tokenizer = AutoTokenizer.from_pretrained(path)
+
+        # 这里假设从加载的模型相关配置或其他地方能获取到label2id和id2label，需根据实际保存情况调整
+        # self.label2id = self.model.config.label2id if hasattr(self.model.config, "label2id") else None
+        # self.id2label = self.model.config.id2label if hasattr(self.model.config, "id2label") else None
+
+    def load_pretrained_network(self, adapter_path):
+        # setup tokenizer
+        peft_config = PeftConfig.from_pretrained(adapter_path)
+        self.model = AutoModelForSequenceClassification.from_pretrained(
+            peft_config.base_model_name_or_path,
+            return_dict=True
+        )
+        self.tokenizer = AutoTokenizer.from_pretrained(adapter_path)
+
+        self.model = PeftModel.from_pretrained(self.model, adapter_path, config=peft_config, is_trainable=True)
+        # self.finetuned_config = LoraConfig.from_pretrained(pretrained_model_name_or_path=adapter_path)
+
+    def save_full(self, path):
+        """
+        保存训练好的LoRA模型、分词器以及相关配置到指定路径。
+        """
+        self.model = self.model.merge_and_unload()  ## 存储全量模型
+        self.model.save_pretrained(path)
+        self.tokenizer.save_pretrained(path)
+        # 同时保存标签映射信息，可以根据实际需求选择合适的保存格式（这里简单示例为保存到模型配置中）
+        self.model.config.label2id = self.label2id
+        self.model.config.id2label = self.id2label
+        self.model.config.save_pretrained(path)
+
+    def save_lora(self, path, full_model=False):
+        """
+        保存训练好的LoRA模型、分词器以及相关配置到指定路径。
+        """
+        if full_model:
+            self.model = self.model.merge_and_unload()  ## 存储全量模型
+        self.model.save_pretrained(path)
+        self.tokenizer.save_pretrained(path)
+        # 同样保存标签映射信息（根据实际保存逻辑调整）
+        self.model.config.label2id = self.label2id
+        self.model.config.id2label = self.id2label
+        self.model.config.save_pretrained(path)
+
+
+    def train_LORA_model(self):
+        """
+        执行模型训练的方法，适配多标签分类任务，加入混合精度训练相关逻辑，包括加载评估指标、初始化优化器和学习率调度器，
+        按轮次遍历训练数据进行训练，并在验证集上进行评估（如果设置了相应标志），
+        最后在测试集上进行评估。
+        """
+        def compute_metrics(eval_pred):
+            clf_metrics = evaluate.combine(["../../evaluate-main/metrics/accuracy",
+                                    "../../evaluate-main/metrics/f1",
+                                    "../../evaluate-main/metrics/precision",
+                                    "../../evaluate-main/metrics/recall"])
+            logits, labels = eval_pred
+            predictions = (torch.sigmoid(torch.tensor(logits)) > 0.5).int()  # 对logits应用sigmoid并转换为二值预测
+            results = clf_metrics.compute(predictions=predictions, references=labels)
+            return results
+        optimizer = AdamW(params=self.model.parameters(), lr=self.lr)
+
+        # Instantiate scheduler
+        lr_scheduler = get_linear_schedule_with_warmup(
+            optimizer=optimizer,
+            num_warmup_steps=0.06 * (len(self.train_dataloader) * self.num_epochs),
+            num_training_steps=(len(self.train_dataloader) * self.num_epochs),
+        )
+        print('Total Steps:{}'.format(len(self.train_dataloader) * self.num_epochs))
+
+        self.model.to(self.device)
+
+        # scaler = GradScaler()  # 创建梯度缩放器，用于混合精度训练
+
+        # 调整评估指标，组合多个评估指标
+
+
+        for epoch in range(self.num_epochs):
+            self.model.train()
+            total_loss = 0
+
+            for step, batch in enumerate(tqdm(self.train_dataloader)):
+                # batch.pop('id', None)
+                # batch = {k: v.to(self.device) for k, v in batch.items()}  # 确保所有张量都在设备上
+                batch["labels"] = batch["labels"].float()
+                batch = batch.to(self.device)
+                # print(batch)
+                # with autocast():
+                outputs = self.model(**batch)
+                logits = outputs.logits
+                loss = outputs.loss
+                # 确保 labels 是 float 类型，并且形状匹配
+                # labels = batch["labels"]
+                # if not isinstance(labels, torch.Tensor):
+                #     labels = torch.tensor(labels, dtype=torch.float32).to(self.device)
+                # else:
+                #     labels = labels.float().to(self.device)
+
+                # if logits.shape != labels.shape:
+                #     raise ValueError(f"Shape mismatch: Logits {logits.shape}, Labels {labels.shape}")
+
+                # # 计算损失
+                # loss_fn = torch.nn.BCEWithLogitsLoss()
+                # # print(logits.dtype,labels.dtype,logits,labels)
+                # loss = loss_fn(logits, labels)
+
+                total_loss += loss.item()
+
+                loss.backward()                # 直接反向传播
+                optimizer.step()               # 更新参数
+                lr_scheduler.step()            # 更新学习率调度器
+                optimizer.zero_grad()          # 清空梯度
+
+            print(f"Epoch {epoch + 1}: Training Loss = {total_loss / len(self.train_dataloader)}")
+
+
+            if self.valid_each_epoch:
+                all_predictions = []
+                all_references = []
+                all_logits = []
+                self.model.eval()
+                # 定义计算评估指标的函数，适配多标签分类任务
+
+
+                batch.pop('id', None)
+                batch["labels"] = batch["labels"].float()
+                batch = batch.to(self.device)  # 确保所有张量都在设备上
+
+                with torch.no_grad():
+                    outputs = self.model(**batch)
+                
+                # 使用 sigmoid 将 logits 转为概率，并将其转为二进制预测值
+                predictions = (torch.sigmoid(outputs.logits) > 0.5).int()
+
+                # 将预测值和标签转为 CPU 上的 numpy 格式以便后续计算
+                all_predictions.append(predictions.cpu().numpy())
+                all_references.append(batch["labels"].int().cpu().numpy())
+
+            # 将所有批次的预测值和标签合并
+            all_predictions = np.vstack(all_predictions)
+            all_references = np.vstack(all_references)
+
+            # 计算多标签分类的 F1、Precision 和 Recall
+            precision = precision_score(all_references, all_predictions, average='micro')
+            recall = recall_score(all_references, all_predictions, average='micro')
+            f1 = f1_score(all_references, all_predictions, average='micro')
+            print(f"Epoch {(epoch + 1)}:Precision: {precision:.4f}, Recall: {recall:.4f}, F1-score: {f1:.4f}")
+
+
+
+        self.model.eval()
+        # metric_results = []
+        # for step, batch in enumerate(tqdm(self.test_dataloader)):
+        #     batch.pop('id', None)
+        #     batch["labels"] = batch["labels"].float()
+        #     batch = batch.to(self.device)
+        #     with torch.no_grad():
+        #         outputs = self.model(**batch)
+        #     predictions = (torch.sigmoid(outputs.logits) > 0.5).int()
+        #     predictions, references = predictions, batch["labels"].int()
+        #     metric_results.append(compute_metrics((predictions.cpu().numpy(), references.cpu().numpy())))
+
+        # # 合并每一步的评估指标结果（这里假设指标结果是字典形式，可以根据实际情况调整合并方式）
+        # print(metric_results)
+        # combined_metrics = {}
+        # for result in metric_results:
+        #     for key, value in result.items():
+        #         combined_metrics[key] = combined_metrics.get(key, 0) + value
+        # for key in combined_metrics:
+        #     combined_metrics[key] /= len(metric_results)
+
+        # print("Prediction Result on Test Data:", combined_metrics)
+        all_predictions = []
+        all_references = []
+        all_logits = []
+        for step, batch in enumerate(tqdm(self.test_dataloader)):
+            batch.pop('id', None)
+            batch["labels"] = batch["labels"].float()
+            batch = batch.to(self.device)  # 确保所有张量都在设备上
+
+            with torch.no_grad():
+                outputs = self.model(**batch)
+            
+            # 使用 sigmoid 将 logits 转为概率，并将其转为二进制预测值
+            predictions = (torch.sigmoid(outputs.logits) > 0.5).int()
+            all_logits.append(outputs.logits.float().cpu().numpy())
+            # 将预测值和标签转为 CPU 上的 numpy 格式以便后续计算
+            all_predictions.append(predictions.cpu().numpy())
+            all_references.append(batch["labels"].int().cpu().numpy())
+
+        # 将所有批次的预测值和标签合并
+        all_predictions = np.vstack(all_predictions)
+        all_references = np.vstack(all_references)
+        all_logits = np.vstack(all_logits)
+        # 计算多标签分类的 F1、Precision 和 Recall
+        precision = precision_score(all_references, all_predictions, average='micro')
+        recall = recall_score(all_references, all_predictions, average='micro')
+        f1 = f1_score(all_references, all_predictions, average='micro')
+
+        print(f"Precision: {precision:.4f}, Recall: {recall:.4f}, F1-score: {f1:.4f}")
+        return all_logits
+    def eval_LORA_model(self):
+        """
+        执行模型评估的方法，适配多标签分类任务，包括加载评估指标、遍历测试数据进行评估。
+        """
+        def compute_metrics(eval_pred):
+            clf_metrics = evaluate.combine(["../../evaluate-main/metrics/accuracy",
+                                    "../../evaluate-main/metrics/f1",
+                                    "../../evaluate-main/metrics/precision",
+                                    "../../evaluate-main/metrics/recall"])
+            logits, labels = eval_pred
+            predictions = (torch.sigmoid(torch.tensor(logits)) > 0.5).int()  # 对logits应用sigmoid并转换为二值预测
+            results = clf_metrics.compute(predictions=predictions, references=labels)
+            return results
+        self.model.to(self.device)
+        self.model.eval()
+
+        # 调整评估指标，组合多个评估指标
+        clf_metrics = evaluate.combine(["../../evaluate-main/metrics/accuracy",
+                                        "../../evaluate-main/metrics/f1",
+                                        "../../evaluate-main/metrics/precision",
+                                        "../../evaluate-main/metrics/recall"])
+
+        metric_results = []
+        for step, batch in enumerate(tqdm(self.test_dataloader)):
+            batch = batch.to(self.device)
+            with torch.no_grad():
+                outputs = self.model(**batch)
+            predictions = (torch.sigmoid(outputs.logits) > 0.5).int()
+            predictions, references = predictions, batch["labels"]
+            metric_results.append(compute_metrics((outputs.logits.cpu().numpy(), references.cpu().numpy())))
+
+        # 合并每一步的评估指标结果（这里假设指标结果是字典形式，可以根据实际情况调整合并方式）
+        combined_metrics = {}
+        for result in metric_results:
+            for key, value in result.items():
+                combined_metrics[key] = combined_metrics.get(key, 0) + value
+        for key in combined_metrics:
+            combined_metrics[key] /= len(metric_results)
+
+        print("Prediction Result on Test Data:", combined_metrics)
+
+
+
+
     

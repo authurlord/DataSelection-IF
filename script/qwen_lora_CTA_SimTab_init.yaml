@@ -1,5 +1,5 @@
 bf16: true
-cutoff_len: 1024
+cutoff_len: 2048
 dataset: Abt-Buy-Match-P1
 ddp_timeout: 180000000
 deepspeed: /data/home/wangys/LLAMA-backup/LLaMA-Factory/examples/deepspeed/ds_z0_config.json

@@ -23,7 +23,7 @@ import argparse
 import torch.multiprocessing as mp
 import subprocess
 
-yaml_path = 'script/config_ER_walmart-amazon.yaml'
+yaml_path = 'script/config_CTA_SimTab.yaml'
 
 def is_folder_empty(folder_path):
     """
@@ -382,8 +382,113 @@ def ER_Embed_Text(df): ## 返回3列分别是text_1,text_2,label
 # parser_yaml.add_argument('--yaml_path', type = str, default = 'config.yaml')
 # args_yaml = parser_yaml.parse_args()
 
+def DC_Embed_Text(df): ## 返回3列分别是text_1,text_2,label
+    SimTab = df
+    context_list = []
+    target_list = []
+    label_list = []
+    for i in tqdm(range(len(SimTab))):
+        text = SimTab.iloc[i,0]
+        label = SimTab.iloc[i,2]
+        label_list.append(label) ## add label
+        if text.__contains__('You are an expert in Cleaning Hospital Dataset.'):
+            context = text.split('Entity 1:\n\n')[1].split('\n\nTake these rows as reference:')[0]
+            context_list.append(context) ## add context
+            
+            context_dict = eval(context)
+            
+            target = text.split('Output Format Example:\n\n')[1].split('\n\nEntity 1:')[0]
+            
+            target_attr = list(eval(target).keys())[0]
+            
+            related_context = context_dict[target_attr]
+            target_list.append(str({target_attr:related_context}))
+        elif text.__contains__('You are an expert in Cleaning Beers Dataset.'):
+            context = text.split('Entity 1:\n\n')[1].split('\n\nThe input')[0]
+            context_list.append(context) ## add context
+            
+            context_dict = eval(context)
+            
+            target = text.split('Output Format Example:\n\n')[1].split('\n\nEntity 1:')[0]
+            
+            target_attr = list(eval(target).keys())[0]
+            
+            related_context = context_dict[target_attr]
+            target_list.append(str({target_attr:related_context}))
+        elif text.__contains__('You are an expert in Cleaning Rayyan Dataset.'):
+            context = text.split('Entity 1:\n\n')[1].split('\n\nThe input')[0]
+            context_list.append(context) ## add context
+            
+            context_dict = eval(context)
+            
+            target = text.split('Output Format Example:\n\n')[1].split('\n\nEntity 1:')[0]
+            
+            target_attr = list(eval(target).keys())[0]
+            
+            related_context = context_dict[target_attr]
+            target_list.append(str({target_attr:related_context}))
+    return context_list,target_list,label_list
+def DI_Embed_Text(df): ## 返回3列分别是text_1,text_2,label
+    SimTab = df
+    context_list = []
+    target_list = []
+    label_list = []
+    for i in tqdm(range(len(SimTab))):
+        text = SimTab.iloc[i,0]
+        label = SimTab.iloc[i,2]
+        label_list.append(label) ## add label
+        context = text.split('\n\nEntity 1:')[1].split('\n\nTake these examples as reference:')[0]
+        context_list.append(context) ## add context
+        
+        # context_dict = eval(context)
+        
+        target = text.split('\n\nOutput format example:')[1].split('\n\nEntity 1:')[0]
+        
+        # target_attr = list(eval(target).keys())[0]
+        
+        # related_context = context_dict[target_attr]
+        target_list.append(target)
 
+    return context_list,target_list,label_list
 
+def SM_Embed_Text(df): ## 返回3列分别是text_1,text_2,label
+    SimTab = df
+    context_list = []
+    target_list = []
+    label_list = []
+    for i in range(len(SimTab)):
+        text = SimTab.iloc[i,0]
+        label = list(eval(SimTab.iloc[i,2]).values())[0]
+        label_list.append(label) ## add label
+        context = text.split('Output format example:{"Output": ""}\n\nColumn 1:')[1].split('\n\nColumn 2:')[0].replace('\\n', '').replace('\n', '').replace('\\', '')
+        context_list.append(context) ## add context
+        
+        target = text.split('\n\nColumn 2:')[1].split('\n\nTake these examples as reference:')[0].replace('\\n', '').replace('\n', '').replace('\\', '')
+        target_list.append(target)
+    return context_list,target_list,label_list
+
+def AVE_Embed_Text(df): ## 返回3列分别是text_1,text_2,label
+    SimTab = df
+    context_list = []
+    target_list = []
+    label_list = []
+    for i in tqdm(range(len(SimTab))):
+        text = SimTab.iloc[i,0]
+        label = SimTab.iloc[i,2]
+        label_list.append(label) ## add label
+        context = text.split('product title:\n\n')[1].split('\n\nTake these rows as examples:')[0]
+        context_list.append(context) ## add context
+        
+        # context_dict = eval(context)
+        
+        target = text.split('Output Format Example:\n\n')[1].split('\n\nproduct title:')[0]
+        
+        # target_attr = list(eval(target).keys())[0]
+        
+        # related_context = context_dict[target_attr]
+        target_list.append(target)
+
+    return context_list,target_list,label_list
 args = load_yaml_args(yaml_path)
 # print(args.train_init_model)
 
@@ -410,6 +515,14 @@ elif(task=='RE'):
     left_list,right_list,label_list = RE_Embed_Text(train_file) ## 返回3个list
 elif(task=='ER'):
     left_list,right_list,label_list = ER_Embed_Text(train_file) ## 返回3个list
+elif(task=='DC'):
+    left_list,right_list,label_list = DC_Embed_Text(train_file) ## 返回3个list
+elif(task=='DI'):
+    left_list,right_list,label_list = DI_Embed_Text(train_file) ## 返回3个list
+elif(task=='SM'):
+    left_list,right_list,label_list = SM_Embed_Text(train_file) ## 返回3个list
+elif(task=='AVE'):
+    left_list,right_list,label_list = AVE_Embed_Text(train_file) ## 返回3个list
 ## Set only One-GPU for embedding model
 
 print(len(np.unique(label_list)))
@@ -477,6 +590,11 @@ middle_confidence_samples = sample_middle_confidence_data(cluster_labels, ppl_ar
 new_data = get_json_sample(middle_confidence_samples)
 
 init_df = train_file.iloc[new_data]
+
+if(task=='SM'):
+    train_file_pos = train_file[train_file['output']=="{'Output': 'match'}"]
+    init_df = pd.concat([init_df,train_file_pos])
+    print('add positive samples')
 
 if args.train_init_model:
     create_folder_for_file('train/{}/{}/train-init.json'.format(args.task,args.dataset))
@@ -643,6 +761,12 @@ torch.save(cluster_rank,'selection/{}/{}/Cluster-Rank.pkl'.format(args.task,args
 ## output
 
 selected_df = train_file.iloc[p2_choose_index]
+
+if(task=='SM'):
+    train_file_pos = train_file[train_file['output']=="{'Output': 'match'}"]
+    selected_df = pd.concat([selected_df,train_file_pos])
+    print('add positive samples')
+
 json.dump(selected_df.to_dict(orient='records'), open('train/{}/{}/train-select.json'.format(args.task,args.dataset), 'w', encoding='utf-8'), ensure_ascii=False, indent=4)
 
 end_time = time.time()
@@ -681,13 +805,22 @@ def round_down_to_power_of_two(num): ## vllm查询仅支持1/2/4/8的tensor_para
     return result
 
 if args.require_inference:
-    command = 'CUDA_VISIBLE_DEVICES={} python vllm_inference_mistral_api.py --model_path {} --directory {} --gpu_num {} --file {} --json'.format(
-        device,
-        train_args['model_name_or_path'],
-        train_args['output_dir'],
-        round_down_to_power_of_two(len(device_list)),
-        args.test_file_path
-    )
+    if args.guided_choices:
+        command = 'CUDA_VISIBLE_DEVICES={} python vllm_inference_mistral_api.py --model_path {} --directory {} --gpu_num {} --file {} --json --guided_choices'.format(
+            device,
+            train_args['model_name_or_path'],
+            train_args['output_dir'],
+            round_down_to_power_of_two(len(device_list)),
+            args.test_file_path
+        )
+    else:
+        command = 'CUDA_VISIBLE_DEVICES={} python vllm_inference_mistral_api.py --model_path {} --directory {} --gpu_num {} --file {} --json'.format(
+            device,
+            train_args['model_name_or_path'],
+            train_args['output_dir'],
+            round_down_to_power_of_two(len(device_list)),
+            args.test_file_path
+        )
     result = subprocess.run(command, shell=True, capture_output=True, text=True)
 
     print("标准输出：", result.stdout)

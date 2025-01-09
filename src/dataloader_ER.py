@@ -26,8 +26,8 @@ def create_dataloaders(model_name_or_path="roberta-large",
                        select_index = None):
     # Load tokenizer
     tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, padding_side="right")
-    tokenizer.pad_token = tokenizer.eos_token
-    tokenizer.pad_token_id = tokenizer.eos_token_id
+    # tokenizer.pad_token = tokenizer.pad_token_id
+    # tokenizer.eos_token = tokenizer.eos_token_id
     
     # Define task-specific keys for sentence1 and sentence2
     sentence1_key, sentence2_key = task_to_keys[task]
@@ -60,17 +60,6 @@ def create_dataloaders(model_name_or_path="roberta-large",
     test_dataset = Dataset.from_pandas(test_df)
     
 
-    # If noise is required, apply the noise to the training set
-    # if noise_ratio > 0.0:
-    #     n_train = len(train_dataset)
-    #     noise_index = np.random.choice(n_train, size=int(noise_ratio * n_train), replace=False)
-    #     def flip_label(example, ind, noise_index):
-    #         if ind in noise_index:
-    #             example["label"] = 1 - example["label"]
-    #         return example
-    #     train_dataset = train_dataset.map(flip_label, with_indices=True, fn_kwargs={'noise_index': noise_index})
-    # else:
-    #     noise_index = []
 
     # Tokenize the dataset
     if sentence2_key is None:
@@ -106,10 +95,6 @@ def create_dataloaders(model_name_or_path="roberta-large",
             remove_columns=["sentence_1", "sentence_2"]
         )
 
-    # Rename the 'label' column to 'labels' for compatibility with models
-    # tokenized_train = tokenized_train.rename_column("label", "labels")
-    # tokenized_valid = tokenized_valid.rename_column("label", "labels")
-    # tokenized_test = tokenized_test.rename_column("label", "labels")
     
     # Define the collate function for padding
     def collate_fn(examples):
@@ -253,3 +238,126 @@ def create_dataloaders_WebTable(
     tokenized_datasets['validation'] = tokenized_valid
     tokenized_datasets['test'] = tokenized_test
     return train_dataloader, eval_dataloader, test_dataloader, tokenized_datasets, collate_fn, len(label_to_int), int_to_label
+
+def create_dataloaders_multi_label(
+        model_name_or_path="roberta-large",
+        batch_size=32,
+        train_file="train.csv",
+        valid_file="valid.csv",
+        test_file="test.csv",
+        max_length=128,
+        sample = None,
+):
+    """
+    Create dataloaders for multi-label classification training, validation, and testing with label mapping.
+
+    Args:
+        model_name_or_path (str): Path to the pretrained model or model name.
+        batch_size (int): Batch size for dataloaders.
+        train_file (str): Path to the training CSV file.
+        valid_file (str): Path to the validation CSV file.
+        test_file (str): Path to the testing CSV file.
+        max_length (int): Maximum sequence length.
+
+    Returns:
+        train_dataloader, eval_dataloader, test_dataloader, tokenized_datasets, collate_fn, label2id, id2label
+    """
+    import pandas as pd
+    from transformers import AutoTokenizer
+    from torch.utils.data import DataLoader
+    from datasets import Dataset
+    import numpy as np
+
+    # Load tokenizer
+    tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, padding_side="right")
+    # tokenizer.pad_token = tokenizer.pad_token_id
+    # tokenizer.eos_token = tokenizer.eos_token_id
+
+    # Load the datasets from CSV files
+    train_df = pd.read_csv(train_file,index_col=0).reset_index(drop=True)
+    valid_df = pd.read_csv(valid_file,index_col=0).reset_index(drop=True)
+    test_df = pd.read_csv(test_file,index_col=0).reset_index(drop=True)
+    
+    if sample!=None:
+        train_df = train_df.sample(n=sample).reset_index(drop=True)
+
+    # Ensure the dataframes have the correct columns
+    train_df.columns = ['text', 'labels']
+    valid_df.columns = ['text', 'labels']
+    test_df.columns = ['text', 'labels']
+
+    # Get all unique labels from the label columns in train, valid, and test datasets
+    all_labels = []
+    for df in [train_df, valid_df, test_df]:
+        labels_list = df['labels'].apply(lambda x: eval(x))  # 将字符串表示的列表转换为实际的列表
+        all_labels.extend([l for sublist in labels_list for l in sublist])
+    all_labels = sorted(set(all_labels))
+
+    # Create label to id and id to label mappings
+    label2id = {label: idx for idx, label in enumerate(all_labels)}
+    id2label = {idx: label for label, idx in label2id.items()}
+
+    # Convert label columns to multi-hot encoding format (suitable for multi-label classification)
+    def convert_labels_to_multi_hot(row):
+        label_list = eval(row['labels'])  # 将字符串表示的列表转换为实际的列表
+        multi_hot = np.zeros(len(all_labels), dtype=int)
+        for label in label_list:
+            multi_hot[label2id[label]] = 1
+        return multi_hot.tolist()
+
+    train_df['labels'] = train_df.apply(convert_labels_to_multi_hot, axis=1)
+    valid_df['labels'] = valid_df.apply(convert_labels_to_multi_hot, axis=1)
+    test_df['labels'] = test_df.apply(convert_labels_to_multi_hot, axis=1)
+
+    # Convert the DataFrames into HuggingFace Dataset format
+    train_dataset = Dataset.from_pandas(train_df)
+    valid_dataset = Dataset.from_pandas(valid_df)
+    test_dataset = Dataset.from_pandas(test_df)
+    
+    print(train_dataset)
+
+    # Define tokenize function
+    def tokenize_function(examples):
+        return tokenizer(
+            examples["text"],
+            truncation=True,
+            max_length=max_length,
+        )
+
+    # Tokenize datasets
+    tokenized_train = train_dataset.map(
+        tokenize_function,
+        batched=True,
+        remove_columns=["text"]
+    )
+    tokenized_valid = valid_dataset.map(
+        tokenize_function,
+        batched=True,
+        remove_columns=["text"]
+    )
+    tokenized_test = test_dataset.map(
+        tokenize_function,
+        batched=True,
+        remove_columns=["text"]
+    )
+
+    # Define the collate function for padding
+    def collate_fn(examples):
+        return tokenizer.pad(examples, padding="longest", return_tensors="pt")
+
+    tokenized_datasets = {}
+    # Create dataloaders
+    train_dataloader = DataLoader(
+        tokenized_train, shuffle=True, collate_fn=collate_fn, batch_size=batch_size
+    )
+    eval_dataloader = DataLoader(
+        tokenized_valid, shuffle=False, collate_fn=collate_fn, batch_size=batch_size
+    )
+    test_dataloader = DataLoader(
+        tokenized_test, shuffle=False, collate_fn=collate_fn, batch_size=batch_size
+    )
+    tokenized_datasets['train'] = tokenized_train
+    tokenized_datasets['validation'] = tokenized_valid
+    tokenized_datasets['test'] = tokenized_test
+
+    return train_dataloader, eval_dataloader, test_dataloader, tokenized_datasets, collate_fn, label2id, id2label

@@ -1,0 +1,22 @@
+sample_per_cluster: 20
+cluster_num: 200
+train_init_model: true
+task: CTA
+dataset: SimTab
+embedding_model_path: /data/home/wangys/sentence_transformer_model/bge-large-en-1.5
+train_file_path: /data/home/wangys/MELD/dataset/CTA/SimTab_Train_few.json
+eval_file_path: train/CTA/SimTab/train-init.json
+test_file_path: /data/home/wangys/MELD/dataset/CTA/SimTab_test_few.json
+devices: 0,1,2,3,4,5,6,7
+batch_size: 8
+## LLM config
+model_name_or_path: /data/home/wangys/model/Qwen2.5-0.5B-Instruct
+stage: sft
+template: qwen
+adapter_name_or_path: lora/qwen-0.5B/CTA/SimTab/init
+require_grad: true
+require_ppl: true
+require_inference: true
+cutoff_len: 2048
+guided_choices: true
+re_train: true

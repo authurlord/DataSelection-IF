@@ -1,0 +1,70 @@
+{
+  "best_metric": 0.9878847585934692,
+  "best_model_checkpoint": "modernbert-llm-router/checkpoint-479",
+  "epoch": 1.0,
+  "eval_steps": 500,
+  "global_step": 479,
+  "is_hyper_param_search": false,
+  "is_local_process_zero": true,
+  "is_world_process_zero": true,
+  "log_history": [
+    {
+      "epoch": 0.20876826722338204,
+      "grad_norm": 0.16300763189792633,
+      "learning_rate": 4.791231732776618e-05,
+      "loss": 0.1295,
+      "step": 100
+    },
+    {
+      "epoch": 0.4175365344467641,
+      "grad_norm": 2.445711612701416,
+      "learning_rate": 4.582463465553236e-05,
+      "loss": 0.0631,
+      "step": 200
+    },
+    {
+      "epoch": 0.6263048016701461,
+      "grad_norm": 2.234318494796753,
+      "learning_rate": 4.373695198329854e-05,
+      "loss": 0.0464,
+      "step": 300
+    },
+    {
+      "epoch": 0.8350730688935282,
+      "grad_norm": 3.8066937923431396,
+      "learning_rate": 4.164926931106472e-05,
+      "loss": 0.04,
+      "step": 400
+    },
+    {
+      "epoch": 1.0,
+      "eval_f1": 0.9878847585934692,
+      "eval_loss": 0.04153059795498848,
+      "eval_runtime": 15.7366,
+      "eval_samples_per_second": 312.711,
+      "eval_steps_per_second": 19.572,
+      "step": 479
+    }
+  ],
+  "logging_steps": 100,
+  "max_steps": 2395,
+  "num_input_tokens_seen": 0,
+  "num_train_epochs": 5,
+  "save_steps": 500,
+  "stateful_callbacks": {
+    "TrainerControl": {
+      "args": {
+        "should_epoch_stop": false,
+        "should_evaluate": false,
+        "should_log": false,
+        "should_save": true,
+        "should_training_stop": false
+      },
+      "attributes": {}
+    }
+  },
+  "total_flos": 1.0431279182241792e+16,
+  "train_batch_size": 32,
+  "trial_name": null,
+  "trial_params": null
+}

@@ -6,6 +6,7 @@ dataset: WebTable
 embedding_model_path: /data/home/wangys/sentence_transformer_model/bge-large-en-1.5
 train_file_path: train/CTA/WebTable/WebTable-train.json
 eval_file_path: train/CTA/WebTable/train-init.json
+test_file_path: train/CTA/WebTable/WebTable-test.json
 devices: 0,1,2,3,4,5,6,7
 batch_size: 8
 ## LLM config

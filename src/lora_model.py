@@ -12,7 +12,7 @@ from transformers import (
     BitsAndBytesConfig,
     LlamaForCausalLM,
     LlamaTokenizer,AutoModelForCausalLM,AutoTokenizer,
-    DebertaV2ForSequenceClassification, DebertaV2Tokenizer, AdamW, get_linear_schedule_with_warmup
+    DebertaV2ForSequenceClassification, DebertaV2Tokenizer, get_linear_schedule_with_warmup
 )
 from peft import (
     LoraConfig,
@@ -749,25 +749,277 @@ class LORAEngineDebertaMultiClass(object):
         
         return tr_grad_dict, val_grad_dict
     
+# class LORAEngineDeberta(object):
+#     def __init__(self, 
+#                 model_name_or_path="microsoft/deberta-v3-base",
+#                 target_modules=None,
+#                 train_dataloader=None,
+#                 eval_dataloader=None,
+#                 device="cuda",
+#                 num_epochs=10,
+#                 lr=3e-4,
+#                 low_rank=2,
+#                 num_labels=2,
+#                 task='mrpc'):  # Set to the number of classes
+#         self.model_name_or_path = model_name_or_path
+#         self.target_modules = target_modules
+#         self.train_dataloader = train_dataloader
+#         self.eval_dataloader = eval_dataloader
+#         self.device = device
+#         self.num_epochs = num_epochs
+#         self.lr = lr
+#         self.low_rank = low_rank
+#         self.num_labels = num_labels
+#         self.tokenizer = DebertaV2Tokenizer.from_pretrained(self.model_name_or_path)
+#         self.task = task
+#     def build_LORA_model(self):
+#         '''
+#         This function fine-tunes a DeBERTa model for multi-class classification tasks. 
+#         '''
+#         self.model = DebertaV2ForSequenceClassification.from_pretrained(
+#             self.model_name_or_path,
+#             num_labels=self.num_labels,  # Dynamically set the number of labels
+#             return_dict=True,
+#         )
+#         self.model.config.use_cache = False
+#         self.model.config.pad_token_id = self.tokenizer.pad_token_id
+#         self.model.config.eos_token_id = self.tokenizer.eos_token_id
+        
+#         peft_config = LoraConfig(
+#             task_type="SEQ_CLS",
+#             inference_mode=False, 
+#             target_modules=self.target_modules,
+#             r=self.low_rank,
+#             lora_alpha=self.low_rank, 
+#             lora_dropout=0.05,
+#         )
+#         self.model = get_peft_model(self.model, peft_config)
+#         self.model.print_trainable_parameters()
+
+#     def train_LORA_model(self):
+#         '''
+#         This function fine-tunes a DeBERTa model for multi-class classification tasks using micro F1 metric.
+#         '''
+#         metric = evaluate.load("../metrics/f1")  # Load F1 metric
+#         optimizer = AdamW(params=self.model.parameters(), lr=self.lr)
+
+#         # Instantiate scheduler
+#         lr_scheduler = get_linear_schedule_with_warmup(
+#             optimizer=optimizer,
+#             num_warmup_steps=int(0.06 * len(self.train_dataloader) * self.num_epochs),
+#             num_training_steps=len(self.train_dataloader) * self.num_epochs,
+#         )
+
+#         self.model.to(self.device)
+#         for epoch in range(self.num_epochs):
+#             self.model.train()
+#             total_loss = 0
+#             for step, batch in enumerate(tqdm(self.train_dataloader)):
+#                 batch.to(self.device)
+#                 outputs = self.model(**batch)
+#                 loss = outputs.loss
+#                 total_loss += loss.item()
+#                 loss.backward()
+#                 optimizer.step()
+#                 lr_scheduler.step()
+#                 optimizer.zero_grad()
+
+#             print(f"Epoch {epoch + 1}: Training Loss = {total_loss / len(self.train_dataloader)}")
+
+#             # Evaluation
+#             self.model.eval()
+#             for step, batch in enumerate(tqdm(self.eval_dataloader)):
+#                 batch.to(self.device)
+#                 with torch.no_grad():
+#                     outputs = self.model(**batch)
+#                 predictions = outputs.logits.argmax(dim=-1)
+#                 references = batch["labels"]
+#                 metric.add_batch(
+#                     predictions=predictions.cpu(),
+#                     references=references.cpu(),
+#                 )
+
+#             # Compute micro F1
+#             eval_metric = metric.compute(average="micro")
+#             print(f"Epoch {epoch + 1}: Micro F1 = {eval_metric['f1']}")
+
+#     def compute_gradient(self, tokenized_datasets, collate_fn):
+#         train_dataloader_stochastic = DataLoader(
+#             tokenized_datasets["train"], 
+#             shuffle=False,
+#             collate_fn=collate_fn,
+#             batch_size=32,
+#         )
+#         val_dataloader_stochastic = DataLoader(
+#             tokenized_datasets["validation"], 
+#             shuffle=False,
+#             collate_fn=collate_fn,
+#             batch_size=32,
+#         )
+
+#         # Compute the gradient
+#         self.model.eval()
+#         tr_grad_dict = {}
+#         for step, batch in enumerate(tqdm(train_dataloader_stochastic)):
+#             self.model.zero_grad()  # zeroing out gradient
+#             batch.to(self.device)
+#             outputs = self.model(**batch)
+#             loss = outputs.loss
+#             loss.backward()
+            
+#             grad_dict = {}
+#             for k, v in self.model.named_parameters():
+#                 if 'lora_A' in k:
+#                     grad_dict[k] = v.grad.cpu()
+#                 elif 'lora_B' in k:
+#                     grad_dict[k] = v.grad.cpu().T
+#                 elif 'modules_to_save.default.weight' in k:
+#                     grad_dict[k] = v.grad.cpu()
+#             tr_grad_dict[step] = grad_dict
+#             del grad_dict
+            
+#         val_grad_dict = {}
+#         for step, batch in enumerate(tqdm(val_dataloader_stochastic)):
+#             self.model.zero_grad()  # zeroing out gradient
+#             batch.to(self.device)
+#             outputs = self.model(**batch)
+#             loss = outputs.loss
+#             loss.backward()
+            
+#             grad_dict = {}
+#             for k, v in self.model.named_parameters():
+#                 if 'lora_A' in k:
+#                     grad_dict[k] = v.grad.cpu()
+#                 elif 'lora_B' in k:
+#                     grad_dict[k] = v.grad.cpu().T
+#                 elif 'modules_to_save.default.weight' in k:
+#                     grad_dict[k] = v.grad.cpu()
+#             val_grad_dict[step] = grad_dict    
+#             del grad_dict
+            
+#         return tr_grad_dict, val_grad_dict
+#     def compute_gradient_ddp_standalone(model, tokenized_datasets, collate_fn, device="cuda", world_size=4, rank=0):
+#         """
+#         Compute gradients on multiple GPUs using PyTorch DistributedDataParallel (DDP).
+        
+#         Args:
+#             model: Pre-trained model with LoRA layers.
+#             tokenized_datasets: Dataset dictionary with "train" and "validation" splits.
+#             collate_fn: Function to collate batches.
+#             device: Device type ("cuda" or "cpu").
+#             world_size: Number of GPUs to use.
+#             rank: Current GPU rank (0 for single-GPU setup).
+            
+#         Returns:
+#             tr_grad_dict, val_grad_dict: Dictionaries containing gradients for training and validation datasets.
+#         """
+#         # Initialize distributed training if running in a multi-GPU environment
+#         if world_size > 1:
+#             torch.distributed.init_process_group(backend="nccl", init_method="env://", world_size=world_size, rank=rank)
+
+#         # Move model to device and wrap with DDP if applicable
+#         model.to(device)
+#         if world_size > 1:
+#             model = DDP(model, device_ids=[rank], output_device=rank)
+
+#         # Create distributed samplers for datasets
+#         train_sampler = DistributedSampler(tokenized_datasets["train"], num_replicas=world_size, rank=rank, shuffle=False)
+#         val_sampler = DistributedSampler(tokenized_datasets["validation"], num_replicas=world_size, rank=rank, shuffle=False)
+
+#         # Create data loaders with distributed samplers
+#         train_dataloader_stochastic = DataLoader(
+#             tokenized_datasets["train"],
+#             sampler=train_sampler,
+#             collate_fn=collate_fn,
+#             batch_size=1,
+#         )
+#         val_dataloader_stochastic = DataLoader(
+#             tokenized_datasets["validation"],
+#             sampler=val_sampler,
+#             collate_fn=collate_fn,
+#             batch_size=1,
+#         )
+
+#         # Prepare gradient storage
+#         tr_grad_dict = {}
+#         val_grad_dict = {}
+
+#         # Put the model in evaluation mode
+#         model.eval()
+
+#         # Train gradient computation
+#         for step, batch in enumerate(tqdm(train_dataloader_stochastic, desc="Processing Training Data")):
+#             model.zero_grad()  # Clear existing gradients
+#             batch = {k: v.to(device) for k, v in batch.items()}  # Move batch to GPU
+#             outputs = model(**batch)  # Forward pass
+#             loss = outputs.loss
+#             loss.backward()  # Compute gradients
+
+#             # Store gradients for train set
+#             grad_dict = {}
+#             for k, v in model.named_parameters():
+#                 if 'lora_A' in k:
+#                     grad_dict[k] = v.grad.cpu()  # Store gradient for lora_A
+#                 elif 'lora_B' in k:
+#                     grad_dict[k] = v.grad.cpu().T  # Transpose gradient for lora_B
+#                 elif 'modules_to_save.default.weight' in k:
+#                     grad_dict[k] = v.grad.cpu()  # Store gradient for saved modules
+#             tr_grad_dict[step] = grad_dict
+#             del grad_dict  # Free memory
+
+#         # Validation gradient computation
+#         for step, batch in enumerate(tqdm(val_dataloader_stochastic, desc="Processing Validation Data")):
+#             model.zero_grad()  # Clear existing gradients
+#             batch = {k: v.to(device) for k, v in batch.items()}  # Move batch to GPU
+#             outputs = model(**batch)  # Forward pass
+#             loss = outputs.loss
+#             loss.backward()  # Compute gradients
+
+#             # Store gradients for validation set
+#             grad_dict = {}
+#             for k, v in model.named_parameters():
+#                 if 'lora_A' in k:
+#                     grad_dict[k] = v.grad.cpu()  # Store gradient for lora_A
+#                 elif 'lora_B' in k:
+#                     grad_dict[k] = v.grad.cpu().T  # Transpose gradient for lora_B
+#                 elif 'modules_to_save.default.weight' in k:
+#                     grad_dict[k] = v.grad.cpu()  # Store gradient for saved modules
+#             val_grad_dict[step] = grad_dict
+#             del grad_dict  # Free memory
+
+#         # Cleanup distributed environment if applicable
+#         if world_size > 1:
+#             torch.distributed.destroy_process_group()
+
+#         return tr_grad_dict, val_grad_dict
+
 class LORAEngineDeberta(object):
     def __init__(self, 
                 model_name_or_path="microsoft/deberta-v3-base",
                 target_modules=None,
                 train_dataloader=None,
                 eval_dataloader=None,
+                test_dataloader=None,
                 device="cuda",
                 num_epochs=10,
+                lora=True,
                 lr=3e-4,
                 low_rank=2,
                 num_labels=2,
-                task='mrpc'):  # Set to the number of classes
+                task='mrpc',
+                use_rslora=True,
+                valid_each_epoch=False):  # Set to the number of classes
         self.model_name_or_path = model_name_or_path
         self.target_modules = target_modules
         self.train_dataloader = train_dataloader
         self.eval_dataloader = eval_dataloader
+        self.test_dataloader = test_dataloader
         self.device = device
+        self.valid_each_epoch = valid_each_epoch
         self.num_epochs = num_epochs
         self.lr = lr
+        self.lora = lora
+        self.use_rslora = use_rslora
         self.low_rank = low_rank
         self.num_labels = num_labels
         self.tokenizer = DebertaV2Tokenizer.from_pretrained(self.model_name_or_path)
@@ -785,22 +1037,31 @@ class LORAEngineDeberta(object):
         self.model.config.pad_token_id = self.tokenizer.pad_token_id
         self.model.config.eos_token_id = self.tokenizer.eos_token_id
         
-        peft_config = LoraConfig(
-            task_type="SEQ_CLS",
-            inference_mode=False, 
-            target_modules=self.target_modules,
-            r=self.low_rank,
-            lora_alpha=self.low_rank, 
-            lora_dropout=0.05,
-        )
-        self.model = get_peft_model(self.model, peft_config)
-        self.model.print_trainable_parameters()
+        # peft_config = LoraConfig(
+        #     task_type="SEQ_CLS",
+        #     inference_mode=False, 
+        #     target_modules=self.target_modules,
+        #     r=self.low_rank,
+        #     lora_alpha=self.low_rank, 
+        #     lora_dropout=0.05,
+        # )
+        if self.lora:
+            peft_config = LoraConfig(task_type="SEQ_CLS",
+                                    inference_mode=False,
+                                    target_modules=self.target_modules,
+                                    r=self.low_rank,
+                                    lora_alpha=self.low_rank * 2,
+                                    use_rslora=self.use_rslora,
+                                    lora_dropout=0.05
+                                    )
+            self.model = get_peft_model(self.model, peft_config)
+            self.model.print_trainable_parameters()
 
     def train_LORA_model(self):
         '''
         This function fine-tunes a DeBERTa model for multi-class classification tasks using micro F1 metric.
         '''
-        metric = evaluate.load("../metrics/f1")  # Load F1 metric
+        metric = evaluate.load("metrics/f1", "f1")
         optimizer = AdamW(params=self.model.parameters(), lr=self.lr)
 
         # Instantiate scheduler
@@ -827,34 +1088,49 @@ class LORAEngineDeberta(object):
             print(f"Epoch {epoch + 1}: Training Loss = {total_loss / len(self.train_dataloader)}")
 
             # Evaluation
-            self.model.eval()
-            for step, batch in enumerate(tqdm(self.eval_dataloader)):
-                batch.to(self.device)
-                with torch.no_grad():
-                    outputs = self.model(**batch)
-                predictions = outputs.logits.argmax(dim=-1)
-                references = batch["labels"]
-                metric.add_batch(
-                    predictions=predictions.cpu(),
-                    references=references.cpu(),
-                )
+            if self.valid_each_epoch:
+                self.model.eval()
+                for step, batch in enumerate(tqdm(self.eval_dataloader)):
+                    batch.to(self.device)
+                    with torch.no_grad():
+                        outputs = self.model(**batch)
+                    predictions = outputs.logits.argmax(dim=-1)
+                    references = batch["labels"]
+                    metric.add_batch(
+                        predictions=predictions.cpu(),
+                        references=references.cpu(),
+                    )
 
-            # Compute micro F1
-            eval_metric = metric.compute(average="micro")
-            print(f"Epoch {epoch + 1}: Micro F1 = {eval_metric['f1']}")
+                # Compute micro F1
+                # eval_metric = metric.compute(average="micro")
+                eval_metric = metric.compute()
+                print(f"Epoch {epoch + 1}: F1 = {eval_metric}")
+        for step, batch in enumerate(tqdm(self.test_dataloader)):
+            batch.to(self.device)
+            with torch.no_grad():
+                outputs = self.model(**batch)
+            predictions = outputs.logits.argmax(dim=-1)
+            predictions, references = predictions, batch["labels"]
+            metric.add_batch(
+                predictions=predictions,
+                references=references,
+            )
 
-    def compute_gradient(self, tokenized_datasets, collate_fn):
+        eval_metric = metric.compute()
+        print("Prediction Result on Test Data:", eval_metric)
+
+    def compute_gradient(self, tokenized_datasets, collate_fn, batch_size = 1):
         train_dataloader_stochastic = DataLoader(
             tokenized_datasets["train"], 
             shuffle=False,
             collate_fn=collate_fn,
-            batch_size=32,
+            batch_size=batch_size,
         )
         val_dataloader_stochastic = DataLoader(
             tokenized_datasets["validation"], 
             shuffle=False,
             collate_fn=collate_fn,
-            batch_size=32,
+            batch_size=batch_size,
         )
 
         # Compute the gradient
@@ -865,16 +1141,21 @@ class LORAEngineDeberta(object):
             batch.to(self.device)
             outputs = self.model(**batch)
             loss = outputs.loss
+            # if(step % 1000 == 0):
+            #     print(loss.shape)
             loss.backward()
             
             grad_dict = {}
             for k, v in self.model.named_parameters():
                 if 'lora_A' in k:
                     grad_dict[k] = v.grad.cpu()
+                    # grad_dict[k] = v.grad
                 elif 'lora_B' in k:
                     grad_dict[k] = v.grad.cpu().T
-                elif 'modules_to_save.default.weight' in k:
+                    # grad_dict[k] = v.grad.T
+                elif 'modules_to_save.default.weight' in k: ## Different from roberta
                     grad_dict[k] = v.grad.cpu()
+                    # grad_dict[k] = v.grad
             tr_grad_dict[step] = grad_dict
             del grad_dict
             
@@ -898,97 +1179,4 @@ class LORAEngineDeberta(object):
             del grad_dict
             
         return tr_grad_dict, val_grad_dict
-    def compute_gradient_ddp_standalone(model, tokenized_datasets, collate_fn, device="cuda", world_size=4, rank=0):
-        """
-        Compute gradients on multiple GPUs using PyTorch DistributedDataParallel (DDP).
-        
-        Args:
-            model: Pre-trained model with LoRA layers.
-            tokenized_datasets: Dataset dictionary with "train" and "validation" splits.
-            collate_fn: Function to collate batches.
-            device: Device type ("cuda" or "cpu").
-            world_size: Number of GPUs to use.
-            rank: Current GPU rank (0 for single-GPU setup).
-            
-        Returns:
-            tr_grad_dict, val_grad_dict: Dictionaries containing gradients for training and validation datasets.
-        """
-        # Initialize distributed training if running in a multi-GPU environment
-        if world_size > 1:
-            torch.distributed.init_process_group(backend="nccl", init_method="env://", world_size=world_size, rank=rank)
 
-        # Move model to device and wrap with DDP if applicable
-        model.to(device)
-        if world_size > 1:
-            model = DDP(model, device_ids=[rank], output_device=rank)
-
-        # Create distributed samplers for datasets
-        train_sampler = DistributedSampler(tokenized_datasets["train"], num_replicas=world_size, rank=rank, shuffle=False)
-        val_sampler = DistributedSampler(tokenized_datasets["validation"], num_replicas=world_size, rank=rank, shuffle=False)
-
-        # Create data loaders with distributed samplers
-        train_dataloader_stochastic = DataLoader(
-            tokenized_datasets["train"],
-            sampler=train_sampler,
-            collate_fn=collate_fn,
-            batch_size=1,
-        )
-        val_dataloader_stochastic = DataLoader(
-            tokenized_datasets["validation"],
-            sampler=val_sampler,
-            collate_fn=collate_fn,
-            batch_size=1,
-        )
-
-        # Prepare gradient storage
-        tr_grad_dict = {}
-        val_grad_dict = {}
-
-        # Put the model in evaluation mode
-        model.eval()
-
-        # Train gradient computation
-        for step, batch in enumerate(tqdm(train_dataloader_stochastic, desc="Processing Training Data")):
-            model.zero_grad()  # Clear existing gradients
-            batch = {k: v.to(device) for k, v in batch.items()}  # Move batch to GPU
-            outputs = model(**batch)  # Forward pass
-            loss = outputs.loss
-            loss.backward()  # Compute gradients
-
-            # Store gradients for train set
-            grad_dict = {}
-            for k, v in model.named_parameters():
-                if 'lora_A' in k:
-                    grad_dict[k] = v.grad.cpu()  # Store gradient for lora_A
-                elif 'lora_B' in k:
-                    grad_dict[k] = v.grad.cpu().T  # Transpose gradient for lora_B
-                elif 'modules_to_save.default.weight' in k:
-                    grad_dict[k] = v.grad.cpu()  # Store gradient for saved modules
-            tr_grad_dict[step] = grad_dict
-            del grad_dict  # Free memory
-
-        # Validation gradient computation
-        for step, batch in enumerate(tqdm(val_dataloader_stochastic, desc="Processing Validation Data")):
-            model.zero_grad()  # Clear existing gradients
-            batch = {k: v.to(device) for k, v in batch.items()}  # Move batch to GPU
-            outputs = model(**batch)  # Forward pass
-            loss = outputs.loss
-            loss.backward()  # Compute gradients
-
-            # Store gradients for validation set
-            grad_dict = {}
-            for k, v in model.named_parameters():
-                if 'lora_A' in k:
-                    grad_dict[k] = v.grad.cpu()  # Store gradient for lora_A
-                elif 'lora_B' in k:
-                    grad_dict[k] = v.grad.cpu().T  # Transpose gradient for lora_B
-                elif 'modules_to_save.default.weight' in k:
-                    grad_dict[k] = v.grad.cpu()  # Store gradient for saved modules
-            val_grad_dict[step] = grad_dict
-            del grad_dict  # Free memory
-
-        # Cleanup distributed environment if applicable
-        if world_size > 1:
-            torch.distributed.destroy_process_group()
-
-        return tr_grad_dict, val_grad_dict

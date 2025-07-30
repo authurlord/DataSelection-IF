@@ -394,14 +394,15 @@ def get_dataset_id(
         )
 
         # Add ids attribute to each sample in the dataset
-        # def add_ids(examples):
-        #     # Create a new column 'ids' with sequential ids as a list
-        #     examples['ids'] = list(range(len(examples['input_ids'])))
-        #     return examples
+        def add_ids(examples):
+            # Create a new column 'ids' with sequential ids as a list
+            examples['ids'] = list(range(len(examples['input_ids'])))
+            # print(examples)
+            return examples
 
-        # dataset = dataset.map(add_ids, batched=True)
-        # if eval_dataset is not None:
-        #     eval_dataset = eval_dataset.map(add_ids, batched=True)
+        dataset = dataset.map(add_ids, batched=True,batch_size=len(dataset))
+        if eval_dataset is not None:
+            eval_dataset = eval_dataset.map(add_ids, batched=True,batch_size=len(dataset))
 
         if data_args.val_size > 1e-6:
             dataset_dict = split_dataset(dataset, data_args, seed=training_args.seed)

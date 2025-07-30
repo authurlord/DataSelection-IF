@@ -3,13 +3,18 @@ lora_weight/*
 # 忽略 raw_dataset 文件夹下的所有文件
 raw_dataset/*
 
+grad/*
+
+grad_single/*
+
+train/router/*
+
 # 不忽略子文件夹的名称
 !lora_weight/*/
 
 # 忽略所有 .bin 文件和 .pt 文件
 *.bin
 *.pt
-*.npy
 *.safetensors
 *.zip
 *.pkl

@@ -159,7 +159,7 @@ for method in result.keys():
     
     
 # print(pd.DataFrame(result_df['proposed']))
-# result_df.to_csv('grad/result_df.csv')
+result_df.to_csv('grad/{}/{}/result_df.csv'.format(args.task,args.dataset))
 
 create_folder_for_file('Influence/{}/{}/result.pkl'.format(args.task,args.dataset))
 torch.save(sorted_dict_all,'Influence/{}/{}/score.pkl'.format(args.task,args.dataset))

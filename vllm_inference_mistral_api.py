@@ -58,7 +58,7 @@ def main():
     parser.add_argument("--model_path", type=str, default='', help="Model path, default is empty")
     parser.add_argument("--temperature", type=float, default=0, help="temperature")
     parser.add_argument("--top_p", type=float, default=1, help="top_p")
-    parser.add_argument("-checkpoint_dir", "--directory", type=str, help="Specify the directory path", default='/data/home/wangys/LLaMA-Factory-main/models/Mixtral-sft')
+    parser.add_argument("-checkpoint_dir", "--directory", type=str, help="Specify the directory path", default='')
     args = parser.parse_args()
     print('|'.join(args.directory.split('/')))
     # if args.verbose:
@@ -115,10 +115,14 @@ def main():
             sampling_params = SamplingParams(temperature=args.temperature, 
                                              top_p=args.top_p,
                                              max_tokens=args.max_token)
-            if args.guided_choices:
+            if args.guided_choices and args.directory!='':
                 outputs = llm.generate(text_all, sampling_params,guided_options_request=dict(guided_choice=selection_list),lora_request = LoRARequest('merge', 1, args.directory))
+            elif args.guided_choices and args.directory=='':
+                outputs = llm.generate(text_all, sampling_params,guided_options_request=dict(guided_choice=selection_list))  
+            elif not args.guided_choices and args.directory=='':    
+                outputs = llm.generate(text_all, sampling_params)  
             else:
-                outputs = llm.generate(text_all, sampling_params,lora_request = LoRARequest('merge', 1, args.directory))             
+                outputs = llm.generate(text_all, sampling_params,lora_request = LoRARequest('merge', 1, args.directory))
             generation_list = []
             # Print the outputs.
             for output in outputs:

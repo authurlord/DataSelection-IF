@@ -15,7 +15,7 @@ model_name_or_path: /data/home/wangys/model/Mistral-7B-Instruct-v0.2
 neat_packing: true
 num_train_epochs: 3.0
 output_dir: lora/mistral-7B/ER/semi-text-w/w-IF-single-proposed
-overwrite_cache: false
+overwrite_cache: true
 overwrite_output_dir: true
 plot_loss: true
 preprocessing_num_workers: 16

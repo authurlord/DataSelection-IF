@@ -58,6 +58,7 @@ task = args.task
 dataset = args.dataset
 device = args.device
 is_all_element = args.all
+# token_num = args.
 model_path = args.model_path ## path for pre-trained QuRating Model
 
 ## load config
@@ -93,7 +94,10 @@ annotate_command = 'CUDA_VISIBLE_DEVICES={} python -m data_tools.qurater_annotat
     dataset)
 print(annotate_command)
 if not os.path.exists('data/annotation-main/{}-{}'.format(task,dataset)):
-    run_command(annotate_command)
+    output = run_command(annotate_command)
+else:
+    output = 'Task {} Dataset {} already embed, skip!'.format(task,dataset)
+print(output)
 
 annoate_time = time.time()
 
@@ -105,17 +109,19 @@ time_dict['annotate_time'] = annoate_time - start_time
 
 annotate_data = datasets.load_from_disk('data/annotation-main/{}-{}/'.format(task,dataset))
 
-token_count = []
-for i in range(len(annotate_data)):
-    token_count.append(annotate_data[i]['length'])
-avg_token_count = np.mean(token_count)
-if is_all_element:
-    select_token_total = int(np.sum(token_count))
-else:
-    select_token_total = int(avg_token_count * select_file_size)
+# token_count = []
+# for i in range(len(annotate_data)):
+#     token_count.append(annotate_data[i]['length'])
+# avg_token_count = np.mean(token_count)
+# if is_all_element:
+#     select_token_total = int(np.sum(token_count))
+# else:
+#     select_token_total = int(avg_token_count * select_file_size)
 
-select_command = 'CUDA_VISIBLE_DEVICES={} python -m data_tools.select_subset data/annotation-main/{}-{}/ data/subset-main-norm/{}-{}/ \
-    --metric_field writing_style_average \
+select_token_total = 500_000
+
+select_command = 'CUDA_VISIBLE_DEVICES={} python -m data_tools.select_subset data/annotation-main/{}-{}/ data/subset-main-expert/{}-{}/ \
+    --metric_field required_expertise_average \
     --seq_len_field length \
     --tokens {} \
     --temperature 2.0 \
@@ -129,23 +135,24 @@ select_command = 'CUDA_VISIBLE_DEVICES={} python -m data_tools.select_subset dat
     
 print(select_token_total)
 print(select_command)
-run_command(select_command)
+output = run_command(select_command)
+print(output)
 ## load subset
 
-subset = datasets.concatenate_datasets([datasets.load_from_disk(ds) for ds in sorted(glob.glob("data/subset-main-norm/{}-{}/*".format(task,dataset)))])
+subset = datasets.concatenate_datasets([datasets.load_from_disk(ds) for ds in sorted(glob.glob("data/subset-main-expert/{}-{}/*".format(task,dataset)))])
 
 index_list = []
 score = {}
 for i in range(len(subset)):
     index = subset[i]['index']
     index_list.append(subset[i]['index'])
-    score[index] = subset[i]['writing_style_average']
+    score[index] = subset[i]['required_expertise_average']
     
 print('Original File Size:{}\n\nSelect File Size Target:{}\n\nSelect File Size Output:{}\n\nwith {} seconds'.format(train_file_size,select_file_size,len(index_list),time_dict['annotate_time']))
-os.makedirs('data/select_index_main_norm',exist_ok=True)
+os.makedirs('data/select_index_main_expert',exist_ok=True)
 if is_all_element:
-    np.save('data/select_index_main_norm/{}-{}-QuRating.npy'.format(task,dataset),index_list)
-    np.save('data/select_index_main_norm/{}-{}-QuRating-score.npy'.format(task,dataset),score)
+    np.save('data/select_index_main_expert/{}-{}-QuRating.npy'.format(task,dataset),index_list)
+    np.save('data/select_index_main_expert/{}-{}-QuRating-score.npy'.format(task,dataset),score)
 else:
-    np.save('data/select_index_main_norm/{}-{}-QuRating.npy'.format(task,dataset),index_list[:select_file_size])
-np.save('data/select_index_main_norm/{}-{}-time-dict.npy'.format(task,dataset),time_dict)
+    np.save('data/select_index_main_expert/{}-{}-QuRating.npy'.format(task,dataset),index_list[:select_file_size])
+np.save('data/select_index_main_expert/{}-{}-time-dict.npy'.format(task,dataset),time_dict)

@@ -1,0 +1,11 @@
+{"current_steps": 10, "total_steps": 108, "loss": 2.248, "lr": 9.090909090909092e-05, "epoch": 0.2777777777777778, "percentage": 9.26, "elapsed_time": "0:00:23", "remaining_time": "0:03:47"}
+{"current_steps": 20, "total_steps": 108, "loss": 0.009, "lr": 9.789086620939936e-05, "epoch": 0.5555555555555556, "percentage": 18.52, "elapsed_time": "0:00:45", "remaining_time": "0:03:18"}
+{"current_steps": 30, "total_steps": 108, "loss": 0.0026, "lr": 9.082818315286055e-05, "epoch": 0.8333333333333334, "percentage": 27.78, "elapsed_time": "0:01:07", "remaining_time": "0:02:54"}
+{"current_steps": 40, "total_steps": 108, "loss": 0.001, "lr": 7.952011865029614e-05, "epoch": 1.1111111111111112, "percentage": 37.04, "elapsed_time": "0:01:29", "remaining_time": "0:02:32"}
+{"current_steps": 50, "total_steps": 108, "loss": 0.0032, "lr": 6.514250379489753e-05, "epoch": 1.3888888888888888, "percentage": 46.3, "elapsed_time": "0:01:51", "remaining_time": "0:02:09"}
+{"current_steps": 60, "total_steps": 108, "loss": 0.0005, "lr": 4.919034655987493e-05, "epoch": 1.6666666666666665, "percentage": 55.56, "elapsed_time": "0:02:13", "remaining_time": "0:01:46"}
+{"current_steps": 70, "total_steps": 108, "loss": 0.0011, "lr": 3.332237841745898e-05, "epoch": 1.9444444444444444, "percentage": 64.81, "elapsed_time": "0:02:35", "remaining_time": "0:01:24"}
+{"current_steps": 80, "total_steps": 108, "loss": 0.0003, "lr": 1.9188576719953633e-05, "epoch": 2.2222222222222223, "percentage": 74.07, "elapsed_time": "0:02:57", "remaining_time": "0:01:02"}
+{"current_steps": 90, "total_steps": 108, "loss": 0.0, "lr": 8.25859734853645e-06, "epoch": 2.5, "percentage": 83.33, "elapsed_time": "0:03:19", "remaining_time": "0:00:39"}
+{"current_steps": 100, "total_steps": 108, "loss": 0.0003, "lr": 1.6689574843694433e-06, "epoch": 2.7777777777777777, "percentage": 92.59, "elapsed_time": "0:03:42", "remaining_time": "0:00:17"}
+{"current_steps": 108, "total_steps": 108, "epoch": 3.0, "percentage": 100.0, "elapsed_time": "0:04:07", "remaining_time": "0:00:00"}

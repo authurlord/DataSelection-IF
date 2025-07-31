@@ -1,0 +1,11 @@
+{"current_steps": 10, "total_steps": 105, "loss": 2.0551, "lr": 9.090909090909092e-05, "epoch": 0.2857142857142857, "percentage": 9.52, "elapsed_time": "0:00:23", "remaining_time": "0:03:43"}
+{"current_steps": 20, "total_steps": 105, "loss": 0.0138, "lr": 9.775512486034563e-05, "epoch": 0.5714285714285714, "percentage": 19.05, "elapsed_time": "0:00:45", "remaining_time": "0:03:14"}
+{"current_steps": 30, "total_steps": 105, "loss": 0.006, "lr": 9.025350265637815e-05, "epoch": 0.8571428571428571, "percentage": 28.57, "elapsed_time": "0:01:07", "remaining_time": "0:02:49"}
+{"current_steps": 40, "total_steps": 105, "loss": 0.002, "lr": 7.829735471652978e-05, "epoch": 1.1428571428571428, "percentage": 38.1, "elapsed_time": "0:01:29", "remaining_time": "0:02:26"}
+{"current_steps": 50, "total_steps": 105, "loss": 0.0002, "lr": 6.320977009356431e-05, "epoch": 1.4285714285714286, "percentage": 47.62, "elapsed_time": "0:01:52", "remaining_time": "0:02:03"}
+{"current_steps": 60, "total_steps": 105, "loss": 0.0, "lr": 4.666036831274392e-05, "epoch": 1.7142857142857144, "percentage": 57.14, "elapsed_time": "0:02:14", "remaining_time": "0:01:40"}
+{"current_steps": 70, "total_steps": 105, "loss": 0.0058, "lr": 3.0480536241825263e-05, "epoch": 2.0, "percentage": 66.67, "elapsed_time": "0:02:36", "remaining_time": "0:01:18"}
+{"current_steps": 80, "total_steps": 105, "loss": 0.0, "lr": 1.646076349303884e-05, "epoch": 2.2857142857142856, "percentage": 76.19, "elapsed_time": "0:02:58", "remaining_time": "0:00:55"}
+{"current_steps": 90, "total_steps": 105, "loss": 0.0001, "lr": 6.152503589666425e-06, "epoch": 2.571428571428571, "percentage": 85.71, "elapsed_time": "0:03:20", "remaining_time": "0:00:33"}
+{"current_steps": 100, "total_steps": 105, "loss": 0.0, "lr": 6.964873004985717e-07, "epoch": 2.857142857142857, "percentage": 95.24, "elapsed_time": "0:03:42", "remaining_time": "0:00:11"}
+{"current_steps": 105, "total_steps": 105, "epoch": 3.0, "percentage": 100.0, "elapsed_time": "0:04:01", "remaining_time": "0:00:00"}

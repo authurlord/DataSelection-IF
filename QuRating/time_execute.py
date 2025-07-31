@@ -7,6 +7,9 @@ command_line = []
 task_list = [
     ['RE','RE'],
     ['ER','abt-buy'],
+    ['ER','walmart-amazon'],
+    ['ER','amazon-google'],
+    ['ER','wdc-all'],
     ['ER','semi-text-w'],
     ['DC','hospital'],
     ['DC','beer'],
@@ -28,7 +31,7 @@ for task,dataset in task_list:
     #     )
     ### IF with small model
     command_line.append(
-        'python QuRating_Selection.py --task {} --dataset {} --device 6 --model_path ../../model/QuRating-1.3B --all'.format(task,dataset)
+        'python QuRating_Selection.py --task {} --dataset {} --device 6 --model_path ../../model/QuRating-1.3B'.format(task,dataset)
     )
     ### Test IF with DataInf
     # command_line.append(

@@ -21,7 +21,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'sunpak 620-7575cc pictures plus 7575 digital pro 74 heavy-duty photo and video tripod with 3-way pan head', 'category': '', 'brand': 'sunpak', 'modelno': '620-7575cc', 'price': 59.95}"", 'output': {'category': 'complete tripod units'}}
 
-",,{'category': 'blank media'},  {'category': 'dvd r discs'}
+",,{'category': 'blank media'},  {'category': 'blank media'}
 1,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -136,7 +136,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-petty cash receipt book 5-1 2 x 11 carbonless case pack 2 - 497838', 'category': '', 'brand': 'tops', 'modelno': '', 'price': 36.0}"", 'output': {'category': 'laminating supplies'}}
 
-",,{'category': 'networking products'},  {'category': 'network cards'}
+",,{'category': 'networking products'},  {'category': 'networking products'}
 6,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -159,7 +159,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'avery removable print or write color coding labels 0.75 inches round pack of 1008 5472', 'category': '', 'brand': 'avery', 'modelno': '5472', 'price': 7.47}"", 'output': {'category': 'all-purpose labels'}}
 
-",,{'category': 'coaxial speakers'},  {'category': 'antennas'}
+",,{'category': 'coaxial speakers'},  {'category': 'coaxial speakers'}
 7,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -274,7 +274,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-raptor 000raplh2 stereo gaming headset - tknm000raplh2', 'category': '', 'brand': 'raptor', 'modelno': '', 'price': 56.0}"", 'output': {'category': 'mice'}}
 
-",,{'category': 'printers'},  {'category': 'printing'}
+",,{'category': 'printers'},  {'category': 'document creation'}
 12,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -619,7 +619,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'high capacity label tray', 'category': 'laminating supplies', 'brand': '', 'modelno': 'slp-tray', 'price': ''}"", 'output': {'brand': 'seiko instruments'}}
 
-",,{'brand': 'gear head'},  {'brand': 'peripheral logix'}
+",,{'brand': 'gear head'},  {'brand': 'premiertek'}
 27,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -642,7 +642,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'peerless electrical cord wrap for flat panel carts acc320', 'category': '', 'brand': 'peerless', 'modelno': 'acc320', 'price': 52.21}"", 'output': {'category': 'accessories supplies'}}
 
-",,{'category': 'labeling tapes'},  {'category': 'label makers'}
+",,{'category': 'labeling tapes'},  {'category': 'labeling tapes'}
 28,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -872,7 +872,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'motorola moto q9h silver unlocked phone with 2mp camera and windows mobile 6.0 - us warranty', 'category': '', 'brand': 'motorola', 'modelno': 'moto q9h silver', 'price': 89.99}"", 'output': {'category': 'unlocked phones'}}
 
-",,{'category': 'printer ink toner'},  {'category': 'inkjet printer ink'}
+",,{'category': 'printer ink toner'},  {'category': 'printer ink toner'}
 38,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -895,7 +895,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'coby 3 inch touchscreen video mp3 player 16 gb mp837-16gblk black', 'category': '', 'brand': 'coby', 'modelno': 'mp837-16gblk', 'price': 163.22}"", 'output': {'category': 'mp3 players'}}
 
-",,{'category': 'complete tripod units'},  {'category': 'cords'}
+",,{'category': 'complete tripod units'},  {'category': 'rca cables'}
 39,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -918,7 +918,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'lenovo thinkpad 440358u notebook pc - core i5 i5-520m 2.4 ghz - 14-inch - black - centrino 2 - 2 gb ddr3 sdram - 160 gb hdd - dvd-writer - gigabit ethernet wi-fi bluetooth - windows 7 professional x64', 'category': '', 'brand': 'lenovo', 'modelno': '440358u', 'price': 866.97}"", 'output': {'category': 'laptops'}}
 
-",,{'category': 'wrist rests'},  {'category': 'lamps'}
+",,{'category': 'wrist rests'},  {'category': 'back seat cushions'}
 40,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -987,7 +987,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'da-lite 27651 da-glas deluxe rear projection screen - 96 x 96 av format', 'category': '', 'brand': 'da-lite', 'modelno': '', 'price': ''}"", 'output': {'category': 'projection screens'}}
 
-",,{'category': 'laser printers'},  {'category': 'laser printer toner'}
+",,{'category': 'laser printers'},  {'category': 'laser printers'}
 43,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -1033,7 +1033,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'roocase eva hard shell dark blue carrying case with memory foam for sony cybershot dsc-h70 digital camera', 'category': '', 'brand': 'roocase', 'modelno': 'dsc-h70', 'price': 16.88}"", 'output': {'category': 'cases bags'}}
 
-",,{'category': 'chargers adapters'},  {'category': 'chargers adapters'}
+",,{'category': 'chargers adapters'},  {'category': 'ac adapters'}
 45,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -1286,7 +1286,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'sumdex ntc-108bk camera camcorder case', 'category': '', 'brand': 'sumdex', 'modelno': 'ntc-108bk', 'price': 22.87}"", 'output': {'category': 'cases bags'}}
 
-",,{'category': 'laptop netbook computer accessories'},  {'category': 'cases sleeves'}
+",,{'category': 'laptop netbook computer accessories'},  {'category': 'bags cases'}
 56,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -1608,7 +1608,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'pioneer ts-g1343r 5.25-inch 2-way speakers', 'category': '', 'brand': 'pioneer', 'modelno': 'ts-g1343r', 'price': ''}"", 'output': {'category': 'coaxial speakers'}}
 
-",,{'category': 'cases sleeves'},  {'category': 'cases sleeves'}
+",,{'category': 'cases sleeves'},  {'category': 'covers'}
 70,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -1631,7 +1631,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'intermatic tb121c digital tabletop lamp and appliance timer', 'category': '', 'brand': 'intermatic', 'modelno': 'tb121c', 'price': 14.99}"", 'output': {'category': 'timers'}}
 
-",,{'category': 'remote controls'},  {'category': 'remote controls'}
+",,{'category': 'remote controls'},  {'category': 'accessories'}
 71,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -1700,7 +1700,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'tomtom via 1505t 5-inch portable gps navigator with lifetime traffic', 'category': 'portable vehicle gps', 'brand': '', 'modelno': '1en5 .019.02', 'price': 129.99}"", 'output': {'brand': 'tomtom'}}
 
-",,{'brand': 'sunpak'},  {'brand': 'sunpak'}
+",,{'brand': 'sunpak'},  {'brand': 'ptc'}
 74,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -1953,7 +1953,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'hello kitty 79009 sms text messenger red', 'category': 'audio video accessories', 'brand': '', 'modelno': '79009-tru-red', 'price': 16.99}"", 'output': {'brand': 'hello kitty'}}
 
-",,{'brand': 'digital'},  {'brand': 'vivitar'}
+",,{'brand': 'digital'},  {'brand': '3dtv corp'}
 85,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -2022,7 +2022,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'midland avph3 transparent security headsets with ptt vox pair', 'category': 'headsets microphones', 'brand': '', 'modelno': 'avph3', 'price': 21.08}"", 'output': {'brand': 'midland'}}
 
-",,{'brand': 'handhelditems'},  {'brand': 'hello kitty'}
+",,{'brand': 'handhelditems'},  {'brand': 'handhelditems'}
 88,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -2114,7 +2114,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'sharpie accent 1733164 - accent jumbo highlighter chisel tip fluorescent yellow 2 pk', 'category': '', 'brand': 'sharpie', 'modelno': '', 'price': 21.0}"", 'output': {'category': 'battery chargers'}}
 
-",,{'category': 'accessory kits'},  {'category': 'cases bags'}
+",,{'category': 'accessory kits'},  {'category': 'battery chargers'}
 92,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -2183,7 +2183,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'accell b124c-007b proultra elite high speed hdmi cable with ethernet - 2m 6.6 feet', 'category': '', 'brand': 'accell', 'modelno': 'b124c-007b', 'price': 34.99}"", 'output': {'category': 'hdmi cables'}}
 
-",,{'category': 'computers accessories'},  {'category': 'computers accessories'}
+",,{'category': 'computers accessories'},  {'category': 'connectors adapters'}
 95,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -2367,7 +2367,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'young micro cnp-80 950mah li-ion battery for casio ex-z550 14.1 mp digital camera silver', 'category': '', 'brand': 'young micro', 'modelno': 'ex-z550', 'price': 9.98}"", 'output': {'category': 'camera batteries'}}
 
-",,{'category': 'postcards'},  {'category': 'self-stick notes'}
+",,{'category': 'postcards'},  {'category': 'greeting cards'}
 103,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -2390,7 +2390,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-bush wc72446 - series c bow front desk 71w x 36-1 8d x 29-7 8h natural cherry - bshwc72446', 'category': '', 'brand': 'bush', 'modelno': '', 'price': 507.0}"", 'output': {'category': 'laminating supplies'}}
 
-",,{'category': 'labels stickers'},  {'category': 'other office equipment'}
+",,{'category': 'labels stickers'},  {'category': 'printer labels laser inkjet'}
 104,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -2528,7 +2528,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'pioneer cd-r55 remote control', 'category': 'audio video accessories', 'brand': '', 'modelno': 'cd-r55', 'price': 13.59}"", 'output': {'brand': 'pioneer'}}
 
-",,{'brand': 'belkin'},  {'brand': 'gear head'}
+",,{'brand': 'belkin'},  {'brand': 'clickfree'}
 110,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -2873,7 +2873,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'national brand 33001 - 5-subject wire notebook college rule 11 x 8-7 8 white 200 sheets', 'category': 'storage presentation materials', 'brand': '', 'modelno': '', 'price': 21.26}"", 'output': {'brand': 'national'}}
 
-",,{'brand': 'keytronicems'},  {'brand': 'kanguru solutions'}
+",,{'brand': 'keytronicems'},  {'brand': 'saitek'}
 125,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -3057,7 +3057,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'rca rcrn08gr 8 device universal remote with blue backlit keypad gloss black', 'category': 'remote controls', 'brand': '', 'modelno': 'rcrn08gr', 'price': 15.13}"", 'output': {'brand': 'rca'}}
 
-",,{'brand': 'whistler radar'},  {'brand': 'whistler radar'}
+",,{'brand': 'whistler radar'},  {'brand': 'whistler'}
 133,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -3149,7 +3149,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'rand mcnally 0-528-00279-1 gps starter kit', 'category': '', 'brand': 'rand mcnally', 'modelno': '', 'price': 54.8}"", 'output': {'category': 'darkroom supplies'}}
 
-",,{'category': 'tripods'},  {'category': 'binocular accessories'}
+",,{'category': 'tripods'},  {'category': 'camera photo'}
 137,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -3195,7 +3195,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'pc treasures mighty mini mouse - retractable', 'category': '', 'brand': 'pc treasures', 'modelno': '07223', 'price': 9.99}"", 'output': {'category': 'mice'}}
 
-",,{'category': 'audio video accessories'},  {'category': 'shredders'}
+",,{'category': 'audio video accessories'},  {'category': 'printer accessories'}
 139,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -3287,7 +3287,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'lexar media single-slot usb 2.0 multi-card reader model rw023-001', 'category': '', 'brand': 'lexar', 'modelno': 'rw023-001', 'price': 2.88}"", 'output': {'category': 'memory card readers'}}
 
-",,{'category': 'memory cards'},  {'category': 'blank media'}
+",,{'category': 'memory cards'},  {'category': 'memory cards'}
 143,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -3701,7 +3701,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'middle atlantic slim power strip pd-2415sc-ns - power distribution strip - 24 output connector s', 'category': 'selector boxes', 'brand': '', 'modelno': 'pd-2415sc-ns', 'price': 101.32}"", 'output': {'brand': 'middle atlantic'}}
 
-",,{'brand': 'iphone'},  {'brand': 'iphone'}
+",,{'brand': 'iphone'},  {'brand': 'apple'}
 161,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -3724,7 +3724,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'wintec filemate 2 gb class 2 microsd memory card', 'category': '', 'brand': 'wintec', 'modelno': '3fmusdck2gb-r', 'price': 10.99}"", 'output': {'category': 'memory cards'}}
 
-",,{'category': 'hard drive enclosures'},  {'category': 'hard drive enclosures'}
+",,{'category': 'hard drive enclosures'},  {'category': 'computers accessories'}
 162,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -3793,7 +3793,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'canon cli221 2950b001 compatible remanufactured grey ink cartridge w chip', 'category': '', 'brand': 'compatible', 'modelno': '', 'price': 5.06}"", 'output': {'category': 'inkjet printer ink'}}
 
-",,{'category': 'bags cases'},  {'category': 'cooling pads'}
+",,{'category': 'bags cases'},  {'category': 'covers skins'}
 165,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -3839,7 +3839,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'peerless solid-point flat panel straight column mount plcm 2 - mounting kit ti', 'category': '', 'brand': 'peerless', 'modelno': 'plcm-2', 'price': 86.51}"", 'output': {'category': 'tv mounts'}}
 
-",,{'category': 'computers accessories'},  {'category': 'tablets'}
+",,{'category': 'computers accessories'},  {'category': 'computers accessories'}
 167,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -4000,7 +4000,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'young micro cnp-80 950mah li-ion battery for casio ex-z550 14.1 mp digital camera silver', 'category': '', 'brand': 'young micro', 'modelno': 'ex-z550', 'price': 9.98}"", 'output': {'category': 'camera batteries'}}
 
-",,{'category': 'docking stations'},  {'category': 'lap desks'}
+",,{'category': 'docking stations'},  {'category': 'computers accessories'}
 174,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -4046,7 +4046,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'math blaster master the basics win 2000xpvista mac 10.4 or later', 'category': 'printers', 'brand': '', 'modelno': '', 'price': ''}"", 'output': {'brand': 'grade-a'}}
 
-",,{'brand': '4inkjets'},  {'brand': '4inkjets'}
+",,{'brand': '4inkjets'},  {'brand': 'ld'}
 176,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -4184,7 +4184,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'mace security mas-amd120 macealert solo motion detector alarm', 'category': '', 'brand': 'mace security', 'modelno': 'mas-amd120', 'price': 36.99}"", 'output': {'category': 'security surveillance'}}
 
-",,{'category': 'bd-r discs'},  {'category': 'disc jewel cases'}
+",,{'category': 'bd-r discs'},  {'category': 'cd-r discs'}
 182,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -4230,7 +4230,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-super sticky large format notes 8x6 four colors case pack 1 - 447752', 'category': '', 'brand': 'post-it', 'modelno': '', 'price': 32.99}"", 'output': {'category': 'storage presentation materials'}}
 
-",,{'category': 'speaker systems'},  {'category': 'speaker systems'}
+",,{'category': 'speaker systems'},  {'category': 'multiroom digital music systems'}
 184,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -4414,7 +4414,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'kodak playsport zx5 waterproof pocket 1080p hd video camera camcorder black with 4gb card case accessory kit', 'category': '', 'brand': 'kodak', 'modelno': 'k-60584-01', 'price': 129.95}"", 'output': {'category': 'camcorders'}}
 
-",,{'category': 'printer finishers'},  {'category': 'printer staples'}
+",,{'category': 'printer finishers'},  {'category': 'printer accessories'}
 192,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -4552,7 +4552,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'kingston datatraveler 108 8 gb flash drive dt108 8gbz', 'category': 'usb flash drives', 'brand': '', 'modelno': 'dt108/8gbz', 'price': 8.95}"", 'output': {'brand': 'kingston'}}
 
-",,{'brand': 'opto'},  {'brand': 'usom'}
+",,{'brand': 'opto'},  {'brand': 'infocus'}
 198,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -4644,7 +4644,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'sandisk microsd 2gb memory card', 'category': '', 'brand': 'sandisk', 'modelno': 'sdsdq-2048-e11m', 'price': 5.0}"", 'output': {'category': 'memory cards'}}
 
-",,{'category': 'screen protector foils'},  {'category': 'screen protector foils'}
+",,{'category': 'screen protector foils'},  {'category': 'covers skins'}
 202,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -4690,7 +4690,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'stm bags llc small alley case for 13 inch screens carbon', 'category': '', 'brand': 'stm', 'modelno': 'dp-0515-1', 'price': 34.04}"", 'output': {'category': 'bags cases'}}
 
-",,{'category': 'computer monitor mounts'},  {'category': 'monitor accessories'}
+",,{'category': 'computer monitor mounts'},  {'category': 'tv mounts'}
 204,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -4759,7 +4759,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'asus vh232h - 23 wide 16 9 lcd monitors - black', 'category': '', 'brand': 'asus', 'modelno': 'vh232h', 'price': 166.99}"", 'output': {'category': 'monitors'}}
 
-",,{'category': 'connectors adapters'},  {'category': 'surveillance cameras'}
+",,{'category': 'connectors adapters'},  {'category': 'home security systems'}
 207,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -4874,7 +4874,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'kodak easyshare m531 14mp hd digital camera w 3x optical 5x digital zoom 2.7 bright lcd screen red black 4gb sd card', 'category': '', 'brand': 'kodak', 'modelno': 'm531', 'price': ''}"", 'output': {'category': 'point shoot digital camera bundles'}}
 
-",,{'category': 'camera photo'},  {'category': 'remote controls'}
+",,{'category': 'camera photo'},  {'category': 'security surveillance'}
 212,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -4920,7 +4920,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'the joy factory valet versatile in-car retractable carbon fiber seat bolt ipad 1 first generation mount aab103 black', 'category': '', 'brand': 'the joy factory', 'modelno': 'aab103', 'price': 131.29}"", 'output': {'category': 'touch screen tablet accessories'}}
 
-",,{'category': 'power-cable terminals'},  {'category': 'dash mounting kits'}
+",,{'category': 'power-cable terminals'},  {'category': 'wiring harnesses'}
 214,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -4943,7 +4943,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'syba cl-aud63020 green stereo gaming headset with removable mic - green', 'category': '', 'brand': 'syba', 'modelno': 'cl-aud63020', 'price': 6.66}"", 'output': {'category': 'accessories supplies'}}
 
-",,{'category': 'blank media'},  {'category': 'blank media'}
+",,{'category': 'blank media'},  {'category': 'memory cards'}
 215,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -4966,7 +4966,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'samsung eternity a867 unlocked phone with touchscreen 3mp camera gps and music player', 'category': '', 'brand': 'samsung', 'modelno': 'a867', 'price': 105.99}"", 'output': {'category': 'unlocked phones'}}
 
-",,{'category': 'no-contract phones'},  {'category': 'unlocked phones'}
+",,{'category': 'no-contract phones'},  {'category': 'no-contract phones'}
 216,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -5104,7 +5104,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'left handed keyboard wired black by ergoguys', 'category': 'keyboards mice input devices', 'brand': '', 'modelno': 'kbs-29blk', 'price': 26.64}"", 'output': {'brand': 'acp'}}
 
-",,{'brand': 'q-see'},  {'brand': 'q-see'}
+",,{'brand': 'q-see'},  {'brand': 'digital peripheral solutions'}
 222,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -5127,7 +5127,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new york jets pro grip mouse', 'category': '', 'brand': 'team promark', 'modelno': 'msnf21', 'price': 20.36}"", 'output': {'category': 'mice'}}
 
-",,{'category': 'laminating supplies'},  {'category': 'storage presentation materials'}
+",,{'category': 'laminating supplies'},  {'category': 'laminating supplies'}
 223,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -5150,7 +5150,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'crosley ck-1 record cleaning kit', 'category': 'cleaning repair', 'brand': '', 'modelno': 'ck-1', 'price': 32.78}"", 'output': {'brand': 'crosley'}}
 
-",,{'brand': 'smead'},  {'brand': 'pendaflex'}
+",,{'brand': 'smead'},  {'brand': 'universal'}
 224,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -5173,7 +5173,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-wireless presenter with built-in laser pointer - df2050', 'category': '', 'brand': 'v7', 'modelno': '', 'price': 45.0}"", 'output': {'category': 'connectors adapters'}}
 
-",,{'category': 'accessories supplies'},  {'category': 'surveillance cameras'}
+",,{'category': 'accessories supplies'},  {'category': 'power converters'}
 225,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -5311,7 +5311,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'solid wood tv console with drawers - brown 52', 'category': 'office electronics accessories', 'brand': '', 'modelno': '', 'price': ''}"", 'output': {'brand': 'unknown'}}
 
-",,{'brand': 'gbc'},  {'brand': 'mygift'}
+",,{'brand': 'gbc'},  {'brand': 'gbc'}
 231,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -5334,7 +5334,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': '2500 lumens dlp projector', 'category': 'video projectors', 'brand': '', 'modelno': 'np115', 'price': 355.82}"", 'output': {'brand': 'nec'}}
 
-",,{'brand': 'fujitsu'},  {'brand': 'fujitsu'}
+",,{'brand': 'fujitsu'},  {'brand': 'fuji'}
 232,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -5495,7 +5495,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'ld compatible high yield black laser toner cartridge for lexmark 08a0478 e320 e322 series printers', 'category': '', 'brand': '4inkjets', 'modelno': '', 'price': 69.99}"", 'output': {'category': 'laser printer toner'}}
 
-",,{'category': 'address labels'},  {'category': 'labels indexes stamps'}
+",,{'category': 'address labels'},  {'category': 'all-purpose labels'}
 239,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -5633,7 +5633,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'belkin r 6ft . cord concealer gray', 'category': '', 'brand': 'belkin', 'modelno': 'f8b023', 'price': 9.77}"", 'output': {'category': 'computers accessories'}}
 
-",,{'category': 'amplifier wiring kits'},  {'category': 'dash mounting kits'}
+",,{'category': 'amplifier wiring kits'},  {'category': 'wiring harnesses'}
 245,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -5955,7 +5955,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-paper hp universal bond 24x150 - q1396a', 'category': '', 'brand': 'hp', 'modelno': '', 'price': 14.0}"", 'output': {'category': 'inkjet printers'}}
 
-",,{'category': 'surveillance cameras'},  {'category': 'surveillance cameras'}
+",,{'category': 'surveillance cameras'},  {'category': 'lighting'}
 259,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -6323,7 +6323,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'professional kingston microsdhc 4gb 4 gigabyte card for pantech link with custom formatting and standard sd adapter . sdhc class 4 certified', 'category': '', 'brand': 'kingston', 'modelno': '', 'price': 7.62}"", 'output': {'category': 'memory cards'}}
 
-",,{'category': 'chargers adapters'},  {'category': 'chargers adapters'}
+",,{'category': 'chargers adapters'},  {'category': 'batteries chargers accessories'}
 275,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -6392,7 +6392,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'usb 2.0 to hdmi with audio', 'category': 'hdmi cables', 'brand': '', 'modelno': 'ju-hm0112-s1', 'price': 62.24}"", 'output': {'brand': 'siig'}}
 
-",,{'brand': 'gbc'},  {'brand': 'quartet'}
+",,{'brand': 'gbc'},  {'brand': 'gbc'}
 278,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -6415,7 +6415,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'apple magsafe 60w power adapter for macbook mc461ll a with ac extension wall cord retail packaging', 'category': '', 'brand': 'apple', 'modelno': 'mc461ll/a', 'price': 79.0}"", 'output': {'category': 'chargers adapters'}}
 
-",,{'category': 'touch screen tablet accessories'},  {'category': 'touch screen tablet accessories'}
+",,{'category': 'touch screen tablet accessories'},  {'category': 'keyboards'}
 279,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -6438,7 +6438,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'kingston technology 1 gb dimm memory 333 mhz pc 2700 184-pin ddr sdram single not a kit ktd4550 1g', 'category': 'memory', 'brand': '', 'modelno': 'ktd4550/1g', 'price': 46.95}"", 'output': {'brand': 'kingston'}}
 
-",,{'brand': 'epson'},  {'brand': 'luxmo'}
+",,{'brand': 'epson'},  {'brand': 'lux'}
 280,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -6530,7 +6530,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'q-see qsvrg200 shielded video power 200 feet bnc male cable with 2 female connectors', 'category': '', 'brand': 'q-see', 'modelno': 'qsvrg200', 'price': 50.24}"", 'output': {'category': 'surveillance camera cables'}}
 
-",,{'category': 'aa'},  {'category': 'aa'}
+",,{'category': 'aa'},  {'category': 'aaa'}
 284,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -6576,7 +6576,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'okidata 42158601 120v fuser high-yield', 'category': '', 'brand': 'oki', 'modelno': '', 'price': 116.74}"", 'output': {'category': 'laser printer toner'}}
 
-",,{'category': 'memory'},  {'category': 'computers accessories'}
+",,{'category': 'memory'},  {'category': 'memory'}
 286,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -6622,7 +6622,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'hp tri-fold brochure paper glossy 100 sheets 8.5 x 11 inches', 'category': 'brochure paper', 'brand': '', 'modelno': 'hewc7020a', 'price': 13.0}"", 'output': {'brand': 'hp'}}
 
-",,{'brand': 'noah company'},  {'brand': 'noah company'}
+",,{'brand': 'noah company'},  {'brand': 'by noah company'}
 288,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -6714,7 +6714,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'softskin gel wrist rest black', 'category': '', 'brand': 'innovera', 'modelno': '', 'price': 10.6}"", 'output': {'category': 'wrist rests'}}
 
-",,{'category': 'selector boxes'},  {'category': 'monitor arms stands'}
+",,{'category': 'selector boxes'},  {'category': 'tv mounts'}
 292,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -6783,7 +6783,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'canon eos rebel t3 12.2 mp digital slr camera body ef-s 18-55mm is ii lens with 75-300mm iii lens 16gb card battery backpack sling case 2 filters cleaning kit', 'category': '', 'brand': 'canon', 'modelno': 'k-60702-19', 'price': 669.95}"", 'output': {'category': 'digital slr cameras'}}
 
-",,{'category': 'computers accessories'},  {'category': 'network attached storage'}
+",,{'category': 'computers accessories'},  {'category': 'computers accessories'}
 295,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -6898,7 +6898,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'rca to 6-pin din coupler', 'category': '', 'brand': 'lorex', 'modelno': 'cva6933', 'price': 8.98}"", 'output': {'category': 'office electronics'}}
 
-",,{'category': 'audio video accessories'},  {'category': 'audio video accessories'}
+",,{'category': 'audio video accessories'},  {'category': 'printer ink toner'}
 300,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -6921,7 +6921,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'iogear vga hi-res extension cable hddb15m hddb15f - 25 feet', 'category': '', 'brand': 'iogear', 'modelno': 'g2lvgae025', 'price': 24.85}"", 'output': {'category': 'cables interconnects'}}
 
-",,{'category': 'mice'},  {'category': 'mice'}
+",,{'category': 'mice'},  {'category': 'gaming mice'}
 301,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -6990,7 +6990,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-post-it notes super sticky 67512sscp - super sticky notes 4 x 4 lined canary yellow 12 90-sheet pads pack - mmm67512sscp', 'category': '', 'brand': 'post-it', 'modelno': '', 'price': 50.9}"", 'output': {'category': 'storage presentation materials'}}
 
-",,{'category': 'screen protectors'},  {'category': 'screen protectors'}
+",,{'category': 'screen protectors'},  {'category': 'screen protector foils'}
 304,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -7266,7 +7266,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'humminbird 408130-1 788ci hd di combo fishfinder gps', 'category': 'fishfinders', 'brand': '', 'modelno': '408130-1', 'price': ''}"", 'output': {'brand': 'humminbird'}}
 
-",,{'brand': 'fiskars'},  {'brand': 'premier'}
+",,{'brand': 'fiskars'},  {'brand': 'fiskars'}
 316,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -7335,7 +7335,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'targus sport backpack case designed for 15.4 inch notebooks tsb007us black with platinum accents', 'category': '', 'brand': 'targus', 'modelno': 'tsb007us', 'price': 19.38}"", 'output': {'category': 'bags cases'}}
 
-",,{'category': 'tv mounts'},  {'category': 'tv mounts'}
+",,{'category': 'tv mounts'},  {'category': 'computer monitor mounts'}
 319,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -7450,7 +7450,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'sascltr409 - imaging drum for samsung clp310', 'category': '', 'brand': 'samsung', 'modelno': '', 'price': 130.95}"", 'output': {'category': 'inkjet printer ink'}}
 
-",,{'category': 'cases bags'},  {'category': 'cases bags'}
+",,{'category': 'cases bags'},  {'category': 'bags cases'}
 324,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -7473,7 +7473,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'level mount elew5-07 universal wire management kit - 5 feet', 'category': '', 'brand': 'easymounts', 'modelno': 'elew5-07', 'price': 14.99}"", 'output': {'category': 'audio-video kits'}}
 
-",,{'category': 'routers'},  {'category': 'networking products'}
+",,{'category': 'routers'},  {'category': 'routers'}
 325,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -7519,7 +7519,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'sennheiser px 100-ii on ear miniheadphone black', 'category': '', 'brand': 'sennheiser', 'modelno': 'px100-ii black', 'price': 64.95}"", 'output': {'category': 'headphones'}}
 
-",,{'category': 'speakers'},  {'category': 'speakers'}
+",,{'category': 'speakers'},  {'category': 'speaker systems'}
 327,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -7565,7 +7565,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-quartet mws - magnetic write-on wipe-off strips 2w x 7 8h white 25 pack - qrtmws', 'category': '', 'brand': 'quartet', 'modelno': '', 'price': ''}"", 'output': {'category': 'laminating supplies'}}
 
-",,{'category': 'usb cables'},  {'category': 'computers accessories'}
+",,{'category': 'usb cables'},  {'category': 'cables interconnects'}
 329,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -7726,7 +7726,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'vivitar close up lens set 62mm plus1 plus2 plus4 plus10', 'category': '', 'brand': 'vivitar', 'modelno': 'viv-cl-62', 'price': 15.98}"", 'output': {'category': 'filters'}}
 
-",,{'category': 'cases'},  {'category': 'cases'}
+",,{'category': 'cases'},  {'category': 'covers skins'}
 336,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -7772,7 +7772,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'maxell timbers earbud', 'category': 'headphones', 'brand': '', 'modelno': '190244', 'price': 19.4}"", 'output': {'brand': 'maxell'}}
 
-",,{'brand': 'imation'},  {'brand': 'innovera'}
+",,{'brand': 'imation'},  {'brand': 'tdk'}
 338,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -7818,7 +7818,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'iphone iphone 3g cortex design protective skin decal sticker mac0973-18', 'category': '', 'brand': 'pacers', 'modelno': '', 'price': ''}"", 'output': {'category': 'computers accessories'}}
 
-",,{'category': 'fiber optic cables'},  {'category': 'optical drives'}
+",,{'category': 'fiber optic cables'},  {'category': 'digital coaxial cables'}
 340,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -7841,7 +7841,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'ihome ih-b931nr - notebook cooling pad', 'category': '', 'brand': 'lifeworks', 'modelno': 'ih-b931nr', 'price': 12.99}"", 'output': {'category': 'cooling pads'}}
 
-",,{'category': 'memory'},  {'category': 'computers accessories'}
+",,{'category': 'memory'},  {'category': 'memory'}
 341,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -8232,7 +8232,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': '10 pack 2bk 2bk 2c 2m 2y bci-6 bci-3e non-oem printer ink cartridges for canon pixma i860 ip4000 ip5000 mp750 mp760 mp780', 'category': '', 'brand': 'compatible', 'modelno': '', 'price': 9.29}"", 'output': {'category': 'inkjet printer ink'}}
 
-",,{'category': 'usb flash drives'},  {'category': 'computer accessories'}
+",,{'category': 'usb flash drives'},  {'category': 'usb flash drives'}
 358,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -8301,7 +8301,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': '203 project-o stand projection 11.25 inx19in table shelf', 'category': '', 'brand': 'da-lite screen', 'modelno': '42068', 'price': 117.73}"", 'output': {'category': 'projector accessories'}}
 
-",,{'category': 'dvd-r discs'},  {'category': 'dvd r discs'}
+",,{'category': 'dvd-r discs'},  {'category': 'computers accessories'}
 361,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -8577,7 +8577,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-advantus ang120d - vinyl magazine binder 9 1 2w x 11-1 4h clear front cover navy blue back - avtang120d', 'category': '', 'brand': 'advantus', 'modelno': '', 'price': 29.0}"", 'output': {'category': 'laminating supplies'}}
 
-",,{'category': 'routers'},  {'category': 'security surveillance'}
+",,{'category': 'routers'},  {'category': 'routers'}
 373,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -8623,7 +8623,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'roocase executive portfolio red leather case cover with landscape portrait view for asus eee pad transformer 10.1-inch tf101 android tablet wi-fi', 'category': '', 'brand': 'roocase', 'modelno': '', 'price': 43.64}"", 'output': {'category': 'cases sleeves'}}
 
-",,{'category': 'screen protectors'},  {'category': 'screen protectors'}
+",,{'category': 'screen protectors'},  {'category': 'covers skins'}
 375,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -8715,7 +8715,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-pendaflex r152blu - two-ply reinforced file folders straight cut top tab letter blue 100 box - essr152blu', 'category': '', 'brand': 'pendaflex', 'modelno': '', 'price': ''}"", 'output': {'category': 'laminating supplies'}}
 
-",,{'category': 'wiring harnesses'},  {'category': 'speaker connectors'}
+",,{'category': 'wiring harnesses'},  {'category': 'wiring harnesses'}
 379,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -8784,7 +8784,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'pc treasures 07958-pg head sweetbeatz ear buds', 'category': '', 'brand': 'pc treasures', 'modelno': '', 'price': 7.79}"", 'output': {'category': 'audio video accessories'}}
 
-",,{'category': 'surveillance cameras'},  {'category': 'webcams'}
+",,{'category': 'surveillance cameras'},  {'category': 'surveillance cameras'}
 382,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -9014,7 +9014,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'qd 1026p', 'category': '', 'brand': 'vxi', 'modelno': '201797', 'price': 12.59}"", 'output': {'category': 'accessories supplies'}}
 
-",,{'category': 'audio video accessories'},  {'category': 'audio video accessories'}
+",,{'category': 'audio video accessories'},  {'category': 'printer accessories'}
 392,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -9152,7 +9152,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'inland pro usb 800dpi mini ir laser notebook 3d mouse', 'category': '', 'brand': 'inland', 'modelno': '07010', 'price': 7.82}"", 'output': {'category': 'mice'}}
 
-",,{'category': 'labeling tapes'},  {'category': 'adhesive tapes'}
+",,{'category': 'labeling tapes'},  {'category': 'labeling tapes'}
 398,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -9244,7 +9244,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'hip street anti-fingerprint screen protector for ipad 2 hs-ipadscrp-af', 'category': 'screen protectors', 'brand': '', 'modelno': 'hs-ipadscrp-af', 'price': 17.08}"", 'output': {'brand': 'hipstreet'}}
 
-",,{'brand': 'motion systems'},  {'brand': 'pyle'}
+",,{'brand': 'motion systems'},  {'brand': 'clarity'}
 402,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -9313,7 +9313,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'peerless pt660 universal tilt wall mount for 32 to 60 displays black', 'category': '', 'brand': 'peerless', 'modelno': 'pt660', 'price': 71.87}"", 'output': {'category': 'tv mounts'}}
 
-",,{'category': 'blank media'},  {'category': 'blank media'}
+",,{'category': 'blank media'},  {'category': 'memory cards'}
 405,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -9382,7 +9382,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'bluelounge cablebox - cable management box - white', 'category': '', 'brand': 'bluelounge', 'modelno': 'cb-01-wh', 'price': 26.95}"", 'output': {'category': 'stands'}}
 
-",,{'category': 'digital slr cameras'},  {'category': 'digital slr cameras'}
+",,{'category': 'digital slr cameras'},  {'category': 'digital slr camera bundles'}
 408,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -9428,7 +9428,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'intel socket 1156 intel h57 a gbe mini-itx motherboard retail boxdh57jg', 'category': '', 'brand': 'intel', 'modelno': 'boxdh57jg', 'price': 122.99}"", 'output': {'category': 'computers accessories'}}
 
-",,{'category': 'ethernet cables'},  {'category': 'accessories supplies'}
+",,{'category': 'ethernet cables'},  {'category': 'ethernet cables'}
 410,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -9451,7 +9451,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'sabrent sbt-tvfm tv tuner video capture fm radio pci card with remote control', 'category': '', 'brand': 'sabrent', 'modelno': 'sbt-tvfm', 'price': 24.94}"", 'output': {'category': 'computers accessories'}}
 
-",,{'category': 'modem cables'},  {'category': 'modems'}
+",,{'category': 'modem cables'},  {'category': 'connectors adapters'}
 411,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -9520,7 +9520,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-lexmark 34s0500 - e360dn network ready duplex monochrome printer - lex34s0500', 'category': '', 'brand': 'lexmark', 'modelno': '', 'price': 518.37}"", 'output': {'category': 'printers'}}
 
-",,{'category': 'cooling pads'},  {'category': 'cooling pads'}
+",,{'category': 'cooling pads'},  {'category': 'computers accessories'}
 414,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -9635,7 +9635,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'laptop case without foam 14.7 x 20 x 5.8 color black', 'category': '', 'brand': 'pelican', 'modelno': '', 'price': 114.95}"", 'output': {'category': 'bags cases'}}
 
-",,{'category': 'cases sleeves'},  {'category': 'cases sleeves'}
+",,{'category': 'cases sleeves'},  {'category': 'covers'}
 419,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -9681,7 +9681,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'sony bloggie camera with 360 degree lens attachment white', 'category': '', 'brand': 'sony', 'modelno': 'mhsfs1k/w', 'price': 148.0}"", 'output': {'category': 'camcorders'}}
 
-",,{'category': 'boating gps units chartplotters'},  {'category': 'boating gps units chartplotters'}
+",,{'category': 'boating gps units chartplotters'},  {'category': 'boating gps accessories'}
 421,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -9727,7 +9727,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'sony 2 gb digital music player black', 'category': '', 'brand': 'sony', 'modelno': 'nwzw252blk', 'price': 49.88}"", 'output': {'category': 'mp3 players'}}
 
-",,{'category': 'printer ink toner'},  {'category': 'audio video accessories'}
+",,{'category': 'printer ink toner'},  {'category': 'printer accessories'}
 423,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -9796,7 +9796,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'incipio 1-port car charger for ipod iphone and ipad ip-651', 'category': 'chargers adapters', 'brand': '', 'modelno': 'ip-651', 'price': 20.96}"", 'output': {'brand': 'incipio'}}
 
-",,{'brand': 'general electric'},  {'brand': 'general electric'}
+",,{'brand': 'general electric'},  {'brand': 'georgia pacific'}
 426,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -9842,7 +9842,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'epson cyan ink cartridge t054220', 'category': '', 'brand': 'epson', 'modelno': 't054220', 'price': 13.73}"", 'output': {'category': 'inkjet printer ink'}}
 
-",,{'category': 'address labels'},  {'category': 'labels indexes stamps'}
+",,{'category': 'address labels'},  {'category': 'labeling tapes'}
 428,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -9911,7 +9911,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'xerox 113r00656 print cartridge for xerox phaser 4500 black', 'category': '', 'brand': 'xerox', 'modelno': '113r00656', 'price': 134.11}"", 'output': {'category': 'printer ink toner'}}
 
-",,{'category': 'accessories'},  {'category': 'cable security devices'}
+",,{'category': 'accessories'},  {'category': 'accessories'}
 431,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -10095,7 +10095,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'ld hewlett packard hp c9393an hp 88xl yellow high yield remanufactured ink cartridge', 'category': 'inkjet printer ink', 'brand': '', 'modelno': '', 'price': 7.99}"", 'output': {'brand': '4inkjets'}}
 
-",,{'brand': 'wincraft'},  {'brand': 'team pro mark'}
+",,{'brand': 'wincraft'},  {'brand': 'razer'}
 439,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -10256,7 +10256,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'verbatim 2.8 gb 2x double-sided mini dvd-ram bundle 3 discs', 'category': '', 'brand': 'verbatim', 'modelno': '95429', 'price': 19.8}"", 'output': {'category': 'blank media'}}
 
-",,{'category': 'inkjet printer ink'},  {'category': 'laser printer toner'}
+",,{'category': 'inkjet printer ink'},  {'category': 'printer ink toner'}
 446,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -10325,7 +10325,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'meelectronics rx-11-bk in-ear headphones for ipod iphone mp3 cd dvd players black with red accents', 'category': '', 'brand': 'meelectonics', 'modelno': 'rx-11-bk', 'price': 20.09}"", 'output': {'category': 'headphones'}}
 
-",,{'category': 'computers accessories'},  {'category': 'keyboard skins'}
+",,{'category': 'computers accessories'},  {'category': 'skins decals'}
 449,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -10371,7 +10371,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-rdx500 system with 2 cartridge - hpq2042aa', 'category': 'bd-r discs', 'brand': '', 'modelno': '', 'price': 816.46}"", 'output': {'brand': 'hp'}}
 
-",,{'brand': 'patriot'},  {'brand': 'patriot memory'}
+",,{'brand': 'patriot'},  {'brand': 'patriot'}
 451,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -10417,7 +10417,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'hp 91 - maintenance cartridge - 1', 'category': '', 'brand': 'hp', 'modelno': 'c9518a', 'price': 65.32}"", 'output': {'category': 'printer ink toner'}}
 
-",,{'category': 'printer accessories'},  {'category': 'shredders'}
+",,{'category': 'printer accessories'},  {'category': 'printer accessories'}
 453,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -10463,7 +10463,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'incipio smart feather case for apple ipad 2 - light blue ipad-227', 'category': '', 'brand': 'incipio', 'modelno': 'ipad-227', 'price': 29.13}"", 'output': {'category': 'cases sleeves'}}
 
-",,{'category': 'combs spines'},  {'category': 'binding machine supplies'}
+",,{'category': 'combs spines'},  {'category': 'covers'}
 455,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -10486,7 +10486,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': '203 project-o stand projection 11.25 inx19in table shelf', 'category': '', 'brand': 'da-lite screen', 'modelno': '42068', 'price': 117.73}"", 'output': {'category': 'projector accessories'}}
 
-",,{'category': 'tv mounts'},  {'category': 'tv mounts'}
+",,{'category': 'tv mounts'},  {'category': 'computer monitor mounts'}
 456,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -10532,7 +10532,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'aktiv pak ap400 professional all weather multi purpose camera photo computer laptop backpack accessory kit for canon rebel t3 t3i t1i t2i eos 60d 5d 7d nikon d3000 d3100 d5000 d5100 d7000 d300s olympus evolt e-5 e-30 e-620 sony alpha a560 a580 a33 a35', 'category': '', 'brand': 'aktiv pak', 'modelno': 'k-38592-01', 'price': 69.95}"", 'output': {'category': 'cases bags'}}
 
-",,{'category': 'accessories supplies'},  {'category': 'headsets microphones'}
+",,{'category': 'accessories supplies'},  {'category': 'headsets'}
 458,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -10739,7 +10739,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-paper pro desktop w high start 28 sheet capacity case pack 1 - 509809', 'category': '', 'brand': 'paperpro', 'modelno': '', 'price': 76.85}"", 'output': {'category': 'computer accessories'}}
 
-",,{'category': 'laser printer toner'},  {'category': 'labeling tapes'}
+",,{'category': 'laser printer toner'},  {'category': 'inkjet printer ink'}
 467,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -10831,7 +10831,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'lorex cbld100u din or bnc extension cable for security cameras 100 feet', 'category': '', 'brand': 'lorex', 'modelno': 'cbld100u', 'price': 42.88}"", 'output': {'category': 'surveillance camera cables'}}
 
-",,{'category': 'postcards'},  {'category': 'printer labels laser inkjet'}
+",,{'category': 'postcards'},  {'category': 'postcards'}
 471,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -11084,7 +11084,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'cables to go 40609 velocity m f stereo audio extension cable 12 feet blue', 'category': '', 'brand': 'ctg', 'modelno': '40609', 'price': 11.99}"", 'output': {'category': 'audio cables'}}
 
-",,{'category': 'microphones accessories'},  {'category': 'headsets microphones'}
+",,{'category': 'microphones accessories'},  {'category': 'microphones'}
 482,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -11337,7 +11337,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-advantus ang120d - vinyl magazine binder 9 1 2w x 11-1 4h clear front cover navy blue back - avtang120d', 'category': '', 'brand': 'advantus', 'modelno': '', 'price': 29.0}"", 'output': {'category': 'laminating supplies'}}
 
-",,{'category': 'computer speakers'},  {'category': 'speaker systems'}
+",,{'category': 'computer speakers'},  {'category': 'speakers'}
 493,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -11383,7 +11383,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'diaper dude black coated grey canvas laptop bag digi-cc400', 'category': '', 'brand': 'diaper dude', 'modelno': 'digi-cc400', 'price': 98.15}"", 'output': {'category': 'bags cases'}}
 
-",,{'category': 'printer accessories'},  {'category': 'printer transfer units'}
+",,{'category': 'printer accessories'},  {'category': 'computer accessories'}
 495,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -11429,7 +11429,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'samsung galaxy tab 7-inch 16gb wi-fi', 'category': '', 'brand': 'samsung', 'modelno': 'gt-p1010cwaxar', 'price': ''}"", 'output': {'category': 'tablets'}}
 
-",,{'category': 'covers skins'},  {'category': 'cases'}
+",,{'category': 'covers skins'},  {'category': 'covers skins'}
 497,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -11590,7 +11590,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'alera va216030mc - valencia series straight front desk shell 59-1 8 x 29-1 2 x 29-1 2 med cherry', 'category': 'headphones', 'brand': '', 'modelno': '', 'price': ''}"", 'output': {'brand': 'alera'}}
 
-",,{'brand': 'transcend'},  {'brand': 'hp'}
+",,{'brand': 'transcend'},  {'brand': 'storex'}
 504,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -11705,7 +11705,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'level mount elspm 5-surround sound speaker wall ceiling bracket black', 'category': '', 'brand': 'level mount', 'modelno': 'elspm', 'price': 29.23}"", 'output': {'category': 'tv mounts'}}
 
-",,{'category': 'flashes'},  {'category': 'flashes'}
+",,{'category': 'flashes'},  {'category': 'flash accessories'}
 509,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -11774,7 +11774,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'clover electronics mvr1020 1-channel mobile dvr - small black', 'category': '', 'brand': 'clover', 'modelno': 'mvr1020', 'price': 144.84}"", 'output': {'category': 'surveillance cameras'}}
 
-",,{'category': 'phones with plans'},  {'category': 'phones with plans'}
+",,{'category': 'phones with plans'},  {'category': 'no-contract phones'}
 512,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -11797,7 +11797,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'targus tgc-np525 neoprene camera case red', 'category': '', 'brand': 'merkury innovations', 'modelno': 'tgc-np525', 'price': 11.57}"", 'output': {'category': 'cases bags'}}
 
-",,{'category': 'printer accessories'},  {'category': 'printer ink toner'}
+",,{'category': 'printer accessories'},  {'category': 'printer accessories'}
 513,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -11843,7 +11843,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'hp v135w 4 gb usb 2.0 flash drive p-fd4gbhp135-ef blue', 'category': 'usb flash drives', 'brand': '', 'modelno': 'p-fd4gbhp135-ef', 'price': 15.25}"", 'output': {'brand': 'hp'}}
 
-",,{'brand': 'generic'},  {'brand': 't-mobile'}
+",,{'brand': 'generic'},  {'brand': 'tz case'}
 515,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -11981,7 +11981,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-innovera 85826 - cd dvd polystyrene thin line storage case clear 50 pack - ivr85826', 'category': '', 'brand': 'innovera', 'modelno': '', 'price': 31.4}"", 'output': {'category': 'bd-r discs'}}
 
-",,{'category': 'camera lenses'},  {'category': 'digital slr cameras'}
+",,{'category': 'camera lenses'},  {'category': 'camera lenses'}
 521,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -12050,7 +12050,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'verbatim store n go superspeed 750 gb usb 3.0 portable external hard drive 97396 black', 'category': 'computers accessories', 'brand': '', 'modelno': '97396', 'price': 94.24}"", 'output': {'brand': 'verbatim'}}
 
-",,{'brand': 'brainydeal'},  {'brand': 'duracell'}
+",,{'brand': 'brainydeal'},  {'brand': 'dekcell'}
 524,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -12096,7 +12096,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'plantronics 8400 sota 65672-01', 'category': '', 'brand': 'plantronics', 'modelno': '65672-01', 'price': 141.28}"", 'output': {'category': 'accessories supplies'}}
 
-",,{'category': 'removable labels'},  {'category': 'labels indexes stamps'}
+",,{'category': 'removable labels'},  {'category': 'all-purpose labels'}
 526,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -12349,7 +12349,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'premium molded hard shell 7 tablet ereader carrying case for viewsonic viewpad 7 htc flyer amazon kindle and many more includes charge micro-usb cable', 'category': 'cases sleeves', 'brand': '', 'modelno': '', 'price': 19.99}"", 'output': {'brand': 'accessory genie'}}
 
-",,{'brand': 'unknown'},  {'brand': 'avocent'}
+",,{'brand': 'unknown'},  {'brand': 'avf'}
 537,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -12395,7 +12395,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-vaultz vz01187 - locking file tote storage box letter 13-3 4 x 7-1 4 x 12-1 4 black - idevz01187', 'category': '', 'brand': 'vaultz', 'modelno': '', 'price': ''}"", 'output': {'category': 'label makers'}}
 
-",,{'category': 'cases'},  {'category': 'accessories supplies'}
+",,{'category': 'cases'},  {'category': 'covers'}
 539,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -12579,7 +12579,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'incipio smart feather case for apple ipad 2 - black ipad-225', 'category': '', 'brand': 'incipio', 'modelno': 'ipad-225', 'price': 25.01}"", 'output': {'category': 'cases sleeves'}}
 
-",,{'category': 'coaxial speakers'},  {'category': 'speakers'}
+",,{'category': 'coaxial speakers'},  {'category': 'coaxial speakers'}
 547,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -12602,7 +12602,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'interlink electronics remotepoint global presenter - remote control vp4360', 'category': '', 'brand': 'interlink', 'modelno': 'vp4360', 'price': 146.58}"", 'output': {'category': 'computers accessories'}}
 
-",,{'category': 'wired headsets'},  {'category': 'headsets microphones'}
+",,{'category': 'wired headsets'},  {'category': 'wired headsets'}
 548,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -12694,7 +12694,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'da-lite 27651 da-glas deluxe rear projection screen - 96 x 96 av format', 'category': '', 'brand': 'da-lite', 'modelno': '', 'price': ''}"", 'output': {'category': 'projection screens'}}
 
-",,{'category': 'cases sleeves'},  {'category': 'cases sleeves'}
+",,{'category': 'cases sleeves'},  {'category': 'cases'}
 552,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -12717,7 +12717,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'startech.com pac1016 6 feet power cord extension - nema 5-15r to nema 5-15p', 'category': '', 'brand': 'startech', 'modelno': 'pac1016', 'price': 6.99}"", 'output': {'category': 'serial cables'}}
 
-",,{'category': 'data cartridges'},  {'category': 'blank media'}
+",,{'category': 'data cartridges'},  {'category': 'data cartridges'}
 553,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -12809,7 +12809,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'ifrogz earpollution cs40 headphones red', 'category': '', 'brand': 'ifrogz', 'modelno': 'ep-cs40-red', 'price': 28.67}"", 'output': {'category': 'headphones'}}
 
-",,{'category': 'chargers adapters'},  {'category': 'chargers adapters'}
+",,{'category': 'chargers adapters'},  {'category': 'batteries chargers accessories'}
 557,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -12855,7 +12855,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-pendaflex 55708 - easyview poly hanging file folders letter assorted colors 25 box - ess55708', 'category': '', 'brand': 'pendaflex', 'modelno': '', 'price': 51.0}"", 'output': {'category': 'laminating supplies'}}
 
-",,{'category': 'computers accessories'},  {'category': 'power supplies'}
+",,{'category': 'computers accessories'},  {'category': 'computers accessories'}
 559,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -12901,7 +12901,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'middle atlantic rrf 8 - rack rail kit - black - 8u - 19', 'category': '', 'brand': 'middle atlantic', 'modelno': '8', 'price': 13.81}"", 'output': {'category': 'selector boxes'}}
 
-",,{'category': 'screen protectors'},  {'category': 'screen protectors'}
+",,{'category': 'screen protectors'},  {'category': 'screen protector foils'}
 561,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -13177,7 +13177,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'brand new rockford fosgate r600-5 prime series 600 watt rms 5 channel car amplifier', 'category': '', 'brand': 'rockford fosgate', 'modelno': '', 'price': 209.95}"", 'output': {'category': 'multichannel amplifiers'}}
 
-",,{'category': 'memory cards'},  {'category': 'blank media'}
+",,{'category': 'memory cards'},  {'category': 'memory cards'}
 573,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -13223,7 +13223,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'hp c8554a color laserjet image cleaning kit', 'category': '', 'brand': 'hp', 'modelno': 'c8554a', 'price': 39.11}"", 'output': {'category': 'cleaning repair'}}
 
-",,{'category': 'accessories supplies'},  {'category': 'headsets microphones'}
+",,{'category': 'accessories supplies'},  {'category': 'headsets'}
 575,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -13246,7 +13246,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'arkon sr123 universal flexible cup holder mount for xm sirius', 'category': 'accessories', 'brand': '', 'modelno': 'sr123', 'price': 10.17}"", 'output': {'brand': 'arkon'}}
 
-",,{'brand': 'patriot'},  {'brand': 'patriot memory'}
+",,{'brand': 'patriot'},  {'brand': 'patriot'}
 576,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -13407,7 +13407,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'tcl l32hdf11ta 32-inch 720p 60 hz lcd hdtv with 2-year warranty black', 'category': '', 'brand': 'tcl', 'modelno': 'l32hdf11ta', 'price': 259.99}"", 'output': {'category': 'tvs'}}
 
-",,{'category': 'screen protector foils'},  {'category': 'screen protectors'}
+",,{'category': 'screen protector foils'},  {'category': 'screen protector foils'}
 583,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -13499,7 +13499,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-62mm lens cap - t49058', 'category': '', 'brand': 'hakuba', 'modelno': '', 'price': 14.98}"", 'output': {'category': 'accessory kits'}}
 
-",,{'category': 'computers accessories'},  {'category': 'surveillance cameras'}
+",,{'category': 'computers accessories'},  {'category': 'complete surveillance systems'}
 587,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -13568,7 +13568,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'da-lite imager - projection screen - 96 in - 4 3 - high contrast audio vision', 'category': '', 'brand': 'da-lite', 'modelno': '', 'price': ''}"", 'output': {'category': 'projection screens'}}
 
-",,{'category': 'accessory kits'},  {'category': 'mp3 player accessories'}
+",,{'category': 'accessory kits'},  {'category': 'mp3 players accessories'}
 590,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -13798,7 +13798,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'verbatim dvd-r 16x 4.7 gb 120min white inkjet printable 50 pk', 'category': '', 'brand': 'verbatim', 'modelno': '', 'price': ''}"", 'output': {'category': 'blank media'}}
 
-",,{'category': 'adapter rings'},  {'category': 'label makers'}
+",,{'category': 'adapter rings'},  {'category': 'binder index dividers'}
 600,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -13913,7 +13913,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'linksys se2800 8-port gigabit ethernet switch', 'category': '', 'brand': 'cisco', 'modelno': 'se2800', 'price': 54.99}"", 'output': {'category': 'switches'}}
 
-",,{'category': 'laminating supplies'},  {'category': 'laminating supplies'}
+",,{'category': 'laminating supplies'},  {'category': 'platforms stands shelves'}
 605,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -13982,7 +13982,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'usb twin serial adapter', 'category': '', 'brand': 'keyspan', 'modelno': 'usa-28xg', 'price': 64.24}"", 'output': {'category': 'connectors adapters'}}
 
-",,{'category': 'laminating supplies'},  {'category': 'storage presentation materials'}
+",,{'category': 'laminating supplies'},  {'category': 'laminating supplies'}
 608,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -14097,7 +14097,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'retract 4n1 ipod charger-black', 'category': 'chargers', 'brand': '', 'modelno': 'etipodchg41b', 'price': 21.29}"", 'output': {'brand': 'emerge tech'}}
 
-",,{'brand': 'ampad'},  {'brand': 'ampad'}
+",,{'brand': 'ampad'},  {'brand': 'antec'}
 613,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -14143,7 +14143,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'kodak essential floating wrist strap for cameras - orange', 'category': '', 'brand': 'kodak', 'modelno': '8365991', 'price': 12.99}"", 'output': {'category': 'binocular camera camcorder straps'}}
 
-",,{'category': 'label makers'},  {'category': 'printer labels inkjet'}
+",,{'category': 'label makers'},  {'category': 'printer labels laser inkjet'}
 615,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -14166,7 +14166,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'startech.com 1-port pci express dual profile parallel adapter card - spp epp ecp pex1p', 'category': '', 'brand': 'startech', 'modelno': 'pex1p', 'price': 26.99}"", 'output': {'category': 'memory card adapters'}}
 
-",,{'category': 'memory card readers'},  {'category': 'laminating supplies'}
+",,{'category': 'memory card readers'},  {'category': 'printer accessories'}
 616,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -14281,7 +14281,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'lexmark pinnacle pro901 all-in-one printer', 'category': '', 'brand': 'lexmark', 'modelno': '90t9105', 'price': 143.68}"", 'output': {'category': 'inkjet all-in-one printers'}}
 
-",,{'category': 'laminating supplies'},  {'category': 'printers'}
+",,{'category': 'laminating supplies'},  {'category': 'printer accessories'}
 621,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -14304,7 +14304,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'griffin technology elan form graphite for ipod touch 4g ice', 'category': '', 'brand': 'griffin technology', 'modelno': 'gb01945', 'price': 3.99}"", 'output': {'category': 'cases'}}
 
-",,{'category': 'gaming mice'},  {'category': 'mice'}
+",,{'category': 'gaming mice'},  {'category': 'accessories supplies'}
 622,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -14373,7 +14373,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'samsung clp-m660a magenta toner cartidge for clp-610 660 series and clx-6200fx series printers', 'category': '', 'brand': 'samsung', 'modelno': 'clp-m660a', 'price': 80.97}"", 'output': {'category': 'printer ink toner'}}
 
-",,{'category': 'storage presentation materials'},  {'category': 'storage presentation materials'}
+",,{'category': 'storage presentation materials'},  {'category': 'printer accessories'}
 625,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -14718,7 +14718,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'bic ultimates ball pen medium point 1.0 mm black 18 pens gsmgap18-blk', 'category': '', 'brand': 'bic', 'modelno': 'gsmgap18-blk', 'price': 5.39}"", 'output': {'category': 'bags cases'}}
 
-",,{'category': 'uninterrupted power supply ups'},  {'category': 'laminating supplies'}
+",,{'category': 'uninterrupted power supply ups'},  {'category': 'printer accessories'}
 640,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -14741,7 +14741,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'trendnet 300 mbps wireless n usb adapter tew-624ub black', 'category': '', 'brand': 'trendnet', 'modelno': 'tew-624ub', 'price': 33.99}"", 'output': {'category': 'network cards'}}
 
-",,{'category': 'laminating supplies'},  {'category': 'printers'}
+",,{'category': 'laminating supplies'},  {'category': 'printer accessories'}
 641,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -14764,7 +14764,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'sony alpha pcklh6am lcd protective cover', 'category': '', 'brand': 'sony', 'modelno': 'pcklh6am', 'price': 11.99}"", 'output': {'category': 'case bag accessories'}}
 
-",,{'category': 'printer accessories'},  {'category': 'laminating supplies'}
+",,{'category': 'printer accessories'},  {'category': 'printer accessories'}
 642,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -14787,7 +14787,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-mk series heavy-duty tripod case pack 1 - 501695', 'category': '', 'brand': 'vanguard', 'modelno': '', 'price': 119.14}"", 'output': {'category': 'film'}}
 
-",,{'category': 'microphones accessories'},  {'category': 'printer accessories'}
+",,{'category': 'microphones accessories'},  {'category': 'memory card readers'}
 643,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -14810,7 +14810,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'qwest actiontec pk5000 dsl modem 4 port wireless router', 'category': '', 'brand': 'actiontec', 'modelno': 'ge083ad4-08', 'price': ''}"", 'output': {'category': 'networking products'}}
 
-",,{'category': 'label makers'},  {'category': 'laminating supplies'}
+",,{'category': 'label makers'},  {'category': 'radios'}
 644,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -14925,7 +14925,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'xantech xss24100w speaker selectors 4 zones - xanxss24100w', 'category': 'computers accessories', 'brand': '', 'modelno': '', 'price': 189.4}"", 'output': {'brand': 'xantech'}}
 
-",,{'brand': 'deflect-o'},  {'brand': 'deflect-o'}
+",,{'brand': 'deflect-o'},  {'brand': 'deflecto'}
 649,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -14994,7 +14994,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'belkin fast cat 5e 25 ft. red patch cable snagless', 'category': '', 'brand': 'belkin', 'modelno': '', 'price': 2.98}"", 'output': {'category': 'ethernet cables'}}
 
-",,{'category': 'binding machines'},  {'category': 'binding machine supplies'}
+",,{'category': 'binding machines'},  {'category': 'binder index dividers'}
 652,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -15086,7 +15086,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'canon vixia hf r20 flash memory 1080p hd digital video camcorder silver with video light tripod case accessory kit', 'category': '', 'brand': 'canon', 'modelno': 'k-61711-02', 'price': ''}"", 'output': {'category': 'camcorders'}}
 
-",,{'category': 'home audio theater'},  {'category': 'speaker connectors'}
+",,{'category': 'home audio theater'},  {'category': 'wiring harnesses'}
 656,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -15155,7 +15155,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'hello kitty 79009 sms text messenger red', 'category': '', 'brand': 'hello kitty', 'modelno': '79009-tru-red', 'price': 16.99}"", 'output': {'category': 'audio video accessories'}}
 
-",,{'category': 'laminating supplies'},  {'category': 'laser pointers'}
+",,{'category': 'laminating supplies'},  {'category': 'presentation pointers'}
 659,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -15224,7 +15224,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'cables unlimted flt610018g 18-inch translucent green sata ii 3gbps cable with straight connectors', 'category': '', 'brand': 'cables unlimited', 'modelno': 'flt-6100-18g', 'price': 6.42}"", 'output': {'category': 'cables interconnects'}}
 
-",,{'category': 'storage presentation materials'},  {'category': 'storage presentation materials'}
+",,{'category': 'storage presentation materials'},  {'category': 'laminating supplies'}
 662,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -15615,7 +15615,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': '7 feet peerless plasma screen pedestal with rotation and tilt', 'category': 'television stands entertainment centers', 'brand': '', 'modelno': '', 'price': ''}"", 'output': {'brand': 'peerless'}}
 
-",,{'brand': 'cradlepoint'},  {'brand': 'tripp lite'}
+",,{'brand': 'cradlepoint'},  {'brand': 'netgear'}
 679,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -15707,7 +15707,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'sony np-fv100 rechargeable battery pack retail packaging', 'category': '', 'brand': 'sony', 'modelno': 'npfv100', 'price': 92.55}"", 'output': {'category': 'camcorder batteries'}}
 
-",,{'category': 'surveillance cameras'},  {'category': 'surveillance video recorders'}
+",,{'category': 'surveillance cameras'},  {'category': 'surveillance cameras'}
 683,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -15822,7 +15822,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-pendaflex 21301 - folders with embossed fasteners 1 3 cut top tab letter blue 50 box - ess21301', 'category': '', 'brand': 'pendaflex', 'modelno': '', 'price': 65.0}"", 'output': {'category': 'laminating supplies'}}
 
-",,{'category': 'scanners'},  {'category': 'cameras'}
+",,{'category': 'scanners'},  {'category': 'scanners'}
 688,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -15937,7 +15937,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'hp v310w 4 gb usb 2.0 flash drive p-fd4gbhp310b-ef blue', 'category': '', 'brand': 'hp', 'modelno': 'p-fd4gbhp310b-ef', 'price': 15.73}"", 'output': {'category': 'usb flash drives'}}
 
-",,{'category': 'binocular camera camcorder straps'},  {'category': 'cases bags'}
+",,{'category': 'binocular camera camcorder straps'},  {'category': 'camera photo'}
 693,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -16052,7 +16052,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'razer lachesis 4000 dpi gaming mouse wraith red', 'category': '', 'brand': 'razer', 'modelno': 'rz01-00170300', 'price': 72.39}"", 'output': {'category': 'gaming mice'}}
 
-",,{'category': 'projection screens'},  {'category': 'projection screens'}
+",,{'category': 'projection screens'},  {'category': 'home audio theater'}
 698,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -16259,7 +16259,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'hp 16 inch notebook sleeve - onyx', 'category': '', 'brand': 'hp', 'modelno': 'nu561aa #aba', 'price': 18.32}"", 'output': {'category': 'bags cases'}}
 
-",,{'category': 'network adapters'},  {'category': 'network cards'}
+",,{'category': 'network adapters'},  {'category': 'computer cable adapters'}
 707,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -16282,7 +16282,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'lg infinia 42lv5500 42-inch 1080p 120 hz led hdtv with smart tv', 'category': '', 'brand': 'lg', 'modelno': '42lv5500', 'price': ''}"", 'output': {'category': 'tvs'}}
 
-",,{'category': 'cases sleeves'},  {'category': 'cases sleeves'}
+",,{'category': 'cases sleeves'},  {'category': 'touch screen tablet accessories'}
 708,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -16650,7 +16650,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'samsung st700 16.1 mp dualview digital camera with 5x optical zoom 8gb accessory kit', 'category': '', 'brand': 'samsung', 'modelno': 'st700', 'price': 239.0}"", 'output': {'category': 'point shoot digital cameras'}}
 
-",,{'category': 'audio video accessories'},  {'category': 'subwoofer cables'}
+",,{'category': 'audio video accessories'},  {'category': 'subwoofers'}
 724,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -16673,7 +16673,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'roocase eva hard shell dark blue carrying case with memory foam for sony cybershot dsc-h70 digital camera', 'category': '', 'brand': 'roocase', 'modelno': 'dsc-h70', 'price': 16.88}"", 'output': {'category': 'cases bags'}}
 
-",,{'category': 'computer components'},  {'category': 'computers accessories'}
+",,{'category': 'computer components'},  {'category': 'memory'}
 725,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -16811,7 +16811,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'logitech corded mouse m125 blue', 'category': '', 'brand': 'logitech', 'modelno': '910-001831', 'price': 11.48}"", 'output': {'category': 'mice'}}
 
-",,{'category': 'disc jewel cases'},  {'category': 'disc jewel cases'}
+",,{'category': 'disc jewel cases'},  {'category': 'dvd cases'}
 731,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -16857,7 +16857,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'lowepro flipside 200 backpack arctic blue', 'category': '', 'brand': 'lowepro', 'modelno': 'flipside 200 ( artic blue )', 'price': 61.13}"", 'output': {'category': 'cases bags'}}
 
-",,{'category': 'universal fm cassette adapters'},  {'category': 'mp3 player accessories'}
+",,{'category': 'universal fm cassette adapters'},  {'category': 'universal fm cassette adapters'}
 733,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -17110,7 +17110,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'pioneer fh-p8000bt double-din in-dash cd mp3 wma aac receiver with built-in bluetooth ipod control and rear usb input', 'category': '', 'brand': 'pioneer', 'modelno': 'fh-p8000bt', 'price': ''}"", 'output': {'category': 'cd-mp3 players'}}
 
-",,{'category': 'mounts'},  {'category': 'monitor accessories'}
+",,{'category': 'mounts'},  {'category': 'tv mounts'}
 744,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -17133,7 +17133,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'imation printable - 50 x dvd-r - 4.7 gb 16x - white - ink jet printable surface - spindle - storage media', 'category': 'dvd-r discs', 'brand': '', 'modelno': '17350', 'price': 13.6}"", 'output': {'brand': 'imation'}}
 
-",,{'brand': 'premiertek'},  {'brand': 'arclyte technologies inc. .'}
+",,{'brand': 'premiertek'},  {'brand': 'arclyte technologies inc.'}
 745,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -17156,7 +17156,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'case logic abs-11 black back seat organizer', 'category': '', 'brand': 'case logic', 'modelno': 'abs-11', 'price': 7.99}"", 'output': {'category': 'audio video accessories'}}
 
-",,{'category': 'audio-video kits'},  {'category': 'hdmi cables'}
+",,{'category': 'audio-video kits'},  {'category': 'dvi cables'}
 746,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -17202,7 +17202,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'sabrent usb-dvr4 4-channel usb 2.0 dvr security surveillance cctv digital video camera recorder adapter - vista ready', 'category': 'surveillance cameras', 'brand': '', 'modelno': 'usb-dvr4', 'price': 13.99}"", 'output': {'brand': 'sabrent'}}
 
-",,{'brand': 'amp'},  {'brand': 'creative labs'}
+",,{'brand': 'amp'},  {'brand': 'creative'}
 748,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -17294,7 +17294,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'canon color imageclass mf9220cdn all-in-one printer 4495b001aa', 'category': '', 'brand': 'canon', 'modelno': 'mf9220cdn', 'price': 964.28}"", 'output': {'category': 'all-in-one printers'}}
 
-",,{'category': 'computers accessories'},  {'category': 'laminating supplies'}
+",,{'category': 'computers accessories'},  {'category': 'radios'}
 752,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -17340,7 +17340,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'bower ss26 digital neck strap green', 'category': '', 'brand': 'atlona', 'modelno': 'ss26gr', 'price': 12.19}"", 'output': {'category': 'audio video accessories'}}
 
-",,{'category': 'storage presentation materials'},  {'category': 'printer accessories'}
+",,{'category': 'storage presentation materials'},  {'category': 'computer accessories'}
 754,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -17386,7 +17386,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'texas instruments ti-30x iis 2-line scientific calculator', 'category': '', 'brand': 'texas instruments', 'modelno': 'ti30xiis', 'price': 13.24}"", 'output': {'category': 'scientific'}}
 
-",,{'category': 'motherboards'},  {'category': 'motherboards'}
+",,{'category': 'motherboards'},  {'category': 'computers accessories'}
 756,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -17432,7 +17432,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'digipower bp-cn4l replacement li-ion battery for canon nb-4l', 'category': '', 'brand': 'digipower', 'modelno': 'bp-cn4l', 'price': 10.44}"", 'output': {'category': 'camera batteries'}}
 
-",,{'category': 'point shoot digital cameras'},  {'category': 'point shoot digital camera bundles'}
+",,{'category': 'point shoot digital cameras'},  {'category': 'point shoot digital cameras'}
 758,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -17593,7 +17593,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'hp pavilion dv7-6195us entertainment notebook pc silver', 'category': '', 'brand': 'hp', 'modelno': 'lw170ua #aba', 'price': 1079.99}"", 'output': {'category': 'laptops'}}
 
-",,{'category': 'coin button cell'},  {'category': 'touch screen tablet accessories'}
+",,{'category': 'coin button cell'},  {'category': 'accessory kits'}
 765,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -17662,7 +17662,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-quartet mws - magnetic write-on wipe-off strips 2w x 7 8h white 25 pack - qrtmws', 'category': '', 'brand': 'quartet', 'modelno': '', 'price': ''}"", 'output': {'category': 'laminating supplies'}}
 
-",,{'category': 'memory cards'},  {'category': 'blank media'}
+",,{'category': 'memory cards'},  {'category': 'memory cards'}
 768,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -17685,7 +17685,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'canon pgi-35 black ink cartridge 1509b002', 'category': '', 'brand': 'canon', 'modelno': '1509b002', 'price': 11.99}"", 'output': {'category': 'inkjet printer ink'}}
 
-",,{'category': 'car audio video'},  {'category': 'memory card readers'}
+",,{'category': 'car audio video'},  {'category': 'computer accessories'}
 769,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -17777,7 +17777,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'electrified sp .82 g01 .001 bl-fu180a replacement lamp with housing for optoma projectors', 'category': '', 'brand': 'electrified', 'modelno': 'sp .82 g01 .001', 'price': 104.0}"", 'output': {'category': 'lamps'}}
 
-",,{'category': 'compact stereos'},  {'category': 'compact stereos'}
+",,{'category': 'compact stereos'},  {'category': 'speaker systems'}
 773,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -17823,7 +17823,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'v7 r19w12 19-inch widescreen lcd monitor silver black', 'category': 'monitors', 'brand': '', 'modelno': 'r19w12', 'price': 229.5}"", 'output': {'brand': 'v7'}}
 
-",,{'brand': 'simplism'},  {'brand': 'simplism japan'}
+",,{'brand': 'simplism'},  {'brand': 'simplism'}
 775,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -17915,7 +17915,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'tp-link td-w8950nd 150 mbps wireless n adsl2 modem router', 'category': 'routers', 'brand': '', 'modelno': 'td-w8950nd', 'price': 49.99}"", 'output': {'brand': 'tp-link'}}
 
-",,{'brand': 'ihome'},  {'brand': 'chester creek'}
+",,{'brand': 'ihome'},  {'brand': 'micro innovations'}
 779,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -18076,7 +18076,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'duragadget 14 to 15 inch midnight blue water resistant laptop pc notebook carry case bag sleeve holder for lenovo thinkpad t400 0884343560014 pc', 'category': 'bags cases', 'brand': '', 'modelno': '', 'price': 14.88}"", 'output': {'brand': 'duragadget'}}
 
-",,{'brand': 'axis'},  {'brand': 'axis communications'}
+",,{'brand': 'axis'},  {'brand': 'axis'}
 786,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -18122,7 +18122,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'palm pre plus agf blue and chrome grt slider case 2 pack', 'category': '', 'brand': 'palm', 'modelno': '', 'price': 5.82}"", 'output': {'category': 'cases'}}
 
-",,{'category': 'storage presentation materials'},  {'category': 'storage presentation materials'}
+",,{'category': 'storage presentation materials'},  {'category': 'bags cases'}
 788,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -18191,7 +18191,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'i-tec t2203 adjustable wireless fm transmitter with usb port', 'category': '', 'brand': 'i-tec', 'modelno': '', 'price': ''}"", 'output': {'category': 'printers'}}
 
-",,{'category': 'chargers adapters'},  {'category': 'chargers adapters'}
+",,{'category': 'chargers adapters'},  {'category': 'ac adapters'}
 791,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -18214,7 +18214,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'iogear 2-port miniview micro ps 2 kvm switch with 2 cables gcs62', 'category': '', 'brand': 'iogear', 'modelno': 'gcs62', 'price': 18.99}"", 'output': {'category': 'kvm switches'}}
 
-",,{'category': 'dash mounting kits'},  {'category': 'dash mounting kits'}
+",,{'category': 'dash mounting kits'},  {'category': 'wiring harnesses'}
 792,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -18260,7 +18260,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'ge 6 s-video composite audio cable av-23320', 'category': '', 'brand': 'general electric', 'modelno': 'av-23320', 'price': 4.19}"", 'output': {'category': 'component video'}}
 
-",,{'category': 'computer accessories'},  {'category': 'network cards'}
+",,{'category': 'computer accessories'},  {'category': 'usb network adapters'}
 794,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -18283,7 +18283,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'x-acto 1031 - model ks manual pencil sharpener table - or wall-mount black chrome', 'category': '', 'brand': 'x-acto', 'modelno': '', 'price': 32.19}"", 'output': {'category': 'laminating supplies'}}
 
-",,{'category': 'dvd-r discs'},  {'category': 'dvd r discs'}
+",,{'category': 'dvd-r discs'},  {'category': 'bd-r discs'}
 795,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -18375,7 +18375,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'new-avery 72278 - translucent document wallets letter poly clear 12 box - ave72278', 'category': '', 'brand': 'avery', 'modelno': '', 'price': 51.0}"", 'output': {'category': 'laminating supplies'}}
 
-",,{'category': 'speakers'},  {'category': 'speaker systems'}
+",,{'category': 'speakers'},  {'category': 'speakers'}
 799,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -18421,7 +18421,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'dp audio video dh700 7-inch headrest monitor ultra slim', 'category': 'headrest video', 'brand': '', 'modelno': 'dh700', 'price': 91.0}"", 'output': {'brand': 'dp audio video'}}
 
-",,{'brand': 'canon'},  {'brand': 'unknown'}
+",,{'brand': 'canon'},  {'brand': 'compatible'}
 801,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -18444,7 +18444,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'okidata 42126603 cyan image drum kit', 'category': '', 'brand': 'oki data', 'modelno': '42126603', 'price': 86.99}"", 'output': {'category': 'laser printer toner'}}
 
-",,{'category': 'audio cables'},  {'category': 'speaker cables'}
+",,{'category': 'audio cables'},  {'category': 'audio cables'}
 802,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -18513,7 +18513,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'duragadget 14 to 15 inch midnight blue water resistant laptop pc notebook carry case bag sleeve holder for lenovo thinkpad t400 0884343560014 pc', 'category': 'bags cases', 'brand': '', 'modelno': '', 'price': 14.88}"", 'output': {'brand': 'duragadget'}}
 
-",,{'brand': 'link depot'},  {'brand': 'tripp lite'}
+",,{'brand': 'link depot'},  {'brand': 'eforcity'}
 805,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -18697,7 +18697,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'philips gogear muse 16 gb mp3 video player with month of rhapsody music and free audible audiobook black', 'category': '', 'brand': 'philips', 'modelno': 'sa1mus16k/17', 'price': 84.95}"", 'output': {'category': 'mp3 players'}}
 
-",,{'category': 'accessories supplies'},  {'category': 'cleaning repair'}
+",,{'category': 'accessories supplies'},  {'category': 'dlt cleaning cartridges'}
 813,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -18743,7 +18743,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'clear front back body protector shield guard with cleaning cloth for apple iphone 4 4g 16gb 32gb 4th generation', 'category': 'screen protector foils', 'brand': '', 'modelno': '81906-a', 'price': 0.75}"", 'output': {'brand': 'ccm'}}
 
-",,{'brand': 'xerox'},  {'brand': 'xerox'}
+",,{'brand': 'xerox'},  {'brand': 'ncr'}
 815,"You are an expert in attribute extraction from Amazon dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.

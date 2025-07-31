@@ -14,10 +14,17 @@ command_line = []
 #     ['CTA','SimTab'],
 # ]
 task_list = [
+    ['RE','RE'],
+    ['ER','abt-buy'],
+    ['ER','semi-text-w'],
+    ['DC','hospital'],
+    ['DC','beer'],
+    ['DC','rayyan'],
     ['DI','amazon'],
     ['DI','walmart'],
-    ['CTA','WebTable'],
+    ['AVE','oa_mine'],
     ['CTA','SimTab'],
+    ['CTA','WebTable']
 ]
 for task,dataset in task_list:
     # if task=='CTA':
@@ -32,8 +39,14 @@ for task,dataset in task_list:
     # command_line.append(
     #     'CUDA_VISIBLE_DEVICES=6 python cal_IF_pipeline.py --yaml_path script/config_{}_{}.yaml --IF_device cuda'.format(task,dataset)
     # )
+    # command_line.append(
+    #     'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 6,7 --model mistral-7B --DO_TRAIN_QURATING --DO_EVAL_QURATING --DO_SELECT'.format(task,dataset)
+    # )
+    # command_line.append(
+    #     'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 5,6 --model mistral-7B --DO_TRAIN_LESS --DO_EVAL_LESS'.format(task,dataset)
+    # )
     command_line.append(
-        'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 6 --model mistral-7B --DO_TRAIN_QURATING --DO_EVAL_QURATING --DO_SELECT'.format(task,dataset)
+        'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 4,7 --model mistral-7B --DO_TRAIN_SP --DO_EVAL_SP'.format(task,dataset)
     )
     ### Test IF with DataInf
     # command_line.append(

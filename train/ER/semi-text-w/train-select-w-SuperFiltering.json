@@ -1,0 +1,138 @@
+[
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/sku': '[6417084182692]', 'category': 'Jewelry'}\"\n\nEntity 2:\"{'title': '', 'brand': 'Cartier', 'color': '', 'gender': 'W', 'sku': 'W20018D6', 'diameter': '', 'description': '  \\\"Cartier Santos W20018D6\\\" W20018D6 Watch | Watchfinder & Co.\\\"  \\\"This Cartier has undergone a thoro'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 57.405460357666016,
+        "ifd_ppl": 0.9923134514961494
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/sku': '[dw00100147]', 'category': 'Jewelry'}\"\n\nEntity 2:\"{'title': '', 'brand': 'Cartier', 'color': '', 'gender': 'W', 'sku': 'W20018D6', 'diameter': '', 'description': '  \\\"Cartier Santos W20018D6\\\" W20018D6 Watch | Watchfinder & Co.\\\"  \\\"This Cartier has undergone a thoro'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 57.269222259521484,
+        "ifd_ppl": 0.9899584334098425
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/sku': '[dw00100131]', 'category': 'Jewelry'}\"\n\nEntity 2:\"{'title': '', 'brand': 'Cartier', 'color': '', 'gender': 'W', 'sku': 'W20018D6', 'diameter': '', 'description': '  \\\"Cartier Santos W20018D6\\\" W20018D6 Watch | Watchfinder & Co.\\\"  \\\"This Cartier has undergone a thoro'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 57.09510040283203,
+        "ifd_ppl": 0.9869485549154293
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/sku': '[dw00100132]', 'category': 'Jewelry'}\"\n\nEntity 2:\"{'title': '', 'brand': 'Cartier', 'color': '', 'gender': 'W', 'sku': 'W20018D6', 'diameter': '', 'description': '  \\\"Cartier Santos W20018D6\\\" W20018D6 Watch | Watchfinder & Co.\\\"  \\\"This Cartier has undergone a thoro'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 56.992496490478516,
+        "ifd_ppl": 0.9851749389254144
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/mpn': '[al372lbo4v6]', 'category': 'Jewelry'}\"\n\nEntity 2:\"{'title': '', 'brand': 'Cartier', 'color': '', 'gender': 'W', 'sku': 'W20018D6', 'diameter': '', 'description': '  \\\"Cartier Santos W20018D6\\\" W20018D6 Watch | Watchfinder & Co.\\\"  \\\"This Cartier has undergone a thoro'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 56.54954147338867,
+        "ifd_ppl": 0.977517997945805
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/productID': '[102343662000]', 'category': 'Jewelry'}\"\n\nEntity 2:\"{'title': 'Cartier', 'brand': 'Cartier', 'color': '', 'gender': '', 'sku': '', 'diameter': '', 'description': '  \\\"Cartier\\\" \\\"CartierCartier Tank Francaise Series Women\\\\'s Watch W51028Q3\\\"   \\\"See a beautiful diamond'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 56.49774169921875,
+        "ifd_ppl": 0.9766225846458676
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/sku': '[636926076562]', 'category': 'Sports_and_Outdoors'}\"\n\nEntity 2:\"{'title': 'TomTom Runner 2 Cardio+Music+HP DBL/LBL (Large) - Blu Cielo Captain/Blu Scuba', 'brand': 'TomTom Accessori', 'color': 'Blu Cielo Captain/Blu Scuba', 'gender': '', 'sku': '', 'diameter': '', 'description': '  \\\"TomTom Runner 2 Cardio+Music+HP DBL/LBL (Large) - Blu Cielo Captain/Blu Scuba\\\"@it \\\" TomTom Access'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 56.157169342041016,
+        "ifd_ppl": 0.9707354350763043
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/productID': '[102343662000]', 'category': 'Jewelry'}\"\n\nEntity 2:\"{'title': 'Cartier', 'brand': 'Cartier', 'color': '', 'gender': '', 'sku': '', 'diameter': '', 'description': '  \\\"Cartier\\\" \\\"CartierCartier Tank Francaise Series Women\\\\'s Watch W50002N2\\\"   \\\"See a beautiful diamond'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 56.10519027709961,
+        "ifd_ppl": 0.9698369225477717
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/sku': '[636926076593]', 'category': 'Sports_and_Outdoors'}\"\n\nEntity 2:\"{'title': '  \\\"TomTom Multi-Sport Cardio CSS+AM GPS Uhr - Herzfrequenz- & Sportuhren Grau\\\"@de', 'sku': {'title': '  \\\"TomTom Multi-Sport Cardio CSS+AM GPS Uhr - Herzfrequenz- & Sportuhren Grau\\\"@de', 'sku': nan}, 'description': '  \\\"TomTom Multi-Sport Cardio CSS+AM GPS Uhr - Herzfrequenz- & Sportuhren Grau\\\"@de'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 56.04486846923828,
+        "ifd_ppl": 0.9687941969780015
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/sku': '[636926076562]', 'category': 'Sports_and_Outdoors'}\"\n\nEntity 2:\"{'title': '  \\\"TomTom Multi-Sport Cardio CSS+AM GPS Uhr - Herzfrequenz- & Sportuhren Grau\\\"@de', 'sku': {'title': '  \\\"TomTom Multi-Sport Cardio CSS+AM GPS Uhr - Herzfrequenz- & Sportuhren Grau\\\"@de', 'sku': nan}, 'description': '  \\\"TomTom Multi-Sport Cardio CSS+AM GPS Uhr - Herzfrequenz- & Sportuhren Grau\\\"@de'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 55.954132080078125,
+        "ifd_ppl": 0.967225723544589
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/sku': '[636926076319]', 'category': 'not found'}\"\n\nEntity 2:\"{'title': '  \\\"Freja Zegarek damski\\\"@pl \\\"Skagen Freja damski 358SGGD nur 111 20 \\u20ac\\\"@pl', 'sku': {'title': '  \\\"Freja Zegarek damski\\\"@pl \\\"Skagen Freja damski 358SGGD nur 111 20 \\u20ac\\\"@pl', 'sku': nan}, 'description': '  \\\"Freja Zegarek damski\\\"@pl \\\"Skagen Freja damski 358SGGD nur 111 20 \\u20ac\\\"@pl'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 55.2249870300293,
+        "ifd_ppl": 0.9546216883753342
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/sku': '[636926076326]', 'category': 'not found'}\"\n\nEntity 2:\"{'title': '  \\\"Freja Zegarek damski\\\"@pl \\\"Skagen Freja damski 358SGGD nur 111 20 \\u20ac\\\"@pl', 'sku': {'title': '  \\\"Freja Zegarek damski\\\"@pl \\\"Skagen Freja damski 358SGGD nur 111 20 \\u20ac\\\"@pl', 'sku': nan}, 'description': '  \\\"Freja Zegarek damski\\\"@pl \\\"Skagen Freja damski 358SGGD nur 111 20 \\u20ac\\\"@pl'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 55.10001754760742,
+        "ifd_ppl": 0.9524614601033006
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/sku': '[6417084182692]', 'category': 'Jewelry'}\"\n\nEntity 2:\"{'title': '', 'brand': 'Cartier', 'color': '', 'gender': '', 'sku': 'W1556051', 'diameter': '', 'description': '  \\\"Cartier Rotonde de Cartier Watch W1556051\\\" \\\"Shop W1556051 Watches | Northeastern Fine Jewelry\\\"  \\\"'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 54.90810775756836,
+        "ifd_ppl": 0.9491440985676025
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/mpn': '[al372lbo4v6]', 'category': 'Jewelry'}\"\n\nEntity 2:\"{'title': '', 'brand': 'Cartier', 'color': '', 'gender': '', 'sku': 'W1556051', 'diameter': '', 'description': '  \\\"Cartier Rotonde de Cartier Watch W1556051\\\" \\\"Shop W1556051 Watches | Northeastern Fine Jewelry\\\"  \\\"'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 53.67898178100586,
+        "ifd_ppl": 0.9278973699022965
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/sku': '[636926076319]', 'category': 'not found'}\"\n\nEntity 2:\"{'title': 'TomTom Runner 2 Music (Large)', 'brand': 'TomTom', 'color': 'Nero/Antracide', 'gender': '', 'sku': '', 'diameter': '', 'description': '  \\\"TomTom Runner 2 Music (Large) - Nero/Antracide\\\"@it \\\" TomTom Accessori Calcio Nero/Antracide \\\"@it '}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 52.36008834838867,
+        "ifd_ppl": 0.9050989168262
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/sku': '[636926076319]', 'category': 'not found'}\"\n\nEntity 2:\"{'title': '  \\\"Montre Daniel Wellington, Canterbury unisexe\\\"@fr Wellington unisexe - W0502DW\\\"@fr  \\\"Montre Daniel', 'sku': {'title': '  \\\"Montre Daniel Wellington, Canterbury unisexe\\\"@fr Wellington unisexe - W0502DW\\\"@fr  \\\"Montre Daniel', 'sku': nan}, 'description': '  \\\"Montre Daniel Wellington, Canterbury unisexe\\\"@fr Wellington unisexe - W0502DW\\\"@fr  \\\"Montre Daniel'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 52.14059066772461,
+        "ifd_ppl": 0.9013046697330127
+    },
+    {
+        "instruction": "You are an expert in detecting if two text descriptions of entities refer to the same or different entities. You are well-known to examine the fine details and can find subtle matches or mismatches to help you arrive at the final judgement. \n\nJudge whether Entity 1 and Entity 2 are match or mismatch, and choose within the given Options.\n\nReturn in JSON format.\n\nOptions: [match,mismatch]\n\nOutput format example:{\"Output\": \"\"}\n\nEntity 1:\"{'/sku': '[636926076326]', 'category': 'not found'}\"\n\nEntity 2:\"{'title': '  \\\"Montre Daniel Wellington, Canterbury unisexe\\\"@fr Wellington unisexe - W0502DW\\\"@fr  \\\"Montre Daniel', 'sku': {'title': '  \\\"Montre Daniel Wellington, Canterbury unisexe\\\"@fr Wellington unisexe - W0502DW\\\"@fr  \\\"Montre Daniel', 'sku': nan}, 'description': '  \\\"Montre Daniel Wellington, Canterbury unisexe\\\"@fr Wellington unisexe - W0502DW\\\"@fr  \\\"Montre Daniel'}\"",
+        "input": "",
+        "output": "{'Output': 'mismatch'}",
+        "ppl_A_direct": 57.850128173828125,
+        "ppl_A_condition": 51.96398162841797,
+        "ifd_ppl": 0.8982517976844674
+    }
+]

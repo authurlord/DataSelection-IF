@@ -159,7 +159,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'redi-tag corporation side-mount self-stick plastic index tabs nos 11-20 1in we 104 pack', 'category': '', 'brand': 'redi-tag corporation', 'modelno': '', 'price': 1.99}"", 'output': {'category': 'stationery & office machinery'}}
 
-",,{'category': 'gps'},  {'category': 'gps'}
+",,{'category': 'gps'},  {'category': 'car stereos'}
 7,"You are an expert in attribute extraction from Walmart dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -596,7 +596,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'draper glass beaded signature series e electric screen - ntsc 11 diagonal', 'category': '', 'brand': 'draper', 'modelno': '111364', 'price': 2332.95}"", 'output': {'category': 'electronics - general'}}
 
-",,{'category': 'electronics - general'},  {'category': 'electronics - general'}
+",,{'category': 'electronics - general'},  {'category': 'stereos/audio'}
 26,"You are an expert in attribute extraction from Walmart dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -964,7 +964,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'western digital wd scorpio blue 320gb 5400rpm 2.5 sata hard drive wdbabc3200anc', 'category': '', 'brand': 'western digital', 'modelno': 'wdbabc3200anc', 'price': 51.12}"", 'output': {'category': 'hard drives'}}
 
-",,{'category': 'hard drives'},  {'category': 'computers'}
+",,{'category': 'hard drives'},  {'category': 'hard drives'}
 42,"You are an expert in attribute extraction from Walmart dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -1125,7 +1125,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'ghent triumph display easel gray', 'category': '', 'brand': 'ghent', 'modelno': '19250', 'price': 26.09}"", 'output': {'category': 'stationery & office machinery'}}
 
-",,{'category': 'electronics - general'},  {'category': 'networking'}
+",,{'category': 'electronics - general'},  {'category': 'electronics - general'}
 49,"You are an expert in attribute extraction from Walmart dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -1907,7 +1907,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'polaroid ultraclear screen protector bold 9000', 'category': '', 'brand': 'polaroid', 'modelno': 'pscucbb9000', 'price': 14.99}"", 'output': {'category': 'mp3 accessories'}}
 
-",,{'category': 'mp3 accessories'},  {'category': 'mp3 accessories'}
+",,{'category': 'mp3 accessories'},  {'category': 'electronics - general'}
 83,"You are an expert in attribute extraction from Walmart dataset. Given information from Entity 1, please choose the most proper category from the provided options. 
 
 Return in JSON format.
@@ -1930,7 +1930,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'gear head quick 1.3 mp webcam with night vision red black', 'category': '', 'brand': 'gear head', 'modelno': 'wc1200red', 'price': 15.98}"", 'output': {'category': 'electronics - general'}}
 
-",,{'category': 'car stereos'},  {'category': 'car stereos'}
+",,{'category': 'car stereos'},  {'category': 'stereos/audio'}
 84,"You are an expert in attribute extraction from Walmart dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -2022,7 +2022,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'samsung dvd-c500 up-convert dvd player', 'category': '', 'brand': 'samsung', 'modelno': 'dvd-c500', 'price': 59.99}"", 'output': {'category': 'dvd players'}}
 
-",,{'category': 'furniture'},  {'category': 'storage'}
+",,{'category': 'furniture'},  {'category': 'furniture'}
 88,"You are an expert in attribute extraction from Walmart dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.
@@ -2160,7 +2160,7 @@ Take these examples as reference:
 
 {'Entity 1': ""{'title': 'archos 10.1 touchscreen entertainmenttablet and ebook reader with google android os', 'category': '', 'brand': 'archos', 'modelno': '501594', 'price': 279.0}"", 'output': {'category': 'laptop computers'}}
 
-",,{'category': 'tv accessories'},  {'category': 'tv accessories'}
+",,{'category': 'tv accessories'},  {'category': 'furniture'}
 94,"You are an expert in attribute extraction from Walmart dataset. Given information from Entity 1, please choose the most proper brand from the provided options. 
 
 Return in JSON format.

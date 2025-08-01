@@ -1,0 +1,741 @@
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+Traceback (most recent call last):
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 676, in determine_local_world_size
+    return int(nproc_per_node)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/home/wangys/anaconda3/envs/verl/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 908, in run
+    config, cmd, cmd_args = config_from_args(args)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 789, in config_from_args
+    nproc_per_node = determine_local_world_size(args.nproc_per_node)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 705, in determine_local_world_size
+    raise ValueError(
+ValueError: Unsupported nproc_per_node value: 
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+Traceback (most recent call last):
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 676, in determine_local_world_size
+    return int(nproc_per_node)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/home/wangys/anaconda3/envs/verl/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 908, in run
+    config, cmd, cmd_args = config_from_args(args)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 789, in config_from_args
+    nproc_per_node = determine_local_world_size(args.nproc_per_node)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 705, in determine_local_world_size
+    raise ValueError(
+ValueError: Unsupported nproc_per_node value: 
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+Traceback (most recent call last):
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 676, in determine_local_world_size
+    return int(nproc_per_node)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/home/wangys/anaconda3/envs/verl/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 908, in run
+    config, cmd, cmd_args = config_from_args(args)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 789, in config_from_args
+    nproc_per_node = determine_local_world_size(args.nproc_per_node)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 705, in determine_local_world_size
+    raise ValueError(
+ValueError: Unsupported nproc_per_node value: 
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+Traceback (most recent call last):
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 676, in determine_local_world_size
+    return int(nproc_per_node)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/home/wangys/anaconda3/envs/verl/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 908, in run
+    config, cmd, cmd_args = config_from_args(args)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 789, in config_from_args
+    nproc_per_node = determine_local_world_size(args.nproc_per_node)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 705, in determine_local_world_size
+    raise ValueError(
+ValueError: Unsupported nproc_per_node value: 
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+Traceback (most recent call last):
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 676, in determine_local_world_size
+    return int(nproc_per_node)
+ValueError: invalid literal for int() with base 10: ''
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/home/wangys/anaconda3/envs/verl/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 908, in run
+    config, cmd, cmd_args = config_from_args(args)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 789, in config_from_args
+    nproc_per_node = determine_local_world_size(args.nproc_per_node)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 705, in determine_local_world_size
+    raise ValueError(
+ValueError: Unsupported nproc_per_node value: 
+[W801 03:43:37.984054997 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:57654 (errno: 97 - Address family not supported by protocol).
+[W801 03:43:37.114422577 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:41019 (errno: 97 - Address family not supported by protocol).
+/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/import_utils.py:658: FutureWarning: `is_torch_tpu_available` is deprecated and will be removed in 4.41.0. Please use the `is_torch_xla_available` instead.
+  warnings.warn(
+/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/import_utils.py:658: FutureWarning: `is_torch_tpu_available` is deprecated and will be removed in 4.41.0. Please use the `is_torch_xla_available` instead.
+  warnings.warn(
+[W801 03:43:41.152041311 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:41019 (errno: 97 - Address family not supported by protocol).
+[W801 03:43:41.152691082 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:41019 (errno: 97 - Address family not supported by protocol).
+08/01/2025 03:43:41 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
+08/01/2025 03:43:41 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1distributed training: True, 16-bits training: False
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+[rank0]:     response.raise_for_status()
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+[rank0]:     raise HTTPError(http_error_msg, response=self)
+[rank0]: requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://hf-mirror.com/None/resolve/main/tokenizer_config.json
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/hub.py", line 342, in cached_file
+[rank0]:     resolved_file = hf_hub_download(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+[rank0]:     return _hf_hub_download_to_cache_dir(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1115, in _hf_hub_download_to_cache_dir
+[rank0]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1656, in _raise_on_head_call_error
+[rank0]:     raise head_call_error
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1544, in _get_metadata_or_catch_error
+[rank0]:     metadata = get_hf_file_metadata(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1461, in get_hf_file_metadata
+[rank0]:     r = _request_wrapper(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+[rank0]:     response = _request_wrapper(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 310, in _request_wrapper
+[rank0]:     hf_raise_for_status(response)
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+[rank0]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank0]: huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-688bc76e-0c70b74c71f67fa5254d99e0;e7830312-0d73-4042-b544-5959bfedd5d9)
+
+[rank0]: Repository Not Found for url: https://hf-mirror.com/None/resolve/main/tokenizer_config.json.
+[rank0]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank0]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+[rank0]: Invalid username or password.
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[rank0]:     return _run_code(code, main_globals, None,
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 86, in _run_code
+[rank0]:     exec(code, run_globals)
+[rank0]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 445, in <module>
+[rank0]:     main()
+[rank0]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 287, in main
+[rank0]:     tokenizer = AutoTokenizer.from_pretrained(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 881, in from_pretrained
+[rank0]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 713, in get_tokenizer_config
+[rank0]:     resolved_config_file = cached_file(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/hub.py", line 365, in cached_file
+[rank0]:     raise EnvironmentError(
+[rank0]: OSError: None is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank0]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+[rank1]:     response.raise_for_status()
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+[rank1]:     raise HTTPError(http_error_msg, response=self)
+[rank1]: requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://hf-mirror.com/None/resolve/main/tokenizer_config.json
+
+[rank1]: The above exception was the direct cause of the following exception:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/hub.py", line 342, in cached_file
+[rank1]:     resolved_file = hf_hub_download(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank1]:     return fn(*args, **kwargs)
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+[rank1]:     return _hf_hub_download_to_cache_dir(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1115, in _hf_hub_download_to_cache_dir
+[rank1]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1656, in _raise_on_head_call_error
+[rank1]:     raise head_call_error
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1544, in _get_metadata_or_catch_error
+[rank1]:     metadata = get_hf_file_metadata(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank1]:     return fn(*args, **kwargs)
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1461, in get_hf_file_metadata
+[rank1]:     r = _request_wrapper(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+[rank1]:     response = _request_wrapper(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 310, in _request_wrapper
+[rank1]:     hf_raise_for_status(response)
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+[rank1]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank1]: huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-688bc76e-311b351f5df4a51a09ad85d2;cf9a06ba-f5e8-4930-8594-03c6ae6c82be)
+
+[rank1]: Repository Not Found for url: https://hf-mirror.com/None/resolve/main/tokenizer_config.json.
+[rank1]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank1]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+[rank1]: Invalid username or password.
+
+[rank1]: The above exception was the direct cause of the following exception:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[rank1]:     return _run_code(code, main_globals, None,
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 86, in _run_code
+[rank1]:     exec(code, run_globals)
+[rank1]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 445, in <module>
+[rank1]:     main()
+[rank1]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 287, in main
+[rank1]:     tokenizer = AutoTokenizer.from_pretrained(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 881, in from_pretrained
+[rank1]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 713, in get_tokenizer_config
+[rank1]:     resolved_config_file = cached_file(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/hub.py", line 365, in cached_file
+[rank1]:     raise EnvironmentError(
+[rank1]: OSError: None is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank1]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[rank0]:[W801 03:43:42.040868478 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0801 03:43:42.987310 1670374 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1670414 closing signal SIGTERM
+E0801 03:43:43.101653 1670374 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 1670413) of binary: /data/home/wangys/anaconda3/envs/verl/bin/python
+Traceback (most recent call last):
+  File "/data/home/wangys/anaconda3/envs/verl/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+training.train_language_model FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-08-01_03:43:42
+  host      : 12-43
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1670413)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+[W801 03:45:41.692330804 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:50984 (errno: 97 - Address family not supported by protocol).
+[W801 03:45:41.732804674 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:33437 (errno: 97 - Address family not supported by protocol).
+/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/import_utils.py:658: FutureWarning: `is_torch_tpu_available` is deprecated and will be removed in 4.41.0. Please use the `is_torch_xla_available` instead.
+  warnings.warn(
+/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/import_utils.py:658: FutureWarning: `is_torch_tpu_available` is deprecated and will be removed in 4.41.0. Please use the `is_torch_xla_available` instead.
+  warnings.warn(
+[W801 03:45:45.689774527 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:33437 (errno: 97 - Address family not supported by protocol).
+[W801 03:45:45.697518541 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:33437 (errno: 97 - Address family not supported by protocol).
+08/01/2025 03:45:45 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
+08/01/2025 03:45:45 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1distributed training: True, 16-bits training: False
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+[rank0]:     response.raise_for_status()
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+[rank0]:     raise HTTPError(http_error_msg, response=self)
+[rank0]: requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://hf-mirror.com/None/resolve/main/tokenizer_config.json
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/hub.py", line 342, in cached_file
+[rank0]:     resolved_file = hf_hub_download(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+[rank0]:     return _hf_hub_download_to_cache_dir(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1115, in _hf_hub_download_to_cache_dir
+[rank0]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1656, in _raise_on_head_call_error
+[rank0]:     raise head_call_error
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1544, in _get_metadata_or_catch_error
+[rank0]:     metadata = get_hf_file_metadata(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1461, in get_hf_file_metadata
+[rank0]:     r = _request_wrapper(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+[rank0]:     response = _request_wrapper(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 310, in _request_wrapper
+[rank0]:     hf_raise_for_status(response)
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+[rank0]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank0]: huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-688bc7e9-5ce44ebe0652e68f328f1c99;f5295d28-c351-441a-9b8c-8170a0fd13b3)
+
+[rank0]: Repository Not Found for url: https://hf-mirror.com/None/resolve/main/tokenizer_config.json.
+[rank0]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank0]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+[rank0]: Invalid username or password.
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[rank0]:     return _run_code(code, main_globals, None,
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 86, in _run_code
+[rank0]:     exec(code, run_globals)
+[rank0]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 445, in <module>
+[rank0]:     main()
+[rank0]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 287, in main
+[rank0]:     tokenizer = AutoTokenizer.from_pretrained(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 881, in from_pretrained
+[rank0]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 713, in get_tokenizer_config
+[rank0]:     resolved_config_file = cached_file(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/hub.py", line 365, in cached_file
+[rank0]:     raise EnvironmentError(
+[rank0]: OSError: None is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank0]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+[rank1]:     response.raise_for_status()
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+[rank1]:     raise HTTPError(http_error_msg, response=self)
+[rank1]: requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://hf-mirror.com/None/resolve/main/tokenizer_config.json
+
+[rank1]: The above exception was the direct cause of the following exception:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/hub.py", line 342, in cached_file
+[rank1]:     resolved_file = hf_hub_download(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank1]:     return fn(*args, **kwargs)
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+[rank1]:     return _hf_hub_download_to_cache_dir(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1115, in _hf_hub_download_to_cache_dir
+[rank1]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1656, in _raise_on_head_call_error
+[rank1]:     raise head_call_error
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1544, in _get_metadata_or_catch_error
+[rank1]:     metadata = get_hf_file_metadata(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank1]:     return fn(*args, **kwargs)
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1461, in get_hf_file_metadata
+[rank1]:     r = _request_wrapper(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+[rank1]:     response = _request_wrapper(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 310, in _request_wrapper
+[rank1]:     hf_raise_for_status(response)
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+[rank1]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank1]: huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-688bc7e9-1ea4fc32103bc5fb03fb64ea;be3d8ac3-8fe7-4bb7-9d96-8d095a1fed8e)
+
+[rank1]: Repository Not Found for url: https://hf-mirror.com/None/resolve/main/tokenizer_config.json.
+[rank1]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank1]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+[rank1]: Invalid username or password.
+
+[rank1]: The above exception was the direct cause of the following exception:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[rank1]:     return _run_code(code, main_globals, None,
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 86, in _run_code
+[rank1]:     exec(code, run_globals)
+[rank1]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 445, in <module>
+[rank1]:     main()
+[rank1]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 287, in main
+[rank1]:     tokenizer = AutoTokenizer.from_pretrained(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 881, in from_pretrained
+[rank1]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 713, in get_tokenizer_config
+[rank1]:     resolved_config_file = cached_file(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/hub.py", line 365, in cached_file
+[rank1]:     raise EnvironmentError(
+[rank1]: OSError: None is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank1]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[rank0]:[W801 03:45:46.617711935 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0801 03:45:46.602783 1671172 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1671191 closing signal SIGTERM
+E0801 03:45:46.635271 1671172 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 1671190) of binary: /data/home/wangys/anaconda3/envs/verl/bin/python
+Traceback (most recent call last):
+  File "/data/home/wangys/anaconda3/envs/verl/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+training.train_language_model FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-08-01_03:45:46
+  host      : 12-43
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1671190)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+[W801 03:47:37.441083530 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:55027 (errno: 97 - Address family not supported by protocol).
+[W801 03:47:37.476286798 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:46451 (errno: 97 - Address family not supported by protocol).
+/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/import_utils.py:658: FutureWarning: `is_torch_tpu_available` is deprecated and will be removed in 4.41.0. Please use the `is_torch_xla_available` instead.
+  warnings.warn(
+/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/import_utils.py:658: FutureWarning: `is_torch_tpu_available` is deprecated and will be removed in 4.41.0. Please use the `is_torch_xla_available` instead.
+  warnings.warn(
+[W801 03:47:41.317006333 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:46451 (errno: 97 - Address family not supported by protocol).
+[W801 03:47:41.317237616 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:46451 (errno: 97 - Address family not supported by protocol).
+08/01/2025 03:47:41 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
+08/01/2025 03:47:42 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1distributed training: True, 16-bits training: False
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+[rank0]:     response.raise_for_status()
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+[rank0]:     raise HTTPError(http_error_msg, response=self)
+[rank0]: requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://hf-mirror.com/None/resolve/main/tokenizer_config.json
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/hub.py", line 342, in cached_file
+[rank0]:     resolved_file = hf_hub_download(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+[rank0]:     return _hf_hub_download_to_cache_dir(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1115, in _hf_hub_download_to_cache_dir
+[rank0]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1656, in _raise_on_head_call_error
+[rank0]:     raise head_call_error
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1544, in _get_metadata_or_catch_error
+[rank0]:     metadata = get_hf_file_metadata(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1461, in get_hf_file_metadata
+[rank0]:     r = _request_wrapper(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+[rank0]:     response = _request_wrapper(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 310, in _request_wrapper
+[rank0]:     hf_raise_for_status(response)
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+[rank0]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank0]: huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-688bc85e-23c2680c0dfb4f34340d2419;09877181-209c-4d43-aedb-1e45c9fbdfaa)
+
+[rank0]: Repository Not Found for url: https://hf-mirror.com/None/resolve/main/tokenizer_config.json.
+[rank0]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank0]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+[rank0]: Invalid username or password.
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[rank0]:     return _run_code(code, main_globals, None,
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 86, in _run_code
+[rank0]:     exec(code, run_globals)
+[rank0]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 445, in <module>
+[rank0]:     main()
+[rank0]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 287, in main
+[rank0]:     tokenizer = AutoTokenizer.from_pretrained(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 881, in from_pretrained
+[rank0]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 713, in get_tokenizer_config
+[rank0]:     resolved_config_file = cached_file(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/hub.py", line 365, in cached_file
+[rank0]:     raise EnvironmentError(
+[rank0]: OSError: None is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank0]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 409, in hf_raise_for_status
+[rank1]:     response.raise_for_status()
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/requests/models.py", line 1024, in raise_for_status
+[rank1]:     raise HTTPError(http_error_msg, response=self)
+[rank1]: requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: https://hf-mirror.com/None/resolve/main/tokenizer_config.json
+
+[rank1]: The above exception was the direct cause of the following exception:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/hub.py", line 342, in cached_file
+[rank1]:     resolved_file = hf_hub_download(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank1]:     return fn(*args, **kwargs)
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1008, in hf_hub_download
+[rank1]:     return _hf_hub_download_to_cache_dir(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1115, in _hf_hub_download_to_cache_dir
+[rank1]:     _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1656, in _raise_on_head_call_error
+[rank1]:     raise head_call_error
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1544, in _get_metadata_or_catch_error
+[rank1]:     metadata = get_hf_file_metadata(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank1]:     return fn(*args, **kwargs)
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1461, in get_hf_file_metadata
+[rank1]:     r = _request_wrapper(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 286, in _request_wrapper
+[rank1]:     response = _request_wrapper(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 310, in _request_wrapper
+[rank1]:     hf_raise_for_status(response)
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 459, in hf_raise_for_status
+[rank1]:     raise _format(RepositoryNotFoundError, message, response) from e
+[rank1]: huggingface_hub.errors.RepositoryNotFoundError: 401 Client Error. (Request ID: Root=1-688bc85e-588ca0690451830a3496fff8;d223ada0-d974-4387-907b-730c775396d0)
+
+[rank1]: Repository Not Found for url: https://hf-mirror.com/None/resolve/main/tokenizer_config.json.
+[rank1]: Please make sure you specified the correct `repo_id` and `repo_type`.
+[rank1]: If you are trying to access a private or gated repo, make sure you are authenticated. For more details, see https://huggingface.co/docs/huggingface_hub/authentication
+[rank1]: Invalid username or password.
+
+[rank1]: The above exception was the direct cause of the following exception:
+
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[rank1]:     return _run_code(code, main_globals, None,
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 86, in _run_code
+[rank1]:     exec(code, run_globals)
+[rank1]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 445, in <module>
+[rank1]:     main()
+[rank1]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 287, in main
+[rank1]:     tokenizer = AutoTokenizer.from_pretrained(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 881, in from_pretrained
+[rank1]:     tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/models/auto/tokenization_auto.py", line 713, in get_tokenizer_config
+[rank1]:     resolved_config_file = cached_file(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/hub.py", line 365, in cached_file
+[rank1]:     raise EnvironmentError(
+[rank1]: OSError: None is not a local folder and is not a valid model identifier listed on 'https://huggingface.co/models'
+[rank1]: If this is a private repository, make sure to pass a token having permission to this repo either by logging in with `huggingface-cli login` or by passing `token=<your_token>`
+[rank0]:[W801 03:47:42.249699398 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+E0801 03:47:43.242960 1671883 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 1671910) of binary: /data/home/wangys/anaconda3/envs/verl/bin/python
+Traceback (most recent call last):
+  File "/data/home/wangys/anaconda3/envs/verl/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+training.train_language_model FAILED
+------------------------------------------------------------
+Failures:
+[1]:
+  time      : 2025-08-01_03:47:43
+  host      : 12-43
+  rank      : 1 (local_rank: 1)
+  exitcode  : 1 (pid: 1671911)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-08-01_03:47:43
+  host      : 12-43
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1671910)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+[W801 03:50:22.730427363 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:49802 (errno: 97 - Address family not supported by protocol).
+[W801 03:50:22.928726552 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:44347 (errno: 97 - Address family not supported by protocol).
+/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/import_utils.py:658: FutureWarning: `is_torch_tpu_available` is deprecated and will be removed in 4.41.0. Please use the `is_torch_xla_available` instead.
+  warnings.warn(
+/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/import_utils.py:658: FutureWarning: `is_torch_tpu_available` is deprecated and will be removed in 4.41.0. Please use the `is_torch_xla_available` instead.
+  warnings.warn(
+[W801 03:50:26.923955217 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:44347 (errno: 97 - Address family not supported by protocol).
+[W801 03:50:26.924555481 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:44347 (errno: 97 - Address family not supported by protocol).
+08/01/2025 03:50:26 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
+08/01/2025 03:50:26 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1distributed training: True, 16-bits training: False
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[rank0]:     return _run_code(code, main_globals, None,
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 86, in _run_code
+[rank0]:     exec(code, run_globals)
+[rank0]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 445, in <module>
+[rank0]:     main()
+[rank0]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 294, in main
+[rank0]:     config = AutoConfig.from_pretrained(
+[rank0]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/models/auto/configuration_auto.py", line 1112, in from_pretrained
+[rank0]:     raise ValueError(
+[rank0]: ValueError: Unrecognized model in /data/home/wangys/model/QuRating-1.3B. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, align, altclip, aria, aria_text, audio-spectrogram-transformer, autoformer, bamba, bark, bart, beit, bert, bert-generation, big_bird, bigbird_pegasus, biogpt, bit, blenderbot, blenderbot-small, blip, blip-2, bloom, bridgetower, bros, camembert, canine, chameleon, chinese_clip, chinese_clip_vision_model, clap, clip, clip_text_model, clip_vision_model, clipseg, clvp, code_llama, codegen, cohere, cohere2, colpali, conditional_detr, convbert, convnext, convnextv2, cpmant, ctrl, cvt, dab-detr, dac, data2vec-audio, data2vec-text, data2vec-vision, dbrx, deberta, deberta-v2, decision_transformer, deformable_detr, deit, depth_anything, depth_pro, deta, detr, diffllama, dinat, dinov2, dinov2_with_registers, distilbert, donut-swin, dpr, dpt, efficientformer, efficientnet, electra, emu3, encodec, encoder-decoder, ernie, ernie_m, esm, falcon, falcon_mamba, fastspeech2_conformer, flaubert, flava, fnet, focalnet, fsmt, funnel, fuyu, gemma, gemma2, git, glm, glpn, got_ocr2, gpt-sw3, gpt2, gpt_bigcode, gpt_neo, gpt_neox, gpt_neox_japanese, gptj, gptsan-japanese, granite, granitemoe, granitemoeshared, granitevision, graphormer, grounding-dino, groupvit, helium, hiera, hubert, ibert, idefics, idefics2, idefics3, idefics3_vision, ijepa, imagegpt, informer, instructblip, instructblipvideo, jamba, jetmoe, jukebox, kosmos-2, layoutlm, layoutlmv2, layoutlmv3, led, levit, lilt, llama, llava, llava_next, llava_next_video, llava_onevision, longformer, longt5, luke, lxmert, m2m_100, mamba, mamba2, marian, markuplm, mask2former, maskformer, maskformer-swin, mbart, mctct, mega, megatron-bert, mgp-str, mimi, mistral, mixtral, mllama, mobilebert, mobilenet_v1, mobilenet_v2, mobilevit, mobilevitv2, modernbert, moonshine, moshi, mpnet, mpt, mra, mt5, musicgen, musicgen_melody, mvp, nat, nemotron, nezha, nllb-moe, nougat, nystromformer, olmo, olmo2, olmoe, omdet-turbo, oneformer, open-llama, openai-gpt, opt, owlv2, owlvit, paligemma, patchtsmixer, patchtst, pegasus, pegasus_x, perceiver, persimmon, phi, phi3, phimoe, pix2struct, pixtral, plbart, poolformer, pop2piano, prophetnet, pvt, pvt_v2, qdqbert, qwen2, qwen2_5_vl, qwen2_audio, qwen2_audio_encoder, qwen2_moe, qwen2_vl, rag, realm, recurrent_gemma, reformer, regnet, rembert, resnet, retribert, roberta, roberta-prelayernorm, roc_bert, roformer, rt_detr, rt_detr_resnet, rt_detr_v2, rwkv, sam, seamless_m4t, seamless_m4t_v2, segformer, seggpt, sew, sew-d, siglip, siglip_vision_model, speech-encoder-decoder, speech_to_text, speech_to_text_2, speecht5, splinter, squeezebert, stablelm, starcoder2, superglue, superpoint, swiftformer, swin, swin2sr, swinv2, switch_transformers, t5, table-transformer, tapas, textnet, time_series_transformer, timesformer, timm_backbone, timm_wrapper, trajectory_transformer, transfo-xl, trocr, tvlt, tvp, udop, umt5, unispeech, unispeech-sat, univnet, upernet, van, video_llava, videomae, vilt, vipllava, vision-encoder-decoder, vision-text-dual-encoder, visual_bert, vit, vit_hybrid, vit_mae, vit_msn, vitdet, vitmatte, vitpose, vitpose_backbone, vits, vivit, wav2vec2, wav2vec2-bert, wav2vec2-conformer, wavlm, whisper, xclip, xglm, xlm, xlm-prophetnet, xlm-roberta, xlm-roberta-xl, xlnet, xmod, yolos, yoso, zamba, zamba2, zoedepth
+[rank1]: Traceback (most recent call last):
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+[rank1]:     return _run_code(code, main_globals, None,
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/runpy.py", line 86, in _run_code
+[rank1]:     exec(code, run_globals)
+[rank1]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 445, in <module>
+[rank1]:     main()
+[rank1]:   File "/data/home/wangys/DataSelection-IF/QuRating/training/train_language_model.py", line 294, in main
+[rank1]:     config = AutoConfig.from_pretrained(
+[rank1]:   File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/models/auto/configuration_auto.py", line 1112, in from_pretrained
+[rank1]:     raise ValueError(
+[rank1]: ValueError: Unrecognized model in /data/home/wangys/model/QuRating-1.3B. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, align, altclip, aria, aria_text, audio-spectrogram-transformer, autoformer, bamba, bark, bart, beit, bert, bert-generation, big_bird, bigbird_pegasus, biogpt, bit, blenderbot, blenderbot-small, blip, blip-2, bloom, bridgetower, bros, camembert, canine, chameleon, chinese_clip, chinese_clip_vision_model, clap, clip, clip_text_model, clip_vision_model, clipseg, clvp, code_llama, codegen, cohere, cohere2, colpali, conditional_detr, convbert, convnext, convnextv2, cpmant, ctrl, cvt, dab-detr, dac, data2vec-audio, data2vec-text, data2vec-vision, dbrx, deberta, deberta-v2, decision_transformer, deformable_detr, deit, depth_anything, depth_pro, deta, detr, diffllama, dinat, dinov2, dinov2_with_registers, distilbert, donut-swin, dpr, dpt, efficientformer, efficientnet, electra, emu3, encodec, encoder-decoder, ernie, ernie_m, esm, falcon, falcon_mamba, fastspeech2_conformer, flaubert, flava, fnet, focalnet, fsmt, funnel, fuyu, gemma, gemma2, git, glm, glpn, got_ocr2, gpt-sw3, gpt2, gpt_bigcode, gpt_neo, gpt_neox, gpt_neox_japanese, gptj, gptsan-japanese, granite, granitemoe, granitemoeshared, granitevision, graphormer, grounding-dino, groupvit, helium, hiera, hubert, ibert, idefics, idefics2, idefics3, idefics3_vision, ijepa, imagegpt, informer, instructblip, instructblipvideo, jamba, jetmoe, jukebox, kosmos-2, layoutlm, layoutlmv2, layoutlmv3, led, levit, lilt, llama, llava, llava_next, llava_next_video, llava_onevision, longformer, longt5, luke, lxmert, m2m_100, mamba, mamba2, marian, markuplm, mask2former, maskformer, maskformer-swin, mbart, mctct, mega, megatron-bert, mgp-str, mimi, mistral, mixtral, mllama, mobilebert, mobilenet_v1, mobilenet_v2, mobilevit, mobilevitv2, modernbert, moonshine, moshi, mpnet, mpt, mra, mt5, musicgen, musicgen_melody, mvp, nat, nemotron, nezha, nllb-moe, nougat, nystromformer, olmo, olmo2, olmoe, omdet-turbo, oneformer, open-llama, openai-gpt, opt, owlv2, owlvit, paligemma, patchtsmixer, patchtst, pegasus, pegasus_x, perceiver, persimmon, phi, phi3, phimoe, pix2struct, pixtral, plbart, poolformer, pop2piano, prophetnet, pvt, pvt_v2, qdqbert, qwen2, qwen2_5_vl, qwen2_audio, qwen2_audio_encoder, qwen2_moe, qwen2_vl, rag, realm, recurrent_gemma, reformer, regnet, rembert, resnet, retribert, roberta, roberta-prelayernorm, roc_bert, roformer, rt_detr, rt_detr_resnet, rt_detr_v2, rwkv, sam, seamless_m4t, seamless_m4t_v2, segformer, seggpt, sew, sew-d, siglip, siglip_vision_model, speech-encoder-decoder, speech_to_text, speech_to_text_2, speecht5, splinter, squeezebert, stablelm, starcoder2, superglue, superpoint, swiftformer, swin, swin2sr, swinv2, switch_transformers, t5, table-transformer, tapas, textnet, time_series_transformer, timesformer, timm_backbone, timm_wrapper, trajectory_transformer, transfo-xl, trocr, tvlt, tvp, udop, umt5, unispeech, unispeech-sat, univnet, upernet, van, video_llava, videomae, vilt, vipllava, vision-encoder-decoder, vision-text-dual-encoder, visual_bert, vit, vit_hybrid, vit_mae, vit_msn, vitdet, vitmatte, vitpose, vitpose_backbone, vits, vivit, wav2vec2, wav2vec2-bert, wav2vec2-conformer, wavlm, whisper, xclip, xglm, xlm, xlm-prophetnet, xlm-roberta, xlm-roberta-xl, xlnet, xmod, yolos, yoso, zamba, zamba2, zoedepth
+[rank0]:[W801 03:50:26.526683578 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+W0801 03:50:27.500174 1672987 site-packages/torch/distributed/elastic/multiprocessing/api.py:897] Sending process 1673014 closing signal SIGTERM
+E0801 03:50:27.532049 1672987 site-packages/torch/distributed/elastic/multiprocessing/api.py:869] failed (exitcode: 1) local_rank: 0 (pid: 1673013) of binary: /data/home/wangys/anaconda3/envs/verl/bin/python
+Traceback (most recent call last):
+  File "/data/home/wangys/anaconda3/envs/verl/bin/torchrun", line 8, in <module>
+    sys.exit(main())
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/elastic/multiprocessing/errors/__init__.py", line 355, in wrapper
+    return f(*args, **kwargs)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 918, in main
+    run(args)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/run.py", line 909, in run
+    elastic_launch(
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 138, in __call__
+    return launch_agent(self._config, self._entrypoint, list(args))
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/torch/distributed/launcher/api.py", line 269, in launch_agent
+    raise ChildFailedError(
+torch.distributed.elastic.multiprocessing.errors.ChildFailedError: 
+============================================================
+training.train_language_model FAILED
+------------------------------------------------------------
+Failures:
+  <NO_OTHER_FAILURES>
+------------------------------------------------------------
+Root Cause (first observed failure):
+[0]:
+  time      : 2025-08-01_03:50:27
+  host      : 12-43
+  rank      : 0 (local_rank: 0)
+  exitcode  : 1 (pid: 1673013)
+  error_file: <N/A>
+  traceback : To enable traceback see: https://pytorch.org/docs/stable/elastic/errors.html
+============================================================
+[W801 03:52:05.095797959 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:56290 (errno: 97 - Address family not supported by protocol).
+[W801 03:52:05.370631254 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:45355 (errno: 97 - Address family not supported by protocol).
+/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/import_utils.py:658: FutureWarning: `is_torch_tpu_available` is deprecated and will be removed in 4.41.0. Please use the `is_torch_xla_available` instead.
+  warnings.warn(
+/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/import_utils.py:658: FutureWarning: `is_torch_tpu_available` is deprecated and will be removed in 4.41.0. Please use the `is_torch_xla_available` instead.
+  warnings.warn(
+[W801 03:52:09.325546897 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:45355 (errno: 97 - Address family not supported by protocol).
+[W801 03:52:09.327476157 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:45355 (errno: 97 - Address family not supported by protocol).
+08/01/2025 03:52:09 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
+08/01/2025 03:52:09 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1distributed training: True, 16-bits training: False
+[WARNING|logging.py:329] 2025-08-01 03:52:10,016 >> LlamaForCausalLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+[WARNING|logging.py:329] 2025-08-01 03:52:10,050 >> LlamaForCausalLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  6.38it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:00<00:00,  6.36it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  7.05it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  6.93it/s]
+[WARNING|modeling_utils.py:4960] 2025-08-01 03:52:10,702 >> Some weights of the model checkpoint at /data/home/wangys/model/QuRating-1.3B were not used when initializing LlamaForCausalLM: {'score.weight'}
+- This IS expected if you are initializing LlamaForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing LlamaForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[WARNING|modeling_utils.py:4972] 2025-08-01 03:52:10,703 >> Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /data/home/wangys/model/QuRating-1.3B and are newly initialized: ['lm_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/data/home/wangys/DataSelection-IF/QuRating/training/trainer.py:179: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  super().__init__(model, args, *more_args, **kwargs)
+Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  7.00it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00,  6.89it/s]
+[WARNING|modeling_utils.py:4960] 2025-08-01 03:52:10,737 >> Some weights of the model checkpoint at /data/home/wangys/model/QuRating-1.3B were not used when initializing LlamaForCausalLM: {'score.weight'}
+- This IS expected if you are initializing LlamaForCausalLM from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing LlamaForCausalLM from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+[WARNING|modeling_utils.py:4972] 2025-08-01 03:52:10,737 >> Some weights of LlamaForCausalLM were not initialized from the model checkpoint at /data/home/wangys/model/QuRating-1.3B and are newly initialized: ['lm_head.weight']
+You should probably TRAIN this model on a down-stream task to be able to use it for predictions and inference.
+/data/home/wangys/DataSelection-IF/QuRating/training/trainer.py:179: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  super().__init__(model, args, *more_args, **kwargs)
+[2025-08-01 03:52:12,048] [INFO] [real_accelerator.py:239:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-08-01 03:52:12,273] [INFO] [real_accelerator.py:239:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[rank0]:[W801 03:52:14.048966399 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[W801 12:34:17.661803347 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:54629 (errno: 97 - Address family not supported by protocol).
+[W801 12:34:17.965402720 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:45271 (errno: 97 - Address family not supported by protocol).
+/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/import_utils.py:658: FutureWarning: `is_torch_tpu_available` is deprecated and will be removed in 4.41.0. Please use the `is_torch_xla_available` instead.
+  warnings.warn(
+/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/import_utils.py:658: FutureWarning: `is_torch_tpu_available` is deprecated and will be removed in 4.41.0. Please use the `is_torch_xla_available` instead.
+  warnings.warn(
+[W801 12:34:21.779988643 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:45271 (errno: 97 - Address family not supported by protocol).
+[W801 12:34:21.780945990 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:45271 (errno: 97 - Address family not supported by protocol).
+08/01/2025 12:34:21 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
+[WARNING|logging.py:329] 2025-08-01 12:34:21,449 >> You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+08/01/2025 12:34:21 - WARNING - __main__ - Process rank: 1, device: cuda:1, n_gpu: 1distributed training: True, 16-bits training: False
+[WARNING|logging.py:329] 2025-08-01 12:34:21,526 >> LlamaForCausalLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+[WARNING|logging.py:329] 2025-08-01 12:34:21,539 >> You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+/data/home/wangys/DataSelection-IF/QuRating/training/trainer.py:179: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  super().__init__(model, args, *more_args, **kwargs)
+[WARNING|logging.py:329] 2025-08-01 12:34:21,614 >> LlamaForCausalLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+/data/home/wangys/DataSelection-IF/QuRating/training/trainer.py:179: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  super().__init__(model, args, *more_args, **kwargs)
+[2025-08-01 12:34:22,618] [INFO] [real_accelerator.py:239:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[2025-08-01 12:34:22,774] [INFO] [real_accelerator.py:239:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[rank0]:[W801 12:34:25.589567541 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[W801 12:39:07.708409025 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [localhost]:62121 (errno: 97 - Address family not supported by protocol).
+[W801 12:39:07.884391826 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:43667 (errno: 97 - Address family not supported by protocol).
+/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/transformers/utils/import_utils.py:658: FutureWarning: `is_torch_tpu_available` is deprecated and will be removed in 4.41.0. Please use the `is_torch_xla_available` instead.
+  warnings.warn(
+[W801 12:39:11.710511952 socket.cpp:759] [c10d] The client socket cannot be initialized to connect to [12-43]:43667 (errno: 97 - Address family not supported by protocol).
+08/01/2025 12:39:11 - WARNING - __main__ - Process rank: 0, device: cuda:0, n_gpu: 1distributed training: True, 16-bits training: False
+[WARNING|logging.py:329] 2025-08-01 12:39:11,350 >> You are using the default legacy behaviour of the <class 'transformers.models.llama.tokenization_llama_fast.LlamaTokenizerFast'>. This is expected, and simply means that the `legacy` (previous) behavior will be used so nothing changes for you. If you want to use the new behaviour, set `legacy=False`. This should only be set if you understand what it means, and thoroughly read the reason why this was added as explained in https://github.com/huggingface/transformers/pull/24565 - if you loaded a llama tokenizer from a GGUF file you can ignore this message.
+[WARNING|logging.py:329] 2025-08-01 12:39:11,426 >> LlamaForCausalLM has generative capabilities, as `prepare_inputs_for_generation` is explicitly overwritten. However, it doesn't directly inherit from `GenerationMixin`. From 👉v4.50👈 onwards, `PreTrainedModel` will NOT inherit from `GenerationMixin`, and this model will lose the ability to call `generate` and other related functions.
+  - If you're using `trust_remote_code=True`, you can get rid of this warning by loading the model with an auto class. See https://huggingface.co/docs/transformers/en/model_doc/auto#auto-classes
+  - If you are the owner of the model architecture code, please modify your model class such that it inherits from `GenerationMixin` (after `PreTrainedModel`, otherwise you'll get an exception).
+  - If you are not the owner of the model architecture class, please contact the model code owner to update it.
+/data/home/wangys/DataSelection-IF/QuRating/training/trainer.py:179: FutureWarning: `tokenizer` is deprecated and will be removed in version 5.0.0 for `Trainer.__init__`. Use `processing_class` instead.
+  super().__init__(model, args, *more_args, **kwargs)
+[2025-08-01 12:39:12,382] [INFO] [real_accelerator.py:239:get_accelerator] Setting ds_accelerator to cuda (auto detect)
+[rank0]:[W801 12:39:14.191013626 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

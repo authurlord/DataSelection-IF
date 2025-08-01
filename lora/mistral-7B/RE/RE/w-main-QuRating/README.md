@@ -42,9 +42,9 @@ The following hyperparameters were used during training:
 - eval_batch_size: 8
 - seed: 42
 - distributed_type: multi-GPU
-- num_devices: 4
-- total_train_batch_size: 32
-- total_eval_batch_size: 32
+- num_devices: 2
+- total_train_batch_size: 16
+- total_eval_batch_size: 16
 - optimizer: Use adamw_torch with betas=(0.9,0.999) and epsilon=1e-08 and optimizer_args=No additional optimizer arguments
 - lr_scheduler_type: cosine
 - lr_scheduler_warmup_ratio: 0.1

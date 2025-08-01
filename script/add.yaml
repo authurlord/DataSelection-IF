@@ -1,0 +1,3 @@
+RE_RE: train/CTA/WebTable/train-select-w-QuRating-top100.json,train/RE/RE/train-select-w-QuRating-top100.json,train/CTA/SimTab/train-select-w-QuRating-top100.json,train/RE/RE/train-select.json
+
+AVE_oa_mine:  train/DI/walmart/train-select-w-QuRating-top100.json,train/DI/amazon/train-select-w-QuRating-top100.json,train/AVE/oa_mine/train-select-w-QuRating-top100.json,train/AVE/oa_mine/train-select.json

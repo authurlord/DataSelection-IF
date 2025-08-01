@@ -45,6 +45,9 @@ for task,dataset in task_list:
     # command_line.append(
     #     'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 5,6 --model mistral-7B --DO_TRAIN_LESS --DO_EVAL_LESS'.format(task,dataset)
     # )
+    # command_line.append(
+    #     'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 4,7 --model mistral-7B --DO_TRAIN_SP --DO_EVAL_SP'.format(task,dataset)
+    # )
     command_line.append(
         'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 4,7 --model mistral-7B --DO_TRAIN_SP --DO_EVAL_SP'.format(task,dataset)
     )

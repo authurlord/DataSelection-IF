@@ -2,13 +2,14 @@
 lora_weight/*
 # 忽略 raw_dataset 文件夹下的所有文件
 raw_dataset/*
-
+QuRating/QuRating-Data/*
 grad/*
 
 grad_single/*
 
 train/router/*
-
+script/mistral-7B_template.yaml
+script/qwen2.5-7B_template.yaml
 # 不忽略子文件夹的名称
 !lora_weight/*/
 

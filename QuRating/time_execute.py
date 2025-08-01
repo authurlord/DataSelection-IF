@@ -9,7 +9,7 @@ task_list = [
     ['ER','abt-buy'],
     ['ER','walmart-amazon'],
     ['ER','amazon-google'],
-    ['ER','wdc-all'],
+    ['ER','wdc'],
     ['ER','semi-text-w'],
     ['DC','hospital'],
     ['DC','beer'],
@@ -30,8 +30,11 @@ for task,dataset in task_list:
     #         'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 4,5 --model mistral-7B --DO_TRAIN --DO_EVAL --DO_TRAIN_MAIN --DO_EVAL_MAIN'.format(task,dataset)
     #     )
     ### IF with small model
+    # command_line.append(
+    #     'python QuRating_Selection.py --task {} --dataset {} --device 6 --model_path ../../model/QuRating-1.3B'.format(task,dataset)
+    # )
     command_line.append(
-        'python QuRating_Selection.py --task {} --dataset {} --device 6 --model_path ../../model/QuRating-1.3B'.format(task,dataset)
+        'python QuRating_Selection_top_100.py --task {} --dataset {} --device 6 --model_path ../../model/QuRating-1.3B'.format(task,dataset)
     )
     ### Test IF with DataInf
     # command_line.append(

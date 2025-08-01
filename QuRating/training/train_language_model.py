@@ -29,7 +29,7 @@ logger = logging.getLogger(__name__)
 @dataclass
 class ScriptArguments:
     model_name_or_path: Optional[str] = field(
-        default=None,
+        default='/data/home/wangys/model/Sheared-LLaMA-1.3B',
         metadata={
             "help": (
                 "The model checkpoint for weights initialization.Don't set if you want to train a model from scratch."
@@ -353,11 +353,15 @@ def main():
     # load_datasets
     if training_args.do_train:
         if len(args.tokenized_train_dataset) > 1:
+            print('concatenate')
             train_dataset = datasets.concatenate_datasets([
                 datasets.load_from_disk(ds) for ds in args.tokenized_train_dataset
             ])
         else:
-            train_dataset = datasets.load_from_disk(args.tokenized_train_dataset[0])
+            # print('single')
+            # print(datasets.load_from_disk(args.tokenized_train_dataset[0]))
+            # print(args.tokenized_train_dataset)
+            train_dataset = datasets.load_from_disk(args.tokenized_train_dataset[0])['train']
         logger.warning(f"train_dataset sequences: {len(train_dataset):,}")
 
         if args.sort_by is not None:

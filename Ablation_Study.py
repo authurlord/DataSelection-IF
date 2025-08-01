@@ -25,6 +25,8 @@ import torch.multiprocessing as mp
 import subprocess
 from src.util_func import load_yaml,z_score_normalize,get_top_k_indices,run_command,round_down_to_power_of_two,load_yaml_args
 
+add = load_yaml('script/add.yaml')
+
 def count_overlapping_elements(list1, list2):
     # This line (and the ones below it) should be indented 4 spaces
     set1 = set(list1)
@@ -52,6 +54,8 @@ parser.add_argument('--DO_TRAIN_LESS', action='store_true')
 parser.add_argument('--DO_EVAL_LESS', action='store_true')
 parser.add_argument('--DO_TRAIN_SP', action='store_true')
 parser.add_argument('--DO_EVAL_SP', action='store_true')
+parser.add_argument('--DO_TRAIN_DSIR', action='store_true')
+parser.add_argument('--DO_EVAL_DSIR', action='store_true')
 input_args = parser.parse_args()
 
 device = input_args.device
@@ -105,6 +109,8 @@ DO_TRAIN_LESS = input_args.DO_TRAIN_LESS
 DO_EVAL_LESS = input_args.DO_EVAL_LESS
 DO_TRAIN_SP = input_args.DO_TRAIN_SP
 DO_EVAL_SP = input_args.DO_EVAL_SP
+DO_TRAIN_DSIR = input_args.DO_TRAIN_DSIR
+DO_EVAL_DSIR = input_args.DO_EVAL_DSIR
 
 if os.path.exists('eval_result/{}-{}-{}.npy'.format(model,task,dataset)):
     all_metrics = np.load('eval_result/{}-{}-{}.npy'.format(model,task,dataset),allow_pickle=True).item()
@@ -238,30 +244,30 @@ if DO_TRAIN_MAIN:
     
     
     
-    QuRating_Score = np.load('QuRating/data/select_index_main_norm/{}-{}-QuRating-score.npy'.format(task,dataset),allow_pickle=True).item()
+    # QuRating_Score = np.load('QuRating/data/select_index_main_norm/{}-{}-QuRating-score.npy'.format(task,dataset),allow_pickle=True).item()
     
-    # final_score = np.zeros(len(total_score))
+    # # final_score = np.zeros(len(total_score))
     
-    total_score = np.zeros(len(QuRating_Score))
+    # total_score = np.zeros(len(QuRating_Score))
     
-    for i in range(len(total_score)):
-        if not greedyList_All_norm_flatten.__contains__(i):
-            greedyList_All_norm_flatten[i] = 0
-        if not sample_IF['iterative'].__contains__(i):
-            sample_IF['iterative'][i] = 0
-        # total_score[i] -= ppl_array[i]
-        total_score[i] += QuRating_Score[i]
-        # total_score[i] += greedyList_All_norm_flatten[i]
-        # total_score[i] -= sample_IF['iterative'][i]
-    main_list = np.argsort(-total_score)[:select_num]
-    QuRating_list = get_top_k_indices(QuRating_Score,select_num,IF=False)
-    print('Overlap Num: {}'.format(count_overlapping_elements(main_list,QuRating_list)))
+    # for i in range(len(total_score)):
+    #     if not greedyList_All_norm_flatten.__contains__(i):
+    #         greedyList_All_norm_flatten[i] = 0
+    #     if not sample_IF['iterative'].__contains__(i):
+    #         sample_IF['iterative'][i] = 0
+    #     # total_score[i] -= ppl_array[i]
+    #     total_score[i] += QuRating_Score[i]
+    #     # total_score[i] += greedyList_All_norm_flatten[i]
+    #     # total_score[i] -= sample_IF['iterative'][i]
+    # main_list = np.argsort(-total_score)[:select_num]
+    # QuRating_list = get_top_k_indices(QuRating_Score,select_num,IF=False)
+    # print('Overlap Num: {}'.format(count_overlapping_elements(main_list,QuRating_list)))
         
-    select_main = train_file.iloc[main_list]
+    # select_main = train_file.iloc[main_list]
     
-    train_main_file_path = 'train/{}/{}/train-select-w-{}.json'.format(task,dataset,ablation_method)
+    # train_main_file_path = 'train/{}/{}/train-select-w-{}.json'.format(task,dataset,ablation_method)
 
-    json.dump(select_main.to_dict(orient='records'), open(train_main_file_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=4)
+    # json.dump(select_main.to_dict(orient='records'), open(train_main_file_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=4)
 
     train_args = load_yaml(template_yaml_path)
 
@@ -270,7 +276,7 @@ if DO_TRAIN_MAIN:
     #     del train_args['deepspeed']
     train_args['output_dir'] = 'lora/{}/{}/{}/w-{}'.format(model,task,dataset,ablation_method)
 
-    train_args['train_file_path'] = train_main_file_path
+    train_args['train_file_path'] = add[f'{task}_{dataset}']
 
     train_args['cutoff_len'] = cutoff_len
 
@@ -280,6 +286,8 @@ if DO_TRAIN_MAIN:
         dataset,
         ablation_method), 'w') as file:
         yaml.dump(train_args, file)
+
+    print(train_args)
 
     run_command('CUDA_VISIBLE_DEVICES={} {} llamafactory-cli train script/ablation/{}_lora_{}_{}_P2-w-{}.yaml'.format(
         device,
@@ -562,6 +570,69 @@ if DO_EVAL_SP:
         print(round_down_to_power_of_two(len(device.split(','))))
         
         eval_command = 'CUDA_VISIBLE_DEVICES={} python vllm_query_qwen.py --lora_path {} --input_file {} --gpu_num {} --gpu_mem 0.8 --output_path {}'.format(
+            device,
+            lora_path,
+            test_file_path,
+            round_down_to_power_of_two(len(device.split(','))),
+            output_file_name
+        )
+        print(eval_command)
+        run_command(eval_command)
+        output_file = pd.read_csv(output_file_name,index_col=0)
+        metrics = evaluator.process(task,dataset,output_file)
+        # try:
+        #     all_metrics[ablation_method] = metrics
+        # except:
+        all_metrics[ablation_method] = metrics
+        # all_metrics[ablation_method] = metrics
+    
+
+if DO_TRAIN_DSIR:
+    # for ablation_method in ['IF-single']:
+    for ablation_method in ['DSIR']:
+        # select_QuRating = np.load('QuRating/data/select_index_main_expert/{}-{}-LESS.npy'.format(task,dataset))   
+        # select_QuRating_df = train_file.iloc[select_QuRating]
+        
+        
+        train_args = load_yaml(template_yaml_path)
+        
+        train_args['output_dir'] = 'lora/{}/{}/{}/w-{}'.format(model,task,dataset,ablation_method)
+        
+        # train_args['num_train_epochs'] = 
+        
+        train_args['train_file_path'] = 'train/{}/{}/train-select-w-{}.json'.format(task,dataset,ablation_method)
+        
+        train_args['cutoff_len'] = cutoff_len
+        
+        with open('script/ablation/{}_lora_{}_{}_P2-w-{}.yaml'.format(model,task,dataset,ablation_method), 'w') as file:
+            yaml.dump(train_args, file)
+
+        train_command = 'CUDA_VISIBLE_DEVICES={} {} llamafactory-cli train script/ablation/{}_lora_{}_{}_P2-w-{}.yaml'.format(
+            device,
+            force_torchrun,
+            model,
+            task,
+            dataset,
+            ablation_method)
+        
+        print(train_command)
+        run_command(train_command)
+
+### Inference
+
+if DO_EVAL_DSIR:
+    # all_metrics = {}
+    # os.makedirs('output/Ablation/{}/{}'.format(task,dataset),exist_ok=True)
+    # for ablation_method in ['IF-single']:
+    for ablation_method in ['DSIR']:
+        all_metrics[ablation_method] = {}
+        lora_path = 'lora/{}/{}/{}/w-{}'.format(model,task,dataset,ablation_method)
+        
+        output_file_name = 'output/Ablation/{}/{}/{}-w-{}.csv'.format(task,dataset,model,ablation_method)
+        
+        print(round_down_to_power_of_two(len(device.split(','))))
+        
+        eval_command = 'CUDA_VISIBLE_DEVICES={} python vllm_query_qwen.py --lora_path {} --input_file {} --gpu_num {} --gpu_mem 0.9 --output_path {}'.format(
             device,
             lora_path,
             test_file_path,

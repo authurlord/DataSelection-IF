@@ -2,7 +2,7 @@
 
 # > Default arguments - can be overriden by environment variables:
 # architecture to train, must be compatible with the Llama architecture
-arch=${ARCH:-princeton-nlp/Sheared-LLaMA-1.3b}
+arch=${ARCH:-/data/home/wangys/model/QuRating-1.3B}
 # total batch size across all devices with gradient accumulation
 bsz=${BSZ:-2048}
 # number of sequences per device
@@ -19,6 +19,7 @@ save_steps=${SAVE:-1000}
 dataset=${DATASET:-""}
 # suffix to append to run name
 suffix=${SUFFIX:-""}
+# device=${CUDA_VISIBLE_DEVICES:-5,6}
 
 run_name="lm_$(basename $arch)_bsz${bsz}_lr${lr}to10pc_epochs${epochs}_warmup${warmup}_dataset$(basename $dataset)${suffix}"
 out_dir="checkpoints/$run_name"
@@ -49,8 +50,8 @@ if [ $num_nodes -gt 1 ]; then
     header="srun torchrun \
     --rdzv-backend=c10d \
     --rdzv-endpoint=$master_addr:$master_port \
-    --nnodes=$num_nodes \
-    --nproc-per-node=$num_gpus \
+    --nnodes=1 \
+    --nproc-per-node=1 \
     -m training.train_language_model"
 else
     # Find a free port at random
@@ -62,11 +63,11 @@ else
     --rdzv-backend=c10d \
     --rdzv-endpoint=localhost:$master_port \
     --nnodes=1 \
-    --nproc-per-node=$num_gpus \
+    --nproc-per-node=1 \
     -m training.train_language_model"
 fi
 
-export OMP_NUM_THREADS=$num_gpus
+export OMP_NUM_THREADS=1
 
 export WANDB_PROJECT="qurating"
 export WANDB_DIR=$out_dir
@@ -76,12 +77,11 @@ export FSDP_SHARDING_STRATEGY="5" # 5 corresponds to _hybrid_shard_zero2
 export FSDP_STATE_DICT_TYPE="FULL_STATE_DICT"
 
 base_arguments=(
-    --report_to wandb
 
     --do_train
-    --config_name $arch
+    --config_name /data/home/wangys/model/QuRating-1.3B
     --config_overrides ""
-    --tokenizer_name $arch
+    --tokenizer_name /data/home/wangys/model/QuRating-1.3B
 
     --run_name $run_name
     --output_dir $out_dir

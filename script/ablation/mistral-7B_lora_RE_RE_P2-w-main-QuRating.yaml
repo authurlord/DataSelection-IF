@@ -23,5 +23,5 @@ report_to: none
 save_steps: 2000
 stage: sft
 template: mistral
-train_file_path: train/RE/RE/train-select-w-main-QuRating.json
+train_file_path: train/CTA/WebTable/train-select-w-QuRating-top100.json,train/RE/RE/train-select-w-QuRating-top100.json,train/CTA/SimTab/train-select-w-QuRating-top100.json,train/RE/RE/train-select.json
 warmup_ratio: 0.1

@@ -1,0 +1,22 @@
+{
+  "_data_files": [
+    {
+      "filename": "data-00000-of-00001.arrow"
+    }
+  ],
+  "_fingerprint": "a6910a80a65fd103",
+  "_format_columns": [
+    "index",
+    "chunk_lengths",
+    "length",
+    "writing_style_chunks",
+    "writing_style_average",
+    "required_expertise_chunks",
+    "required_expertise_average",
+    "text"
+  ],
+  "_format_kwargs": {},
+  "_format_type": null,
+  "_output_all_columns": false,
+  "_split": null
+}

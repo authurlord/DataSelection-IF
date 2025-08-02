@@ -1,4 +1,6 @@
-{
+{  "alpaca_en_demo": {
+    "file_name": "alpaca_en_demo.json"
+  },
     "AE_110k_train_small": {
         "file_name": "/data/home/wangys/LLaMA-Factory-main/data/AE_110k/AE_110k_train_small.json",
         "file_sha1": "d22b6c75577710c5fc7bafeaa4a79a12853755bf",
@@ -88,9 +90,6 @@
     },
     "Amazon-Google-Match-Test": {
         "file_name": "Amazon-Google-Test-Match.json"
-    },
-    "alpaca_en_demo": {
-        "file_name": "alpaca_en_demo.json"
     },
     "Walmart-Amazon-Match-P2": {
         "file_name": "/data/home/wangys/transfer-er/Pipeline/Walmart-Amazon/LLM_file/Walmart-Amazon-Pseudo-Label-Train.json",

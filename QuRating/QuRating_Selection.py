@@ -109,19 +109,19 @@ time_dict['annotate_time'] = annoate_time - start_time
 
 annotate_data = datasets.load_from_disk('data/annotation-main/{}-{}/'.format(task,dataset))
 
-# token_count = []
-# for i in range(len(annotate_data)):
-#     token_count.append(annotate_data[i]['length'])
-# avg_token_count = np.mean(token_count)
-# if is_all_element:
-#     select_token_total = int(np.sum(token_count))
-# else:
-#     select_token_total = int(avg_token_count * select_file_size)
+token_count = []
+for i in range(len(annotate_data)):
+    token_count.append(annotate_data[i]['length'])
+avg_token_count = np.mean(token_count)
+if is_all_element:
+    select_token_total = int(np.sum(token_count))
+else:
+    select_token_total = int(avg_token_count * select_file_size)
 
-select_token_total = 500_000
+# select_token_total = 500_000
 
-select_command = 'CUDA_VISIBLE_DEVICES={} python -m data_tools.select_subset data/annotation-main/{}-{}/ data/subset-main-expert/{}-{}/ \
-    --metric_field required_expertise_average \
+select_command = 'CUDA_VISIBLE_DEVICES={} python -m data_tools.select_subset data/annotation-main/{}-{}/ data/subset-main-writing/{}-{}/ \
+    --metric_field writing_style_average \
     --seq_len_field length \
     --tokens {} \
     --temperature 2.0 \
@@ -139,20 +139,20 @@ output = run_command(select_command)
 print(output)
 ## load subset
 
-subset = datasets.concatenate_datasets([datasets.load_from_disk(ds) for ds in sorted(glob.glob("data/subset-main-expert/{}-{}/*".format(task,dataset)))])
+subset = datasets.concatenate_datasets([datasets.load_from_disk(ds) for ds in sorted(glob.glob("data/subset-main-writing/{}-{}/*".format(task,dataset)))])
 
 index_list = []
 score = {}
 for i in range(len(subset)):
     index = subset[i]['index']
     index_list.append(subset[i]['index'])
-    score[index] = subset[i]['required_expertise_average']
+    score[index] = subset[i]['writing_style_average']
     
 print('Original File Size:{}\n\nSelect File Size Target:{}\n\nSelect File Size Output:{}\n\nwith {} seconds'.format(train_file_size,select_file_size,len(index_list),time_dict['annotate_time']))
-os.makedirs('data/select_index_main_expert',exist_ok=True)
+os.makedirs('data/select_index_main_writing',exist_ok=True)
 if is_all_element:
-    np.save('data/select_index_main_expert/{}-{}-QuRating.npy'.format(task,dataset),index_list)
-    np.save('data/select_index_main_expert/{}-{}-QuRating-score.npy'.format(task,dataset),score)
+    np.save('data/select_index_main_writing/{}-{}-QuRating.npy'.format(task,dataset),index_list)
+    np.save('data/select_index_main_writing/{}-{}-QuRating-score.npy'.format(task,dataset),score)
 else:
     np.save('data/select_index_main_expert/{}-{}-QuRating.npy'.format(task,dataset),index_list[:select_file_size])
 np.save('data/select_index_main_expert/{}-{}-time-dict.npy'.format(task,dataset),time_dict)

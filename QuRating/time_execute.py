@@ -5,20 +5,22 @@ import time
 
 command_line = []
 task_list = [
-    ['RE','RE'],
-    ['ER','abt-buy'],
-    ['ER','walmart-amazon'],
-    ['ER','amazon-google'],
-    ['ER','wdc'],
-    ['ER','semi-text-w'],
-    ['DC','hospital'],
-    ['DC','beer'],
-    ['DC','rayyan'],
-    ['DI','amazon'],
-    ['DI','walmart'],
-    ['AVE','oa_mine'],
-    ['CTA','SimTab'],
-    ['CTA','WebTable']
+    # ['RE','RE'],
+    # ['ER','abt-buy'],
+    # ['ER','semi-text-w'],
+    # ['DC','hospital'],
+    # ['DC','beer'],
+    # ['DC','rayyan'],
+    # ['DI','amazon'],
+    # ['DI','walmart'],
+    # ['AVE','oa_mine'],
+    # ['CTA','SimTab'],
+    # ['CTA','WebTable'],
+    # ['ER','walmart-amazon'],
+    ['ER','semi-text-c'],
+    # ['ER','amazon-google'],
+    # ['ER','wdc'],
+    # ['SM','CMS']
 ]
 for task,dataset in task_list:
     # if task=='CTA':
@@ -34,7 +36,7 @@ for task,dataset in task_list:
     #     'python QuRating_Selection.py --task {} --dataset {} --device 6 --model_path ../../model/QuRating-1.3B'.format(task,dataset)
     # )
     command_line.append(
-        'python QuRating_Selection_top_100.py --task {} --dataset {} --device 6 --model_path ../../model/QuRating-1.3B'.format(task,dataset)
+        'python QuRating_Selection.py --task {} --dataset {} --device 5 --model_path ../../model/QuRating-1.3B --all'.format(task,dataset)
     )
     ### Test IF with DataInf
     # command_line.append(

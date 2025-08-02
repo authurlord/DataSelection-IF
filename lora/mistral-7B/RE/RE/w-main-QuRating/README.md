@@ -48,7 +48,7 @@ The following hyperparameters were used during training:
 - optimizer: Use adamw_torch with betas=(0.9,0.999) and epsilon=1e-08 and optimizer_args=No additional optimizer arguments
 - lr_scheduler_type: cosine
 - lr_scheduler_warmup_ratio: 0.1
-- num_epochs: 3.0
+- num_epochs: 2.0
 
 ### Training results
 
@@ -59,5 +59,5 @@ The following hyperparameters were used during training:
 - PEFT 0.16.0
 - Transformers 4.49.0
 - Pytorch 2.6.0+cu124
-- Datasets 3.6.0
+- Datasets 4.0.0
 - Tokenizers 0.21.4

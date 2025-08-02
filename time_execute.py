@@ -13,6 +13,19 @@ command_line = []
 #     ['CTA','WebTable'],
 #     ['CTA','SimTab'],
 # ]
+# task_list = [
+#     # ['RE','RE'],
+#     ['ER','abt-buy'],
+#     ['ER','semi-text-w'],
+#     ['DC','hospital'],
+#     ['DC','beer'],
+#     ['DC','rayyan'],
+#     ['DI','amazon'],
+#     ['DI','walmart'],
+#     ['AVE','oa_mine'],
+#     # ['CTA','SimTab'],
+#     ['CTA','WebTable']
+# ]
 task_list = [
     ['RE','RE'],
     ['ER','abt-buy'],
@@ -23,8 +36,13 @@ task_list = [
     ['DI','amazon'],
     ['DI','walmart'],
     ['AVE','oa_mine'],
-    ['CTA','SimTab'],
-    ['CTA','WebTable']
+    # ['CTA','SimTab'],
+    ['CTA','WebTable'],
+    ['ER','walmart-amazon'],
+    ['ER','amazon-google'],
+    ['ER','wdc'],
+    # ['ER','semi-text-c'],
+    # ['SM','CMS']
 ]
 for task,dataset in task_list:
     # if task=='CTA':
@@ -48,8 +66,12 @@ for task,dataset in task_list:
     # command_line.append(
     #     'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 4,7 --model mistral-7B --DO_TRAIN_SP --DO_EVAL_SP'.format(task,dataset)
     # )
+    # command_line.append(
+    #     'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 6,7 --model mistral-7B --DO_TRAIN_DSIR --DO_EVAL_DSIR'.format(task,dataset)
+    # )
     command_line.append(
-        'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 4,7 --model mistral-7B --DO_TRAIN_SP --DO_EVAL_SP'.format(task,dataset)
+        f'python Ablation_Study.py --yaml_path script/config_{task}_{dataset}.yaml --device 4,5 --model mistral-7B --DO_TRAIN_MAIN_VAR --DO_EVAL_MAIN_VAR --main_var main-QuRating'
+
     )
     ### Test IF with DataInf
     # command_line.append(

@@ -541,3 +541,20 @@ def round_down_to_power_of_two(num: int):
         return 4
     else:
         return 8
+def normalize_to_neg1_pos1(arr: np.ndarray) -> np.ndarray:
+    """
+    将 numpy 数组归一化到 [-1, 1] 区间。
+
+    参数:
+        arr (np.ndarray): 输入数组
+
+    返回:
+        np.ndarray: 归一化后的数组，范围在 [-1, 1]
+    """
+    min_val = arr.min()
+    max_val = arr.max()
+    if max_val - min_val == 0:
+        # 避免除以0，返回全零数组
+        return np.zeros_like(arr)
+    else:
+        return 2 * (arr - min_val) / (max_val - min_val) - 1

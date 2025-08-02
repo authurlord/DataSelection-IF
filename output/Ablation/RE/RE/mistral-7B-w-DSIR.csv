@@ -321,7 +321,7 @@ Reference tables:
 
 {""table"": ""<table_title>socialist federal republic of yugoslaviafederal subjects<header>name|capital"", ""relation"": ""location.country.capital""}
 
-{""table"": ""<table_title>vehicle registration plates of montanacounty coding<header>county|county seat"", ""relation"": ""location.location.contains""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}"
+{""table"": ""<table_title>vehicle registration plates of montanacounty coding<header>county|county seat"", ""relation"": ""location.location.contains""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 17,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>jacques dufilhoselected filmography<header>title|director
@@ -416,7 +416,7 @@ Reference tables:
 
 {""table"": ""<table_title>magritte award for best film2010s<header>english title|director(s)"", ""relation"": ""film.film.written_by""}
 
-{""table"": ""<table_title>list of australian films of 19841984<header>title|director"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}",,"{""relation"": ""award.award_nominee.award_nominations-award.award_nomination.nominated_for""}","  {""relation"": ""award.award_nominee.award_nominations-award.award_nomination.award_nominee""}"
+{""table"": ""<table_title>list of australian films of 19841984<header>title|director"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}",,"{""relation"": ""award.award_nominee.award_nominations-award.award_nomination.nominated_for""}","  {""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}"
 22,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>southland conferenceformer members<header>institution|nickname
@@ -511,7 +511,7 @@ Reference tables:
 
 {""table"": ""<table_title>national football league 2000s all-decade teamdefense<header>first team|position"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}
 
-{""table"": ""<table_title>new england patriotsretired numbers<header>player|position"", ""relation"": ""american_football.football_player.position_s""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}","  {""relation"": ""american_football.football_player.position_s""}"
+{""table"": ""<table_title>new england patriotsretired numbers<header>player|position"", ""relation"": ""american_football.football_player.position_s""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}"
 27,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2003–04 ncaa division i men's ice hockey seasonncaa<header>east first team|position
@@ -606,7 +606,7 @@ Reference tables:
 
 {""table"": ""<table_title>collateral (film)awards<header>category|award"", ""relation"": ""award.award_category.category_of""}
 
-{""table"": ""<table_title>flight (2012 film)awards and nominations<header>category|award"", ""relation"": ""award.award_category.category_of""}",,"{""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}","  {""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}"
+{""table"": ""<table_title>flight (2012 film)awards and nominations<header>category|award"", ""relation"": ""award.award_category.category_of""}",,"{""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}","  {""relation"": ""award.award_category.category_of""}"
 32,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of college athletic programs in connecticut<header>school|city
@@ -625,7 +625,7 @@ Reference tables:
 
 {""table"": ""<table_title>saginaw valley leaguecurrent member schools<header>school|city"", ""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}
 
-{""table"": ""<table_title>list of college athletic programs in virginia<header>school|city"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}"
+{""table"": ""<table_title>list of college athletic programs in virginia<header>school|city"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""location.location.containedby""}"
 33,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of college athletic programs in georgia (u.s. state)<header>school|city
@@ -777,7 +777,7 @@ Reference tables:
 
 {""table"": ""<table_title>chicago film critics association award for best supporting actor2010s<header>winner and nominees|film"", ""relation"": ""award.award_nominee.award_nominations-award.award_nomination.nominated_for""}
 
-{""table"": ""<table_title>list of indian academy award winners and nomineeswinners and nominees<header>nominee(s)/recipient(s)|film"", ""relation"": ""award.award_nominee.award_nominations-award.award_nomination.nominated_for""}",,"{""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}","  {""relation"": ""award.award_nominee.award_nominations-award.award_nomination.nominated_for""}"
+{""table"": ""<table_title>list of indian academy award winners and nomineeswinners and nominees<header>nominee(s)/recipient(s)|film"", ""relation"": ""award.award_nominee.award_nominations-award.award_nomination.nominated_for""}",,"{""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}","  {""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}"
 41,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>transavia.com destinationsdestinations from groningen airport eelde<header>city|country
@@ -910,7 +910,7 @@ Reference tables:
 
 {""table"": ""<table_title>natalie portman filmographyfilms<header>title|director"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}
 
-{""table"": ""<table_title>list of thriller films of the 2010s<header>title|director"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}",,"{""relation"": ""film.film.directed_by""}","  {""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}"
+{""table"": ""<table_title>list of thriller films of the 2010s<header>title|director"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}",,"{""relation"": ""film.film.directed_by""}","  {""relation"": ""film.film.directed_by""}"
 48,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>david newman (composer)2010s<header>title|studio(s)
@@ -1119,7 +1119,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of nba players who have spent their entire career with one franchiseactive<header>player|team"", ""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}
 
-{""table"": ""<table_title>2006 nba all-star gameplaystation skills challenge<header>player|team"", ""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}",,"{""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}","  {""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}"
+{""table"": ""<table_title>2006 nba all-star gameplaystation skills challenge<header>player|team"", ""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}",,"{""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}","  {""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}"
 59,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of heroes charactersmain characters<header>name|played by
@@ -1138,7 +1138,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of the mentalist charactersmain characters<header>name name|portrayed by portrayed by"", ""relation"": ""tv.tv_character.appeared_in_tv_program-tv.regular_tv_appearance.actor""}
 
-{""table"": ""<table_title>afi's 100 years...100 heroes & villainsthe list<header>hero|actor"", ""relation"": ""film.film_character.portrayed_in_films-film.performance.actor""}",,"{""relation"": ""tv.tv_character.appeared_in_tv_program-tv.regular_tv_appearance.actor""}","  {""relation"": ""film.film_character.portrayed_in_films-film.performance.actor""}"
+{""table"": ""<table_title>afi's 100 years...100 heroes & villainsthe list<header>hero|actor"", ""relation"": ""film.film_character.portrayed_in_films-film.performance.actor""}",,"{""relation"": ""tv.tv_character.appeared_in_tv_program-tv.regular_tv_appearance.actor""}","  {""relation"": ""tv.tv_character.appeared_in_tv_program-tv.regular_tv_appearance.actor""}"
 60,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2010 afl seasonbest and fairest<header>club|player
@@ -1214,7 +1214,7 @@ Reference tables:
 
 {""table"": ""<table_title>franceoverseas regions<header>name|capital"", ""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}
 
-{""table"": ""<table_title>voreia elladanorthern greece statistics<header>geographic division|capital"", ""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}"
+{""table"": ""<table_title>voreia elladanorthern greece statistics<header>geographic division|capital"", ""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 64,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>1972 philadelphia phillies seasonfarm system<header>team|league
@@ -1689,7 +1689,7 @@ Reference tables:
 
 {""table"": ""<table_title>natalie portman filmographyfilms<header>title|director"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}
 
-{""table"": ""<table_title>brigitte auberselected filmography<header>title|director"", ""relation"": ""film.film.directed_by""}",,"{""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}","  {""relation"": ""film.film.directed_by""}"
+{""table"": ""<table_title>brigitte auberselected filmography<header>title|director"", ""relation"": ""film.film.directed_by""}",,"{""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}","  {""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}"
 89,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>grace kellyfilmography<header>title|co-stars
@@ -1746,7 +1746,7 @@ Reference tables:
 
 {""table"": ""<table_title>2010\u201311 genoa c.f.c. seasonin<header>player|from"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}
 
-{""table"": ""<table_title>inter milanone-club men<header>player|nationality"", ""relation"": ""people.person.nationality""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}"
+{""table"": ""<table_title>inter milanone-club men<header>player|nationality"", ""relation"": ""people.person.nationality""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}","  {""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}"
 92,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of paris saint-germain f.c. records and statisticshighest transfer fees received<header>player|to
@@ -1898,7 +1898,7 @@ Reference tables:
 
 {""table"": ""<table_title>mr. football award (alabama)list of the alabama sports writers association\u2019s mr. football award winners<header>player name|position"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}
 
-{""table"": ""<table_title>1997 ncaa division i-a football seasonvoting<header>name|position"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}",,"{""relation"": ""sports.sports_position.players-sports.sports_team_roster.player""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}"
+{""table"": ""<table_title>1997 ncaa division i-a football seasonvoting<header>name|position"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}",,"{""relation"": ""sports.sports_position.players-sports.sports_team_roster.player""}","  {""relation"": ""sports.sports_position.players-sports.sports_team_roster.player""}"
 100,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>minister of citizenship and immigrationministers of citizenship and immigration (1994– )<header>name|political party
@@ -1993,7 +1993,7 @@ Reference tables:
 
 {""table"": ""<table_title>nobuhide akibaclub team career statistics<header>club performance season japan|club performance league japan"", ""relation"": ""sports.sports_league_season.league""}
 
-{""table"": ""<table_title>tatsuya shiozawaclub statistics<header>club performance season japan|club performance league japan"", ""relation"": ""sports.sports_league_season.league""}",,"{""relation"": ""sports.sports_league_season.league""}","  {""relation"": ""sports.sports_league_season.league""}"
+{""table"": ""<table_title>tatsuya shiozawaclub statistics<header>club performance season japan|club performance league japan"", ""relation"": ""sports.sports_league_season.league""}",,"{""relation"": ""sports.sports_league_season.league""}","  {""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}"
 105,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2010–11 in scottish footballsummary<header>club|top scorer
@@ -2012,7 +2012,7 @@ Reference tables:
 
 {""table"": ""<table_title>2010\u201311 scottish youth cupthird round<header>home team|score"", ""relation"": ""sports.sports_team.sport""}
 
-{""table"": ""<table_title>2008\u201309 valencia cf seasonloaned out<header>pos|player"", ""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}",,"{""relation"": ""sports.sports_team.roster-sports.sports_team_roster.player""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}"
+{""table"": ""<table_title>2008\u201309 valencia cf seasonloaned out<header>pos|player"", ""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}",,"{""relation"": ""sports.sports_team.roster-sports.sports_team_roster.player""}","  {""relation"": ""sports.sports_team.roster-sports.sports_team_roster.player""}"
 106,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>1993 nhl entry draftround eleven<header>player|nationality
@@ -2449,7 +2449,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of south african airports by passenger movements2009\u201310<header>airport|location"", ""relation"": ""aviation.airport.serves""}
 
-{""table"": ""<table_title>list of airports in greater sydneylist of airports<header>community|airport name"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.nearby_airports""}"
+{""table"": ""<table_title>list of airports in greater sydneylist of airports<header>community|airport name"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.contains""}"
 129,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>1996 in brazilian footballstate championship champions<header>state|champion
@@ -2582,7 +2582,7 @@ Reference tables:
 
 {""table"": ""<table_title>1995\u201396 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}
 
-{""table"": ""<table_title>1985\u201386 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.places_lived-people.place_lived.location""}"
+{""table"": ""<table_title>1985\u201386 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.place_of_birth""}"
 136,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2007 new york yankees seasonfarm system<header>team|league
@@ -3019,7 +3019,7 @@ Reference tables:
 
 {""table"": ""<table_title>1972\u201373 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}
 
-{""table"": ""<table_title>1986\u201387 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.places_lived-people.place_lived.location""}"
+{""table"": ""<table_title>1986\u201387 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.place_of_birth""}"
 159,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>descendants of louis xiv of francethe spanish line<header>name of descendant|marriages and issue
@@ -3323,7 +3323,7 @@ Reference tables:
 
 {""table"": ""<table_title>jessica bielawards and nominations<header>award|work"", ""relation"": ""award.award_ceremony.nominees-award.award_nomination.nominated_for""}
 
-{""table"": ""<table_title>catalina saavedrafilm<header>award|work"", ""relation"": ""award.award_ceremony.nominees-award.award_nomination.nominated_for""}",,"{""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}","  {""relation"": ""award.award_ceremony.nominees-award.award_nomination.ceremony""}"
+{""table"": ""<table_title>catalina saavedrafilm<header>award|work"", ""relation"": ""award.award_ceremony.nominees-award.award_nomination.nominated_for""}",,"{""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}","  {""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}"
 175,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>members of the 20th dáiltds by constituency<header>name|party
@@ -4691,7 +4691,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of japanese films of 19951995<header>director|title"", ""relation"": ""film.director.film""}
 
-{""table"": ""<table_title>list of american films of 1994p<header>title|director"", ""relation"": ""award.award_winning_work.awards_won-award.award_honor.award_winner""}",,"{""relation"": ""film.director.film""}","  {""relation"": ""film.director.film""}"
+{""table"": ""<table_title>list of american films of 1994p<header>title|director"", ""relation"": ""award.award_winning_work.awards_won-award.award_honor.award_winner""}",,"{""relation"": ""film.director.film""}","  {""relation"": ""film.film.directed_by""}"
 247,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of american films of 1995n-q<header>title|director
@@ -4900,7 +4900,7 @@ Reference tables:
 
 {""table"": ""<table_title>1964\u201365 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}
 
-{""table"": ""<table_title>1985\u201386 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.places_lived-people.place_lived.location""}"
+{""table"": ""<table_title>1985\u201386 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.place_of_birth""}"
 258,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2011–12 coventry city f.c. seasonplayers info<header>name|place of birth
@@ -5223,7 +5223,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of countries and capitals with currency and languageasia<header>name|capital"", ""relation"": ""location.country.capital""}
 
-{""table"": ""<table_title>all nippon airways destinationsdomestic<header>city|province/region"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.containedby""}"
+{""table"": ""<table_title>all nippon airways destinationsdomestic<header>city|province/region"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 275,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>seattle supersonics all-time rostero<header>player|nationality
@@ -5451,7 +5451,7 @@ Reference tables:
 
 {""table"": ""<table_title>1984 nfl draftnotable undrafted players<header>player|pos."", ""relation"": ""american_football.football_player.position_s""}
 
-{""table"": ""<table_title>1981 nfl draftnotable undrafted players<header>player|pos."", ""relation"": ""american_football.football_player.position_s""}",,"{""relation"": ""american_football.football_player.position_s""}","  {""relation"": ""american_football.football_player.position_s""}"
+{""table"": ""<table_title>1981 nfl draftnotable undrafted players<header>player|pos."", ""relation"": ""american_football.football_player.position_s""}",,"{""relation"": ""american_football.football_player.position_s""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}"
 287,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>manitoba junior hockey leaguecurrent teams<header>team|arena
@@ -5527,7 +5527,7 @@ Reference tables:
 
 {""table"": ""<table_title>boston celtics all-time rostert<header>player player|from from"", ""relation"": ""people.person.education-education.education.institution""}
 
-{""table"": ""<table_title>1954 nba all-star gamewestern conference<header>player|team"", ""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}",,"{""relation"": ""people.person.education-education.education.institution""}","  {""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}"
+{""table"": ""<table_title>1954 nba all-star gamewestern conference<header>player|team"", ""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}",,"{""relation"": ""people.person.education-education.education.institution""}","  {""relation"": ""people.person.education-education.education.institution""}"
 291,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>all hope is gone world tourtour dates<header>city|country
@@ -5641,7 +5641,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of awards and nominations received by shahrukh khan<header>category|fi\u0307lm"", ""relation"": ""award.award_winner.awards_won-award.award_honor.honored_for""}
 
-{""table"": ""<table_title>collateral (film)awards<header>category|award"", ""relation"": ""award.award_category.category_of""}",,"{""relation"": ""award.award_category.nominees-award.award_nomination.award_nominee""}","  {""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}"
+{""table"": ""<table_title>collateral (film)awards<header>category|award"", ""relation"": ""award.award_category.category_of""}",,"{""relation"": ""award.award_category.nominees-award.award_nomination.award_nominee""}","  {""relation"": ""award.award_category.category_of""}"
 297,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>united states house of representatives elections, 2004maryland<header>district|incumbent
@@ -6135,7 +6135,7 @@ Reference tables:
 
 {""table"": ""<table_title>1983\u201384 north carolina tar heels men's basketball teamroster<header>name|home town"", ""relation"": ""people.person.places_lived-people.place_lived.location""}
 
-{""table"": ""<table_title>1962\u201363 illinois fighting illini men's basketball teamroster<header>player|hometown"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.place_of_birth""}"
+{""table"": ""<table_title>1962\u201363 illinois fighting illini men's basketball teamroster<header>player|hometown"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.places_lived-people.place_lived.location""}"
 323,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of sporting clube de portugal captainslist of captains<header>name|position
@@ -6686,7 +6686,7 @@ Reference tables:
 
 {""table"": ""<table_title>2013 little league softball world series qualification<header>city|state"", ""relation"": ""location.location.containedby""}
 
-{""table"": ""<table_title>2011 little league world series qualification<header>state|city"", ""relation"": ""location.location.contains""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.containedby""}"
+{""table"": ""<table_title>2011 little league world series qualification<header>state|city"", ""relation"": ""location.location.contains""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 352,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2010–11 algerian ligue professionnelle 1stadiums<header>team|stadium
@@ -7826,7 +7826,7 @@ Reference tables:
 
 {""table"": ""<table_title>american music awards of 2012performers<header>artist(s)|song(s)"", ""relation"": ""award.award_nominee.award_nominations-award.award_nomination.nominated_for""}
 
-{""table"": ""<table_title>american music awards of 2009performers<header>artist(s)|song(s)"", ""relation"": ""award.award_nominee.award_nominations-award.award_nomination.nominated_for""}",,"{""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}","  {""relation"": ""award.award_nominee.award_nominations-award.award_nomination.nominated_for""}"
+{""table"": ""<table_title>american music awards of 2009performers<header>artist(s)|song(s)"", ""relation"": ""award.award_nominee.award_nominations-award.award_nomination.nominated_for""}",,"{""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}","  {""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}"
 412,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2012–13 scottish first divisionstadia and locations<header>team|stadium
@@ -7902,7 +7902,7 @@ Reference tables:
 
 {""table"": ""<table_title>2003 afl seasonround 3<header>home team|venue"", ""relation"": ""sports.sports_team.venue-sports.team_venue_relationship.venue""}
 
-{""table"": ""<table_title>2004 afl seasonround 10<header>home team|venue"", ""relation"": ""sports.sports_team.venue-sports.team_venue_relationship.venue""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""sports.sports_team.venue-sports.team_venue_relationship.venue""}"
+{""table"": ""<table_title>2004 afl seasonround 10<header>home team|venue"", ""relation"": ""sports.sports_team.venue-sports.team_venue_relationship.venue""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""location.location.containedby""}"
 416,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>members of the 5th seanadlist of senators<header>name|party
@@ -7997,7 +7997,7 @@ Reference tables:
 
 {""table"": ""<table_title>2010 itu triathlon world cuptisza\u00fajv\u00e1ros<header>men name|men nation"", ""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}
 
-{""table"": ""<table_title>2011 itu triathlon world cupmooloolaba<header>men name|men nation"", ""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}",,"{""relation"": ""people.person.nationality""}","  {""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}"
+{""table"": ""<table_title>2011 itu triathlon world cupmooloolaba<header>men name|men nation"", ""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}",,"{""relation"": ""people.person.nationality""}","  {""relation"": ""people.person.nationality""}"
 421,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>duchess of brabant, 1482–1700<header>name|father
@@ -8054,7 +8054,7 @@ Reference tables:
 
 {""table"": ""<table_title>1964 all-pro teamoffense<header>position:|players:"", ""relation"": ""sports.sports_position.players-sports.sports_team_roster.player""}
 
-{""table"": ""<table_title>1971 all-pro teamoffense<header>position|second team"", ""relation"": ""sports.sports_position.players-sports.sports_team_roster.player""}",,"{""relation"": ""american_football.football_player.position_s""}","  {""relation"": ""american_football.football_player.position_s""}"
+{""table"": ""<table_title>1971 all-pro teamoffense<header>position|second team"", ""relation"": ""sports.sports_position.players-sports.sports_team_roster.player""}",,"{""relation"": ""american_football.football_player.position_s""}","  {""relation"": ""sports.sports_position.players-sports.sports_team_roster.player""}"
 424,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>1947 college football all-america teamconsensus all-americans<header>name|position
@@ -8282,7 +8282,7 @@ Reference tables:
 
 {""table"": ""<table_title>our airlinedestinations<header>city|airport"", ""relation"": ""location.location.nearby_airports""}
 
-{""table"": ""<table_title>list of airports in bulgariapassenger statistics<header>airport|city"", ""relation"": ""aviation.airport.serves""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.nearby_airports""}"
+{""table"": ""<table_title>list of airports in bulgariapassenger statistics<header>airport|city"", ""relation"": ""aviation.airport.serves""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.contains""}"
 436,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>lasse schöneclub performance<header>club performance season netherlands|club performance league netherlands
@@ -8415,7 +8415,7 @@ Reference tables:
 
 {""table"": ""<table_title>smtown live '08tour dates<header>city|country"", ""relation"": ""location.administrative_division.country""}
 
-{""table"": ""<table_title>never say die! tour 2011dates<header>city|country"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""location.administrative_division.country""}"
+{""table"": ""<table_title>never say die! tour 2011dates<header>city|country"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""location.location.containedby""}"
 443,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2012 chicago white sox seasonfarm system<header>team|league
@@ -8700,7 +8700,7 @@ Reference tables:
 
 {""table"": ""<table_title>2012 little league world series qualification<header>state|city"", ""relation"": ""location.location.contains""}
 
-{""table"": ""<table_title>2006 little league world series qualification<header>city|state"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""location.location.containedby""}"
+{""table"": ""<table_title>2006 little league world series qualification<header>city|state"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""location.location.contains""}"
 458,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2012 little league world series qualification<header>city|ll organization
@@ -9080,7 +9080,7 @@ Reference tables:
 
 {""table"": ""<table_title>2005 nrl season resultssecond preliminary final<header>sunday, 25 september 2005 4 pm aest|date"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}
 
-{""table"": ""<table_title>national football league 75th anniversary all-time teamdefense<header>player|team(s) played for"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}",,"{""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}"
+{""table"": ""<table_title>national football league 75th anniversary all-time teamdefense<header>player|team(s) played for"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}",,"{""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}","  {""relation"": ""sports.sports_team.league-sports.sports_league_participation.team""}"
 478,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>national football leagueclubs<header>club|began play
@@ -9099,7 +9099,7 @@ Reference tables:
 
 {""table"": ""<table_title>2014 collingwood football club seasonin<header>name|previous club"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}
 
-{""table"": ""<table_title>notre dame fighting irish footballcurrent nfl players<header>name|team"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}",,"{""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}"
+{""table"": ""<table_title>notre dame fighting irish footballcurrent nfl players<header>name|team"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}",,"{""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}","  {""relation"": ""sports.sports_team.league-sports.sports_league_participation.team""}"
 479,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>precision airdestinations<header>city|country
@@ -9137,7 +9137,7 @@ Reference tables:
 
 {""table"": ""<table_title>azerbaijan (iran)air<header>airport|city"", ""relation"": ""aviation.airport.serves""}
 
-{""table"": ""<table_title>our airlinedestinations<header>city|airport"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""aviation.airport.serves""}"
+{""table"": ""<table_title>our airlinedestinations<header>city|airport"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.contains""}"
 481,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>peanuts mediagraphyspecials<header>title|current network
@@ -9251,7 +9251,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of wars involving nigeria<header>conflict|combatant 1"", ""relation"": ""time.event.locations""}
 
-{""table"": ""<table_title>list of wars involving djibouti<header>conflict|combatant 1"", ""relation"": ""base.culturalevent.event.entity_involved""}",,"{""relation"": ""base.culturalevent.event.entity_involved""}","  {""relation"": ""military.military_combatant.military_conflicts-military.military_combatant_group.combatants""}"
+{""table"": ""<table_title>list of wars involving djibouti<header>conflict|combatant 1"", ""relation"": ""base.culturalevent.event.entity_involved""}",,"{""relation"": ""base.culturalevent.event.entity_involved""}","  {""relation"": ""base.culturalevent.event.entity_involved""}"
 487,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of wars involving libya<header>conflict|results
@@ -9270,7 +9270,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of wars involving abkhazia<header>conflict|combatant 1"", ""relation"": ""time.event.locations""}
 
-{""table"": ""<table_title>list of wars involving djibouti<header>conflict|combatant 1"", ""relation"": ""base.culturalevent.event.entity_involved""}",,"{""relation"": ""base.culturalevent.event.entity_involved""}","  {""relation"": ""time.event.locations""}"
+{""table"": ""<table_title>list of wars involving djibouti<header>conflict|combatant 1"", ""relation"": ""base.culturalevent.event.entity_involved""}",,"{""relation"": ""base.culturalevent.event.entity_involved""}","  {""relation"": ""base.culturalevent.event.entity_involved""}"
 488,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>1996 college baseball all-america teamall-americans<header>name|position
@@ -9574,7 +9574,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of monarchs of sicily, 1516 1713<header>name|birth"", ""relation"": ""people.person.place_of_birth""}
 
-{""table"": ""<table_title>list of french consortscapetian dynasty, house of valois-angoul\u00eame<header>name|spouse"", ""relation"": ""people.person.spouse_s-people.marriage.spouse""}",,"{""relation"": ""people.person.parents""}","  {""relation"": ""people.person.spouse_s-people.marriage.spouse""}"
+{""table"": ""<table_title>list of french consortscapetian dynasty, house of valois-angoul\u00eame<header>name|spouse"", ""relation"": ""people.person.spouse_s-people.marriage.spouse""}",,"{""relation"": ""people.person.parents""}","  {""relation"": ""people.person.parents""}"
 504,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of italian queens, (1026–1125)<header>name|spouse
@@ -11075,7 +11075,7 @@ Reference tables:
 
 {""table"": ""<table_title>1972 all-pro teamdefense<header>first team|position"", ""relation"": ""american_football.football_player.position_s""}
 
-{""table"": ""<table_title>1984 all-pro teamdefense<header>first team|position"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}",,"{""relation"": ""american_football.football_player.position_s""}","  {""relation"": ""american_football.football_player.position_s""}"
+{""table"": ""<table_title>1984 all-pro teamdefense<header>first team|position"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}",,"{""relation"": ""american_football.football_player.position_s""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}"
 583,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>1988 all-pro teamoffense<header>position|first team
@@ -11151,7 +11151,7 @@ Reference tables:
 
 {""table"": ""<table_title>1972 all-pro teamdefense<header>first team|position"", ""relation"": ""american_football.football_player.position_s""}
 
-{""table"": ""<table_title>1986 all-pro teamspecial teams<header>first team|position"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}",,"{""relation"": ""american_football.football_player.position_s""}","  {""relation"": ""american_football.football_player.position_s""}"
+{""table"": ""<table_title>1986 all-pro teamspecial teams<header>first team|position"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}",,"{""relation"": ""american_football.football_player.position_s""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}"
 587,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>1980 major league baseball all-star gameamerican league<header>player|position
@@ -11322,7 +11322,7 @@ Reference tables:
 
 {""table"": ""<table_title>minnesota golden gophers football under murray warmathschedule<header>opponent#|site"", ""relation"": ""sports.sports_team.venue-sports.team_venue_relationship.venue""}
 
-{""table"": ""<table_title>minnesota golden gophers football under murray warmathschedule<header>opponent#|site"", ""relation"": ""sports.sports_team.venue-sports.team_venue_relationship.venue""}",,"{""relation"": ""time.event.locations""}","  {""relation"": ""sports.sports_team.venue-sports.team_venue_relationship.venue""}"
+{""table"": ""<table_title>minnesota golden gophers football under murray warmathschedule<header>opponent#|site"", ""relation"": ""sports.sports_team.venue-sports.team_venue_relationship.venue""}",,"{""relation"": ""time.event.locations""}","  {""relation"": ""location.location.containedby""}"
 596,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2010–11 premier soccer leaguestadia and locations<header>team|home venue
@@ -11854,7 +11854,7 @@ Reference tables:
 
 {""table"": ""<table_title>2009\u201310 ligue 1young player of the year<header>player|club"", ""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}
 
-{""table"": ""<table_title>uefa cup and europa league records and statisticsall time top scorers<header>player|clubs"", ""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}"
+{""table"": ""<table_title>uefa cup and europa league records and statisticsall time top scorers<header>player|clubs"", ""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}","  {""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}"
 624,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>national register of historic places listings in greenbrier county, west virginiacurrent listings<header>name on the register|city or town
@@ -12082,7 +12082,7 @@ Reference tables:
 
 {""table"": ""<table_title>grammy award for best pop/contemporary gospel albumrecipients<header>year|performing artists"", ""relation"": ""award.award_ceremony.nominees-award.award_nomination.award_nominee""}
 
-{""table"": ""<table_title>grammy award for best gospel choir or chorus albumrecipients<header>year|work"", ""relation"": ""award.award_ceremony.nominees-award.award_nomination.nominated_for""}",,"{""relation"": ""award.award_ceremony.nominees-award.award_nomination.award_nominee""}","  {""relation"": ""award.award_ceremony.nominees-award.award_nomination.award_nominee""}"
+{""table"": ""<table_title>grammy award for best gospel choir or chorus albumrecipients<header>year|work"", ""relation"": ""award.award_ceremony.nominees-award.award_nomination.nominated_for""}",,"{""relation"": ""award.award_ceremony.nominees-award.award_nomination.award_nominee""}","  {""relation"": ""award.award_ceremony.nominees-award.award_nomination.nominated_for""}"
 636,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>southern states athletic conferenceformer members<header>institution|location
@@ -12576,7 +12576,7 @@ Reference tables:
 
 {""table"": ""<table_title>airport of entryoceania<header>airport|location"", ""relation"": ""aviation.airport.serves""}
 
-{""table"": ""<table_title>philippine airlines destinationsdomestic terminated destinations<header>city|airport"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.nearby_airports""}"
+{""table"": ""<table_title>philippine airlines destinationsdomestic terminated destinations<header>city|airport"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.contains""}"
 662,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>1923 alabama crimson tide football teamvarsity letter winners<header>player|hometown
@@ -12709,7 +12709,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of the busiest airports in russiarussia's 50 busiest airports by passenger traffic in 2011<header>airport|city"", ""relation"": ""aviation.airport.serves""}
 
-{""table"": ""<table_title>list of airports in guinea-bissaulist<header>location|airportname"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""aviation.airport.serves""}"
+{""table"": ""<table_title>list of airports in guinea-bissaulist<header>location|airportname"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.contains""}"
 669,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2013–14 argentine primera división seasonclub information<header>club|stadium
@@ -13051,7 +13051,7 @@ Reference tables:
 
 {""table"": ""<table_title>municipalities of switzerlandlist of communes by population<header>city|canton"", ""relation"": ""location.location.containedby""}
 
-{""table"": ""<table_title>montefeltromunicipalities<header>commune|region"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.containedby""}"
+{""table"": ""<table_title>montefeltromunicipalities<header>commune|region"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 687,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>francemetropolitan regions<header>region|capital
@@ -13355,7 +13355,7 @@ Reference tables:
 
 {""table"": ""<table_title>2013 j. league division 1top scorers<header>scorer|club"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}
 
-{""table"": ""<table_title>2010 east asian football championship final squadsplayer statistics<header>player|club"", ""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}",,"{""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}","  {""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}"
+{""table"": ""<table_title>2010 east asian football championship final squadsplayer statistics<header>player|club"", ""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}",,"{""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}"
 703,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>juno award for artist of the yearartist of the year (2003–present)<header>year|artist of the year
@@ -13697,7 +13697,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of airports in bulgariapassenger statistics<header>airport|city"", ""relation"": ""aviation.airport.serves""}
 
-{""table"": ""<table_title>azerbaijan (iran)air<header>airport|city"", ""relation"": ""aviation.airport.serves""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""aviation.airport.serves""}"
+{""table"": ""<table_title>azerbaijan (iran)air<header>airport|city"", ""relation"": ""aviation.airport.serves""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.contains""}"
 721,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>looney tunes golden collection: volume 3disc 1 - bugs bunny classics<header>title|director
@@ -13849,7 +13849,7 @@ Reference tables:
 
 {""table"": ""<table_title>yuji yokoyamaclub statistics<header>club performance season japan|club performance league japan"", ""relation"": ""sports.sports_league_season.league""}
 
-{""table"": ""<table_title>kohei yamadaclub statistics<header>club performance season japan|club performance league japan"", ""relation"": ""sports.sports_league_season.league""}",,"{""relation"": ""sports.sports_league_season.league""}","  {""relation"": ""sports.sports_league_season.league""}"
+{""table"": ""<table_title>kohei yamadaclub statistics<header>club performance season japan|club performance league japan"", ""relation"": ""sports.sports_league_season.league""}",,"{""relation"": ""sports.sports_league_season.league""}","  {""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}"
 729,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>john mayer 2008 summer tourtour dates<header>city|country
@@ -14077,7 +14077,7 @@ Reference tables:
 
 {""table"": ""<table_title>2007\u201308 moldovan national divisiontop goalscorers<header>player|scored for"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}
 
-{""table"": ""<table_title>2010 caf champions league group stagegoal scorers<header>rank|player"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}"
+{""table"": ""<table_title>2010 caf champions league group stagegoal scorers<header>rank|player"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}","  {""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}"
 741,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of rulers of savoycounts of savoy<header>name|birth
@@ -14932,7 +14932,7 @@ Reference tables:
 
 {""table"": ""<table_title>1972\u201373 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}
 
-{""table"": ""<table_title>1985\u201386 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.places_lived-people.place_lived.location""}"
+{""table"": ""<table_title>1985\u201386 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.place_of_birth""}"
 786,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>1939–40 colchester united f.c. seasonplayer info<header>name|place of birth
@@ -14989,7 +14989,7 @@ Reference tables:
 
 {""table"": ""<table_title>2009 itu world championship serieskitzb\u00fchel<header>men's race name|men's race nation"", ""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}
 
-{""table"": ""<table_title>1962 european figure skating championshipsmen<header>name|nation"", ""relation"": ""people.person.nationality""}",,"{""relation"": ""olympics.olympic_participating_country.athletes-olympics.olympic_athlete_affiliation.athlete""}","  {""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}"
+{""table"": ""<table_title>1962 european figure skating championshipsmen<header>name|nation"", ""relation"": ""people.person.nationality""}",,"{""relation"": ""olympics.olympic_participating_country.athletes-olympics.olympic_athlete_affiliation.athlete""}","  {""relation"": ""olympics.olympic_participating_country.athletes-olympics.olympic_athlete_affiliation.athlete""}"
 789,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2012 european figure skating championshipsentries<header>country|ladies
@@ -15901,7 +15901,7 @@ Reference tables:
 
 {""table"": ""<table_title>canadian interuniversity sportmembers<header>institution|city"", ""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}
 
-{""table"": ""<table_title>2012 cis football seasonteams<header>institution|city"", ""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}",,"{""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}","  {""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}"
+{""table"": ""<table_title>2012 cis football seasonteams<header>institution|city"", ""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}",,"{""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}","  {""relation"": ""location.location.contains""}"
 837,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>1985 ncaa women's division i basketball tournamentround 1 venues<header>host|state
@@ -15920,7 +15920,7 @@ Reference tables:
 
 {""table"": ""<table_title>central collegiate hockey associationmembers<header>institution|state"", ""relation"": ""organization.organization.headquarters-location.mailing_address.state_province_region""}
 
-{""table"": ""<table_title>list of ncaa division i ice hockey programswomen<header>school|state"", ""relation"": ""organization.organization.headquarters-location.mailing_address.state_province_region""}",,"{""relation"": ""organization.organization.headquarters-location.mailing_address.state_province_region""}","  {""relation"": ""organization.organization.headquarters-location.mailing_address.state_province_region""}"
+{""table"": ""<table_title>list of ncaa division i ice hockey programswomen<header>school|state"", ""relation"": ""organization.organization.headquarters-location.mailing_address.state_province_region""}",,"{""relation"": ""organization.organization.headquarters-location.mailing_address.state_province_region""}","  {""relation"": ""location.location.containedby""}"
 838,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of presidents of the united states by military service<header>president|service
@@ -16300,7 +16300,7 @@ Reference tables:
 
 {""table"": ""<table_title>2001 montreal expos seasonfarm system<header>team|league"", ""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}
 
-{""table"": ""<table_title>1999 montreal expos seasonfarm system<header>team|league"", ""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}",,"{""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}","  {""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}"
+{""table"": ""<table_title>1999 montreal expos seasonfarm system<header>team|league"", ""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}",,"{""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}","  {""relation"": ""baseball.baseball_team.league""}"
 858,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of awards and nominations received by mariah carey2001<header>awards show|nomination(s)
@@ -16319,7 +16319,7 @@ Reference tables:
 
 {""table"": ""<table_title>best-selling albums by year in the united states2000s<header>performing artist(s)|album"", ""relation"": ""award.award_nominee.award_nominations-award.award_nomination.nominated_for""}
 
-{""table"": ""<table_title>list of awards and nominations received by mariah carey1999  &  2000<header>awards show|nominees"", ""relation"": ""award.award_ceremony.nominees-award.award_nomination.award_nominee""}",,"{""relation"": ""award.award_ceremony.nominees-award.award_nomination.award_nominee""}","  {""relation"": ""award.award_ceremony.nominees-award.award_nomination.award_nominee""}"
+{""table"": ""<table_title>list of awards and nominations received by mariah carey1999  &  2000<header>awards show|nominees"", ""relation"": ""award.award_ceremony.nominees-award.award_nomination.award_nominee""}",,"{""relation"": ""award.award_ceremony.nominees-award.award_nomination.award_nominee""}","  {""relation"": ""award.award_ceremony.nominees-award.award_nomination.nominated_for""}"
 859,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>yoshihiro uchimuraclub career stats<header>club performance season japan|club performance league japan
@@ -16338,7 +16338,7 @@ Reference tables:
 
 {""table"": ""<table_title>nobuhide akibaclub team career statistics<header>club performance season japan|club performance league japan"", ""relation"": ""sports.sports_league_season.league""}
 
-{""table"": ""<table_title>masaru hashiguchiclub statistics<header>club performance season japan|club performance league japan"", ""relation"": ""sports.sports_league_season.league""}",,"{""relation"": ""sports.sports_league_season.league""}","  {""relation"": ""sports.sports_league_season.league""}"
+{""table"": ""<table_title>masaru hashiguchiclub statistics<header>club performance season japan|club performance league japan"", ""relation"": ""sports.sports_league_season.league""}",,"{""relation"": ""sports.sports_league_season.league""}","  {""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}"
 860,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>1958 vfl seasonround 7<header>home team|venue
@@ -16414,7 +16414,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of best-selling singles10-14.99 million copies<header>single|artist"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}
 
-{""table"": ""<table_title>fnc entertainment discography2013<header>title|artist"", ""relation"": ""music.album.artist""}",,"{""relation"": ""award.award_nominee.award_nominations-award.award_nomination.nominated_for""}","  {""relation"": ""music.artist.album""}"
+{""table"": ""<table_title>fnc entertainment discography2013<header>title|artist"", ""relation"": ""music.album.artist""}",,"{""relation"": ""award.award_nominee.award_nominations-award.award_nomination.nominated_for""}","  {""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}"
 864,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>music of atlantahip-hop, r & b, neo soul<header>artist|album name
@@ -16927,7 +16927,7 @@ Reference tables:
 
 {""table"": ""<table_title>flight (2012 film)awards and nominations<header>category|award"", ""relation"": ""award.award_category.category_of""}
 
-{""table"": ""<table_title>devdas (1955 film)awards<header>category|award"", ""relation"": ""award.award_category.winners-award.award_honor.ceremony""}",,"{""relation"": ""award.award_category.winners-award.award_honor.award_winner""}","  {""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}"
+{""table"": ""<table_title>devdas (1955 film)awards<header>category|award"", ""relation"": ""award.award_category.winners-award.award_honor.ceremony""}",,"{""relation"": ""award.award_category.winners-award.award_honor.award_winner""}","  {""relation"": ""award.award_category.nominees-award.award_nomination.award_nominee""}"
 891,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>california state universitycampuses enrollment and overview<header>campus|athletics nickname (conference)
@@ -17326,7 +17326,7 @@ Reference tables:
 
 {""table"": ""<table_title>huddersfield town f.c. reserves and academyrecent academy graduates<header>player|born"", ""relation"": ""people.person.places_lived-people.place_lived.location""}
 
-{""table"": ""<table_title>manchester city f.c. reserves and academyacademy graduates (1998\u2013present)<header>player|born"", ""relation"": ""people.person.places_lived-people.place_lived.location""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.places_lived-people.place_lived.location""}"
+{""table"": ""<table_title>manchester city f.c. reserves and academyacademy graduates (1998\u2013present)<header>player|born"", ""relation"": ""people.person.places_lived-people.place_lived.location""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.place_of_birth""}"
 912,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2005 danmark rundtoverall classement (yellow jersey)<header>rider|nat.
@@ -17364,7 +17364,7 @@ Reference tables:
 
 {""table"": ""<table_title>all-star final vote2013 candidates<header>player american league|team american league"", ""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}
 
-{""table"": ""<table_title>2005 major league baseball draftsupplemental first round selections<header>player|team"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}",,"{""relation"": ""people.person.place_of_birth""}","  {""relation"": ""baseball.baseball_player.batting_stats-baseball.batting_statistics.team""}"
+{""table"": ""<table_title>2005 major league baseball draftsupplemental first round selections<header>player|team"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}",,"{""relation"": ""people.person.place_of_birth""}","  {""relation"": ""baseball.baseball_player.position_s""}"
 914,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2013 world baseball classic rosters[[ | ]]<header>player|birthplace
@@ -17497,7 +17497,7 @@ Reference tables:
 
 {""table"": ""<table_title>2007 vuelta a espa\u00f1a, stage 12 to stage 21stage 17, september 19, 2007:   >  , 180 km.<header>cyclist|nation"", ""relation"": ""people.person.nationality""}
 
-{""table"": ""<table_title>list of uci protour recordsmost uci protour points (single season)<header>cyclist|country"", ""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}",,"{""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}","  {""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}"
+{""table"": ""<table_title>list of uci protour recordsmost uci protour points (single season)<header>cyclist|country"", ""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}",,"{""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}","  {""relation"": ""people.person.nationality""}"
 921,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>1994 toronto international film festivalawards<header>film|director
@@ -17820,7 +17820,7 @@ Reference tables:
 
 {""table"": ""<table_title>azerbaijan (iran)air<header>airport|city"", ""relation"": ""aviation.airport.serves""}
 
-{""table"": ""<table_title>tbilisi international airportstatistics<header>city|airport"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""aviation.airport.serves""}"
+{""table"": ""<table_title>tbilisi international airportstatistics<header>city|airport"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.contains""}"
 938,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of french films of 1980<header>title|director
@@ -18181,7 +18181,7 @@ Reference tables:
 
 {""table"": ""<table_title>2003 in swedish footballcompetitions<header>competition|team"", ""relation"": ""sports.sports_league.teams-sports.sports_league_participation.team""}
 
-{""table"": ""<table_title>2010 east asian football championship final squadsplayer statistics<header>player|club"", ""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}",,"{""relation"": ""sports.sports_league.teams-sports.sports_league_participation.team""}","  {""relation"": ""sports.sports_league.teams-sports.sports_league_participation.team""}"
+{""table"": ""<table_title>2010 east asian football championship final squadsplayer statistics<header>player|club"", ""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}",,"{""relation"": ""sports.sports_league.teams-sports.sports_league_participation.team""}","  {""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}"
 957,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of highest-grossing indian films worldwideglobal gross figures in indian cinema<header>movie|language
@@ -18238,7 +18238,7 @@ Reference tables:
 
 {""table"": ""<table_title>1992 nba all-star gamerosters<header>player|team"", ""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}
 
-{""table"": ""<table_title>2002 nba all-star gameroster<header>player|team"", ""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}",,"{""relation"": ""sports.sports_team.roster-sports.sports_team_roster.player""}","  {""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}"
+{""table"": ""<table_title>2002 nba all-star gameroster<header>player|team"", ""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}",,"{""relation"": ""sports.sports_team.roster-sports.sports_team_roster.player""}","  {""relation"": ""sports.sports_team.arena_stadium""}"
 960,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>nba jameastern conference<header>team|snes/genesis
@@ -18618,7 +18618,7 @@ Reference tables:
 
 {""table"": ""<table_title>2011\u201312 nhl seasonlast games<header>player|team"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}
 
-{""table"": ""<table_title>2012 nhl entry draftround one<header>player|nhl team"", ""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}",,"{""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}","  {""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}"
+{""table"": ""<table_title>2012 nhl entry draftround one<header>player|nhl team"", ""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}",,"{""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}"
 980,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>escape from the studio tour (korn)tour dates<header>city|country
@@ -18675,7 +18675,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of tallest buildings by city<header>building|city"", ""relation"": ""location.location.containedby""}
 
-{""table"": ""<table_title>2012 cis football seasonteams<header>institution|city"", ""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}"
+{""table"": ""<table_title>2012 cis football seasonteams<header>institution|city"", ""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""location.location.containedby""}"
 983,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of tallest educational buildingslist<header>building|country
@@ -18751,7 +18751,7 @@ Reference tables:
 
 {""table"": ""<table_title>2011\u201312 barnsley f.c. seasonsquad details<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}
 
-{""table"": ""<table_title>2012\u201313 leyton orient f.c. seasonplaying staff<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.places_lived-people.place_lived.location""}"
+{""table"": ""<table_title>2012\u201313 leyton orient f.c. seasonplaying staff<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.place_of_birth""}"
 987,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>yuki fukayacareer statistics<header>club performance season japan|club performance league japan
@@ -18789,7 +18789,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of ouya softwareofficial status unconfirmed<header>title|developer(s)"", ""relation"": ""cvg.computer_videogame.publisher""}
 
-{""table"": ""<table_title>list of ouya softwaregames<header>title|developer(s)"", ""relation"": ""cvg.computer_videogame.publisher""}",,"{""relation"": ""cvg.computer_videogame.publisher""}","  {""relation"": ""cvg.computer_videogame.developer""}"
+{""table"": ""<table_title>list of ouya softwaregames<header>title|developer(s)"", ""relation"": ""cvg.computer_videogame.publisher""}",,"{""relation"": ""cvg.computer_videogame.publisher""}","  {""relation"": ""cvg.computer_videogame.publisher""}"
 989,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>aksys gamesxbox 360<header>title|platform(s)
@@ -18884,7 +18884,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of the busiest airports in russiarussia's 50 busiest airports by passenger traffic in 2011<header>airport|city"", ""relation"": ""aviation.airport.serves""}
 
-{""table"": ""<table_title>our airlinedestinations<header>city|airport"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""aviation.airport.serves""}"
+{""table"": ""<table_title>our airlinedestinations<header>city|airport"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.contains""}"
 994,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2012 vancouver whitecaps fc seasonsquad information<header>name|nationality
@@ -18941,7 +18941,7 @@ Reference tables:
 
 {""table"": ""<table_title>1963\u201364 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}
 
-{""table"": ""<table_title>1985\u201386 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.places_lived-people.place_lived.location""}"
+{""table"": ""<table_title>1985\u201386 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.place_of_birth""}"
 997,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>electoral results for the division of chisholmmembers<header>member|party
@@ -18998,7 +18998,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of cities and towns in trinidad and tobagog<header>name|location ( regional corporation )"", ""relation"": ""location.location.containedby""}
 
-{""table"": ""<table_title>list of cities by time of continuous habitationmiddle east<header>name|location"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.containedby""}"
+{""table"": ""<table_title>list of cities by time of continuous habitationmiddle east<header>name|location"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 1000,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of central business districtsoceania<header>city|country
@@ -19169,7 +19169,7 @@ Reference tables:
 
 {""table"": ""<table_title>clarkson golden knights men's ice hockeyknights in the nhl<header>player|team"", ""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}
 
-{""table"": ""<table_title>rising stars challenge2009 game<header>player|team"", ""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}",,"{""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}","  {""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}"
+{""table"": ""<table_title>rising stars challenge2009 game<header>player|team"", ""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}",,"{""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}"
 1009,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>59th national hockey league all-star gamedraft<header>player|pos.
@@ -19378,7 +19378,7 @@ Reference tables:
 
 {""table"": ""<table_title>nero awardwinners<header>title|author"", ""relation"": ""award.award_winning_work.awards_won-award.award_honor.award_winner""}
 
-{""table"": ""<table_title>endeavour awardpast winners<header>title|author"", ""relation"": ""award.award_winning_work.awards_won-award.award_honor.award_winner""}",,"{""relation"": ""book.written_work.author""}","  {""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}"
+{""table"": ""<table_title>endeavour awardpast winners<header>title|author"", ""relation"": ""award.award_winning_work.awards_won-award.award_honor.award_winner""}",,"{""relation"": ""book.written_work.author""}","  {""relation"": ""book.written_work.author""}"
 1020,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>javad shirzadclub career statistics<header>club performance season iran|club performance league iran
@@ -19416,7 +19416,7 @@ Reference tables:
 
 {""table"": ""<table_title>2011 canadian senior curling championshipsmen<header>team|locale"", ""relation"": ""location.location.contains""}
 
-{""table"": ""<table_title>2005 world junior curling championshipsteams<header>country|skip"", ""relation"": ""olympics.olympic_participating_country.athletes-olympics.olympic_athlete_affiliation.athlete""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.places_lived-people.place_lived.location""}"
+{""table"": ""<table_title>2005 world junior curling championshipsteams<header>country|skip"", ""relation"": ""olympics.olympic_participating_country.athletes-olympics.olympic_athlete_affiliation.athlete""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.place_of_birth""}"
 1022,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>national register of historic places listings in bucks county, pennsylvaniacurrent listings<header>name on the register|city or town
@@ -19454,7 +19454,7 @@ Reference tables:
 
 {""table"": ""<table_title>the girl with the dragon tattoo (2009 film)awards and nominations<header>category|association"", ""relation"": ""award.award_category.category_of""}
 
-{""table"": ""<table_title>list of accolades received by american beautyselected awards and nominations<header>category|award"", ""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}",,"{""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}","  {""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}"
+{""table"": ""<table_title>list of accolades received by american beautyselected awards and nominations<header>category|award"", ""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}",,"{""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}","  {""relation"": ""award.award_category.category_of""}"
 1024,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>boogie nightsawards and nominations<header>category|recipients and nominees
@@ -19720,7 +19720,7 @@ Reference tables:
 
 {""table"": ""<table_title>punit malhotraassistant director<header>film|director"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}
 
-{""table"": ""<table_title>dharma productionsfilms produced by dharma productions<header>film|director"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}",,"{""relation"": ""film.film.directed_by""}","  {""relation"": ""film.film.directed_by""}"
+{""table"": ""<table_title>dharma productionsfilms produced by dharma productions<header>film|director"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}",,"{""relation"": ""film.film.directed_by""}","  {""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}"
 1038,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>photon kathaasproduction<header>film|cast
@@ -20100,7 +20100,7 @@ Reference tables:
 
 {""table"": ""<table_title>2009\u201310 uci track cycling world rankingwomen's individual<header>cyclists|nation"", ""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}
 
-{""table"": ""<table_title>2009\u201310 uci track cycling world rankingwomen's individual<header>cyclists|nation"", ""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}",,"{""relation"": ""olympics.olympic_participating_country.athletes-olympics.olympic_athlete_affiliation.athlete""}","  {""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}"
+{""table"": ""<table_title>2009\u201310 uci track cycling world rankingwomen's individual<header>cyclists|nation"", ""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}",,"{""relation"": ""olympics.olympic_participating_country.athletes-olympics.olympic_athlete_affiliation.athlete""}","  {""relation"": ""olympics.olympic_participating_country.athletes-olympics.olympic_athlete_affiliation.athlete""}"
 1058,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>team saxo-tinkoffsports directors<header>name|nationality
@@ -20176,7 +20176,7 @@ Reference tables:
 
 {""table"": ""<table_title>miss new jersey usawinners<header>name|hometown"", ""relation"": ""people.person.place_of_birth""}
 
-{""table"": ""<table_title>miss louisianawinners<header>name|hometown"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""people.person.place_of_birth""}"
+{""table"": ""<table_title>miss louisianawinners<header>name|hometown"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 1062,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>john powell2000s<header>title|director
@@ -20233,7 +20233,7 @@ Reference tables:
 
 {""table"": ""<table_title>rugby league 2: world cup edition (video game)super league<header>team name|home stadium"", ""relation"": ""sports.sports_team.venue-sports.team_venue_relationship.venue""}
 
-{""table"": ""<table_title>2009 nrl seasonclub and player records<header>victor|venue"", ""relation"": ""sports.sports_team.venue-sports.team_venue_relationship.venue""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""sports.sports_team.venue-sports.team_venue_relationship.venue""}"
+{""table"": ""<table_title>2009 nrl seasonclub and player records<header>victor|venue"", ""relation"": ""sports.sports_team.venue-sports.team_venue_relationship.venue""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""location.location.containedby""}"
 1065,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2006 nrl seasonvenues<header>stadium name|host club(s)
@@ -21240,7 +21240,7 @@ Reference tables:
 
 {""table"": ""<table_title>2013\u201314 swiss super leaguepersonnel and kits<header>team|captain"", ""relation"": ""soccer.football_team.player_statistics-soccer.football_player_stats.player""}
 
-{""table"": ""<table_title>2011\u201312 egyptian premier leaguepersonnel and kits<header>team|captain"", ""relation"": ""soccer.football_team.player_statistics-soccer.football_player_stats.player""}",,"{""relation"": ""sports.sports_team.roster-sports.sports_team_roster.player""}","  {""relation"": ""soccer.football_team.player_statistics-soccer.football_player_stats.player""}"
+{""table"": ""<table_title>2011\u201312 egyptian premier leaguepersonnel and kits<header>team|captain"", ""relation"": ""soccer.football_team.player_statistics-soccer.football_player_stats.player""}",,"{""relation"": ""sports.sports_team.roster-sports.sports_team_roster.player""}","  {""relation"": ""sports.sports_team.roster-sports.sports_team_roster.player""}"
 1118,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>czech 2. ligaparticipating teams in 2013–14<header>club|2012-13 position
@@ -21449,7 +21449,7 @@ Reference tables:
 
 {""table"": ""<table_title>2009 little league world series qualification<header>state|city"", ""relation"": ""location.location.contains""}
 
-{""table"": ""<table_title>2009 little league world series qualification<header>state|city"", ""relation"": ""location.location.contains""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""location.location.containedby""}"
+{""table"": ""<table_title>2009 little league world series qualification<header>state|city"", ""relation"": ""location.location.contains""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""location.location.contains""}"
 1129,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2009 big 12 conference football seasonbowl games<header>bowl game|stadium
@@ -22038,7 +22038,7 @@ Reference tables:
 
 {""table"": ""<table_title>okaw valley conference (illinois)member schools<header>institution|location"", ""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}
 
-{""table"": ""<table_title>midwest football conference (njcaa)current members<header>school|location"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}","  {""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}"
+{""table"": ""<table_title>midwest football conference (njcaa)current members<header>school|location"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}","  {""relation"": ""location.location.containedby""}"
 1160,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>military history of armeniastatistics<header>war/battle|opponent
@@ -22152,7 +22152,7 @@ Reference tables:
 
 {""table"": ""<table_title>kim min-woo (footballer)career statistics<header>club performance season|club performance league"", ""relation"": ""sports.sports_league_season.league""}
 
-{""table"": ""<table_title>jin taiyancareer statistics<header>club performance season china pr|club performance league china pr"", ""relation"": ""sports.sports_league_season.league""}",,"{""relation"": ""time.event.instance_of_recurring_event""}","  {""relation"": ""sports.sports_league_season.league""}"
+{""table"": ""<table_title>jin taiyancareer statistics<header>club performance season china pr|club performance league china pr"", ""relation"": ""sports.sports_league_season.league""}",,"{""relation"": ""time.event.instance_of_recurring_event""}","  {""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}"
 1166,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>united states senate elections, 17921792 elections<header>incumbent|party
@@ -22399,7 +22399,7 @@ Reference tables:
 
 {""table"": ""<table_title>1972\u201373 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}
 
-{""table"": ""<table_title>1986\u201387 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.places_lived-people.place_lived.location""}"
+{""table"": ""<table_title>1986\u201387 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.place_of_birth""}"
 1179,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>national register of historic places listings in north dakota<header>name on the register|city or town
@@ -22532,7 +22532,7 @@ Reference tables:
 
 {""table"": ""<table_title>athletics at the 2005 mediterranean games \u2013 results800 meters<header>name|nationality"", ""relation"": ""people.person.nationality""}
 
-{""table"": ""<table_title>athletics at the 2013 mediterranean games \u2013 results10,000 meters<header>name|nationality"", ""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}",,"{""relation"": ""people.person.nationality""}","  {""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}"
+{""table"": ""<table_title>athletics at the 2013 mediterranean games \u2013 results10,000 meters<header>name|nationality"", ""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}",,"{""relation"": ""people.person.nationality""}","  {""relation"": ""people.person.nationality""}"
 1186,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>deborah luriecomposer<header>title|director
@@ -23083,7 +23083,7 @@ Reference tables:
 
 {""table"": ""<table_title>cataloniamunicipalities<header>municipality|comarca"", ""relation"": ""location.capital_of_administrative_division.capital_of-location.administrative_division_capital_relationship.administrative_division""}
 
-{""table"": ""<table_title>south bohemian regionpopulation and area<header>name|district"", ""relation"": ""location.capital_of_administrative_division.capital_of-location.administrative_division_capital_relationship.administrative_division""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""location.capital_of_administrative_division.capital_of-location.administrative_division_capital_relationship.administrative_division""}"
+{""table"": ""<table_title>south bohemian regionpopulation and area<header>name|district"", ""relation"": ""location.capital_of_administrative_division.capital_of-location.administrative_division_capital_relationship.administrative_division""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""location.location.containedby""}"
 1215,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>suburban conference (st. louis)suburban north<header>school|town
@@ -23121,7 +23121,7 @@ Reference tables:
 
 {""table"": ""<table_title>2011\u201312 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}
 
-{""table"": ""<table_title>2012\u201313 leyton orient f.c. seasonplaying staff<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.places_lived-people.place_lived.location""}"
+{""table"": ""<table_title>2012\u201313 leyton orient f.c. seasonplaying staff<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.place_of_birth""}"
 1217,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2013–14 bristol city f.c. seasonsquad<header>name|signed from
@@ -23634,7 +23634,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of football league championship players with international capsguadeloupe<header>player|club(s)"", ""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}
 
-{""table"": ""<table_title>2009\u201310 sheffield united f.c. seasonjanuary transfers in<header>player|club"", ""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}","  {""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}"
+{""table"": ""<table_title>2009\u201310 sheffield united f.c. seasonjanuary transfers in<header>player|club"", ""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}"
 1244,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of sovereign states and dependent territories in eurasiastates with limited recognition<header>english short name|legal status
@@ -23691,7 +23691,7 @@ Reference tables:
 
 {""table"": ""<table_title>secretary-general of the council of the european union<header>name|country"", ""relation"": ""people.person.nationality""}
 
-{""table"": ""<table_title>iso 3166-2:knparishes<header>subdivision name|in state"", ""relation"": ""base.aareas.schema.administrative_area.administrative_parent""}",,"{""relation"": ""location.country.official_language""}","  {""relation"": ""location.country.official_language""}"
+{""table"": ""<table_title>iso 3166-2:knparishes<header>subdivision name|in state"", ""relation"": ""base.aareas.schema.administrative_area.administrative_parent""}",,"{""relation"": ""location.country.official_language""}","  {""relation"": ""location.location.containedby""}"
 1247,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of sovereign states and dependent territories in eurasiastates with limited recognition<header>english short name|capital
@@ -24603,7 +24603,7 @@ Reference tables:
 
 {""table"": ""<table_title>the thin red line (1998 film)awards<header>category|award"", ""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}
 
-{""table"": ""<table_title>flight (2012 film)awards and nominations<header>category|award"", ""relation"": ""award.award_category.category_of""}",,"{""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}","  {""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}"
+{""table"": ""<table_title>flight (2012 film)awards and nominations<header>category|award"", ""relation"": ""award.award_category.category_of""}",,"{""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}","  {""relation"": ""award.award_category.category_of""}"
 1295,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>the ides of march (film)accolades<header>category|recipients and nominees
@@ -24717,7 +24717,7 @@ Reference tables:
 
 {""table"": ""<table_title>the big reunion (concerts)tour dates<header>city|country"", ""relation"": ""location.location.containedby""}
 
-{""table"": ""<table_title>smtown live '08tour dates<header>city|country"", ""relation"": ""location.administrative_division.country""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""location.administrative_division.country""}"
+{""table"": ""<table_title>smtown live '08tour dates<header>city|country"", ""relation"": ""location.administrative_division.country""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""location.location.containedby""}"
 1301,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>american idols live! tour 2010tour dates<header>city|venue
@@ -25610,7 +25610,7 @@ Reference tables:
 
 {""table"": ""<table_title>british columbia intercollegiate hockey leagueformer teams<header>institution|location"", ""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}
 
-{""table"": ""<table_title>canadian interuniversity sportmembers<header>institution|city"", ""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}"
+{""table"": ""<table_title>canadian interuniversity sportmembers<header>institution|city"", ""relation"": ""organization.organization.headquarters-location.mailing_address.citytown""}",,"{""relation"": ""location.location.containedby""}","  {""relation"": ""location.location.containedby""}"
 1348,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>national register of historic places listings in houghton county, michiganlistings county-wide<header>name on the register|city or town
@@ -25705,7 +25705,7 @@ Reference tables:
 
 {""table"": ""<table_title>2002 in video gamingvideo game sales<header>title|publisher"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}
 
-{""table"": ""<table_title>body swap appearances in mediavideo games<header>title|developer / publisher"", ""relation"": ""cvg.computer_videogame.developer""}",,"{""relation"": ""cvg.computer_videogame.developer""}","  {""relation"": ""cvg.computer_videogame.developer""}"
+{""table"": ""<table_title>body swap appearances in mediavideo games<header>title|developer / publisher"", ""relation"": ""cvg.computer_videogame.developer""}",,"{""relation"": ""cvg.computer_videogame.developer""}","  {""relation"": ""cvg.computer_videogame.publisher""}"
 1353,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>janimationgaming<header>title(s)|publisher/marketing
@@ -26446,7 +26446,7 @@ Reference tables:
 
 {""table"": ""<table_title>1972\u201373 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}
 
-{""table"": ""<table_title>2005\u201306 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.places_lived-people.place_lived.location""}"
+{""table"": ""<table_title>2005\u201306 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.place_of_birth""}"
 1392,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of sovereign states and dependent territories in the caribbeansovereign states<header>name (official name)|capital
@@ -26465,7 +26465,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of sovereign states and dependent territories in north americasovereign states<header>english short name|capital"", ""relation"": ""location.country.capital""}
 
-{""table"": ""<table_title>islands regulation of the netherlands antillesisland territories<header>name|capital"", ""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}",,"{""relation"": ""location.country.capital""}","  {""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}"
+{""table"": ""<table_title>islands regulation of the netherlands antillesisland territories<header>name|capital"", ""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}",,"{""relation"": ""location.country.capital""}","  {""relation"": ""location.location.contains""}"
 1393,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of sovereign states and dependent territories in the caribbeansovereign states<header>name (official name)|official languages
@@ -26731,7 +26731,7 @@ Reference tables:
 
 {""table"": ""<table_title>1991\u201392 nba seasonstatistics leaders<header>player|team"", ""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}
 
-{""table"": ""<table_title>1997\u201398 nba seasonstatistics leaders<header>player|team"", ""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}",,"{""relation"": ""sports.sports_championship_event.champion""}","  {""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}"
+{""table"": ""<table_title>1997\u201398 nba seasonstatistics leaders<header>player|team"", ""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}",,"{""relation"": ""sports.sports_championship_event.champion""}","  {""relation"": ""sports.sports_award_winner.awards-sports.sports_award.team""}"
 1407,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2013 rugby league world cup squads<header>player|club
@@ -27111,7 +27111,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of maryland congressional districtscurrent districts and representatives<header>district|representative"", ""relation"": ""government.political_district.representatives-government.government_position_held.office_holder""}
 
-{""table"": ""<table_title>107th united states congresshouse of representatives<header>district|vacator"", ""relation"": ""government.political_district.representatives-government.government_position_held.office_holder""}",,"{""relation"": ""government.politician.government_positions_held-government.government_position_held.district_represented""}","  {""relation"": ""government.political_district.representatives-government.government_position_held.office_holder""}"
+{""table"": ""<table_title>107th united states congresshouse of representatives<header>district|vacator"", ""relation"": ""government.political_district.representatives-government.government_position_held.office_holder""}",,"{""relation"": ""government.politician.government_positions_held-government.government_position_held.district_represented""}","  {""relation"": ""government.politician.government_positions_held-government.government_position_held.district_represented""}"
 1427,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>division of willsmembers<header>member|party
@@ -27434,7 +27434,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of spanish films of 2010<header>title|cast"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}
 
-{""table"": ""<table_title>32nd cairo international film festivalfilms out of competition<header>english title|original title"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}",,"{""relation"": ""film.actor.film-film.performance.film""}","  {""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}"
+{""table"": ""<table_title>32nd cairo international film festivalfilms out of competition<header>english title|original title"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}",,"{""relation"": ""film.actor.film-film.performance.film""}","  {""relation"": ""award.award_nominee.award_nominations-award.award_nomination.nominated_for""}"
 1444,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>looney tunes: spotlight collectiondisc 1: looney tunes all-stars<header>title|director
@@ -27776,7 +27776,7 @@ Reference tables:
 
 {""table"": ""<table_title>naruto the movie: legend of the stone of gelelcast<header>character|japanese voice"", ""relation"": ""film.film_character.portrayed_in_films-film.performance.actor""}
 
-{""table"": ""<table_title>pok\u00e9mon: zoroark: master of illusionsregular characters<header>voice actor (japanese)|character"", ""relation"": ""film.actor.film-film.performance.character""}",,"{""relation"": ""film.actor.film-film.performance.character""}","  {""relation"": ""film.actor.film-film.performance.character""}"
+{""table"": ""<table_title>pok\u00e9mon: zoroark: master of illusionsregular characters<header>voice actor (japanese)|character"", ""relation"": ""film.actor.film-film.performance.character""}",,"{""relation"": ""film.actor.film-film.performance.character""}","  {""relation"": ""tv.tv_character.appeared_in_tv_program-tv.regular_tv_appearance.actor""}"
 1462,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>sobieski familynotable members<header>name|parents
@@ -27966,7 +27966,7 @@ Reference tables:
 
 {""table"": ""<table_title>2009 itu world championship serieskitzb\u00fchel<header>men's race name|men's race nation"", ""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}
 
-{""table"": ""<table_title>2011 ice challengepairs<header>name|nation"", ""relation"": ""people.person.nationality""}",,"{""relation"": ""olympics.olympic_participating_country.athletes-olympics.olympic_athlete_affiliation.athlete""}","  {""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}"
+{""table"": ""<table_title>2011 ice challengepairs<header>name|nation"", ""relation"": ""people.person.nationality""}",,"{""relation"": ""olympics.olympic_participating_country.athletes-olympics.olympic_athlete_affiliation.athlete""}","  {""relation"": ""people.person.nationality""}"
 1472,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2011 skate canada internationalentries<header>country|ladies
@@ -28859,7 +28859,7 @@ Reference tables:
 
 {""table"": ""<table_title>lubusz voivodeshipadministrative division<header>english and polish names|other towns"", ""relation"": ""location.location.contains""}
 
-{""table"": ""<table_title>lublin voivodeshipadministrative division<header>english and polish names|other towns"", ""relation"": ""location.location.contains""}",,"{""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}","  {""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}"
+{""table"": ""<table_title>lublin voivodeshipadministrative division<header>english and polish names|other towns"", ""relation"": ""location.location.contains""}",,"{""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}","  {""relation"": ""location.location.contains""}"
 1519,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>west pomeranian voivodeshipadministrative division<header>english and polish names|other towns
@@ -28878,7 +28878,7 @@ Reference tables:
 
 {""table"": ""<table_title>kuyavian-pomeranian voivodeshipadministrative division<header>english and polish names|seat"", ""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}
 
-{""table"": ""<table_title>subdivisions of podlaskie voivodeship<header>english and polish names|seat"", ""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}"
+{""table"": ""<table_title>subdivisions of podlaskie voivodeship<header>english and polish names|seat"", ""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 1520,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>sara forestierselected filmography<header>title|director
@@ -29220,7 +29220,7 @@ Reference tables:
 
 {""table"": ""<table_title>map linhas a\u00e9reasdestinations<header>city|airport"", ""relation"": ""location.location.nearby_airports""}
 
-{""table"": ""<table_title>jetstar asia airways destinationsdestinations<header>city|airport"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.nearby_airports""}"
+{""table"": ""<table_title>jetstar asia airways destinationsdestinations<header>city|airport"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.contains""}"
 1538,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of number-one hits of 2010 (switzerland)singles<header>artist|artist's nationality
@@ -29809,7 +29809,7 @@ Reference tables:
 
 {""table"": ""<table_title>united states house of representatives elections, 1826<header>district district|incumbent incumbent"", ""relation"": ""government.political_district.representatives-government.government_position_held.office_holder""}
 
-{""table"": ""<table_title>united states house of representatives elections, 1796<header>district|incumbent"", ""relation"": ""government.political_district.representatives-government.government_position_held.office_holder""}",,"{""relation"": ""government.politician.government_positions_held-government.government_position_held.district_represented""}","  {""relation"": ""government.political_district.representatives-government.government_position_held.office_holder""}"
+{""table"": ""<table_title>united states house of representatives elections, 1796<header>district|incumbent"", ""relation"": ""government.political_district.representatives-government.government_position_held.office_holder""}",,"{""relation"": ""government.politician.government_positions_held-government.government_position_held.district_represented""}","  {""relation"": ""government.politician.government_positions_held-government.government_position_held.district_represented""}"
 1569,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>united states house of representatives elections, 1794<header>district|incumbent
@@ -29942,7 +29942,7 @@ Reference tables:
 
 {""table"": ""<table_title>1999 montreal expos seasonfarm system<header>team|league"", ""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}
 
-{""table"": ""<table_title>2001 montreal expos seasonfarm system<header>team|league"", ""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}",,"{""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}","  {""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}"
+{""table"": ""<table_title>2001 montreal expos seasonfarm system<header>team|league"", ""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}",,"{""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}","  {""relation"": ""baseball.baseball_team.league""}"
 1576,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of action films of the 2000s<header>title|director
@@ -30018,7 +30018,7 @@ Reference tables:
 
 {""table"": ""<table_title>2009 itu world championship serieskitzb\u00fchel<header>men's race name|men's race nation"", ""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}
 
-{""table"": ""<table_title>2001 skate canada internationalmen<header>name|nation"", ""relation"": ""people.person.nationality""}",,"{""relation"": ""olympics.olympic_participating_country.athletes-olympics.olympic_athlete_affiliation.athlete""}","  {""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}"
+{""table"": ""<table_title>2001 skate canada internationalmen<header>name|nation"", ""relation"": ""people.person.nationality""}",,"{""relation"": ""olympics.olympic_participating_country.athletes-olympics.olympic_athlete_affiliation.athlete""}","  {""relation"": ""olympics.olympic_participating_country.athletes-olympics.olympic_athlete_affiliation.athlete""}"
 1580,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2012 skate americaentries<header>country|ladies
@@ -30322,7 +30322,7 @@ Reference tables:
 
 {""table"": ""<table_title>map linhas a\u00e9reasdestinations<header>city|airport"", ""relation"": ""location.location.nearby_airports""}
 
-{""table"": ""<table_title>jetstar asia airways destinationsdestinations<header>city|airport"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.nearby_airports""}"
+{""table"": ""<table_title>jetstar asia airways destinationsdestinations<header>city|airport"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.contains""}"
 1596,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2005 pba draftround 2<header>player|country of origin*
@@ -30436,7 +30436,7 @@ Reference tables:
 
 {""table"": ""<table_title>2013\u201314 russian premier leaguepersonnel and sponsorship<header>team|location"", ""relation"": ""sports.sports_team.location""}
 
-{""table"": ""<table_title>2011\u201312 ekstraklasastadiums and locations<header>team|location"", ""relation"": ""sports.sports_team.location""}",,"{""relation"": ""sports.sports_team.arena_stadium""}","  {""relation"": ""sports.sports_team.location""}"
+{""table"": ""<table_title>2011\u201312 ekstraklasastadiums and locations<header>team|location"", ""relation"": ""sports.sports_team.location""}",,"{""relation"": ""sports.sports_team.arena_stadium""}","  {""relation"": ""sports.sports_team.venue-sports.team_venue_relationship.venue""}"
 1602,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>drake discographyguest appearances<header>title|other artist(s)
@@ -32336,7 +32336,7 @@ Reference tables:
 
 {""table"": ""<table_title>united states house of representatives elections, 1992washington<header>district|incumbent"", ""relation"": ""government.political_district.representatives-government.government_position_held.office_holder""}
 
-{""table"": ""<table_title>united states house of representatives elections, 1992minnesota<header>district|incumbent"", ""relation"": ""government.political_district.representatives-government.government_position_held.office_holder""}",,"{""relation"": ""government.politician.government_positions_held-government.government_position_held.district_represented""}","  {""relation"": ""government.political_district.representatives-government.government_position_held.office_holder""}"
+{""table"": ""<table_title>united states house of representatives elections, 1992minnesota<header>district|incumbent"", ""relation"": ""government.political_district.representatives-government.government_position_held.office_holder""}",,"{""relation"": ""government.politician.government_positions_held-government.government_position_held.district_represented""}","  {""relation"": ""government.politician.government_positions_held-government.government_position_held.district_represented""}"
 1702,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2013–14 south african premier divisionstadiums and locations<header>team|home venue
@@ -32564,7 +32564,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of airports in bulgariapassenger statistics<header>airport|city"", ""relation"": ""aviation.airport.serves""}
 
-{""table"": ""<table_title>iran air destinations<header>city|airport"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.nearby_airports""}"
+{""table"": ""<table_title>iran air destinations<header>city|airport"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.contains""}"
 1714,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2013–14 shrewsbury town f.c. seasoncurrent squad<header>name|place of birth
@@ -32583,7 +32583,7 @@ Reference tables:
 
 {""table"": ""<table_title>2012\u201313 leyton orient f.c. seasonplaying staff<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}
 
-{""table"": ""<table_title>2011\u201312 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.places_lived-people.place_lived.location""}"
+{""table"": ""<table_title>2011\u201312 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}",,"{""relation"": ""people.person.places_lived-people.place_lived.location""}","  {""relation"": ""people.person.place_of_birth""}"
 1715,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>rugrats (film series)cast<header>character character|film the rugrats movie
@@ -32963,7 +32963,7 @@ Reference tables:
 
 {""table"": ""<table_title>1991 european aquatics championshipssynchronized swimming<header>gold|silver"", ""relation"": ""military.military_combatant.military_conflicts-military.military_combatant_group.combatants""}
 
-{""table"": ""<table_title>synchronised swimming at the 1991 world aquatics championshipsmedal summary<header>gold|silver"", ""relation"": ""military.military_combatant.military_conflicts-military.military_combatant_group.combatants""}",,"{""relation"": ""military.military_combatant.military_conflicts-military.military_combatant_group.combatants""}","  {""relation"": ""olympics.olympic_event_competition.medalists-olympics.olympic_medal_honor.medalist""}"
+{""table"": ""<table_title>synchronised swimming at the 1991 world aquatics championshipsmedal summary<header>gold|silver"", ""relation"": ""military.military_combatant.military_conflicts-military.military_combatant_group.combatants""}",,"{""relation"": ""military.military_combatant.military_conflicts-military.military_combatant_group.combatants""}","  {""relation"": ""military.military_combatant.military_conflicts-military.military_combatant_group.combatants""}"
 1735,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2003 isaf sailing world championshipsmedal summary<header>gold|bronze
@@ -34483,7 +34483,7 @@ Reference tables:
 
 {""table"": ""<table_title>2012 pro bowlspecial teams<header>position|starter(s)"", ""relation"": ""sports.sports_position.players-sports.sports_team_roster.player""}
 
-{""table"": ""<table_title>2013 pro bowloffense<header>position|starter(s)"", ""relation"": ""sports.sports_position.players-sports.sports_team_roster.player""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}","  {""relation"": ""sports.sports_position.players-sports.sports_team_roster.player""}"
+{""table"": ""<table_title>2013 pro bowloffense<header>position|starter(s)"", ""relation"": ""sports.sports_position.players-sports.sports_team_roster.player""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}"
 1815,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>yasuhiro hiraokacareer statistics<header>club performance season japan|club performance league japan
@@ -34521,7 +34521,7 @@ Reference tables:
 
 {""table"": ""<table_title>masashi shimamuraclub statistics<header>club performance season japan|club performance league japan"", ""relation"": ""sports.sports_league_season.league""}
 
-{""table"": ""<table_title>masaru hirayamaclub statistics<header>club performance season japan|club performance league japan"", ""relation"": ""sports.sports_league_season.league""}",,"{""relation"": ""sports.sports_league_season.league""}","  {""relation"": ""sports.sports_league_season.league""}"
+{""table"": ""<table_title>masaru hirayamaclub statistics<header>club performance season japan|club performance league japan"", ""relation"": ""sports.sports_league_season.league""}",,"{""relation"": ""sports.sports_league_season.league""}","  {""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}"
 1817,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>1990 pulitzer prizejournalism awards<header>public service|washington daily news ( washington, north carolina ) the philadelphia inquirer
@@ -34578,7 +34578,7 @@ Reference tables:
 
 {""table"": ""<table_title>2013 nba summer leaguestatistics leaders<header>player|team"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}
 
-{""table"": ""<table_title>highest-paid nba players by season2012\u20132013<header>player|team"", ""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}","  {""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}"
+{""table"": ""<table_title>highest-paid nba players by season2012\u20132013<header>player|team"", ""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}","  {""relation"": ""basketball.basketball_player.player_statistics-basketball.basketball_player_stats.team""}"
 1820,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of 2013–14 nba season transactionssecond round<header>player|school/club team
@@ -35452,7 +35452,7 @@ Reference tables:
 
 {""table"": ""<table_title>1972 all-pro teamdefense<header>first team|position"", ""relation"": ""american_football.football_player.position_s""}
 
-{""table"": ""<table_title>national football league 2000s all-decade teamdefense<header>first team|position"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}",,"{""relation"": ""american_football.football_player.position_s""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}"
+{""table"": ""<table_title>national football league 2000s all-decade teamdefense<header>first team|position"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.position""}",,"{""relation"": ""american_football.football_player.position_s""}","  {""relation"": ""american_football.football_player.position_s""}"
 1866,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of british consortshouse of hanover<header>name|parents
@@ -35566,7 +35566,7 @@ Reference tables:
 
 {""table"": ""<table_title>2011\u201312 s\u00fcper ligtop goalscorers<header>player|club"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}
 
-{""table"": ""<table_title>2012 fifa ballon d'orfifa ballon d'or<header>player|club"", ""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}"
+{""table"": ""<table_title>2012 fifa ballon d'orfifa ballon d'or<header>player|club"", ""relation"": ""base.schemastaging.athlete_extra.salary-base.schemastaging.athlete_salary.team""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}","  {""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}"
 1872,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of sc bastia playersr<header>player|pos.
@@ -35775,7 +35775,7 @@ Reference tables:
 
 {""table"": ""<table_title>largest cities in the united states by population by decade1900<header>city|state"", ""relation"": ""location.location.containedby""}
 
-{""table"": ""<table_title>largest cities in the united states by population by decade1880<header>city|state"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.containedby""}"
+{""table"": ""<table_title>largest cities in the united states by population by decade1880<header>city|state"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 1883,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of u.s. states' largest cities by populationtable<header>state|2nd most populous
@@ -35794,7 +35794,7 @@ Reference tables:
 
 {""table"": ""<table_title>largest cities in the united states by population by decade1960<header>city|state"", ""relation"": ""location.location.containedby""}
 
-{""table"": ""<table_title>largest cities in the united states by population by decade1900<header>city|state"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.containedby""}"
+{""table"": ""<table_title>largest cities in the united states by population by decade1900<header>city|state"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 1884,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of u.s. states' largest cities by populationtable<header>state|3rd most populous
@@ -35813,7 +35813,7 @@ Reference tables:
 
 {""table"": ""<table_title>largest cities in the united states by population by decade1880<header>city|state"", ""relation"": ""location.location.containedby""}
 
-{""table"": ""<table_title>largest cities in the united states by population by decade1960<header>city|state"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.containedby""}"
+{""table"": ""<table_title>largest cities in the united states by population by decade1960<header>city|state"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 1885,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of u.s. states' largest cities by populationtable<header>state|4th most populous
@@ -35832,7 +35832,7 @@ Reference tables:
 
 {""table"": ""<table_title>largest cities in the united states by population by decade1960<header>city|state"", ""relation"": ""location.location.containedby""}
 
-{""table"": ""<table_title>largest cities in the united states by population by decade1880<header>city|state"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.containedby""}"
+{""table"": ""<table_title>largest cities in the united states by population by decade1880<header>city|state"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 1886,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of u.s. states' largest cities by populationtable<header>state|5th most populous
@@ -35851,7 +35851,7 @@ Reference tables:
 
 {""table"": ""<table_title>largest cities in the united states by population by decade1960<header>city|state"", ""relation"": ""location.location.containedby""}
 
-{""table"": ""<table_title>list of states and territories of the united statesstates<header>state|largest city"", ""relation"": ""location.location.contains""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.containedby""}"
+{""table"": ""<table_title>list of states and territories of the united statesstates<header>state|largest city"", ""relation"": ""location.location.contains""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 1887,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of u.s. states' largest cities by populationtable<header>state|capital if not otherwise listed
@@ -35984,7 +35984,7 @@ Reference tables:
 
 {""table"": ""<table_title>2013 little league world series qualification<header>province|city"", ""relation"": ""location.location.contains""}
 
-{""table"": ""<table_title>list of places in canada: b<header>name|province"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.containedby""}"
+{""table"": ""<table_title>list of places in canada: b<header>name|province"", ""relation"": ""location.location.containedby""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 1894,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2008–09 eredivisieoverview<header>club|location
@@ -36079,7 +36079,7 @@ Reference tables:
 
 {""table"": ""<table_title>mtv europe music award for best uk & ireland act2000s<header>year|winner"", ""relation"": ""award.award_ceremony.nominees-award.award_nomination.award_nominee""}
 
-{""table"": ""<table_title>mtv europe music award for best german act2000s<header>year|winner"", ""relation"": ""award.award_ceremony.nominees-award.award_nomination.award_nominee""}",,"{""relation"": ""award.award_ceremony.nominees-award.award_nomination.award_nominee""}","  {""relation"": ""award.award_ceremony.nominees-award.award_nomination.award_nominee""}"
+{""table"": ""<table_title>mtv europe music award for best german act2000s<header>year|winner"", ""relation"": ""award.award_ceremony.nominees-award.award_nomination.award_nominee""}",,"{""relation"": ""award.award_ceremony.nominees-award.award_nomination.award_nominee""}","  {""relation"": ""award.award_ceremony.awards_presented-award.award_honor.award_winner""}"
 1899,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>mtv europe music award for best female2000s<header>year|winner
@@ -36231,7 +36231,7 @@ Reference tables:
 
 {""table"": ""<table_title>azerbaijan (iran)air<header>airport|city"", ""relation"": ""aviation.airport.serves""}
 
-{""table"": ""<table_title>airport of entryoceania<header>airport|location"", ""relation"": ""aviation.airport.serves""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""aviation.airport.serves""}"
+{""table"": ""<table_title>airport of entryoceania<header>airport|location"", ""relation"": ""aviation.airport.serves""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.contains""}"
 1907,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2011–12 men's volleyball serie a1teams<header>team|city and region
@@ -36535,7 +36535,7 @@ Reference tables:
 
 {""table"": ""<table_title>masaru hashiguchiclub statistics<header>club performance season japan|club performance league japan"", ""relation"": ""sports.sports_league_season.league""}
 
-{""table"": ""<table_title>tetsuro otacareer statistics<header>club performance season japan|club performance league japan"", ""relation"": ""sports.sports_league_season.league""}",,"{""relation"": ""sports.sports_league_season.league""}","  {""relation"": ""sports.sports_league_season.league""}"
+{""table"": ""<table_title>tetsuro otacareer statistics<header>club performance season japan|club performance league japan"", ""relation"": ""sports.sports_league_season.league""}",,"{""relation"": ""sports.sports_league_season.league""}","  {""relation"": ""sports.sports_team.league-sports.sports_league_participation.league""}"
 1923,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>takamitsu otaclub statistics<header>club performance season japan|club performance league japan
@@ -37162,7 +37162,7 @@ Reference tables:
 
 {""table"": ""<table_title>1972\u201373 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.places_lived-people.place_lived.location""}
 
-{""table"": ""<table_title>1986\u201387 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.place_of_birth""}","  {""relation"": ""people.person.places_lived-people.place_lived.location""}"
+{""table"": ""<table_title>1986\u201387 colchester united f.c. seasonplayer info<header>name|place of birth"", ""relation"": ""people.person.place_of_birth""}",,"{""relation"": ""people.person.place_of_birth""}","  {""relation"": ""people.person.place_of_birth""}"
 1956,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>2011–12 moldovan national divisionstadia and locations<header>club|stadium
@@ -37238,7 +37238,7 @@ Reference tables:
 
 {""table"": ""<table_title>best-selling albums by year in the united states1960s<header>performing artist(s)|album"", ""relation"": ""music.artist.album""}
 
-{""table"": ""<table_title>grammy award for best gospel choir or chorus albumrecipients<header>year|work"", ""relation"": ""award.award_ceremony.nominees-award.award_nomination.nominated_for""}",,"{""relation"": ""award.award_ceremony.nominees-award.award_nomination.nominated_for""}","  {""relation"": ""award.award_ceremony.nominees-award.award_nomination.nominated_for""}"
+{""table"": ""<table_title>grammy award for best gospel choir or chorus albumrecipients<header>year|work"", ""relation"": ""award.award_ceremony.nominees-award.award_nomination.nominated_for""}",,"{""relation"": ""award.award_ceremony.nominees-award.award_nomination.nominated_for""}","  {""relation"": ""award.award_ceremony.awards_presented-award.award_honor.award_winner""}"
 1960,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>juno award for francophone album of the yearfrancophone album of the year (2003–present)<header>year|nominees
@@ -37466,7 +37466,7 @@ Reference tables:
 
 {""table"": ""<table_title>hauts-bassins region<header>province|capital"", ""relation"": ""location.location.contains""}
 
-{""table"": ""<table_title>list of provinces of spain<header>province name|capital"", ""relation"": ""location.location.contains""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}"
+{""table"": ""<table_title>list of provinces of spain<header>province name|capital"", ""relation"": ""location.location.contains""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 1972,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>politics of vietnamlist of provinces<header>province/city|region
@@ -37979,7 +37979,7 @@ Reference tables:
 
 {""table"": ""<table_title>carole bouquetselected filmography<header>title|director"", ""relation"": ""film.film.directed_by""}
 
-{""table"": ""<table_title>jean pierre noherselected filmography<header>title|director"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}",,"{""relation"": ""film.film.directed_by""}","  {""relation"": ""film.film.directed_by""}"
+{""table"": ""<table_title>jean pierre noherselected filmography<header>title|director"", ""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}",,"{""relation"": ""film.film.directed_by""}","  {""relation"": ""award.award_nominated_work.award_nominations-award.award_nomination.award_nominee""}"
 1999,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of political parties in the philippinesmajor parties<header>philippine name|leader
@@ -38226,7 +38226,7 @@ Reference tables:
 
 {""table"": ""<table_title>2013 european figure skating championshipsice dancing<header>name|nation"", ""relation"": ""people.person.nationality""}
 
-{""table"": ""<table_title>2011 nordic figure skating championshipssenior ladies<header>name|nation"", ""relation"": ""people.person.nationality""}",,"{""relation"": ""olympics.olympic_participating_country.athletes-olympics.olympic_athlete_affiliation.athlete""}","  {""relation"": ""olympics.olympic_athlete.country-olympics.olympic_athlete_affiliation.country""}"
+{""table"": ""<table_title>2011 nordic figure skating championshipssenior ladies<header>name|nation"", ""relation"": ""people.person.nationality""}",,"{""relation"": ""olympics.olympic_participating_country.athletes-olympics.olympic_athlete_affiliation.athlete""}","  {""relation"": ""people.person.nationality""}"
 2012,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>sylvester medallist of recipients<header>name|nationality
@@ -38264,7 +38264,7 @@ Reference tables:
 
 {""table"": ""<table_title>collateral (film)awards<header>category|award"", ""relation"": ""award.award_category.category_of""}
 
-{""table"": ""<table_title>harry potter and the prisoner of azkaban (film)accolades<header>category|award"", ""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}",,"{""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}","  {""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}"
+{""table"": ""<table_title>harry potter and the prisoner of azkaban (film)accolades<header>category|award"", ""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}",,"{""relation"": ""award.award_category.nominees-award.award_nomination.ceremony""}","  {""relation"": ""award.award_category.category_of""}"
 2014,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>the curious case of benjamin button (film)accolades<header>category|recipient
@@ -38549,7 +38549,7 @@ Reference tables:
 
 {""table"": ""<table_title>municipalities of chihuahua<header>municipality|municipal seat (cabecera municipal)"", ""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}
 
-{""table"": ""<table_title>municipalities of durango<header>municipality|municipal seat"", ""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}"
+{""table"": ""<table_title>municipalities of durango<header>municipality|municipal seat"", ""relation"": ""location.administrative_division.capital-location.administrative_division_capital_relationship.capital""}",,"{""relation"": ""location.location.contains""}","  {""relation"": ""location.location.contains""}"
 2029,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of game show hostsp<header>host|country
@@ -38587,7 +38587,7 @@ Reference tables:
 
 {""table"": ""<table_title>list of airports in nepalairports<header>locationserved|airportname"", ""relation"": ""location.location.nearby_airports""}
 
-{""table"": ""<table_title>list of airports in guinea-bissaulist<header>location|airportname"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""aviation.airport.serves""}"
+{""table"": ""<table_title>list of airports in guinea-bissaulist<header>location|airportname"", ""relation"": ""location.location.nearby_airports""}",,"{""relation"": ""location.location.nearby_airports""}","  {""relation"": ""location.location.contains""}"
 2031,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>1976 copa perúfinalists teams<header>departament|location
@@ -39138,7 +39138,7 @@ Reference tables:
 
 {""table"": ""<table_title>uefa cup and europa league records and statisticsall time top scorers<header>player|clubs"", ""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}
 
-{""table"": ""<table_title>2009\u201310 serie atop goalscorers<header>player|club"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}","  {""relation"": ""soccer.football_player.statistics-soccer.football_player_stats.team""}"
+{""table"": ""<table_title>2009\u201310 serie atop goalscorers<header>player|club"", ""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}",,"{""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}","  {""relation"": ""sports.pro_athlete.teams-sports.sports_team_roster.team""}"
 2060,"You are an expert in relation extraction from wikipedia web table to knowledge graph. Given table title and column pair for Table1, please choose the most proper relation from the provided options. Return in json format.
 
 Table1:<table_title>list of football records in chinateam of the year<header>footballer|club

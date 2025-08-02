@@ -1,0 +1,49 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "index": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "chunk_lengths": {
+      "feature": {
+        "dtype": "int64",
+        "_type": "Value"
+      },
+      "_type": "List"
+    },
+    "length": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "writing_style_chunks": {
+      "feature": {
+        "dtype": "float64",
+        "_type": "Value"
+      },
+      "_type": "List"
+    },
+    "writing_style_average": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "required_expertise_chunks": {
+      "feature": {
+        "dtype": "float64",
+        "_type": "Value"
+      },
+      "_type": "List"
+    },
+    "required_expertise_average": {
+      "dtype": "float64",
+      "_type": "Value"
+    },
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

@@ -105,7 +105,7 @@ def load_yaml_args(yaml_file_path):
     parser.add_argument('--yaml_path', type = str)
     parser.add_argument('--process_num', type = int,default=1)
     parser.add_argument('--total_process_num', type = int,default=1)
-    parser.add_argument('--IF_device', type = str,choices=['cuda','cpu'],default='cpu')
+    parser.add_argument('--IF_device', type = str,choices=['cuda','cpu'],default='cuda')
     parser.add_argument(
         '--use_main_model',
         action='store_true',

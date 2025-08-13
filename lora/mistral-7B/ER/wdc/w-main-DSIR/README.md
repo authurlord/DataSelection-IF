@@ -18,7 +18,7 @@ should probably proofread and complete it, then remove this comment. -->
 
 # w-main-DSIR
 
-This model is a fine-tuned version of [/data/home/wangys/model/Mistral-7B-Instruct-v0.2](https://huggingface.co//data/home/wangys/model/Mistral-7B-Instruct-v0.2) on the Abt-Buy-Match-P1 dataset.
+This model is a fine-tuned version of [/data/home/wangys/model/Mistral-7B-Instruct-v0.2](https://huggingface.co//data/home/wangys/model/Mistral-7B-Instruct-v0.2) on the alpaca_en_demo dataset.
 
 ## Model description
 
@@ -42,9 +42,9 @@ The following hyperparameters were used during training:
 - eval_batch_size: 8
 - seed: 42
 - distributed_type: multi-GPU
-- num_devices: 2
-- total_train_batch_size: 16
-- total_eval_batch_size: 16
+- num_devices: 4
+- total_train_batch_size: 32
+- total_eval_batch_size: 32
 - optimizer: Use adamw_torch with betas=(0.9,0.999) and epsilon=1e-08 and optimizer_args=No additional optimizer arguments
 - lr_scheduler_type: cosine
 - lr_scheduler_warmup_ratio: 0.1

@@ -152,12 +152,7 @@ if DO_SELECT_ABLATION:
     sample_IF = torch.load('Influence/{}/{}/score.pkl'.format(task,dataset),weights_only=False)
     sample_IF = z_score_normalize(sample_IF) ## Normalize
     ## per-sample IF
-    if os.path.exists('Influence_single/{}/{}'.format(task,dataset)):
-        sample_IF_single = torch.load('Influence_single/{}/{}/score.pkl'.format(task,dataset),weights_only=False)
-        for IF_method in sample_IF_single.keys():
-            select_IF_single = get_top_k_indices(sample_IF_single[IF_method],k=select_num,IF=True)
-            select_IF_single_df = train_file.iloc[select_IF_single]
-            json.dump(select_IF_single_df.to_dict(orient='records'), open('train/{}/{}/train-select-w-IF-single-{}.json'.format(task,dataset,IF_method), 'w', encoding='utf-8'), ensure_ascii=False, indent=4)
+
     ### Select by each component
 
     
@@ -245,7 +240,59 @@ if DO_EVAL:
 
 
 if DO_TRAIN_MAIN:
-    ablation_method = 'main-DSIR'
+    ## MAIN-DSIR
+    # ablation_method = 'main-DSIR'
+    
+    # total_score = torch.load('selection/{}/{}/Total-Score.pkl'.format(task,dataset),weights_only=False)
+    
+    # greedyList_All_norm_flatten = torch.load('selection/{}/{}/FL-Score.pkl'.format(task,dataset),weights_only=False)
+    
+    # # QuRating_Score = np.load('QuRating/data/select_index_main_norm/{}-{}-QuRating-score.npy'.format(task,dataset),allow_pickle=True).item()
+
+    # # QuRating_Score = normalize_to_neg1_pos1(QuRating_Score)
+        
+    
+
+    # QuRating_Score = np.load(f'../dsir/output_main/{task}/{dataset}/log_importance_weights/0.npy')
+    # # QuRating_Score = normalize_to_neg1_pos1(QuRating_Score)
+    
+    # # final_score = np.zeros(len(total_score))
+    
+    # total_score = np.zeros(len(QuRating_Score))
+    
+    # sample_IF = torch.load('Influence/{}/{}/score.pkl'.format(task,dataset),weights_only=False)
+
+    # # sample_IF_all = normalize_to_neg1_pos1(sample_IF_all)
+    # # sample_IF = z_score_normalize(sample_IF) ## Normalize
+    # sample_IF_all = np.zeros(len(total_score))
+
+    # for i in range(len(total_score)):
+    #     if not greedyList_All_norm_flatten.__contains__(i):
+    #         greedyList_All_norm_flatten[i] = 0
+    #     if not sample_IF['iterative'].__contains__(i):
+    #         # sample_IF['iterative'][i] = 0
+    #         sample_IF_all[i] = 0
+    #     else:
+    #         sample_IF_all[i] = - sample_IF['iterative'][i]
+
+    # sample_IF_all = normalize_to_neg1_pos1(sample_IF_all)
+
+    # for i in range(len(total_score)):
+    #     # total_score[i] -= ppl_array[i]
+    #     total_score[i] += QuRating_Score[i]
+    #     total_score[i] += greedyList_All_norm_flatten[i]
+    #     total_score[i] += sample_IF_all[i]
+    # main_list = np.argsort(-total_score)[:select_num]
+    # # QuRating_list = get_top_k_indices(QuRating_Score,select_num,IF=False)
+    # # print('Overlap Num: {}'.format(count_overlapping_elements(main_list,QuRating_list)))
+        
+    # select_main = train_file.iloc[main_list]
+    
+    # train_main_file_path = 'train/{}/{}/train-select-w-{}.json'.format(task,dataset,ablation_method)
+
+    # json.dump(select_main.to_dict(orient='records'), open(train_main_file_path, 'w', encoding='utf-8'), ensure_ascii=False, indent=4)
+
+    ablation_method = 'main-IF'
     
     total_score = torch.load('selection/{}/{}/Total-Score.pkl'.format(task,dataset),weights_only=False)
     
@@ -257,14 +304,14 @@ if DO_TRAIN_MAIN:
         
     
 
-    QuRating_Score = np.load(f'../dsir/output_main/{task}/{dataset}/log_importance_weights/0.npy')
+    # QuRating_Score = np.load(f'Influence_single/{task}/{dataset}/score.pkl',allow_pickle=True).item()
     # QuRating_Score = normalize_to_neg1_pos1(QuRating_Score)
     
     # final_score = np.zeros(len(total_score))
     
-    total_score = np.zeros(len(QuRating_Score))
+    total_score = np.zeros(len(ppl_array))
     
-    sample_IF = torch.load('Influence/{}/{}/score.pkl'.format(task,dataset),weights_only=False)
+    sample_IF = torch.load('Influence_single/{}/{}/score.pkl'.format(task,dataset),weights_only=False)
 
     # sample_IF_all = normalize_to_neg1_pos1(sample_IF_all)
     # sample_IF = z_score_normalize(sample_IF) ## Normalize
@@ -279,13 +326,13 @@ if DO_TRAIN_MAIN:
         else:
             sample_IF_all[i] = - sample_IF['iterative'][i]
 
-    sample_IF_all = normalize_to_neg1_pos1(sample_IF_all)
+    # sample_IF_all = normalize_to_neg1_pos1(sample_IF_all)
 
     for i in range(len(total_score)):
         # total_score[i] -= ppl_array[i]
-        total_score[i] += QuRating_Score[i]
+        total_score[i] += ppl_array[i]
         total_score[i] += greedyList_All_norm_flatten[i]
-        total_score[i] += sample_IF_all[i]
+        total_score[i] -= sample_IF_all[i]
     main_list = np.argsort(-total_score)[:select_num]
     # QuRating_list = get_top_k_indices(QuRating_Score,select_num,IF=False)
     # print('Overlap Num: {}'.format(count_overlapping_elements(main_list,QuRating_list)))
@@ -360,6 +407,12 @@ if DO_EVAL_MAIN:
 # print(all_metrics)
 
 if DO_TRAIN_IF_SINGLE:
+    if os.path.exists('Influence_single/{}/{}'.format(task,dataset)):
+        sample_IF_single = torch.load('Influence_single/{}/{}/score.pkl'.format(task,dataset),weights_only=False)
+        for IF_method in sample_IF_single.keys():
+            select_IF_single = get_top_k_indices(sample_IF_single[IF_method],k=select_num,IF=True)
+            select_IF_single_df = train_file.iloc[select_IF_single]
+            json.dump(select_IF_single_df.to_dict(orient='records'), open('train/{}/{}/train-select-w-IF-single-{}.json'.format(task,dataset,IF_method), 'w', encoding='utf-8'), ensure_ascii=False, indent=4)
     # for ablation_method in ['IF-single']:
     for ablation_method in ['IF-single-proposed']:
         train_args = load_yaml(template_yaml_path)

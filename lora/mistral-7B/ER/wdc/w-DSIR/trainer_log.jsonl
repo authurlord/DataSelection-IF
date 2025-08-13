@@ -1,0 +1,11 @@
+{"current_steps": 10, "total_steps": 103, "loss": 2.3522, "lr": 9.090909090909092e-05, "epoch": 0.0970873786407767, "percentage": 9.71, "elapsed_time": "0:00:48", "remaining_time": "0:07:31"}
+{"current_steps": 20, "total_steps": 103, "loss": 0.0309, "lr": 9.765723834070804e-05, "epoch": 0.1941747572815534, "percentage": 19.42, "elapsed_time": "0:01:35", "remaining_time": "0:06:37"}
+{"current_steps": 30, "total_steps": 103, "loss": 0.0168, "lr": 8.984025557079523e-05, "epoch": 0.2912621359223301, "percentage": 29.13, "elapsed_time": "0:02:22", "remaining_time": "0:05:47"}
+{"current_steps": 40, "total_steps": 103, "loss": 0.0183, "lr": 7.742259356246593e-05, "epoch": 0.3883495145631068, "percentage": 38.83, "elapsed_time": "0:03:09", "remaining_time": "0:04:59"}
+{"current_steps": 50, "total_steps": 103, "loss": 0.0143, "lr": 6.183822102332234e-05, "epoch": 0.4854368932038835, "percentage": 48.54, "elapsed_time": "0:03:57", "remaining_time": "0:04:11"}
+{"current_steps": 60, "total_steps": 103, "loss": 0.0093, "lr": 4.4886792552898286e-05, "epoch": 0.5825242718446602, "percentage": 58.25, "elapsed_time": "0:04:44", "remaining_time": "0:03:23"}
+{"current_steps": 70, "total_steps": 103, "loss": 0.0107, "lr": 2.8525827848495913e-05, "epoch": 0.6796116504854369, "percentage": 67.96, "elapsed_time": "0:05:31", "remaining_time": "0:02:36"}
+{"current_steps": 80, "total_steps": 103, "loss": 0.0089, "lr": 1.4644660940672627e-05, "epoch": 0.7766990291262136, "percentage": 77.67, "elapsed_time": "0:06:18", "remaining_time": "0:01:48"}
+{"current_steps": 90, "total_steps": 103, "loss": 0.0085, "lr": 4.846263383773364e-06, "epoch": 0.8737864077669902, "percentage": 87.38, "elapsed_time": "0:07:05", "remaining_time": "0:01:01"}
+{"current_steps": 100, "total_steps": 103, "loss": 0.006, "lr": 2.62136057095258e-07, "epoch": 0.970873786407767, "percentage": 97.09, "elapsed_time": "0:07:52", "remaining_time": "0:00:14"}
+{"current_steps": 103, "total_steps": 103, "epoch": 1.0, "percentage": 100.0, "elapsed_time": "0:08:06", "remaining_time": "0:00:00"}

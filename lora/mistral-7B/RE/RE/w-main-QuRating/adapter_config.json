@@ -28,10 +28,10 @@
     "down_proj",
     "v_proj",
     "k_proj",
-    "up_proj",
-    "o_proj",
     "q_proj",
-    "gate_proj"
+    "gate_proj",
+    "o_proj",
+    "up_proj"
   ],
   "task_type": "CAUSAL_LM",
   "trainable_token_indices": null,

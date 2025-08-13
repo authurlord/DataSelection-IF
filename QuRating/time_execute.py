@@ -19,7 +19,7 @@ task_list = [
     # ['ER','walmart-amazon'],
     ['ER','semi-text-c'],
     # ['ER','amazon-google'],
-    # ['ER','wdc'],
+    ['ER','wdc'],
     # ['SM','CMS']
 ]
 for task,dataset in task_list:
@@ -32,12 +32,12 @@ for task,dataset in task_list:
     #         'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 4,5 --model mistral-7B --DO_TRAIN --DO_EVAL --DO_TRAIN_MAIN --DO_EVAL_MAIN'.format(task,dataset)
     #     )
     ### IF with small model
-    # command_line.append(
-    #     'python QuRating_Selection.py --task {} --dataset {} --device 6 --model_path ../../model/QuRating-1.3B'.format(task,dataset)
-    # )
     command_line.append(
-        'python QuRating_Selection.py --task {} --dataset {} --device 5 --model_path ../../model/QuRating-1.3B --all'.format(task,dataset)
+        'python QuRating_Selection.py --task {} --dataset {} --device 6 --model_path ../../model/QuRating-1.3B'.format(task,dataset)
     )
+    # command_line.append(
+    #     'python QuRating_Selection.py --task {} --dataset {} --device 5 --model_path ../../model/QuRating-1.3B --all'.format(task,dataset)
+    # )
     ### Test IF with DataInf
     # command_line.append(
     #     'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 6 --model mistral-7B --DO_TRAIN_IF_SINGLE --DO_EVAL_IF_SINGLE'.format(task,dataset)

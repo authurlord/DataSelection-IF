@@ -27,20 +27,20 @@ command_line = []
 #     ['CTA','WebTable']
 # ]
 task_list = [
-    ['RE','RE'],
-    ['ER','abt-buy'],
-    ['ER','semi-text-w'],
-    ['DC','hospital'],
-    ['DC','beer'],
+    # ['RE','RE'],
+    # ['ER','abt-buy'],
+    # ['ER','semi-text-w'],
+    # ['DC','hospital'],
+    # ['DC','beer'],
     ['DC','rayyan'],
-    ['DI','amazon'],
+    # ['DI','amazon'],
     ['DI','walmart'],
     ['AVE','oa_mine'],
-    # ['CTA','SimTab'],
-    ['CTA','WebTable'],
+    ['CTA','SimTab'],
+    # ['CTA','WebTable'],
     ['ER','walmart-amazon'],
-    ['ER','amazon-google'],
-    ['ER','wdc'],
+    # ['ER','amazon-google'],
+    # ['ER','wdc'],
     # ['ER','semi-text-c'],
     # ['SM','CMS']
 ]
@@ -69,14 +69,20 @@ for task,dataset in task_list:
     # command_line.append(
     #     'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 6,7 --model mistral-7B --DO_TRAIN_DSIR --DO_EVAL_DSIR'.format(task,dataset)
     # )
-    command_line.append(
-        f'python Ablation_Study.py --yaml_path script/config_{task}_{dataset}.yaml --device 4,5 --model mistral-7B --DO_TRAIN_MAIN_VAR --DO_EVAL_MAIN_VAR --main_var main-QuRating'
+    # command_line.append(
+    #     f'python Ablation_Study.py --yaml_path script/config_{task}_{dataset}.yaml --device 4,5 --model mistral-7B --DO_TRAIN_MAIN_VAR --DO_EVAL_MAIN_VAR --main_var main-QuRating'
 
-    )
+    # )
+    # command_line.append(
+    #     'CUDA_VISIBLE_DEVICES=6 python cal_IF_pipeline.py --yaml_path script/config_{}_{}.yaml --IF_device cuda'.format(task,dataset)
+    # )
     ### Test IF with DataInf
     # command_line.append(
     #     'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 6 --model mistral-7B --DO_TRAIN_IF_SINGLE --DO_EVAL_IF_SINGLE'.format(task,dataset)
     # )
+    command_line.append(
+        f'python Ablation_Study.py --yaml_path script/config_{task}_{dataset}.yaml --device 4,5,6,7 --model mistral-7B --DO_SELECT --DO_TRAIN_MAIN --DO_EVAL_MAIN'
+         ) ## Baseline for DataInf/LESS/SuperFiltering
     
 for command in command_line:
     print(command)

@@ -23,7 +23,7 @@ import argparse
 import torch.multiprocessing as mp
 import subprocess
 
-yaml_path = 'script/config_CTA_SimTab.yaml'
+yaml_path = 'script/config_CTA_WebTable_multi_device.yaml'
 
 def is_folder_empty(folder_path):
     """
@@ -501,7 +501,11 @@ task = args.task
 embedding_model_path = args.embedding_model_path
 # ppl_path = args.ppl_path
 batch_size = args.batch_size
-device_list = device.split(',')
+if isinstance(device,str):
+    device_list = device.split(',')
+else:
+    device_list = [str(device)]
+print(f'Run on CUDA:{device}')
 time_dict = {}
 
 train_file = pd.read_json(train_file_path)
@@ -603,6 +607,7 @@ if args.train_init_model:
     
 end_time = time.time()
 time_dict['init_select'] = end_time - start_time
+np.save(f'eval_result/time_dict_{args.task}_{args.dataset}_{device}.npy',time_dict)
 ### train init model
 
 yaml_template_path = 'script/qwen_lora_CTA_SimTab-P1.yaml'
@@ -625,7 +630,7 @@ if not os.path.exists(lora_dir):
 
 end_time = time.time()
 time_dict['init-train'] = end_time - start_time
-
+np.save(f'eval_result/time_dict_{args.task}_{args.dataset}_{device}.npy',time_dict)
 ## Calculate FL Score
 
 cluster_indices = {i: np.where(cluster_labels == i)[0] for i in range(cluster_num)}
@@ -673,7 +678,7 @@ torch.save(batch_sampler,'Influence/{}/{}/batch.pkl'.format(args.task,args.datas
 
 end_time = time.time()
 time_dict['batch-division'] = end_time - start_time
-
+np.save(f'eval_result/time_dict_{args.task}_{args.dataset}_{device}.npy',time_dict)
 ## 根据显卡数量分配线程，可能可以修改
 ## TODO:config.yaml没有在--args内，需要修改
 if args.require_grad:
@@ -696,7 +701,7 @@ if args.require_grad:
 
 end_time = time.time()
 time_dict['gradient-calculation'] = end_time - start_time
-
+np.save(f'eval_result/time_dict_{args.task}_{args.dataset}_{device}.npy',time_dict)
 # command_ppl = 'CUDA_VISIBLE_DEVICES={} python cal_IF_self_divide.py  \
 #     --yaml_path {}\
 #     --process_num {}\
@@ -708,9 +713,9 @@ run_command('python IF_Cal_mp.py  --device cuda --task {} --dataset {} --save_al
 
 end_time = time.time()
 time_dict['IF-Score'] = end_time - start_time
-
+np.save(f'eval_result/time_dict_{args.task}_{args.dataset}_{device}.npy',time_dict)
 ## IF Score
-sample_IF = torch.load('Influence/{}/{}/score.pkl'.format(args.task,args.dataset))
+sample_IF = torch.load('Influence/{}/{}/score.pkl'.format(args.task,args.dataset),weights_only=False)
 sample_IF = z_score_normalize(sample_IF)
 
 
@@ -771,7 +776,7 @@ json.dump(selected_df.to_dict(orient='records'), open('train/{}/{}/train-select.
 
 end_time = time.time()
 time_dict['Final Selection'] = end_time - start_time
-
+np.save(f'eval_result/time_dict_{args.task}_{args.dataset}_{device}.npy',time_dict)
 ### 使用selected data完成training
 
 train_yaml_template_path = 'script/mistral_lora_RE-RE-P2.yaml'
@@ -790,7 +795,7 @@ if not os.path.exists(train_args['output_dir']):
     
 end_time = time.time()
 time_dict['Selection fine-tune'] = end_time - start_time
-
+np.save(f'eval_result/time_dict_{args.task}_{args.dataset}_{device}.npy',time_dict)
 ### 查询
 
 def round_down_to_power_of_two(num): ## vllm查询仅支持1/2/4/8的tensor_parallel
@@ -826,5 +831,9 @@ if args.require_inference:
     print("标准输出：", result.stdout)
 end_time = time.time()
 time_dict['Selection Inference'] = end_time - start_time
-    
+
 print(time_dict)
+# np.save(f'eval_result/time_dict_{yaml_path}.npy',time_dict)
+
+np.save(f'eval_result/time_dict_{args.task}_{args.dataset}_{device}.npy',time_dict)
+

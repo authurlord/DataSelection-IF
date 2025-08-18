@@ -1,0 +1,24 @@
+sample_per_cluster: 20
+cluster_num: 200
+train_init_model: true
+task: CTA
+dataset: WebTable
+embedding_model_path: /data/home/wangys/sentence_transformer_model/bge-large-en-1.5
+train_file_path: train/CTA/WebTable/WebTable-train.json
+eval_file_path: train/CTA/WebTable/train-init.json
+test_file_path: train/CTA/WebTable/WebTable-test.json
+devices: 5,6
+batch_size: 8
+## LLM config
+# model_name_or_path: /data/home/wangys/model/Qwen2.5-0.5B-Instruct
+# adapter_name_or_path: lora/qwen-0.5B/CTA/WebTable/init
+model_name_or_path: lora/qwen-0.5B/CTA/WebTable/init_model
+adapter_name_or_path: none
+stage: sft
+template: qwen
+require_grad: true
+require_ppl: true
+require_inference: false
+cutoff_len: 1024
+guided_choices: false
+re_train: false

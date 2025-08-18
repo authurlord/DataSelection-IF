@@ -1,5 +1,5 @@
 bf16: true
-cutoff_len: 2048
+cutoff_len: 1024
 dataset: Abt-Buy-Match-P1
 ddp_timeout: 180000000
 deepspeed: /data/home/wangys/LLAMA-backup/LLaMA-Factory/examples/deepspeed/ds_z0_config.json
@@ -23,5 +23,5 @@ report_to: none
 save_steps: 500
 stage: sft
 template: qwen
-train_file_path: /data/home/wangys/MELD/dataset/CTA/SimTab_Train_few.json
+train_file_path: train/CTA/SimTab/SimTab_Train_few.json
 warmup_ratio: 0.1

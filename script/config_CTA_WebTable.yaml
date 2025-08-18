@@ -15,4 +15,7 @@ stage: sft
 template: qwen
 adapter_name_or_path: lora/qwen-0.5B/CTA/WebTable/init
 require_grad: true
-require_ppl: true
+require_inference: false
+cutoff_len: 1024
+guided_choices: false
+re_train: false

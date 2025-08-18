@@ -195,7 +195,9 @@ def calculate_ppl(
     eval_file_path = args.eval_file_path
     stage = args.stage
     template = args.template
-    
+    print(adapter_name_or_path)
+    if str(adapter_name_or_path).__contains__('none'):
+        adapter_name_or_path = None
     model_args, data_args, training_args, finetuning_args, _ = get_train_args(
         dict(
             stage=stage,
@@ -216,7 +218,7 @@ def calculate_ppl(
         )
     )
     batch_divide_path = 'Influence/{}/{}/batch.pkl'.format(task,dataset_name)
-    batch_list = torch.load(batch_divide_path) ## FL-based数据划分
+    batch_list = torch.load(batch_divide_path,weights_only=False) ## FL-based数据划分
     batch_list = [batch for batch in batch_list if len(batch)>1] ## 过滤空batch和长度只为1的batch
     
     sub_batch_list = split_list(batch_list,total_process_num)[process_num-1] ## 多线程
@@ -296,7 +298,8 @@ def calculate_ppl(
         perplexities.extend(sentence_logps.exp().tolist())
         ### IF
         loss.requires_grad_(True)
-        loss.backward(retain_graph=True)
+        # loss.backward(retain_graph=True)
+        loss.backward()
         grad_dict={}
         for k, v in model.named_parameters():
             # print(k)
@@ -308,6 +311,8 @@ def calculate_ppl(
             else:
                 pass
         tr_grad_dict[step]=grad_dict
+        del loss, outputs, batch
+        torch.cuda.empty_cache()
 
 
     # with open(save_name, "w", encoding="utf-8") as f:

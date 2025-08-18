@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: /data/home/wangys/model/Qwen2.5-0.5B-Instruct
+adapter_name_or_path: lora/qwen-0.5B/CTA/WebTable/init
+template: qwen
+trust_remote_code: true
+
+### export
+export_dir: lora/qwen-0.5B/CTA/WebTable/init_model
+export_size: 1
+export_device: cuda
+export_legacy_format: false

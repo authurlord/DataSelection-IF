@@ -29,16 +29,16 @@ command_line = []
 task_list = [
     # ['RE','RE'],
     # ['ER','abt-buy'],
-    # ['ER','semi-text-w'],
+    ['ER','semi-text-w'],
     # ['DC','hospital'],
     # ['DC','beer'],
     ['DC','rayyan'],
     # ['DI','amazon'],
     ['DI','walmart'],
-    ['AVE','oa_mine'],
+    # ['AVE','oa_mine'],
     ['CTA','SimTab'],
-    # ['CTA','WebTable'],
-    ['ER','walmart-amazon'],
+    ['CTA','WebTable'],
+    # ['ER','walmart-amazon'],
     # ['ER','amazon-google'],
     # ['ER','wdc'],
     # ['ER','semi-text-c'],
@@ -81,7 +81,7 @@ for task,dataset in task_list:
     #     'python Ablation_Study.py --yaml_path script/config_{}_{}.yaml --device 6 --model mistral-7B --DO_TRAIN_IF_SINGLE --DO_EVAL_IF_SINGLE'.format(task,dataset)
     # )
     command_line.append(
-        f'python Ablation_Study.py --yaml_path script/config_{task}_{dataset}.yaml --device 4,5,6,7 --model mistral-7B --DO_SELECT --DO_TRAIN_MAIN --DO_EVAL_MAIN'
+        f'python Ablation_Study.py --yaml_path script/config_{task}_{dataset}.yaml --device 4,5,6,7 --model mistral-7B --DO_TRAIN_MAIN_VAR --DO_EVAL_MAIN_VAR --main_var main-noIF'
          ) ## Baseline for DataInf/LESS/SuperFiltering
     
 for command in command_line:

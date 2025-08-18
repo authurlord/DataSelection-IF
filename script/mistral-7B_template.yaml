@@ -3,7 +3,7 @@ cutoff_len: 1024
 dataset: alpaca_en_demo
 train_file_path: train/CTA/SimTab/train-select.json
 ddp_timeout: 180000000
-deepspeed: /data/home/wangys/LLAMA-backup/LLaMA-Factory/examples/deepspeed/ds_z0_config.json
+deepspeed: src/ds_z0_config.json
 do_train: true
 finetuning_type: lora
 learning_rate: 0.0001

@@ -1,5 +1,5 @@
 {  "alpaca_en_demo": {
-    "file_name": "/data/home/wangys/DataSelection-IF/data/alpaca_en_demo.json"
+    "file_name": "alpaca_en_demo.json"
   },
     "AE_110k_train_small": {
         "file_name": "/data/home/wangys/LLaMA-Factory-main/data/AE_110k/AE_110k_train_small.json",

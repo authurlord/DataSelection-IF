@@ -1,7 +1,9 @@
 import datasets
 import pandas as pd
 import numpy as np
+
 import os
+import shutil
 import glob
 import argparse
 import subprocess
@@ -12,6 +14,18 @@ def load_yaml(yaml_file_path):
     with open(yaml_file_path, 'r') as file:
         args_dict = yaml.safe_load(file)
     return args_dict
+
+
+def remove_dir_if_exists(path: str):
+    """
+    删除目标文件夹（如果存在）。
+    :param path: 目标路径
+    """
+    if os.path.exists(path) and os.path.isdir(path):
+        shutil.rmtree(path)
+        print(f"Deleted folder: {path}")
+    else:
+        print(f"Folder does not exist: {path}")
 def run_command(command):
     """
     执行给定的shell命令，并返回执行结果。
@@ -48,6 +62,7 @@ def dataframe_to_jsonl_text_column(df: pd.DataFrame, output_filepath: str):
 parser = argparse.ArgumentParser()
 parser.add_argument('--task', type = str)
 parser.add_argument('--dataset', type = str)
+parser.add_argument('--select_size', type = int,default=0)
 parser.add_argument('--device', type = str,default='6')
 parser.add_argument('--model_path', type = str,default='../../model/QuRating-DSIR-1.3B')
 parser.add_argument('--all',action='store_true')
@@ -58,7 +73,7 @@ task = args.task
 dataset = args.dataset
 device = args.device
 is_all_element = args.all
-# token_num = args.
+select_size = args.select_size
 model_path = args.model_path ## path for pre-trained QuRating Model
 
 ## load config
@@ -75,7 +90,10 @@ train_file_size = len(train_file)
 
 select_file_path = '../train/{}/{}/train-select.json'.format(task,dataset)
 select_file = pd.read_json(select_file_path)
-select_file_size = len(select_file)
+if select_size != 0:
+    select_file_size = select_size
+else:
+    select_file_size = len(select_file)
 
 print(task,dataset,train_file_size,select_file_size)
 
@@ -132,7 +150,7 @@ select_command = 'CUDA_VISIBLE_DEVICES={} python -m data_tools.select_subset dat
         task,dataset,
         select_token_total
     )
-    
+remove_dir_if_exists(f'data/subset-main-writing/{task}-{dataset}/')
 print(select_token_total)
 print(select_command)
 output = run_command(select_command)
@@ -153,6 +171,8 @@ os.makedirs('data/select_index_main_writing',exist_ok=True)
 if is_all_element:
     np.save('data/select_index_main_writing/{}-{}-QuRating.npy'.format(task,dataset),index_list)
     np.save('data/select_index_main_writing/{}-{}-QuRating-score.npy'.format(task,dataset),score)
+elif select_size > 0: ## default size
+    np.save('data/select_index_main_expert/{}-{}-QuRating-size-{}.npy'.format(task,dataset,select_file_size),index_list[:select_file_size])
 else:
     np.save('data/select_index_main_expert/{}-{}-QuRating.npy'.format(task,dataset),index_list[:select_file_size])
 np.save('data/select_index_main_expert/{}-{}-time-dict.npy'.format(task,dataset),time_dict)

@@ -11,7 +11,7 @@
         "dtype": "int64",
         "_type": "Value"
       },
-      "_type": "List"
+      "_type": "Sequence"
     },
     "length": {
       "dtype": "int64",
@@ -22,7 +22,7 @@
         "dtype": "float64",
         "_type": "Value"
       },
-      "_type": "List"
+      "_type": "Sequence"
     },
     "writing_style_average": {
       "dtype": "float64",
@@ -33,7 +33,7 @@
         "dtype": "float64",
         "_type": "Value"
       },
-      "_type": "List"
+      "_type": "Sequence"
     },
     "required_expertise_average": {
       "dtype": "float64",

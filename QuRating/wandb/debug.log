@@ -1,1 +1,34 @@
-run-20250801_132554-pgelovj5/logs/debug.log
+2025-08-01 13:25:54,928 INFO    MainThread:1812846 [wandb_setup.py:_flush():68] Current SDK version is 0.19.10
+2025-08-01 13:25:54,928 INFO    MainThread:1812846 [wandb_setup.py:_flush():68] Configure stats pid to 1812846
+2025-08-01 13:25:54,929 INFO    MainThread:1812846 [wandb_setup.py:_flush():68] Loading settings from /data/home/wangyaoshu/.config/wandb/settings
+2025-08-01 13:25:54,929 INFO    MainThread:1812846 [wandb_setup.py:_flush():68] Loading settings from /data/home/wangys/DataSelection-IF/QuRating/wandb/settings
+2025-08-01 13:25:54,929 INFO    MainThread:1812846 [wandb_setup.py:_flush():68] Loading settings from environment variables
+2025-08-01 13:25:54,929 INFO    MainThread:1812846 [wandb_init.py:setup_run_log_directory():724] Logging user logs to /data/home/wangys/DataSelection-IF/QuRating/wandb/run-20250801_132554-pgelovj5/logs/debug.log
+2025-08-01 13:25:54,929 INFO    MainThread:1812846 [wandb_init.py:setup_run_log_directory():725] Logging internal logs to /data/home/wangys/DataSelection-IF/QuRating/wandb/run-20250801_132554-pgelovj5/logs/debug-internal.log
+2025-08-01 13:25:54,929 INFO    MainThread:1812846 [wandb_init.py:init():852] calling init triggers
+2025-08-01 13:25:54,929 INFO    MainThread:1812846 [wandb_init.py:init():857] wandb.init called with sweep_config: {}
+config: {'_wandb': {}}
+2025-08-01 13:25:54,929 INFO    MainThread:1812846 [wandb_init.py:init():893] starting backend
+2025-08-01 13:25:54,929 INFO    MainThread:1812846 [wandb_init.py:init():897] sending inform_init request
+2025-08-01 13:25:54,933 INFO    MainThread:1812846 [backend.py:_multiprocessing_setup():101] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-08-01 13:25:54,933 INFO    MainThread:1812846 [wandb_init.py:init():907] backend started and connected
+2025-08-01 13:25:54,935 INFO    MainThread:1812846 [wandb_init.py:init():1002] updated telemetry
+2025-08-01 13:25:54,941 INFO    MainThread:1812846 [wandb_init.py:init():1026] communicating run to backend with 90.0 second timeout
+2025-08-01 13:25:57,913 WARNING MainThread:1812846 [wandb_init.py:init():1654] [no run ID] interrupted
+Traceback (most recent call last):
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1650, in init
+    return wi.init(run_settings, run_config, run_printer)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/wandb/sdk/wandb_init.py", line 1052, in init
+    result = wait_with_progress(
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 24, in wait_with_progress
+    return wait_all_with_progress(
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/wandb/sdk/mailbox/wait_with_progress.py", line 87, in wait_all_with_progress
+    return asyncio_compat.run(progress_loop_with_timeout)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/site-packages/wandb/sdk/lib/asyncio_compat.py", line 30, in run
+    return future.result()
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/concurrent/futures/_base.py", line 440, in result
+    self._condition.wait(timeout)
+  File "/data/home/wangys/anaconda3/envs/verl/lib/python3.10/threading.py", line 320, in wait
+    waiter.acquire()
+KeyboardInterrupt
+2025-08-01 13:25:57,936 INFO    MsgRouterThr:1812846 [mailbox.py:close():129] [no run ID] Closing mailbox, abandoning 2 handles.

@@ -1,1 +1,6 @@
-/data/home/wangyaoshu/.cache/wandb/logs/core-debug-20250801_132544.log
+{"time":"2025-08-01T13:25:44.756964493+08:00","level":"INFO","msg":"main: starting server","port-filename":"/tmp/tmpqx5npt_z/port-1812846.txt","pid":1812846,"log-level":0,"disable-analytics":false,"shutdown-on-parent-exit":false}
+{"time":"2025-08-01T13:25:44.761188401+08:00","level":"INFO","msg":"Will exit if parent process dies.","ppid":1812846}
+{"time":"2025-08-01T13:25:44.761185405+08:00","level":"INFO","msg":"server is running","addr":{"IP":"127.0.0.1","Port":43859,"Zone":""}}
+{"time":"2025-08-01T13:25:44.922253311+08:00","level":"INFO","msg":"connection: ManageConnectionData: new connection created","id":"127.0.0.1:42022"}
+{"time":"2025-08-01T13:25:54.937529622+08:00","level":"INFO","msg":"handleInformInit: received","streamId":"pgelovj5","id":"127.0.0.1:42022"}
+{"time":"2025-08-01T13:25:58.491334524+08:00","level":"INFO","msg":"Parent process exited, terminating service process."}

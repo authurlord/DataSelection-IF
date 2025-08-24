@@ -9,8 +9,8 @@ from tqdm import tqdm
 import pandas as pd
 from FlagEmbedding import FlagModel
 import time
-import submodlib
-from submodlib.functions.facilityLocation import FacilityLocationFunction
+# import submodlib
+# from submodlib.functions.facilityLocation import FacilityLocationFunction
 from datasets import Dataset
 import heapq
 import numpy as np

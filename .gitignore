@@ -8,7 +8,6 @@ grad/*
 grad_single/*
 
 train/router/*
-train/*
 script/mistral-7B_template.yaml
 script/qwen2.5-7B_template.yaml
 # 不忽略子文件夹的名称

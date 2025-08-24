@@ -58,7 +58,7 @@ parser.add_argument('--DO_TRAIN_DSIR', action='store_true')
 parser.add_argument('--DO_EVAL_DSIR', action='store_true')
 parser.add_argument('--DO_TRAIN_MAIN_VAR', action='store_true')
 parser.add_argument('--DO_EVAL_MAIN_VAR', action='store_true')
-parser.add_argument('--main_var', type = str,default='main-QuRating')
+parser.add_argument('--main_var', type = str,nargs="+",default='main-QuRating')
 
 input_args = parser.parse_args()
 
@@ -669,7 +669,7 @@ if DO_EVAL_SP:
 
 if DO_TRAIN_MAIN_VAR:
     # for ablation_method in ['IF-single']:
-    for ablation_method in [input_args.main_var]:
+    for ablation_method in input_args.main_var:
         # select_QuRating = np.load('QuRating/data/select_index_main_expert/{}-{}-LESS.npy'.format(task,dataset))   
         # select_QuRating_df = train_file.iloc[select_QuRating]
         
@@ -704,7 +704,7 @@ if DO_EVAL_MAIN_VAR:
     # all_metrics = {}
     # os.makedirs('output/Ablation/{}/{}'.format(task,dataset),exist_ok=True)
     # for ablation_method in ['IF-single']:
-    for ablation_method in [input_args.main_var]:
+    for ablation_method in input_args.main_var:
         all_metrics[ablation_method] = {}
         lora_path = 'lora/{}/{}/{}/w-{}'.format(model,task,dataset,ablation_method)
         

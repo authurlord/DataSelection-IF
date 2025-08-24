@@ -11,7 +11,7 @@ logging_steps: 10
 lora_rank: 16
 lora_target: all
 lr_scheduler_type: cosine
-model_name_or_path: /data/home/wangys/model/Mistral-7B-Instruct-v0.2
+model_name_or_path: /public/Mistral-7B-Instruct-v0.2
 num_train_epochs: 2.0
 output_dir: lora/mistral-7B/CTA/SimTab/select-1k
 overwrite_cache: true

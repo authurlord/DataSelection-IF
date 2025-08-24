@@ -11,7 +11,7 @@ logging_steps: 10
 lora_rank: 16
 lora_target: all
 lr_scheduler_type: cosine
-model_name_or_path: /data/home/wangys/model/qwen-2.5-7B
+model_name_or_path: /public/qwen-2.5-7B
 neat_packing: true
 num_train_epochs: 3.0
 output_dir: lora/qwen2.5-7B/ER/amazon-google/select

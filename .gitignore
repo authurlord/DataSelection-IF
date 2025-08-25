@@ -12,7 +12,7 @@ script/mistral-7B_template.yaml
 script/qwen2.5-7B_template.yaml
 # 不忽略子文件夹的名称
 !lora_weight/*/
-
+hyper_parameter.ipynb
 # 忽略所有 .bin 文件和 .pt 文件
 *.bin
 *.pt

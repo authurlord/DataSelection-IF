@@ -33,7 +33,11 @@ parser.add_argument('--compute_lissa', action='store_true', help='compute with L
 
 parser.add_argument('--device',type=str,default='cuda:0', help='IF calculation device')
 
+parser.add_argument('--batch_size',type=int,default=8, help='batch size for storage')
+
 args = parser.parse_args()
+
+batch_size = args.batch_size
 
 
 def create_folder_for_file(file_path):
@@ -161,8 +165,8 @@ for method in result.keys():
 # print(pd.DataFrame(result_df['proposed']))
 result_df.to_csv('grad/{}/{}/result_df.csv'.format(args.task,args.dataset))
 
-create_folder_for_file('Influence/{}/{}/result.pkl'.format(args.task,args.dataset))
-torch.save(sorted_dict_all,'Influence/{}/{}/score.pkl'.format(args.task,args.dataset))
+create_folder_for_file('Influence/{}/{}/batch-size-{}/result.pkl'.format(args.task,args.dataset,batch_size))
+torch.save(sorted_dict_all,'Influence/{}/{}/batch-size-{}/score.pkl'.format(args.task,args.dataset,batch_size))
 if args.save_all_layers:
-    torch.save(result,'Influence/{}/{}/result.pkl'.format(args.task,args.dataset))
+    torch.save(result,'Influence/{}/{}/batch-size-{}/result.pkl'.format(args.task,args.dataset,batch_size))
             

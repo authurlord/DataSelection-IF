@@ -165,7 +165,7 @@ def calculate_ppl(
     batch_size: int = 4,
     stage: Literal["pt", "sft", "rm"] = "sft",
     dataset: str = "alpaca_en_demo",
-    dataset_dir: str = "/data/home/wangys/LLAMA-backup/LLaMA-Factory/data",
+    dataset_dir: str = "/home/wys/DataSelection-IF/data",
     template: str = "default",
     cutoff_len: int = 1024,
     max_samples: Optional[int] = None,
@@ -188,7 +188,7 @@ def calculate_ppl(
     args = load_yaml_args(yaml_path)
     task = args.task
     dataset_name = args.dataset
-    
+    batch_size = args.batch_size
     model_name_or_path = args.model_name_or_path
     adapter_name_or_path = args.adapter_name_or_path
     train_file_path = args.train_file_path
@@ -217,8 +217,13 @@ def calculate_ppl(
             eval_file_path = eval_file_path
         )
     )
-    batch_divide_path = 'Influence/{}/{}/batch.pkl'.format(task,dataset_name)
-    batch_list = torch.load(batch_divide_path,weights_only=False) ## FL-based数据划分
+    try:
+        batch_divide_path = 'Influence/{}/{}/batch.pkl'.format(task,dataset_name)
+        batch_list = torch.load(batch_divide_path,weights_only=False) ## FL-based数据划分
+    except:
+        batch_divide_path = 'Influence/{}/{}/batch-size-{}/batch.pkl'.format(task,dataset_name,batch_size)
+        batch_list = torch.load(batch_divide_path,weights_only=False) ## FL-based数据划分
+    
     batch_list = [batch for batch in batch_list if len(batch)>1] ## 过滤空batch和长度只为1的batch
     
     sub_batch_list = split_list(batch_list,total_process_num)[process_num-1] ## 多线程

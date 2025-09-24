@@ -202,7 +202,7 @@ def calculate_ppl(
             model_name_or_path=model_name_or_path,
             adapter_name_or_path = adapter_name_or_path,
             dataset=dataset,
-            dataset_dir=dataset_dir,
+            dataset_dir='data',
             template=template,
             tokenized_path = tokenized_path,
             cutoff_len=cutoff_len,

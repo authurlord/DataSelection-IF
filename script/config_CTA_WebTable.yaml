@@ -10,7 +10,7 @@ test_file_path: train/CTA/WebTable/WebTable-test.json
 devices: 0,1,2,3,4,5,6,7
 batch_size: 8
 ## LLM config
-model_name_or_path: /data/home/wangys/model/Qwen2.5-0.5B-Instruct
+model_name_or_path: /home/wys/model/Qwen2.5-0.5B-Instruct
 stage: sft
 template: qwen
 adapter_name_or_path: lora/qwen-0.5B/CTA/WebTable/init

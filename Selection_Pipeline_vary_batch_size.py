@@ -27,7 +27,7 @@ import subprocess
 
 # yaml_path = 'script/config_RE_RE_vary_batch_size.yaml'
 
-yaml_path = 'script/config_ER-amazon-google_vary_batch_size.yaml'
+yaml_path = 'script/config_CTA_WebTable_vary_batch_size.yaml'
 import os
 import shutil
 

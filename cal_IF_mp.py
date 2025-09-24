@@ -362,7 +362,7 @@ def calculate_ppl(
             perplexities.extend(sentence_logps.exp().tolist())
             ### IF
             loss.requires_grad_(True)
-            loss.backward(retain_graph=True)
+            loss.backward()
             grad_dict={}
             for k, v in model.named_parameters():
                 if 'lora_A' in k:

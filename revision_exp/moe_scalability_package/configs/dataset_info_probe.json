@@ -1,0 +1,34 @@
+{
+ "union_n3probe": {
+  "file_name": "/data/yanmengyi/DataSelection-IF/revision_exp/scaling_data/union-n3probe.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "union_n6probe": {
+  "file_name": "/data/yanmengyi/DataSelection-IF/revision_exp/scaling_data/union-n6probe.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "union_n9probe": {
+  "file_name": "/data/yanmengyi/DataSelection-IF/revision_exp/scaling_data/union-n9probe.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ },
+ "union_n12probe": {
+  "file_name": "/data/yanmengyi/DataSelection-IF/revision_exp/scaling_data/union-n12probe.json",
+  "columns": {
+   "prompt": "instruction",
+   "query": "input",
+   "response": "output"
+  }
+ }
+}

@@ -1,0 +1,8 @@
+tag,mode,ER-amazon-google,DI-amazon,SM-CMS,probe_mean
+poly_n3_s0,poly,0.7525,0.652,0.0,0.4681
+poly_n6_s0,poly,0.7232,0.6483,0.0,0.4572
+poly_n3_s0,poly,0.7525,0.652,0.0,0.4681
+poly_n9_s0,poly,0.6835,0.6458,0.0,0.4431
+poly_n6_s0,poly,0.7232,0.6483,0.0,0.4572
+poly_n9_s0,poly,0.6935,0.6397,0.0,0.4444
+poly_n12_s0,poly,0.7386,0.6532,0.0233,0.4717

@@ -1,0 +1,13 @@
+task,dataset,adapter,test_file
+ER,amazon-google,lora/mistral-7B/ER/amazon-google/select,train/ER/amazon-google/amazon-google-test.json
+DI,amazon,lora/mistral-7B/DI/amazon/select,train/DI/amazon/amazon-test.json
+SM,CMS,lora/mistral-7B/SM/CMS/select,train/SM/CMS/CMS-test.json
+ER,walmart-amazon,lora/mistral-7B/ER/walmart-amazon/select,train/ER/walmart-amazon/walmart-amazon-test.json
+ER,wdc,lora/mistral-7B/ER/wdc/select,train/ER/wdc/wdc-test.json
+RE,RE,lora/mistral-7B/RE/RE/select,train/RE/RE-test-built.json
+ER,abt-buy,lora/mistral-7B/ER/abt-buy/select,train/ER/abt-buy/abt-buy-test.json
+ER,semi-text-w,lora/mistral-7B/ER/semi-text-w/select,train/ER/semi-text-w/semi-text-w-test.json
+DI,walmart,lora/mistral-7B/DI/walmart/select,train/DI/walmart/walmart-test.json
+ER,semi-text-c,lora/mistral-7B/ER/semi-text-c/select,train/ER/semi-text-c/semi-text-c-test.json
+SM,synthea,lora/mistral-7B/SM/synthea/select,train/SM/synthea/synthea-test.json
+AVE,oa_mine,lora/mistral-7B/AVE/oa_mine/select,train/AVE/oa_mine/oa_mine-test.json

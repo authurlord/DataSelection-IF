@@ -1,8 +1,9 @@
-# MELD MoE Scalability / Router / Multi-task Comparison — Result Package
+# MELD MoE Scalability / Router / Multi-task Comparison (+ ITS) — Result Package
 
 TKDE revision experiments answering **R1-2** (standalone-router training complexity + routing stability),
-**R1-4 / AE-5** (scalability as #tasks grows), **AE-4** (matched dense multi-task 7B baseline), and
-**R2-2.4** (standalone-modular vs integrated MoE). Base model: Mistral-7B-Instruct-v0.2.
+**R1-4 / AE-5** (scalability as #tasks grows), **AE-4** (matched dense multi-task 7B baseline),
+**R2-2.4** (standalone-modular vs integrated MoE), and **R1-1 / AE-1** (intrinsic task subspace beyond
+tabular — see `its/`). Base model: Mistral-7B-Instruct-v0.2; ITS task-vectors use Qwen2.5-0.5B LoRAs.
 
 Generated 2026-06-18. Self-contained: figures, plotting/pipeline scripts, raw data, configs.
 
@@ -72,7 +73,23 @@ configs/   manifest.csv                     12 discriminative experts (task,data
            dataset_info_probe.json          LLaMA-Factory dataset registration for the nested unions
            dense-probe.yaml, _dense_n*_s*.yaml   dense LoRA training configs (1 epoch, fp16, mistral)
            synthea-expert.yaml              per-task MELD expert config for SM/synthea
+its/       its_figure.{png,pdf}             ITS (R1-1/AE-1): t-SNE of 19 per-task LoRA task vectors +
+                                            intrinsic-dim curve; the 3 structurally-different non-tabular
+                                            points (string-transform / general-QA MMLU / reasoning BBH)
+                                            co-embed with the tabular DP cluster (cos 0.945/0.967/0.966)
+           its_varexp.png                   cumulative explained variance (intrinsic dim 90% = 10 / 19 tasks)
+           its.json                         cosine matrix + intrinsic-dim numbers
+           make_its_fig.py                  regenerate its_figure from the qwen-0.5B LoRA adapters
+           ITS_v3_results.md                ITS write-up + provenance
 ```
+
+### ITS (R1-1 / AE-1) — intrinsic task subspace holds beyond tabular
+`its/its_figure.png`: 19 task vectors = 16 tabular DP + 3 structurally-different non-tabular tasks
+(synthetic string-transformation, general-domain QA = MMLU, multi-step reasoning = BBH). Intrinsic
+dimensionality (90% variance) = 10; the 3 non-tabular task vectors co-embed with the tabular cluster
+(cosine 0.945 / 0.967 / 0.966) rather than appearing as outliers — geometric evidence that the ITS
+assumption extends to structurally different domains. (Primary R1-1 evidence is the OOD MMLU/BBH
+performance study elsewhere in the revision; this is the geometric auxiliary.)
 
 ---
 

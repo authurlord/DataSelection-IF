@@ -1,0 +1,122 @@
+[
+ {
+  "name": "AVE__oa_mine",
+  "task": "AVE",
+  "dataset": "oa_mine",
+  "task_id": 0,
+  "test_file": "/data/home/wangys/meld_revision/evaltest/AVE__oa_mine.json",
+  "out_csv": "/data/home/wangys/meld_revision/polyeval_mi/AVE__oa_mine.csv"
+ },
+ {
+  "name": "CTA__WebTable",
+  "task": "CTA",
+  "dataset": "WebTable",
+  "task_id": 1,
+  "test_file": "/data/home/wangys/meld_revision/evaltest/CTA__WebTable.json",
+  "out_csv": "/data/home/wangys/meld_revision/polyeval_mi/CTA__WebTable.csv"
+ },
+ {
+  "name": "DC__beer",
+  "task": "DC",
+  "dataset": "beer",
+  "task_id": 2,
+  "test_file": "/data/home/wangys/meld_revision/evaltest/DC__beer.json",
+  "out_csv": "/data/home/wangys/meld_revision/polyeval_mi/DC__beer.csv"
+ },
+ {
+  "name": "DC__hospital",
+  "task": "DC",
+  "dataset": "hospital",
+  "task_id": 2,
+  "test_file": "/data/home/wangys/meld_revision/evaltest/DC__hospital.json",
+  "out_csv": "/data/home/wangys/meld_revision/polyeval_mi/DC__hospital.csv"
+ },
+ {
+  "name": "DC__rayyan",
+  "task": "DC",
+  "dataset": "rayyan",
+  "task_id": 2,
+  "test_file": "/data/home/wangys/meld_revision/evaltest/DC__rayyan.json",
+  "out_csv": "/data/home/wangys/meld_revision/polyeval_mi/DC__rayyan.csv"
+ },
+ {
+  "name": "DI__amazon",
+  "task": "DI",
+  "dataset": "amazon",
+  "task_id": 3,
+  "test_file": "/data/home/wangys/meld_revision/evaltest/DI__amazon.json",
+  "out_csv": "/data/home/wangys/meld_revision/polyeval_mi/DI__amazon.csv"
+ },
+ {
+  "name": "DI__walmart",
+  "task": "DI",
+  "dataset": "walmart",
+  "task_id": 3,
+  "test_file": "/data/home/wangys/meld_revision/evaltest/DI__walmart.json",
+  "out_csv": "/data/home/wangys/meld_revision/polyeval_mi/DI__walmart.csv"
+ },
+ {
+  "name": "ER__abt-buy",
+  "task": "ER",
+  "dataset": "abt-buy",
+  "task_id": 4,
+  "test_file": "/data/home/wangys/meld_revision/evaltest/ER__abt-buy.json",
+  "out_csv": "/data/home/wangys/meld_revision/polyeval_mi/ER__abt-buy.csv"
+ },
+ {
+  "name": "ER__amazon-google",
+  "task": "ER",
+  "dataset": "amazon-google",
+  "task_id": 4,
+  "test_file": "/data/home/wangys/meld_revision/evaltest/ER__amazon-google.json",
+  "out_csv": "/data/home/wangys/meld_revision/polyeval_mi/ER__amazon-google.csv"
+ },
+ {
+  "name": "ER__semi-text-c",
+  "task": "ER",
+  "dataset": "semi-text-c",
+  "task_id": 4,
+  "test_file": "/data/home/wangys/meld_revision/evaltest/ER__semi-text-c.json",
+  "out_csv": "/data/home/wangys/meld_revision/polyeval_mi/ER__semi-text-c.csv"
+ },
+ {
+  "name": "ER__semi-text-w",
+  "task": "ER",
+  "dataset": "semi-text-w",
+  "task_id": 4,
+  "test_file": "/data/home/wangys/meld_revision/evaltest/ER__semi-text-w.json",
+  "out_csv": "/data/home/wangys/meld_revision/polyeval_mi/ER__semi-text-w.csv"
+ },
+ {
+  "name": "ER__walmart-amazon",
+  "task": "ER",
+  "dataset": "walmart-amazon",
+  "task_id": 4,
+  "test_file": "/data/home/wangys/meld_revision/evaltest/ER__walmart-amazon.json",
+  "out_csv": "/data/home/wangys/meld_revision/polyeval_mi/ER__walmart-amazon.csv"
+ },
+ {
+  "name": "ER__wdc",
+  "task": "ER",
+  "dataset": "wdc",
+  "task_id": 4,
+  "test_file": "/data/home/wangys/meld_revision/evaltest/ER__wdc.json",
+  "out_csv": "/data/home/wangys/meld_revision/polyeval_mi/ER__wdc.csv"
+ },
+ {
+  "name": "SM__CMS",
+  "task": "SM",
+  "dataset": "CMS",
+  "task_id": 6,
+  "test_file": "/data/home/wangys/meld_revision/evaltest/SM__CMS.json",
+  "out_csv": "/data/home/wangys/meld_revision/polyeval_mi/SM__CMS.csv"
+ },
+ {
+  "name": "SM__synthea",
+  "task": "SM",
+  "dataset": "synthea",
+  "task_id": 6,
+  "test_file": "/data/home/wangys/meld_revision/evaltest/SM__synthea.json",
+  "out_csv": "/data/home/wangys/meld_revision/polyeval_mi/SM__synthea.csv"
+ }
+]

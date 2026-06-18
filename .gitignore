@@ -21,3 +21,12 @@ hyper_parameter.ipynb
 *.pkl
 *.arrow
 
+
+# revision: exclude heavy artifacts (regenerate via docs/HANDOFF.md)
+revision_exp/dense_adapters/
+revision_exp/ood_experts/
+revision_exp/merged/
+revision_exp/session_exports/
+revision_exp/packages/
+revision_exp/*_raw/
+lora/

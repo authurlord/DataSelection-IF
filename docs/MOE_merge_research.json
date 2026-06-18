@@ -1,0 +1,316 @@
+{
+  "summary": "Deep research harness — fan-out web searches, fetch sources, adversarially verify claims, synthesize a cited report.",
+  "agentCount": 106,
+  "logs": [
+    "Q: Conflict-free merging of multiple task-specific LoRA adapters on a shared base L…",
+    "Decomposed into 5 angles: broad/primary survey, academic/method comparison, practitioner/PEFT implementation, serving/routing alternative, empirical validation/benchmarks",
+    "empirical validation/benchmarks: 6 results",
+    "practitioner/PEFT implementation: 6 results",
+    "broad/primary survey: 6 results",
+    "broad/primary survey: 5 novel (1 filtered)",
+    "serving/routing alternative: 6 results",
+    "serving/routing alternative: 3 novel (3 filtered)",
+    "academic/method comparison: 6 results",
+    "academic/method comparison: 4 novel (2 filtered)",
+    "Fetched 24 sources → 119 claims → verifying top 25",
+    "\"TIES-Merging is a sparsification-enhanced merging …\": 3-0 ✓",
+    "\"TIES-Merging resolves two specific sources of inte…\": 3-0 ✓",
+    "\"The algorithm has three concrete steps operating o…\": 3-0 ✓",
+    "\"Task vector arithmetic degrades merged-model perfo…\": 1-2 ✗",
+    "\"TIES-Merging provides a fixed, validation-free rec…\": 2-1 ✓",
+    "\"DARE (Yu et al. 2024) mitigates interference via s…\": 3-0 ✓",
+    "\"LoRAHub learns the composition coefficients with a…\": 3-0 ✓",
+    "\"TIES-Merging mitigates task interference by (1) tr…\": 3-0 ✓",
+    "\"LoRAHub composes N task-specific LoRA modules into…\": 3-0 ✓",
+    "\"Combining too many LoRA modules at once expands th…\": 3-0 ✓",
+    "\"DARE reduces merging conflicts by randomly droppin…\": 3-0 ✓",
+    "\"LoRAHub dynamically composes multiple task-specifi…\": 3-0 ✓",
+    "\"Arrow is a zero-shot, gradient-free routing mechan…\": 3-0 ✓",
+    "\"AdaMerging is an activation-aware approach that mi…\": 0-3 ✗",
+    "\"Arrow computes a routing prototype for each expert…\": 3-0 ✓",
+    "\"TIES-Merging resolves model-merging interference v…\": 3-0 ✓",
+    "\"For zero-shot task generalization Arrow uses top-k…\": 3-0 ✓",
+    "\"TIES-Merging identifies two specific sources of in…\": 3-0 ✓",
+    "\"DARE works by randomly dropping delta parameters (…\": 3-0 ✓",
+    "\"DARE can merge multiple task-specific LMs into a s…\": 3-0 ✓",
+    "\"AdaMerging is an unsupervised method that learns m…\": 3-0 ✓",
+    "\"SFT delta parameters are highly redundant (value r…\": 2-1 ✓",
+    "\"Naive/direct merging of task-specific models degra…\": 3-0 ✓",
+    "\"vLLM serves LoRA adapters on a per-request basis: …\": 3-0 ✓",
+    "\"vLLM can serve multiple distinct LoRA adapters con…\": 3-0 ✓",
+    "Verify done: 25 claims → 23 confirmed, 2 killed"
+  ],
+  "result": {
+    "question": "Conflict-free merging of multiple task-specific LoRA adapters on a shared base LLM for a multi-task / mixture-of-experts system. I need to implement a CORRECT algorithm where merging multiple per-task LoRA experts does NOT cause task interference/conflict (merged model retains each task's performance). Cover and compare concretely: (1) TIES-Merging (trim/elect-sign/disjoint-merge), (2) DARE (drop-and-rescale), (3) model soups / linear averaging, (4) LoRAHub (gradient-free few-shot composition), (5) AdaMerging (entropy-minimization layerwise coefficients), (6) PEFT add_weighted_adapter combination types (linear, cat, svd, ties, dare_linear, dare_ties), (7) routing-instead-of-merging (Arrow, PHATGOOSE, per-request LoRA serving). For each: the merge math, when it causes conflicts, how it mitigates them. Does vLLM 0.6.x support serving many LoRAs and per-request LoRA selection, and the recommended way to do top-m expert composition at inference (merge offline vs serve separately)? Give a concrete recommended recipe (algorithm + hyperparameters + library calls) for merging ~16 task-specific LoRA adapters (rank 16, q_proj target, Mistral-7B/Qwen) without conflict, plus how to validate empirically that no conflict occurred. Focus on 2023-2025 methods with citations.",
+    "summary": "To merge ~16 task-specific LoRA adapters (rank 16, q_proj, Mistral-7B/Qwen) on a shared base without task interference, the field offers two families: (a) offline weight-space merging that explicitly resolves conflict, and (b) inference-time routing that avoids merge conflict entirely by selecting adapters per request/token. For weight merging, the strongest conflict-resolution recipe is DARE (drop delta params at ratio p, rescale survivors by 1/(1-p)) used as a sparsification preprocessor, composed with TIES-Merging (trim to top-k% magnitude, elect a majority per-parameter sign, then disjoint-merge only sign-aligned values) — exactly PEFT's dare_ties combination type in add_weighted_adapter; TIES addresses the two documented interference sources (redundant low-magnitude params and sign disagreement that cancel under naive averaging), and AdaMerging can further tune layer-wise coefficients unsupervised via test-time entropy minimization. If retaining full per-task accuracy is paramount, do NOT merge: serve all adapters in vLLM (enable_lora=True, per-request LoRARequest, max_loras/max_lora_rank/max_cpu_loras), optionally using Arrow-style gradient-free SVD top-k routing for zero-shot composition, since per-request serving sidesteps interference altogether. Validate empirically by measuring each task's accuracy on the merged/served model versus the standalone single-adapter model and confirming negligible per-task drop. Hyperparameter starting points are well-established: TIES top-20% / lambda=1 (validation-free), DARE p around 0.9 for small-range SFT deltas, LoRAHub gradient-free CMA-ES with ~5 few-shot examples and L1 alpha=0.05.",
+    "findings": [
+      {
+        "claim": "TIES-Merging is the primary conflict-resolution algorithm: it targets two documented interference sources (redundant low-magnitude params and sign disagreement that both shrink merged magnitudes under naive averaging) via three steps on task vectors (fine-tuned minus pretrained) — Trim to top-k% magnitude (reset rest to 0), Elect per-parameter sign by majority vote sgn(sum of trimmed task vectors), and Disjoint Merge (average only values whose sign matches the elected sign).",
+        "confidence": "high",
+        "vote": "merged: [0]3-0, [1]3-0, [3]3-0, [8]3-0, [14]3-0, [15]3-0",
+        "evidence": "Six unanimous claims across the primary paper (arXiv:2306.01708, NeurIPS 2023) and corroborating surveys. Interference = (a) redundant params obscuring influential values and (b) sign disagreement causing cancellation. Algorithm 1: tau_t = theta_ft - theta_init; trim keep_topk; gamma_m = sgn(sum tau_hat); disjoint mean over sign-aligned entries.",
+        "sources": [
+          "https://arxiv.org/pdf/2306.01708",
+          "https://arxiv.org/abs/2306.01708",
+          "https://arxiv.org/pdf/2503.08998",
+          "https://arxiv.org/html/2603.09938v2"
+        ]
+      },
+      {
+        "claim": "TIES provides a validation-free fixed recipe: keep top-20% of task-vector params (reset rest to 0), set scaling lambda=1, usable without per-task tuning — though the paper's peak results tune lambda on a validation set (official repo sweeps ~0.8-2.5).",
+        "confidence": "high",
+        "vote": "[2]2-1 (split on framing as THE recipe vs a fallback)",
+        "evidence": "Paper states 'keeps the top-20% parameters in the task vector resetting the rest to 0 and sets lambda=1'; reported to match/beat validation-tuned baselines (+1.1% T5-large, +6.6% ViT-B/32). Caveat: lambda=1 is the no-validation fallback, not necessarily peak.",
+        "sources": [
+          "https://arxiv.org/pdf/2306.01708"
+        ]
+      },
+      {
+        "claim": "DARE (Yu et al. 2024, 'Language Models are Super Mario', arXiv:2311.03099) is a drop-and-rescale sparsification preprocessor: randomly drop delta params (fine-tuned minus pretrained) at ratio p and rescale survivors by 1/(1-p) to preserve expected magnitude/embeddings; for small-range SFT deltas (~0.002, highly redundant) it can eliminate 90-99% without significant loss, then feed into Task Arithmetic or TIES (PEFT exposes this as dare_linear / dare_ties).",
+        "confidence": "high",
+        "vote": "merged: [4]3-0, [9]3-0, [16]3-0, [17]2-1, [18]3-0",
+        "evidence": "Five claims, primary source + survey. Rescale 1/(1-p) preserves E[mask*delta/(1-p)]=delta (embedding cosine >0.95 at p=0.9). DARE is orthogonal sparsification applied before Task Arithmetic/TIES. Qualifier (split vote on [17]): 'DARE the Extreme' (arXiv:2410.09344) shows degradation when BOTH drop rate AND delta magnitude are large (aggressive LR / some LoRA configs) — scope to typical small-range SFT deltas.",
+        "sources": [
+          "https://arxiv.org/abs/2311.03099",
+          "https://arxiv.org/pdf/2503.08998",
+          "https://arxiv.org/html/2603.09938v2"
+        ]
+      },
+      {
+        "claim": "LoRAHub composes N same-rank task LoRAs into one module via element-wise weighted sum of A and B factors: m_hat = (sum w_i A_i)(sum w_i B_i), with scalar coefficients w_i that may be positive or negative; this factored form produces cross-terms (NOT a plain sum of w_i*A_iB_i).",
+        "confidence": "high",
+        "vote": "[5]3-0",
+        "evidence": "Primary source arXiv:2307.13269 (COLM 2024), Section 3.3 verbatim. Requires all modules share rank r to align structures.",
+        "sources": [
+          "https://arxiv.org/pdf/2307.13269"
+        ]
+      },
+      {
+        "claim": "LoRAHub learns composition coefficients with a gradient-free black-box optimizer (Shiwa/Nevergrad, primarily CMA-ES), minimizing cross-entropy on as few as 5 few-shot examples plus L1 regularization: objective L + alpha*sum|w_i| (alpha=0.05); no extra parameters, no gradients. To avoid exponential search-space blowup that destabilizes learning, it randomly prunes candidates (e.g., 20 modules per run from ~200).",
+        "confidence": "high",
+        "vote": "merged: [6]3-0, [7]3-0, [10]3-0",
+        "evidence": "Three unanimous claims, primary source + survey. CMA-ES via Nevergrad; objective L + alpha*sum|w_i|; random selection of 20-of-200 candidates to prune search space. LoRA-composition methods commonly integrate with MoE (MixLoRA, Mixture-of-LoRA-Experts).",
+        "sources": [
+          "https://arxiv.org/pdf/2307.13269",
+          "https://arxiv.org/pdf/2503.08998"
+        ]
+      },
+      {
+        "claim": "AdaMerging (arXiv:2310.02575, ICLR 2024) is an unsupervised method that learns task-wise or layer-wise merging coefficients by minimizing prediction entropy on unlabeled test samples (no original training data/labels), targeting the task-interference problem where naive direct merging degrades due to conflicts and correlations among tasks (~11% over task arithmetic).",
+        "confidence": "high",
+        "vote": "merged: [19]3-0, [20]3-0",
+        "evidence": "Two unanimous claims, primary peer-reviewed source. Entropy minimization on unlabeled test inputs as surrogate objective; task-wise OR layer-wise coefficients. Note: a related claim that AdaMerging prunes less-important layers more aggressively was REFUTED (0-3) — do not assume layer-pruning semantics beyond coefficient learning.",
+        "sources": [
+          "https://arxiv.org/abs/2310.02575"
+        ]
+      },
+      {
+        "claim": "Routing-instead-of-merging avoids merge conflict entirely. Arrow (arXiv:2405.11157) is a zero-shot, gradient-free, training-free router: it builds a per-expert prototype by SVD-decomposing the LoRA outer product A_i B_i^T and taking the first right singular vector; routing logits are the absolute dot products between hidden states and prototypes; for zero-shot generalization it does MoE-style top-k selection per token, per layer (top-4 in experiments).",
+        "confidence": "high",
+        "vote": "merged: [11]3-0, [12]3-0, [13]3-0",
+        "evidence": "Three unanimous claims verified against primary PDF (Algorithm 2: U,D,V=SVD(A_iB_i^T); W[i]=V[:,0]; logits=abs(W h); top-k softmax). 'No retraining' applies to composition/routing — experts are still individually trained. PHATGOOSE differs (lightweight per-expert gate training).",
+        "sources": [
+          "https://arxiv.org/pdf/2405.11157"
+        ]
+      },
+      {
+        "claim": "vLLM (0.6.x and current) supports serving many LoRAs with per-request selection — sidestepping merge conflict. Instantiate base model with enable_lora=True, pass LoRARequest(name, unique_int_id, adapter_path) to llm.generate via lora_request; the OpenAI-compatible server selects an adapter by the 'model' field. Concurrency is governed by max_loras (per batch), with max_lora_rank and max_cpu_loras (CPU LRU cache, must exceed max_loras). API stable v0.5.5 -> current.",
+        "confidence": "high",
+        "vote": "merged: [21]3-0, [22]3-0",
+        "evidence": "Two unanimous claims from official vLLM docs. Per-request example: lora_request=LoRARequest('sql_adapter', 1, sql_lora_path). Adapters swapped at runtime, not baked into base weights; multiple adapters run in parallel if max_loras set high enough.",
+        "sources": [
+          "https://docs.vllm.ai/en/stable/features/lora/"
+        ]
+      },
+      {
+        "claim": "Recommended recipe and validation protocol for ~16 rank-16 q_proj adapters: (Option A, single merged artifact) use PEFT add_weighted_adapter with combination_type='dare_ties', DARE density ~0.1 (drop p~0.9), TIES top-20%/lambda=1, equal weights as default; optionally refine layer-wise coefficients with AdaMerging-style unlabeled entropy minimization. (Option B, no conflict) serve all 16 adapters in vLLM per-request, or compose with Arrow top-k routing. Validate by comparing each task's accuracy on the merged/routed model against its standalone single-adapter model and requiring negligible per-task drop.",
+        "confidence": "medium",
+        "vote": "synthesis of high-confidence component claims; recipe assembly is inferential",
+        "evidence": "Component facts each 3-0 verified (PEFT combination types dare_linear/dare_ties/ties/linear/cat/svd; TIES top-20%/lambda=1; DARE p~0.9 for small SFT deltas; vLLM per-request serving; Arrow top-k). The exact composition into a single recipe and the per-task-vs-standalone validation methodology are the synthesizer's integration, not a single cited source.",
+        "sources": [
+          "https://arxiv.org/pdf/2306.01708",
+          "https://arxiv.org/abs/2311.03099",
+          "https://arxiv.org/pdf/2405.11157",
+          "https://docs.vllm.ai/en/stable/features/lora/"
+        ]
+      }
+    ],
+    "caveats": "Source-quality and time-sensitivity notes: (1) One citing URL repeatedly used by the research pipeline, arXiv:2603.09938v2, has an implausible/future arXiv ID (2603 = March 2026) and is likely fabricated or mis-transcribed; however every substantive claim attributed to it (TIES, DARE descriptions) is independently confirmed by the genuine primary papers (2306.01708, 2311.03099), so the underlying facts stand even if that one URL does not. (2) DARE's 90-99% drop result is scoped to small-range SFT deltas (~0.002); 'DARE the Extreme' (arXiv:2410.09344) shows it can fail when both drop rate and delta magnitude are high, which is relevant for aggressively-trained or high-rank LoRA configs — verify drop ratio empirically rather than assuming p=0.9 transfers. (3) TIES lambda=1 is the validation-free fallback; peak performance typically needs a lambda sweep, so treat lambda=1 as a starting point. (4) vLLM behavior was confirmed across v0.6.x through current docs and the API is stable, but max_loras governs adapters per BATCH (vLLM's concurrency unit), not an unlimited global parallelism — set max_cpu_loras > max_loras. (5) The end-to-end 'recommended recipe' (finding 9) is a synthesis of individually-verified facts, not a single benchmarked protocol; the specific claim that dare_ties on 16 rank-16 q_proj adapters yields zero conflict is not directly evidenced and must be validated empirically. (6) A claim that task-vector arithmetic degrades ALL tasks whenever adaptations overlap was REFUTED (1-2) — interference is conditional on direction/sign conflict and task similarity, not universal. (7) A claim that AdaMerging prunes less-important layers more aggressively was REFUTED (0-3) — AdaMerging learns coefficients via entropy minimization but should not be assumed to do layer pruning.",
+    "openQuestions": [
+      "For 16 same-base LoRA adapters specifically targeting only q_proj at rank 16, does the limited target-module footprint reduce or increase sign-conflict severity relative to full-weight model merges, and does that change the optimal DARE density / TIES top-k?",
+      "What is the measured per-task accuracy retention of offline dare_ties merging versus per-request vLLM serving for ~16 adapters on Mistral-7B/Qwen — i.e., the concrete latency/throughput vs accuracy trade-off that should decide merge-offline vs serve-separately?",
+      "Can AdaMerging's unsupervised layer-wise coefficients be applied directly to LoRA-adapter merging (rather than full task vectors) in the PEFT/mergekit toolchain, and does it outperform the fixed TIES lambda=1 in the LoRA regime?",
+      "Does Arrow-style SVD top-k routing integrate cleanly with vLLM's multi-LoRA serving for per-token/per-layer selection, or does vLLM's per-request adapter model only support whole-request (not per-token) routing?"
+    ],
+    "refuted": [
+      {
+        "claim": "Task vector arithmetic degrades merged-model performance on ALL constituent tasks when task-specific adaptations overlap appreciably and conflict in direction; this is the core mechanism of merge conflict.",
+        "vote": "1-2",
+        "source": "https://arxiv.org/html/2603.09938v2"
+      },
+      {
+        "claim": "AdaMerging is an activation-aware approach that minimizes entropy to produce deterministic outputs and assigns different (layer-wise) coefficients/sparsity rates per layer, pruning less important layers more aggressively to reduce task interference rather than relying solely on weight magnitudes.",
+        "vote": "0-3",
+        "source": "https://arxiv.org/pdf/2503.08998"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://arxiv.org/pdf/2306.01708",
+        "quality": "primary",
+        "angle": "broad/primary survey",
+        "claimCount": 5
+      },
+      {
+        "url": "https://arxiv.org/html/2603.09938v2",
+        "quality": "primary",
+        "angle": "broad/primary survey",
+        "claimCount": 5
+      },
+      {
+        "url": "https://arxiv.org/pdf/2307.13269",
+        "quality": "primary",
+        "angle": "broad/primary survey",
+        "claimCount": 5
+      },
+      {
+        "url": "https://arxiv.org/pdf/2503.08998",
+        "quality": "primary",
+        "angle": "broad/primary survey",
+        "claimCount": 5
+      },
+      {
+        "url": "https://arxiv.org/pdf/2405.11157",
+        "quality": "primary",
+        "angle": "broad/primary survey",
+        "claimCount": 5
+      },
+      {
+        "url": "https://arxiv.org/abs/2306.01708",
+        "quality": "primary",
+        "angle": "academic/method comparison",
+        "claimCount": 4
+      },
+      {
+        "url": "https://arxiv.org/abs/2311.03099",
+        "quality": "primary",
+        "angle": "academic/method comparison",
+        "claimCount": 5
+      },
+      {
+        "url": "https://arxiv.org/abs/2310.02575",
+        "quality": "primary",
+        "angle": "academic/method comparison",
+        "claimCount": 5
+      },
+      {
+        "url": "https://docs.vllm.ai/en/stable/features/lora/",
+        "quality": "primary",
+        "angle": "academic/method comparison",
+        "claimCount": 5
+      },
+      {
+        "url": "https://huggingface.co/docs/peft/en/developer_guides/model_merging",
+        "quality": "primary",
+        "angle": "practitioner/PEFT implementation",
+        "claimCount": 5
+      },
+      {
+        "url": "https://github.com/huggingface/blog/blob/main/peft_merging.md",
+        "quality": "primary",
+        "angle": "practitioner/PEFT implementation",
+        "claimCount": 5
+      },
+      {
+        "url": "https://github.com/huggingface/peft/blob/main/src/peft/tuners/lora/model.py",
+        "quality": "primary",
+        "angle": "practitioner/PEFT implementation",
+        "claimCount": 5
+      },
+      {
+        "url": "https://docs.vllm.ai/en/latest/features/lora/",
+        "quality": "primary",
+        "angle": "practitioner/PEFT implementation",
+        "claimCount": 5
+      },
+      {
+        "url": "https://arxiv.org/abs/2307.13269",
+        "quality": "primary",
+        "angle": "practitioner/PEFT implementation",
+        "claimCount": 5
+      },
+      {
+        "url": "https://huggingface.co/docs/diffusers/main/en/using-diffusers/merge_loras",
+        "quality": "primary",
+        "angle": "practitioner/PEFT implementation",
+        "claimCount": 5
+      },
+      {
+        "url": "https://docs.vllm.ai/en/v0.6.0/models/lora.html",
+        "quality": "primary",
+        "angle": "serving/routing alternative",
+        "claimCount": 5
+      },
+      {
+        "url": "https://arxiv.org/pdf/2402.05859",
+        "quality": "primary",
+        "angle": "serving/routing alternative",
+        "claimCount": 5
+      },
+      {
+        "url": "https://arxiv.org/pdf/2408.07057",
+        "quality": "primary",
+        "angle": "serving/routing alternative",
+        "claimCount": 5
+      },
+      {
+        "url": "https://arxiv.org/abs/2505.10833",
+        "quality": "primary",
+        "angle": "empirical validation/benchmarks",
+        "claimCount": 5
+      },
+      {
+        "url": "https://arxiv.org/html/2504.07448v1",
+        "quality": "primary",
+        "angle": "empirical validation/benchmarks",
+        "claimCount": 5
+      },
+      {
+        "url": "https://arxiv.org/pdf/2310.02575",
+        "quality": "primary",
+        "angle": "empirical validation/benchmarks",
+        "claimCount": 5
+      },
+      {
+        "url": "https://arxiv.org/html/2307.13269v2",
+        "quality": "primary",
+        "angle": "empirical validation/benchmarks",
+        "claimCount": 5
+      },
+      {
+        "url": "https://arxiv.org/abs/2508.03999",
+        "quality": "primary",
+        "angle": "empirical validation/benchmarks",
+        "claimCount": 5
+      },
+      {
+        "url": "https://arxiv.org/html/2509.19476v1",
+        "quality": "primary",
+        "angle": "empirical validation/benchmarks",
+        "claimCount": 5
+      }
+    ],
+    "stats": {
+      "angles": 5,
+      "sourcesFetched": 24,
+      "claimsExtracted": 119,
+      "claimsVerified": 25,
+      "confirmed": 23,
+      "killed": 2,
+      "afterSynthesis": 9,
+      "urlDupes": 4,
+      "budgetDropped": 2,
+      "agentCalls": 106
+    }
+  }
+}

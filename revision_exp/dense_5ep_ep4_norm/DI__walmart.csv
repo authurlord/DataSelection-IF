@@ -1,0 +1,105 @@
+,output,predict
+0,{'brand': 'aluratek'},{'brand': 'aluratek'}
+1,{'category': 'printers'},{'category': 'printers'}
+2,{'brand': 'hp'},{'brand': 'hp'}
+3,{'category': 'electronics - general'},{'category': 'electronics - general'}
+4,{'brand': 'balt'},{'brand': 'balt'}
+5,{'brand': 'rca'},{'brand': 'rca'}
+6,{'category': 'gps'},{'category': 'gps'}
+7,{'category': 'electronics - general'},{'category': 'computers'}
+8,{'brand': 'ultralast'},{'brand': 'ultralast'}
+9,{'brand': 'panasonic'},{'brand': 'panasonic'}
+10,{'brand': 'link depot'},{'brand': 'link depot'}
+11,{'brand': 'iluv'},{'brand': 'iluv'}
+12,{'brand': 'avery'},{'brand': 'avery'}
+13,{'category': 'mp3 accessories'},{'category': 'mp3 accessories'}
+14,{'category': 'monitors'},{'category': 'monitors'}
+15,{'brand': 'acer'},{'brand': 'acer'}
+16,{'brand': 'evga'},{'brand': 'evga'}
+17,{'category': 'electronics - general'},{'category': 'electronics - general'}
+18,{'category': 'electronics - general'},{'category': 'electronics - general'}
+19,{'category': 'mice'},{'category': 'electronics - general'}
+20,{'brand': 'startech'},{'brand': 'startech'}
+21,{'category': 'electronics - general'},{'category': 'electronics - general'}
+22,{'category': 'memory'},{'category': 'memory'}
+23,{'category': 'stereos/audio'},{'category': 'portable audio'}
+24,{'brand': 'edge tech'},{'brand': 'edge tech'}
+25,{'category': 'electronics - general'},{'category': 'portable audio'}
+26,{'category': 'usb drives'},{'category': 'usb drives'}
+27,{'category': 'stationery & office machinery'},{'category': 'stationery & office machinery'}
+28,{'category': 'electronics - general'},{'category': 'electronics - general'}
+29,{'category': 'mice'},{'category': 'mice'}
+30,{'brand': 'accell'},{'brand': 'accell'}
+31,{'brand': 'da-lite'},{'brand': 'da-lite'}
+32,{'brand': 'toshiba'},{'brand': 'toshiba'}
+33,{'brand': 'jvc'},{'brand': 'jvc'}
+34,{'category': 'electronics - general'},{'category': 'laptop computers'}
+35,{'brand': 'draper'},{'brand': 'draper'}
+36,{'brand': 'case logic'},{'brand': 'case logic'}
+37,{'brand': 'asus'},{'brand': 'asus'}
+38,{'brand': 'draper'},{'brand': 'draper'}
+39,{'category': 'hard drives'},{'category': 'hard drives'}
+40,{'brand': 'post-it'},{'brand': 'post-it'}
+41,{'category': 'hard drives'},{'category': 'hard drives'}
+42,{'brand': 'accell'},{'brand': 'accell'}
+43,{'category': 'electronics - general'},{'category': 'electronics - general'}
+44,{'brand': 'aoc'},{'brand': 'aoc'}
+45,{'brand': 'hp'},{'brand': 'hp'}
+46,{'brand': 'xantech'},{'brand': 'xantech'}
+47,{'category': 'stationery & office machinery'},{'category': 'stationery & office machinery'}
+48,{'category': 'electronics - general'},{'category': 'electronics - general'}
+49,{'brand': 'amzer'},{'brand': 'amzer'}
+50,{'brand': 'maxell'},{'brand': 'maxell'}
+51,{'brand': 'benq'},{'brand': 'benq'}
+52,{'brand': 's j paper'},{'brand': 's j paper'}
+53,{'category': 'digital cameras'},{'category': 'digital cameras'}
+54,{'category': 'digital cameras'},{'category': 'film cameras'}
+55,{'category': 'photography - general'},{'category': 'photography - general'}
+56,{'category': 'mice'},{'category': 'mice'}
+57,{'category': 'software'},{'category': 'software'}
+58,{'category': 'printers'},{'category': 'printers'}
+59,{'brand': 'draper'},{'brand': 'draper'}
+60,{'category': 'electronics - general'},{'category': 'electronics - general'}
+61,{'brand': 'kroo'},{'brand': 'kroo'}
+62,{'category': 'networking'},{'category': 'networking'}
+63,{'brand': 'nokia'},{'brand': 'nokia'}
+64,{'brand': 'mace security'},{'brand': 'mace security'}
+65,{'brand': 'canon'},{'brand': 'canon'}
+66,{'category': 'tv accessories'},{'category': 'tv accessories'}
+67,{'category': 'electronics - general'},{'category': 'electronics - general'}
+68,{'brand': 'wausau paper'},{'brand': 'wausau paper'}
+69,{'category': 'electronics - general'},{'category': 'mp3 accessories'}
+70,{'category': 'mp3 accessories'},{'category': 'electronics - general'}
+71,{'brand': 'draper'},{'brand': 'draper'}
+72,{'category': 'stationery & office machinery'},{'category': 'stationery & office machinery'}
+73,{'category': 'stationery & office machinery'},{'category': 'stationery & office machinery'}
+74,{'brand': 'creative labs'},{'brand': 'creative labs'}
+75,{'category': 'stationery & office machinery'},{'category': 'garden - general'}
+76,{'category': 'stationery & office machinery'},{'category': 'stationery & office machinery'}
+77,{'category': 'beverages'},{'category': 'beverages'}
+78,{'category': 'electronics - general'},{'category': 'electronics - general'}
+79,{'brand': 'vizio'},{'brand': 'vizio'}
+80,{'category': 'mp3 accessories'},{'category': 'electronics - general'}
+81,{'brand': 'apc'},{'brand': 'apc'}
+82,{'category': 'mp3 accessories'},{'category': 'mp3 accessories'}
+83,{'category': 'car stereos'},{'category': 'car stereos'}
+84,{'brand': 'kenwood'},{'brand': 'kenwood'}
+85,{'category': 'electronics - general'},{'category': 'electronics - general'}
+86,{'brand': 'cables unlimited'},{'brand': 'cables unlimited'}
+87,{'category': 'furniture'},{'category': 'furniture'}
+88,{'brand': 'tribeca'},{'brand': 'tribeca'}
+89,{'category': 'memory'},{'category': 'memory'}
+90,{'brand': 'epson'},{'brand': 'epson'}
+91,{'brand': 'link depot'},{'brand': 'link depot'}
+92,{'category': 'tv accessories'},{'category': 'tv accessories'}
+93,{'category': 'tv accessories'},{'category': 'tv accessories'}
+94,{'brand': 'avery'},{'brand': 'avery'}
+95,{'brand': 'booq'},{'brand': 'booq'}
+96,{'brand': 'seagate'},{'brand': 'seagate'}
+97,{'brand': 'crown'},{'brand': 'crown'}
+98,{'brand': 'ofm'},{'brand': 'ofm'}
+99,{'brand': 'rca'},{'brand': 'rca'}
+100,{'category': 'mice'},{'category': 'mice'}
+101,{'brand': 'cables to go'},{'brand': 'cables to go'}
+102,{'category': 'tv accessories'},{'category': 'electronics - general'}
+103,{'brand': 'sumas'},{'brand': 'sumas'}

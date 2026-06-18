@@ -71,3 +71,37 @@ for p in $(ssh wangys@192.168.12.43 'nvidia-smi --query-compute-apps=pid,gpu_uui
 ## 7. OPEN / NEXT
 - Fold R1-1 (OOD perf + ITS geometry aux) and AE-4 (parity reframe) into `MELDDS_TKDE_response_letter_REVISED.md` and the manuscript (blue edits). The response currently has older AE-1 "grammar" wording — relabel grammar as "synthetic string-transformation" and lead R1-1 with MMLU/BBH.
 - Optional: random-5% vs StructInf-5% arm to make the selection-vs-random claim direct (only selected arm trained so far).
+- Fold the MoE scalability/router experiments (§8) into the response (R1-2, R1-4/AE-5, R2-2.4) and manuscript (Figs A1/A2/B).
+
+---
+
+## 8. MoE SCALABILITY / ROUTER / MULTI-TASK COMPARISON (R1-2, R1-4/AE-5, AE-4, R2-2.4) — DONE 2026-06-18
+
+Discriminative-only task suite (avoid DC/CTA: saturated/low-discriminative). 12 picks: ER{amazon-google,walmart-amazon,wdc,abt-buy,semi-text-w,semi-text-c}, DI{amazon,walmart}, SM{CMS,synthea}, RE{RE}, AVE{oa_mine}. Base = Mistral-7B. All scripts in `revision_exp/`; figs in `revision_exp/results/moe_figs/`.
+
+### Exp A — router n-sweep (ONE sweep → scalability + stability + complexity)
+`revision_exp/results/router_quality/router_quality_sweep.csv`; figs `figA1_scalability.png`, `figA2_stability_cost.png`. n=3..12, ×3 seed.
+- **R1-4/AE-5 scalability**: routed task-F1 of the content router ≈ oracle (in-domain expert) at every n (gap ≤0.017) and ≫ random (+0.15–0.20) → routing quality does NOT degrade with n.
+- **R1-2 stability**: expert utilization (normalized entropy) ~0.98 (no collapse); cross-seed F1 std shrinks as n grows (0.23→0.00).
+- **R1-2 complexity**: router fit is seconds (LogisticRegression; a max_iter solver jump to ~13–15s at n≥10, still seconds), n_params linear in n, and the router NEVER retrains experts.
+- Absolute F1 (~0.53–0.70) is dragged by the degenerate SM-CMS metric; the router-vs-oracle-vs-random comparison is the claim and is clean.
+
+### Exp B — probe-F1 vs n: dense vs Poly+MHR vs MELD (all 1 epoch, unified)
+`revision_exp/results/expB_probe/probe_f1_merged.csv`; fig `figB_probe_vs_n.png`. Fixed probe = {ER-amazon-google, DI-amazon, SM-CMS}; nested n=3/6/9/12. Headline metric = ER+DI mean (SM-CMS excluded, see caveat). dense = 2 seeds (s0,s1, tight std ≤0.003); poly = 1 seed; MELD = per-task experts (constant).
+- **MELD (modular) ≈ 0.722, flat across n** (per-task experts do not interfere).
+- **dense ≈ MELD (parity)**: 0.736 (n3) → ~0.710 (n6/n9/n12); starts ≥MELD, settles just below (within ~0.01). Supports **AE-4 parity**.
+- **Poly+MHR (integrated MoE) is lowest at every n** (~0.67–0.70, single-seed noisy, non-monotonic) → supports **R2-2.4** (standalone-modular MELD more stable than integrated MoE).
+- **CAVEAT — SM-CMS is a degenerate metric**: 36 positives / 5127 (0.7%), binary F1(pos=match) → all three methods ≈0 (even the dedicated MELD SM expert). Excluded from the headline; reported separately. ER/DI are the clean signals; DI is flat ~0.65–0.69 for all three (parity).
+- Poly s1 (error bars) was attempted but dropped: 12.43 HF-Hub flakiness during poly_train (LocalEntryNotFoundError); poly stays single-seed. dense 2-seed error bars suffice to show the dense decline is real (not noise).
+
+### Reproduction
+1. `python revision_exp/expMoE_prep.py` → `manifest.csv`, dense unions `scaling_data/union-n{3,6,9,12}probe.json` (+register in LLaMA-Factory `dataset_info.json` with `dataset_dir`), poly per-task `poly_data/n{N}/task-*.json`.
+2. **Exp A** (51.11, vllm 0.5.4): predict `expMoE_router_quality.py --phase predict --manifest manifest.csv --base <Mistral> --per_ds 300 --cache .../predmatrix`; route `--phase route --bge <bge> --ns 3..12 --seeds 0,1,2`. synthea expert via `scaling_cfg/synthea-expert.yaml` (note `dataset_dir`, output to `lora/mistral-7B/SM/synthea/select`).
+3. **Exp B dense** (51.11): `dense_driver.sh <gpu> <n...>` (pre-gen `_dense_nN_s{0,1}.yaml`, llamafactory, 1ep). **Poly+MHR** (12.43, deepspeed env, sdpa): `poly_driver.sh <cuda6|7> <n...>` (`poly_train.py --n_skills 8 --n_splits 4 --epochs 1 --bsz 2 --cutoff 1024`). Eval (full test): `expMoE_eval_probe.py --mode {dense|poly|meld} --cap 6000` (dense=vLLM LoRA on 51.11; poly=DIRECT PEFT task_ids on 12.43, MHR can't bake; meld=per-task experts).
+4. Figs: `make_moe_figs.py --sweep router_quality_sweep.csv --probe probe_f1_merged.csv` (Fig B uses ER+DI mean, excludes SM).
+
+### GOTCHAS (cost real GPU-hours)
+- `expMoE_eval_probe.py`/`expMoE_router_quality.py` carry `rescue()` + `er_sm_safe()`: Poly emits truncated dicts (`'mismatch'}`) and `Transfer()` scores any pred lacking "mismatch" as a positive match — both must be normalized (codex-reviewed; see memory `watchdog-and-codex-discipline`).
+- Router route phase splits each dataset (eval=first half, train=second half) — first-half keeps RE's positional `test_RAG.csv` gold aligned; no train==test leakage.
+- Multi-line `nohup bash -c '...'` over ssh silently fails / a bash for-loop with multiple ssh backgrounds only the first — launch ONE nohup per ssh or use a script file.
+- `CUDA_VISIBLE_DEVICES=N` makes torch report the masked GPU as logical "GPU 0" — verify physical placement (uuid) before trusting; on 12.43 use cuda6/7 ONLY.

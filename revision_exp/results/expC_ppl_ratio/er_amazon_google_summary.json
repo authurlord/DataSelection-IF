@@ -1,0 +1,10 @@
+{
+ "k": 4,
+ "n": 1000,
+ "clean_mean_ratio": 0.9090068,
+ "flip_mean_ratio": 0.8085377000000001,
+ "clean_pct_ratio_le1": 72.3,
+ "flip_pct_ratio_gt1": 16.1,
+ "clean_mean_fq": 0.5834357,
+ "flip_mean_fq": 0.49593270000000006
+}

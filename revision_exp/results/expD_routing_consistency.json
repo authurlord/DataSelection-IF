@@ -1,0 +1,90 @@
+{
+  "probe_tasks": [
+    "ER-amazon-google",
+    "DI-amazon"
+  ],
+  "baseline_n": 3,
+  "m": 3,
+  "results": [
+    {
+      "n": 3,
+      "top1_agreement_vs_n3": 1.0,
+      "top_m_jaccard_vs_n3": 1.0,
+      "routed_to_original": 1.0,
+      "per_probe": {
+        "amazon-google": {
+          "top1_agreement_vs_n3": 1.0,
+          "top_m_jaccard_vs_n3": 1.0,
+          "routed_to_original": 1.0,
+          "n_queries": 150
+        },
+        "amazon": {
+          "top1_agreement_vs_n3": 1.0,
+          "top_m_jaccard_vs_n3": 1.0,
+          "routed_to_original": 1.0,
+          "n_queries": 150
+        }
+      }
+    },
+    {
+      "n": 6,
+      "top1_agreement_vs_n3": 1.0,
+      "top_m_jaccard_vs_n3": 0.265,
+      "routed_to_original": 1.0,
+      "per_probe": {
+        "amazon-google": {
+          "top1_agreement_vs_n3": 1.0,
+          "top_m_jaccard_vs_n3": 0.224,
+          "routed_to_original": 1.0,
+          "n_queries": 150
+        },
+        "amazon": {
+          "top1_agreement_vs_n3": 1.0,
+          "top_m_jaccard_vs_n3": 0.306,
+          "routed_to_original": 1.0,
+          "n_queries": 150
+        }
+      }
+    },
+    {
+      "n": 9,
+      "top1_agreement_vs_n3": 0.9933,
+      "top_m_jaccard_vs_n3": 0.204,
+      "routed_to_original": 0.9933,
+      "per_probe": {
+        "amazon-google": {
+          "top1_agreement_vs_n3": 1.0,
+          "top_m_jaccard_vs_n3": 0.2,
+          "routed_to_original": 1.0,
+          "n_queries": 150
+        },
+        "amazon": {
+          "top1_agreement_vs_n3": 0.9867,
+          "top_m_jaccard_vs_n3": 0.208,
+          "routed_to_original": 0.9867,
+          "n_queries": 150
+        }
+      }
+    },
+    {
+      "n": 12,
+      "top1_agreement_vs_n3": 0.9933,
+      "top_m_jaccard_vs_n3": 0.205,
+      "routed_to_original": 0.9933,
+      "per_probe": {
+        "amazon-google": {
+          "top1_agreement_vs_n3": 1.0,
+          "top_m_jaccard_vs_n3": 0.202,
+          "routed_to_original": 1.0,
+          "n_queries": 150
+        },
+        "amazon": {
+          "top1_agreement_vs_n3": 0.9867,
+          "top_m_jaccard_vs_n3": 0.208,
+          "routed_to_original": 0.9867,
+          "n_queries": 150
+        }
+      }
+    }
+  ]
+}

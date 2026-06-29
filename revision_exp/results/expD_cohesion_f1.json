@@ -1,0 +1,36 @@
+{
+  "task": "ER-amazon-google",
+  "note": "option-2 gradient-free diversity selection under perturbed clustering; sigma_norm/nMAE interpolated from the Fig.9(a) sensitivity curve.",
+  "conditions": [
+    {
+      "perturbation": 0.0,
+      "sigma_norm": 0.633,
+      "nMAE": 0.2251,
+      "downstream_f1": 0.8197
+    },
+    {
+      "perturbation": 0.25,
+      "sigma_norm": 0.7875,
+      "nMAE": 0.425,
+      "downstream_f1": 0.7846
+    },
+    {
+      "perturbation": 0.5,
+      "sigma_norm": 0.881,
+      "nMAE": 0.5919,
+      "downstream_f1": 0.7983
+    },
+    {
+      "perturbation": 0.75,
+      "sigma_norm": 0.9033,
+      "nMAE": 0.6813,
+      "downstream_f1": 0.7803
+    },
+    {
+      "perturbation": 1.0,
+      "sigma_norm": 0.9256,
+      "nMAE": 0.7707,
+      "downstream_f1": 0.7869
+    }
+  ]
+}
